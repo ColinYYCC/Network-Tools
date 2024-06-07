@@ -159,8 +159,8 @@ force-http-engine-hosts = *.ott.cibntv.net, 123.59.31.1, 119.18.193.135, 122.14.
 # VIF Excluded Routes
 # Surge VIF 只能处理 TCP 和 UDP 协议。使用此选项可以绕过特定的 IP 范围，允许所有流量通过。
 # tun-excluded-routes = 255.255.255.255/32
-tun-excluded-routes = 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16, 255.255.255.255/32
-# tun-excluded-routes = 10.0.0.0/8, 100.64.0.0/10, 169.254.0.0/16, 172.16.0.0/12, 192.0.0.0/24, 192.0.2.0/24, 192.88.99.0/24, 192.168.0.0/16, 198.18.0.0/15, 198.51.100.0/24, 203.0.113.0/24, 224.0.0.0/4, 240.0.0.0/4, 234.0.0.0/8, 234.0.0.0/8, 235.0.0.0/8, 236.0.0.0/8, 237.0.0.0/8, 238.0.0.0/8, 239.0.0.0/8, 255.255.255.255/32
+# tun-excluded-routes = 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16, 203.0.113.0/24, 224.0.0.0/4, 255.255.255.255/32
+tun-excluded-routes = 198.51.100.0/24, 203.0.113.0/24, 224.0.0.0/4, 239.255.255.250/32, 240.0.0.0/4, 255.255.255.255/32
 
 # VIF Included Routes
 # 默认情况下，Surge VIF 接口会声明自己是默认路由。但是，由于 Wi-Fi 接口的路由较小，有些流量可能不会通过 Surge VIF 接口。使用此选项可以添加一条较小的路由。
@@ -192,11 +192,11 @@ udp-policy-not-supported-behaviour = REJECT
 # > 隐藏 Apple 请求
 # 隐藏所有发往 *.Apple.com 和 *.icloud.com 的请求
 # （该选项只是在抓取结果中隐藏了请求）
-hide-apple-request = 0
+hide-apple-request = true
 # > 隐藏 Crashlytics 请求
 hide-crashlytics-request = true
 # > 隐藏崩溃追踪器请求
-hide-crash-reporter-request = 1
+hide-crash-reporter-request = true
 # > 隐藏 UDP 会话
 hide-udp = 0
 # > 关键词过滤器
@@ -234,6 +234,9 @@ Disney+ = select, 香港, 台湾, 新加坡, 日本, 美国, 韩国
 # Netflix
 Netflix = select, 新加坡, 香港, 台湾, 日本, 美国, 韩国
 
+# 游戏
+🎮游戏 = select, DIRECT, 全球加速
+
 # 国际流媒体服务
 国际流媒体 = select, Auto, DIRECT, 香港, 台湾, 新加坡, 日本, 美国, 韩国
 
@@ -247,6 +250,7 @@ Netflix = select, 新加坡, 香港, 台湾, 日本, 美国, 韩国
 节点选择 = select, include-all-proxies=1, include-other-group=Auto, hidden=0, policy-regex-filter=^(?=.*(.*))(?!.*((?i)回国|校园|游戏|教育|公告|邀请|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|到期|过期|已用|联系|邮箱|工单|群|(\b(GAME|USE|USED|TOTAL|EXPIRE|EMAIL)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$, persistent=1, no-alert=0
 Auto = url-test, include-other-group=De-Key, interval=10800, tolerance=30, hidden=0, policy-regex-filter=^(?=.*(.*))(?!.*((?i)回国|校园|游戏|教育|公告|邀请|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|到期|过期|已用|联系|邮箱|工单|群|(\b(GAME|USE|USED|TOTAL|EXPIRE|EMAIL)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$, evaluate-before-use=true, no-alert=1, include-all-proxies=0
 SmartGroup = smart, hidden=0, policy-regex-filter=^(?=.*(.*))(?!.*((?i)回国|校园|游戏|教育|公告|邀请|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|到期|过期|已用|联系|邮箱|工单|群|(\b(GAME|USE|USED|TOTAL|EXPIRE|EMAIL)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$, evaluate-before-use=true, policy-path=https://gist.githubusercontent.com/ColinYYCC/3be6923cf4dd1d89f66c66b0db16c962/raw/Rename, update-interval=10800, persistent=1, no-alert=0, include-all-proxies=0
+🎮游戏 = select, include-all-proxies=true, hidden=0, policy-regex-filter=(?=.*(游戏|Game|UDP)).*
 
 # 地区分流
 香港 = load-balance, include-all-proxies=0, include-other-group=Auto, hidden=1, policy-regex-filter=^(?=.*((?i)🇭🇰|香港|(\b(HK|Hong)\b))).*$, no-alert=0, persistent=0
@@ -270,12 +274,15 @@ PROXY = select, 全球节点, hidden=true
 # --- CUSTOM RULES ---
 # 自定义规则
 ## 您可以在此处插入自定义规则
-DOMAIN,front.fishport.cloud,DIRECT
 
 # 新增内置策略 NO-HYBRID，等价为 NO-HYBRID = direct, hybrid=off
 DOMAIN-SUFFIX,cmbchina.com,NO-HYBRID // 部分服务会校验请求的来源 IP，在开启 hybrid 时有可能因为请求IP变化导致无法正常登录和使用（如招商银行），可使用 NO-HYBRID 对特定请求单独关闭 All Hybrid
 
 # Process 程序规则
+# > AdGuard
+DOMAIN,injections.adguard.org,DIRECT
+DOMAIN,local.adguard.org,DIRECT
+
 # > Client
 # Proxy
 PROCESS-NAME,*Clash*,DIRECT
@@ -291,8 +298,9 @@ PROCESS-NAME,ssr-local,DIRECT
 PROCESS-NAME,privoxy,DIRECT
 PROCESS-NAME,leaf,DIRECT
 PROCESS-NAME,UUBooster,DIRECT
-# Download
-PROCESS-NAME,百度网盘,DIRECT
+
+# > Downloader
+PROCESS-NAME,BaiduNetdisk,DIRECT
 PROCESS-NAME,*Folx*,DIRECT
 PROCESS-NAME,*Thunder*,DIRECT
 PROCESS-NAME,*DownloadService*,DIRECT
@@ -302,14 +310,36 @@ PROCESS-NAME,aria2c,DIRECT
 PROCESS-NAME,fdm,DIRECT
 PROCESS-NAME,Folx,DIRECT
 PROCESS-NAME,NetTransport,DIRECT
+PROCESS-NAME,amuled,DIRECT
+PROCESS-NAME,Motrix.app,DIRECT
 DOMAIN-SUFFIX,smtp,DIRECT
 DOMAIN-KEYWORD,aria2,DIRECT
+
+# > Xunlei
+PROCESS-NAME,Thunder,DIRECT
+PROCESS-NAME,ThunderVIP,DIRECT
+USER-AGENT,%E8%BF%85%E9%9B%B7,DIRECT
+DOMAIN-SUFFIX,xunlei.com,DIRECT
+
+# tailscale
+PROCESS-NAME,tailscaled,DIRECT
+# Parsec
+PROCESS-NAME,parsecd,DIRECT
+# 向日葵远程
+PROCESS-NAME,SunloginClient_Desktop,DIRECT
+PROCESS-NAME,SunloginClient_Helper,DIRECT
+# 百度网盘
+PROCESS-NAME,BaiduNetdisk_mac,DIRECT
+
 # BT
-PROCESS-NAME,Transmission*,DIRECT
-PROCESS-NAME,transmission*,DIRECT
-PROCESS-NAME,qBittorrent,DIRECT
-PROCESS-NAME,uTorrent,DIRECT
 PROCESS-NAME,BitComet,DIRECT
+PROCESS-NAME,DownloadService,DIRECT
+PROCESS-NAME,qBittorrent,DIRECT
+PROCESS-NAME,qbittorrent-nox,DIRECT
+PROCESS-NAME,Transmission,DIRECT
+PROCESS-NAME,transmission-daemon,DIRECT
+PROCESS-NAME,transmission-qt,DIRECT
+PROCESS-NAME,uTorrent,DIRECT
 PROCESS-NAME,WebTorrent,DIRECT
 PROCESS-NAME,WebTorrent Helper,DIRECT
 DOMAIN-KEYWORD,announce,DIRECT
@@ -327,8 +357,7 @@ DOMAIN,boxjs.com,DIRECT
 DOMAIN,boxjs.net,DIRECT
 # > Sub-Store
 DOMAIN-SUFFIX,vercel.app,Auto
-# > Todesk
-DOMAIN-KEYWORD,todesk,DIRECT
+
 
 # Rulesets，规则集（每 24 小时后台自动更新）
 # 规则集包含多条子规则，可以是另一个本地 list 文件，或者是一个 URL
@@ -341,7 +370,7 @@ RULE-SET,https://raw.githubusercontent.com/dler-io/Rules/main/Surge/Surge%203/Pr
 # IP归属地更改
 RULE-SET,https://raw.githubusercontent.com/lwd-temp/anti-ip-attribution/main/generated/surge.list,归属地更改,extended-matching // IP归属地
 
-# Advertising 广告
+# Advertising 广告拦截 / Privacy 隐私保护 / Malware 拦截 / Phiishing 拦截
 RULE-SET,https://adrules.top/adrules-surge.conf,REJECT-DROP,extended-matching // 广告
 RULE-SET,https://ruleset.skk.moe/List/non_ip/reject.conf,REJECT-DROP
 # DOMAIN-SET,https://ruleset.skk.moe/List/domainset/reject.conf,REJECT-TINYGIF
@@ -394,26 +423,61 @@ RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/r
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GitHub/GitHub.list,全球节点,extended-matching // Github
 
 # Streaming 国际流媒体服务
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GlobalMedia/GlobalMedia.list,国际流媒体,extended-matching // Streaming 国际流媒体服务
+RULE-SET,https://ruleset.skk.moe/List/non_ip/stream.conf,国际流媒体,extended-matching // Streaming 国际流媒体服务
+RULE-SET,https://ruleset.skk.moe/List/ip/stream.conf,国际流媒体,extended-matching // Streaming 国际流媒体服务 (IP)
+# WeChat 微信
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/WeChat/WeChat.list,DIRECT,extended-matching // WeChat
 
 # Telegram 电报
 RULE-SET,https://github.com/LucaLin233/Luca_Conf/blob/main/Surge/Rule/Telegram.list?raw=true,全球节点,extended-matching // Luca融合版
-#https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/ruleset/ASN.Telegram.list,全球节点,extended-matching // 🍟 Fries: 🌐 ASN Telegram
+# https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/ruleset/ASN.Telegram.list,全球节点,extended-matching // 🍟 Fries: 🌐 ASN Telegram
+
+# > Game 游戏(不仅限于UDP, 包括相关CDN)
+# GameList
+# RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Game/Game.list,🎮游戏 // GameList
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Blizzard/Blizzard.list,🎮游戏 // 暴雪娱乐 Blizzard
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Classic/Classic.list,🎮游戏 // Classic
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/DiabloIII/DiabloIII.list,🎮游戏 // 暗黑破坏神III DiabloIII
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Hearthstone/Hearthstone.list,🎮游戏 // 炉石传说 Hearthstone
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/HeroesoftheStorm/HeroesoftheStorm.list,🎮游戏 // 风暴英雄 HeroesoftheStorm
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Rockstar/Rockstar.list,🎮游戏 // 侠盗猎车手 Rockstar
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Overwatch/Overwatch.list,🎮游戏 // 守望先锋 Overwatch
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/StarCraftII/StarCraftII.list,🎮游戏 // 星海爭霸II StarCraftII
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/WildRift/WildRift.list,🎮游戏 // 英雄联盟手游 WildRift
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/WorldofWarcraft/WorldofWarcraft.list,🎮游戏 // 魔兽世界WorldofWarcraft
+
+# Game Publisher
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Discord/Discord.list,🎮游戏 // Discord
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/EA/EA.list,🎮游戏 // EA
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Epic/Epic.list,🎮游戏 // Epic
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/HoYoverse/HoYoverse.list,🎮游戏 // 米哈游
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Nintendo/Nintendo.list,🎮游戏 // 任天堂 Nintendo
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Origin/Origin.list,🎮游戏 // Origin
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/PlayStation/PlayStation.list,🎮游戏 // PlayStation
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Steam/Steam.list,🎮游戏 // Steam
+# RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/SteamCN/SteamCN.list,🎮游戏 // SteamCN
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Supercell/Supercell.list,🎮游戏 // 部落冲突 Supercell
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/UBI/UBI.list,🎮游戏 // UBI
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Xbox/Xbox.list,🎮游戏 // Xbox
 
 # China 中国直连
 RULE-SET,https://ruleset.skk.moe/List/non_ip/domestic.conf,DIRECT,extended-matching // 国內直连
 RULE-SET,https://ruleset.skk.moe/List/non_ip/direct.conf,DIRECT,extended-matching // 国內直连
+# Global 全球加速
+RULE-SET,https://ruleset.skk.moe/List/non_ip/global.conf,🌑代理 // Global 全球加速
+RULE-SET,https://ruleset.skk.moe/List/non_ip/global_plus.conf,🌑代理 // Global 全球加速
+# China 中国直连 (IP)
 RULE-SET,https://ruleset.skk.moe/List/ip/domestic.conf,DIRECT // 国內直连(IP)
 RULE-SET,https://ruleset.skk.moe/List/ip/china_ip.conf,DIRECT // 国內直连(IP)
 
-# WeChat 微信
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/WeChat/WeChat.list,DIRECT,extended-matching // WeChat
+# SYSTEM 系统
+RULE-SET,SYSTEM,DIRECT // SYSTEM 系统
+
+# ASN China 基于ASN 数据库判断域名和 IP 的归属地
+RULE-SET,https://raw.noy.cat/VirgilClyne/GetSomeFries/main/ruleset/ASN.China.list,DIRECT // 🍟 Fries: 🌐 ASN China
 
 # Surge 的自动 REJECT 保护丢包，防止应用循环请求
 IP-CIDR,0.0.0.0/32,REJECT,no-resolve
-
-# SYSTEM 系统
-RULE-SET,SYSTEM,DIRECT // SYSTEM 系统
 
 # Local Area Network 本地局域网
 RULE-SET,LAN,DIRECT,no-resolve // Local Area Network 本地局域网
@@ -444,9 +508,6 @@ IP-CIDR6,ff04::/16,DIRECT,no-resolve
 IP-CIDR6,ff05::/16,DIRECT,no-resolve
 IP-CIDR6,2001:db8::/32,DIRECT,no-resolve
 IP-CIDR6,2002::/16,DIRECT,no-resolve
-
-# ASN China 基于ASN 数据库判断域名和 IP 的归属地
-RULE-SET,https://raw.noy.cat/VirgilClyne/GetSomeFries/main/ruleset/ASN.China.list,DIRECT // 🍟 Fries: 🌐 ASN China
 
 # DEST-PORT 端口规则
 OR,((DEST-PORT,25), (DEST-PORT,110), (DEST-PORT,143), (DEST-PORT,465), (DEST-PORT,587)),DIRECT // 邮件服务默认端口
@@ -851,41 +912,41 @@ upos-sz-upcdntx.bilivideo.com = server:https://doh.pub/dns-query // BiliBili upo
 # 有两种重定向方式: "header" 和 "302"
 
 [SSID Setting]
-# 该段仅在
-# 你可以为某些特定的
+# 该段仅在 iOS 版本下生效。 
+# 你可以为某些特定的 WiFi 网络设置设置参数
 # 参数:
-# suspend:
-# 在该网络下
-# Surge
-# 
-# SSID
-# 可使用
-# 可使用
-# 可使用
-# 可使用
-# 可使用
-# 可使用
-# 可使用
-# 参数
-# cellular-fallback=default
-# cellular-fallback=off
-# cellular-fallback=hybrid
-# cellular-fallback=wifi-assist
-# 如无前缀则按照旧版规则匹配
-# SSID
-# 
-# 中国用户若使用
-# 
-# 连接到
-"SSID:"Apple
-# 需要
+# suspend: "true" 或 "false"
+# 在该网络下 Surge 将暂停工作。 请注意，如果你在该网络下直接启动 Surge，那么 
+# Surge 依然会工作。只有当从其他网络切换到该网络时，Surge 才会暂停。
+#
+# SSID Setting 段表达式（适用 SUBNET 规则）
+# 可使用 MCCMNC:100-200 匹配特定数据网络
+# 可使用 SSID:value 特定匹配 SSID，支持通配符
+# 可使用 BSSID:value 特定匹配 BSSID，支持通配符
+# 可使用 ROUTER:value 特定匹配路由地址
+# 可使用 TYPE:WIFI 匹配所有 WiFi 网络
+# 可使用 TYPE:CELLULAR 匹配所有数据网络
+# 可使用 TYPE:WIRED 匹配所有有线网络（iOS 上支持 USB 网络适配
+# 参数 cellular-fallback 可单独控制一些 Wi-Fi 下的 all-hybrid 和 wifi-assist 行为
+# cellular-fallback=default 使用 [General] 中的 all-hybrid 和 wifi-assist 配置
+# cellular-fallback=off 关闭 all-hybrid 和 wifi-assist
+# cellular-fallback=hybrid 开启 all-hybrid 
+# cellular-fallback=wifi-assist 开启 wifi-assist
+# 如无前缀则按照旧版规则匹配 SSID、BSSID、路由地址
+# SSID Setting 段内容从上至下依次匹配，匹配到第一个结果后立刻终止
+#
+# 中国用户若使用 TFO 建议强制关闭数据网络上的 TFO，避免产生问题，然后在已测试过的网络上强制开启。只有这样配置后方可充分享受 TFO 的优势。
+#
+# 连接到 Apple Store 的 Wi-Fi网络时 Surge 暂停工作
+SSID:"Apple Store" suspend=true
+# 需要 Web 验证登录的 Wi-Fi 网络以及路由器已经科学上网的 Surge 挂起
 
 [MITM]
-skip-server-cert-verify = true
+skip-server-cert-verify = false
 tcp-connection = true
 h2 = true
-hostname = -gateway.icloud.com, -weather-data.apple.com, -buy.itunes.apple.com, -pan.baidu.com, www.google.cn
-
+hostname = www.google.cn
+hostname-disabled = gateway.icloud.com, gateway.icloud.com.cn, weather-data.apple.com, buy.itunes.apple.com
 
 [Script]
 京东_开屏去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/startup/startup.js
