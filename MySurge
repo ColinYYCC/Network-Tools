@@ -7,7 +7,7 @@
 # 以"#" ";" 和 "//" 开头的行为注释行
 # 本配置主要参考 薯薯（@VirgilClyne）特别感谢！
 # 本配置使用方法：在自动选择将“输入你的机场订阅链接”替换成你的机场提供的订阅网址即可。
-# 更新时间：2024.06.08 23:25
+# 更新时间：2024.06.09 03:43
 
 [General]
 # ---(通用)---
@@ -37,7 +37,7 @@ test-timeout = 3
 
 # > 自定义 GeoIP 数据库
 geoip-maxmind-url = https://github.com/xream/geoip/releases/latest/download/ipinfo.country.mmdb
-# geoip-maxmind-url = https://github.com/soffchen/GeoIP2-CN/raw/release/Country.mmdb
+# geoip-maxmind-url = https://raw.githubusercontent.com/Repcz/Tool/raw/X/GeoIP/Global_Country.mmdb
 # GeoIP 禁用自动更新
 disable-geoip-db-auto-update = false
 
@@ -104,7 +104,7 @@ exclude-simple-hostnames = true
 # 传统 DNS 服务器设置
 dns-server = 9.9.9.9, 149.112.112.112
 # 加密 DNS 服务器设置
-encrypted-dns-server = https://dns.quad9.net/dns-query
+# encrypted-dns-server = https://dns.quad9.net/dns-query
 
 
 # > 从 /etc/hosts 读取 DNS 记录
