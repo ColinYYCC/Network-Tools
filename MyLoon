@@ -114,7 +114,6 @@ AUTO = url-test,All,interval = 300,tolerance = 30,img-url = https://raw.githubus
 欧洲节点 = load-balance,EU,interval = 300,max-timeout = 3000,algorithm = pcc,,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/European_Union.png
 
 [Rule]
-GEOIP,CN,DIRECT
 FINAL,兜底分流
 
 [Remote Rule]
@@ -126,8 +125,8 @@ https://github.com/Repcz/Tool/raw/X/Loon/Rules/Microsoft.list, policy=微软服�
 https://github.com/Repcz/Tool/raw/X/Loon/Rules/Github.list, policy=微软服务, tag=Github, enabled=true
 https://github.com/Repcz/Tool/raw/X/Loon/Rules/Steam.list, policy=游戏平台, tag=Steam, enabled=true
 https://github.com/Repcz/Tool/raw/X/Loon/Rules/Epic.list, policy=游戏平台, tag=Epic, enabled=true
-https://github.com/LucaLin233/Luca_Conf/blob/main/Surge/Rule/Telegram.list?raw=true, policy=推特消息, tag=Twitter, enabled=true
-https://github.com/Repcz/Tool/raw/X/Loon/Rules/Telegram.list, policy=电报消息, tag=Telegram, enabled=true
+https://github.com/Repcz/Tool/raw/X/Loon/Rules/Twitter.list, policy=推特消息, tag=Twitter, enabled=true
+http://script.hub/file/_start_/https://github.com/LucaLin233/Luca_Conf/blob/main/Surge/Rule/Telegram.list?raw=true/_end_/Telegram.list?type=rule-set&target=loon-rule-set&del=true, policy=电报消息, tag=Telegram, enabled=true
 https://github.com/Repcz/Tool/raw/X/Loon/Rules/Emby.list, policy=Emby, tag=Emby, enabled=true
 https://github.com/Repcz/Tool/raw/X/Loon/Rules/Spotify.list, policy=Spotify, tag=Spotif, enabled=true
 https://github.com/Repcz/Tool/raw/X/Loon/Rules/Bahamut.list, policy=国际媒体, tag=Bahamut, enabled=true
