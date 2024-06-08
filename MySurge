@@ -7,7 +7,7 @@
 # 以"#" ";" 和 "//" 开头的行为注释行
 # 本配置主要参考 薯薯（@VirgilClyne）特别感谢！
 # 本配置使用方法：在自动选择将“输入你的机场订阅链接”替换成你的机场提供的订阅网址即可。
-# 更新时间：2024.06.08 02:54
+# 更新时间：2024.06.08 23:25
 
 [General]
 # ---(通用)---
@@ -29,7 +29,7 @@ proxy-test-url = http://latency-test.skk.moe/endpoint
 # > 代理测试 UDP
 proxy-test-udp = www.apple.com@64.6.64.6
 # > 测试超时（秒）
-test-timeout = 5
+test-timeout = 3
 
 # > TLS 引擎
 # TLS Provider: default, secure-transport, network-framework, openssl
@@ -102,9 +102,9 @@ exclude-simple-hostnames = true
 # ---(DNS 服务器)---
 # > DNS 服务器 (如无必要不建议使用 DNS over HTTPS)
 # 传统 DNS 服务器设置
-dns-server = 9.9.9.9,149.112.112.112
+dns-server = 9.9.9.9, 149.112.112.112
 # 加密 DNS 服务器设置
-encrypted-dns-server = https://doh.pub/dns-query
+encrypted-dns-server = https://dns.quad9.net/dns-query
 
 
 # > 从 /etc/hosts 读取 DNS 记录
@@ -176,7 +176,7 @@ include-local-networks = false
 # > 游戏优化模式
 # 游戏优化:开启后会提高处理 UDP 流量的优先级，当系统负载高时会有比较明显的作用 (如高性能联机游戏)
 udp-priority = false
-  
+
 # udp-policy-not-supported-behaviour 参数用于控制当 UDP 流量被匹配到一个不支持 UDP 转发的策略时的行为
 # DIRECT：回退到 DIRECT 策略（默认）
 # REJECT：回退到 REJECT 策略（建议)
@@ -185,43 +185,12 @@ udp-priority = false
 udp-policy-not-supported-behaviour = REJECT
 # ------
 
-[Replica]
-# [抓取流量] => 过滤器
-# ---(实验性功能)---
-# 0 为关闭，1 为开启
-# > 隐藏 Apple 请求
-# 隐藏所有发往 *.Apple.com 和 *.icloud.com 的请求
-# （该选项只是在抓取结果中隐藏了请求）
-hide-apple-request = true
-# > 隐藏 Crashlytics 请求
-hide-crashlytics-request = true
-# > 隐藏崩溃追踪器请求
-hide-crash-reporter-request = true
-# > 隐藏 UDP 会话
-hide-udp = 0
-# > 关键词过滤器
-# none（关闭关键词过滤器） / whitelist（blacklist（仅记录包含关键字的请求）） / blacklist（仅记录不包含关键字的请求） / pattern（匹配通配符的请求）
-# keyword-filter-type = none
-keyword-filter-type = blacklist
-# > 关键词
-# keyword-filter = (null)
-keyword-filter = ocsp, logs, analytic, imap, adthor, applovin, appnext, talk, dropbox, github, spys, 149.154, 91.108
+[Proxy Group]
+# > External Proxy Group
+
 # ------
 
-# 该段定义可用的代理策略
-# 针对所有类型代理的选项:
-#   interface: 可选 (默认值: null)
-#   强制使用特定的出口地址或网络设备 (仅 macOS 版可用)
-#   例如: ProxyHTTP = http, 1.2.3.4, 443, username, password, interface = en2
-#   en1 = direct, interface = en1
-# 针对启用了 TLS 的代理的选项:
-#   skip-common-name-verify: "true" 或 "false" (默认值: false)
-#   如果启动该选择, Surge 不会校验证书名是否符合
-
-[Proxy Group]
-# External Proxy Group
-
-# Internal Proxy Group
+# > Internal Proxy Group
 # 节点选项
 全球节点 = select, SmartGroup, Auto, 香港, 台湾, 新加坡, 日本, 美国, 韩国, 节点选择
 
@@ -235,7 +204,7 @@ Disney+ = select, 香港, 台湾, 新加坡, 日本, 美国, 韩国
 Netflix = select, 新加坡, 香港, 台湾, 日本, 美国, 韩国
 
 # 游戏
-🎮游戏 = select, DIRECT, 全球加速
+🎮游戏 = select, DIRECT, 全球节点
 
 # 国际流媒体服务
 国际流媒体 = select, Auto, DIRECT, 香港, 台湾, 新加坡, 日本, 美国, 韩国
@@ -245,35 +214,40 @@ Netflix = select, 新加坡, 香港, 台湾, 日本, 美国, 韩国
 
 # 白名单模式 PROXY，黑名单模式 DIRECT
 漏网之鱼 = select, 全球节点, 节点选择, DIRECT
+# ------
 
 # 节点选择
-节点选择 = select, include-all-proxies=1, include-other-group=Auto, hidden=0, policy-regex-filter=^(?=.*(.*))(?!.*((?i)回国|校园|游戏|教育|公告|邀请|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|到期|过期|已用|联系|邮箱|工单|群|(\b(GAME|USE|USED|TOTAL|EXPIRE|EMAIL)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$, persistent=1, no-alert=0
-Auto = url-test, include-other-group=De-Key, interval=10800, tolerance=30, hidden=0, policy-regex-filter=^(?=.*(.*))(?!.*((?i)回国|校园|游戏|教育|公告|邀请|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|到期|过期|已用|联系|邮箱|工单|群|(\b(GAME|USE|USED|TOTAL|EXPIRE|EMAIL)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$, evaluate-before-use=true, no-alert=1, include-all-proxies=0
-SmartGroup = smart, hidden=0, policy-regex-filter=^(?=.*(.*))(?!.*((?i)回国|校园|游戏|教育|公告|邀请|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|到期|过期|已用|联系|邮箱|工单|群|(\b(GAME|USE|USED|TOTAL|EXPIRE|EMAIL)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$, evaluate-before-use=true, policy-path=https://gist.githubusercontent.com/ColinYYCC/3be6923cf4dd1d89f66c66b0db16c962/raw/Rename, update-interval=10800, persistent=1, no-alert=0, include-all-proxies=0
-🎮游戏 = select, include-all-proxies=true, hidden=0, policy-regex-filter=(?=.*(游戏|Game|UDP)).*
+节点选择 = select, policy-regex-filter=^(?=.*(.*))(?!.*((?i)回国|校园|游戏|教育|公告|邀请|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|到期|过期|已用|联系|邮箱|工单|群|(\b(GAME|USE|USED|TOTAL|EXPIRE|EMAIL)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$, update-interval=0, no-alert=0, hidden=0, include-all-proxies=1, include-other-group=De-Key
+
+Auto = url-test, hidden=0, policy-regex-filter=^(?=.*(.*))(?!.*((?i)回国|校园|游戏|教育|公告|邀请|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|到期|过期|已用|联系|邮箱|工单|群|(\b(GAME|USE|USED|TOTAL|EXPIRE|EMAIL)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$, interval=3000, tolerance=50, evaluate-before-use=1, no-alert=0, include-all-proxies=0, include-other-group=De-Key
+
+SmartGroup = smart, policy-regex-filter=^(?=.*(.*))(?!.*((?i)回国|校园|游戏|教育|公告|邀请|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|到期|过期|已用|联系|邮箱|工单|群|(\b(GAME|USE|USED|TOTAL|EXPIRE|EMAIL)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$, policy-path=https://gist.githubusercontent.com/ColinYYCC/3be6923cf4dd1d89f66c66b0db16c962/raw/Rename, update-interval=0, no-alert=0, hidden=0, include-all-proxies=0
+# ------
 
 # 地区分流
-香港 = load-balance, include-all-proxies=0, include-other-group=Auto, hidden=1, policy-regex-filter=^(?=.*((?i)🇭🇰|香港|(\b(HK|Hong)\b))).*$, no-alert=0, persistent=0
+香港 = load-balance, policy-regex-filter=^(?=.*((?i)🇭🇰|香港|(\b(HK|Hong)\b))).*$, no-alert=0, hidden=1, include-all-proxies=0, include-other-group=De-Key, persistent=1
 
-澳门 = load-balance, include-all-proxies=0, include-other-group=Auto, hidden=1, policy-regex-filter=^(?=.*((?i)🇲🇴|澳门|MAC)).*$, no-alert=0, persistent=0
+澳门 = load-balance, policy-regex-filter=^(?=.*((?i)🇲🇴|澳门|MAC)).*$, no-alert=0, hidden=1, include-all-proxies=0, include-other-group=De-Key, persistent=1
 
-台湾 = load-balance, include-all-proxies=0, include-other-group=Auto, hidden=1, policy-regex-filter=^(?=.*((?i)🇼🇸|台湾|(\b(TW|Tai|Taiwan|TWN)\b))).*$, no-alert=0, persistent=0
+台湾 = load-balance, policy-regex-filter=^(?=.*((?i)🇼🇸|台湾|(\b(TW|Tai|Taiwan|TWN)\b))).*$, no-alert=0, hidden=1, include-all-proxies=0, include-other-group=De-Key, persistent=1
 
-新加坡 = load-balance, include-all-proxies=0, include-other-group=Auto, hidden=1, policy-regex-filter=^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|Singapore|SGP)\b))).*$, no-alert=0, persistent=0
+新加坡 = load-balance, policy-regex-filter=^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|Singapore|SGP)\b))).*$, no-alert=0, hidden=1, include-all-proxies=0, include-other-group=De-Key, persistent=1
 
-日本 = load-balance, include-all-proxies=0, include-other-group=Auto, hidden=1, policy-regex-filter=^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan|JPN)\b))).*$, no-alert=0, persistent=0
+日本 = load-balance, policy-regex-filter=^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan|JPN)\b))).*$, no-alert=0, hidden=1, include-all-proxies=0, include-other-group=De-Key, persistent=1
 
-美国 = load-balance, include-all-proxies=0, include-other-group=Auto, hidden=1, policy-regex-filter=^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States|USA)\b))).*$, no-alert=0, persistent=0
+美国 = load-balance, policy-regex-filter=^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States|USA)\b))).*$, no-alert=0, hidden=1, include-all-proxies=0, include-other-group=De-Key, persistent=1
 
-韩国 = load-balance, include-all-proxies=0, include-other-group=Auto, hidden=1, policy-regex-filter=^(?=.*((?i)🇰🇷|韩|韓|首尔|(/b(KR|Korea)/b))).*$, no-alert=0, persistent=0
+韩国 = load-balance, policy-regex-filter=^(?=.*((?i)🇰🇷|韩|韓|首尔|(/b(KR|Korea)/b))).*$, no-alert=0, hidden=1, include-all-proxies=0, include-other-group=De-Key, persistent=1
+# ------
 
 # 兼容性修复
 PROXY = select, 全球节点, hidden=true
+# ------
 
 [Rule]
 # --- CUSTOM RULES ---
 # 自定义规则
-## 您可以在此处插入自定义规则
+# # 您可以在此处插入自定义规则
 
 # 新增内置策略 NO-HYBRID，等价为 NO-HYBRID = direct, hybrid=off
 DOMAIN-SUFFIX,cmbchina.com,NO-HYBRID // 部分服务会校验请求的来源 IP，在开启 hybrid 时有可能因为请求IP变化导致无法正常登录和使用（如招商银行），可使用 NO-HYBRID 对特定请求单独关闭 All Hybrid
@@ -371,11 +345,11 @@ RULE-SET,https://raw.githubusercontent.com/dler-io/Rules/main/Surge/Surge%203/Pr
 RULE-SET,https://raw.githubusercontent.com/lwd-temp/anti-ip-attribution/main/generated/surge.list,归属地更改,extended-matching // IP归属地
 
 # Advertising 广告拦截 / Privacy 隐私保护 / Malware 拦截 / Phiishing 拦截
-RULE-SET,https://adrules.top/adrules-surge.conf,REJECT-DROP,extended-matching // 广告
-RULE-SET,https://ruleset.skk.moe/List/non_ip/reject.conf,REJECT-DROP
-# DOMAIN-SET,https://ruleset.skk.moe/List/domainset/reject.conf,REJECT-TINYGIF
-DOMAIN-SET,https://ruleset.skk.moe/List/domainset/reject_phishing.conf,REJECT-DROP
-# RULE-SET,https://ruleset.skk.moe/List/ip/reject.conf,REJECT-DROP
+RULE-SET,https://adrules.top/adrules-surge.conf,REJECT-DROP,extended-matching
+RULE-SET,https://ruleset.skk.moe/List/non_ip/reject.conf,REJECT-DROP,extended-matching
+# DOMAIN-SET,https://ruleset.skk.moe/List/domainset/reject.conf,REJECT-TINYGIF,extended-matching
+DOMAIN-SET,https://ruleset.skk.moe/List/domainset/reject_phishing.conf,REJECT-DROP,extended-matching
+# RULE-SET,https://ruleset.skk.moe/List/ip/reject.conf,REJECT-DROP,no-resolve
 
 # SpeedTest 测速
 DOMAIN-SET,https://ruleset.skk.moe/List/domainset/speedtest.conf,PROXY,extended-matching // SpeedTest
@@ -423,14 +397,14 @@ RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/r
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GitHub/GitHub.list,全球节点,extended-matching // Github
 
 # Streaming 国际流媒体服务
-RULE-SET,https://ruleset.skk.moe/List/non_ip/stream.conf,国际流媒体,extended-matching // Streaming 国际流媒体服务
-RULE-SET,https://ruleset.skk.moe/List/ip/stream.conf,国际流媒体,extended-matching // Streaming 国际流媒体服务 (IP)
+RULE-SET,https://ruleset.skk.moe/List/non_ip/stream.conf,国际流媒体,extended-matching
+RULE-SET,https://ruleset.skk.moe/List/ip/stream.conf,国际流媒体
+
 # WeChat 微信
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/WeChat/WeChat.list,DIRECT,extended-matching // WeChat
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/WeChat/WeChat.list,DIRECT,extended-matching
 
 # Telegram 电报
-RULE-SET,https://github.com/LucaLin233/Luca_Conf/blob/main/Surge/Rule/Telegram.list?raw=true,全球节点,extended-matching // Luca融合版
-# https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/ruleset/ASN.Telegram.list,全球节点,extended-matching // 🍟 Fries: 🌐 ASN Telegram
+RULE-SET,https://github.com/LucaLin233/Luca_Conf/blob/main/Surge/Rule/Telegram.list?raw=true,全球节点,extended-matching
 
 # > Game 游戏(不仅限于UDP, 包括相关CDN)
 # GameList
@@ -462,19 +436,19 @@ RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/r
 
 # China 中国直连
 RULE-SET,https://ruleset.skk.moe/List/non_ip/domestic.conf,DIRECT,extended-matching // 国內直连
-RULE-SET,https://ruleset.skk.moe/List/non_ip/direct.conf,DIRECT,extended-matching // 国內直连
+RULE-SET,https://ruleset.skk.moe/List/non_ip/direct.conf,DIRECT,extended-matching
 # Global 全球加速
-RULE-SET,https://ruleset.skk.moe/List/non_ip/global.conf,🌑代理 // Global 全球加速
-RULE-SET,https://ruleset.skk.moe/List/non_ip/global_plus.conf,🌑代理 // Global 全球加速
+RULE-SET,https://ruleset.skk.moe/List/non_ip/global.conf,全球节点,extended-matching // Global 全球加速
+RULE-SET,https://ruleset.skk.moe/List/non_ip/global_plus.conf,全球节点,extended-matching
 # China 中国直连 (IP)
-RULE-SET,https://ruleset.skk.moe/List/ip/domestic.conf,DIRECT // 国內直连(IP)
-RULE-SET,https://ruleset.skk.moe/List/ip/china_ip.conf,DIRECT // 国內直连(IP)
+RULE-SET,https://ruleset.skk.moe/List/ip/domestic.conf,DIRECT
+RULE-SET,https://ruleset.skk.moe/List/ip/china_ip.conf,DIRECT,no-resolve
 
 # SYSTEM 系统
 RULE-SET,SYSTEM,DIRECT // SYSTEM 系统
 
 # ASN China 基于ASN 数据库判断域名和 IP 的归属地
-RULE-SET,https://raw.noy.cat/VirgilClyne/GetSomeFries/main/ruleset/ASN.China.list,DIRECT // 🍟 Fries: 🌐 ASN China
+RULE-SET,https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/ruleset/ASN.China.list,DIRECT
 
 # Surge 的自动 REJECT 保护丢包，防止应用循环请求
 IP-CIDR,0.0.0.0/32,REJECT,no-resolve
@@ -494,20 +468,20 @@ DOMAIN-SUFFIX,internal,DIRECT
 DOMAIN-SUFFIX,private,DIRECT
 DOMAIN-SUFFIX,home,DIRECT
 DOMAIN-SUFFIX,corp,DIRECT
-IP-CIDR,169.254.0.0/16,DIRECT,no-resolve
-IP-CIDR,224.0.0.0/4,DIRECT,no-resolve
-IP-CIDR,240.0.0.0/4,DIRECT,no-resolve
-IP-CIDR,255.255.255.255/32,DIRECT,no-resolve
-IP-CIDR6,fc00::/7,DIRECT,no-resolve
-IP-CIDR6,fd00::/8,DIRECT,no-resolve
-IP-CIDR6,ff00::/8,DIRECT,no-resolve
-IP-CIDR6,ff01::/16,DIRECT,no-resolve
-IP-CIDR6,ff02::/16,DIRECT,no-resolve
-IP-CIDR6,ff03::/16,DIRECT,no-resolve
-IP-CIDR6,ff04::/16,DIRECT,no-resolve
-IP-CIDR6,ff05::/16,DIRECT,no-resolve
-IP-CIDR6,2001:db8::/32,DIRECT,no-resolve
-IP-CIDR6,2002::/16,DIRECT,no-resolve
+IP-CIDR,169.254.0.0/16,DIRECT
+IP-CIDR,224.0.0.0/4,DIRECT
+IP-CIDR,240.0.0.0/4,DIRECT
+IP-CIDR,255.255.255.255/32,DIRECT
+IP-CIDR6,fc00::/7,DIRECT
+IP-CIDR6,fd00::/8,DIRECT
+IP-CIDR6,ff00::/8,DIRECT
+IP-CIDR6,ff01::/16,DIRECT
+IP-CIDR6,ff02::/16,DIRECT
+IP-CIDR6,ff03::/16,DIRECT
+IP-CIDR6,ff04::/16,DIRECT
+IP-CIDR6,ff05::/16,DIRECT
+IP-CIDR6,2001:db8::/32,DIRECT
+IP-CIDR6,2002::/16,DIRECT
 
 # DEST-PORT 端口规则
 OR,((DEST-PORT,25), (DEST-PORT,110), (DEST-PORT,143), (DEST-PORT,465), (DEST-PORT,587)),DIRECT // 邮件服务默认端口
@@ -518,10 +492,10 @@ AND,((OR,((DOMAIN,time-ios.apple.com), (DOMAIN,time.apple.com), (DOMAIN-SUFFIX,p
 # DOMAIN-KEYWORD,-cn,DIRECT
 
 # GEOIP
-# GEOIP,CN,DIRECT // IPinfo
+GEOIP,CN,DIRECT // IPinfo
 
 # Final DNS 查询失败走 Final 规则
-FINAL,漏网之鱼,dns-failed
+FINAL,漏网之鱼,notification-text="漏网之鱼",always-capture=Debug,dns-failed
 
 [Host]
 # --- CUSTOM HOSTS ---
@@ -942,11 +916,11 @@ SSID:"Apple Store" suspend=true
 # 需要 Web 验证登录的 Wi-Fi 网络以及路由器已经科学上网的 Surge 挂起
 
 [MITM]
-skip-server-cert-verify = false
 tcp-connection = true
 h2 = true
 hostname = www.google.cn
 hostname-disabled = gateway.icloud.com, gateway.icloud.com.cn, weather-data.apple.com, buy.itunes.apple.com
+
 
 [Script]
 京东_开屏去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/startup/startup.js
