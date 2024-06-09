@@ -106,7 +106,6 @@ dns-server = 9.9.9.9, 149.112.112.112
 # 加密 DNS 服务器设置
 # encrypted-dns-server = https://dns.quad9.net/dns-query
 
-
 # > 从 /etc/hosts 读取 DNS 记录
 read-etc-hosts = true
 # > 通过代理请求使用本地DNS映射结果
@@ -332,7 +331,6 @@ DOMAIN,boxjs.net,DIRECT
 # > Sub-Store
 DOMAIN-SUFFIX,vercel.app,Auto
 
-
 # Rulesets，规则集（每 24 小时后台自动更新）
 # 规则集包含多条子规则，可以是另一个本地 list 文件，或者是一个 URL
 # 内置了两个规则集：SYSTEM 和 LAN
@@ -495,7 +493,7 @@ AND,((OR,((DOMAIN,time-ios.apple.com), (DOMAIN,time.apple.com), (DOMAIN-SUFFIX,p
 GEOIP,CN,DIRECT // IPinfo
 
 # Final DNS 查询失败走 Final 规则
-FINAL,漏网之鱼,notification-text="漏网之鱼",always-capture=Debug,dns-failed
+FINAL,漏网之鱼,dns-failed,notification-text="漏网之鱼",always-capture=Debug
 
 [Host]
 # --- CUSTOM HOSTS ---
