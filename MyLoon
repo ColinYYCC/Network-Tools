@@ -78,11 +78,6 @@ geoip-url = https://github.com/xream/geoip/releases/latest/download/ipinfo.count
 [Proxy]
 
 [Remote Proxy]
-雨燕 = https://api.yuyan.vin/api/v1/client/subscribe?token=a874a52601935982677067821d315da9,udp=true,fast-open=false,vmess-aead=true,enabled=true
-De-Loon = https://gist.githubusercontent.com/ColinYYCC/3be6923cf4dd1d89f66c66b0db16c962/raw/De-Loon,udp=true,fast-open=false,vmess-aead=true,enabled=true
-特价机场 = https://b3b0549e-160e-495a-a528-cccf5148bc48.372372.xyz/api/v1/client/subscribe?token=6c4fadf4acd9a1c76209e92db8f7bdcd,udp=true,fast-open=true,vmess-aead=true,enabled=false
-炸鱼薯条 = https://hirasawa.chipsfuck.fish/api/v1/client/subscribe?token=aa5b871a0652f2f420f6c74b820588bf,udp=true,fast-open=true,vmess-aead=true,enabled=false
-一元机场 = https://sub3.smallstrawberry.com/api/v1/client/subscribe?token=eb3b0babcb05cd13396a079961cb6a10,udp=true,fast-open=true,vmess-aead=true,enabled=false
 
 
 [Remote Filter]
