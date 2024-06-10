@@ -106,7 +106,7 @@ US = NameRegex, FilterKey = "^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄�
 电报消息 = select,香港节点,美国节点,狮城节点,日本节点,台湾节点,欧洲节点,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png
 推特消息 = select,美国节点,香港节点,狮城节点,日本节点,台湾节点,欧洲节点,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Twitter.png
 AI = select,美国节点,香港节点,狮城节点,日本节点,台湾节点,欧洲节点,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png
-游戏平台 = select,香港节点,美国节点,欧洲节点,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Steam.png
+游戏平台 = select,游戏节点,香港节点,美国节点,欧洲节点,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Steam.png
 Emby = select,香港节点,美国节点,狮城节点,日本节点,台湾节点,欧洲节点,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
 Spotify = select,香港节点,美国节点,狮城节点,日本节点,台湾节点,欧洲节点,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png
 兜底分流 = fallback,全球节点,香港节点,美国节点,狮城节点,日本节点,台湾节点,欧洲节点,DIRECT,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
