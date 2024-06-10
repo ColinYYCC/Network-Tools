@@ -7,7 +7,7 @@
 # 以"#" ";" 和 "//" 开头的行为注释行
 # 本配置主要参考 薯薯（@VirgilClyne）特别感谢！
 # 本配置使用方法：在自动选择将“输入你的机场订阅链接”替换成你的机场提供的订阅网址即可。
-# 更新时间：2024.06.09 03:43
+# 更新时间：2024.06.10 12:56
 
 [General]
 # ---(通用)---
@@ -22,10 +22,8 @@ wifi-assist = false
 
 # > Internet 测试 URL
 internet-test-url = http://connectivitycheck.platform.hicloud.com/generate_204
-# server_check_url= http://www.qualcomm.cn/generate_204
 # > 代理测速 URL
 proxy-test-url = http://latency-test.skk.moe/endpoint
-# proxy-test-url = http://cp.cloudflare.com/generate_204
 # > 代理测试 UDP
 proxy-test-udp = www.apple.com@64.6.64.6
 # > 测试超时（秒）
@@ -43,7 +41,7 @@ disable-geoip-db-auto-update = false
 
 # > IPv6 支持（默认关闭）
 # 是否启动完整的 IPv6 支持 (默认值: false)
-ipv6 = true
+ipv6 = false
 # Surge VIF IPv6 Stack
 # 允许 IPv6 通过 Surge VIF。当希望 Surge 处理连接到 IPv6 地址的原始 TCP 连接时非常有用。可选项：true，false，auto，always
 ipv6-vif = auto
@@ -105,6 +103,7 @@ exclude-simple-hostnames = true
 dns-server = 9.9.9.9, 149.112.112.112
 # 加密 DNS 服务器设置
 # encrypted-dns-server = https://dns.quad9.net/dns-query
+
 
 # > 从 /etc/hosts 读取 DNS 记录
 read-etc-hosts = true
@@ -187,6 +186,7 @@ udp-policy-not-supported-behaviour = REJECT
 [Proxy Group]
 # > External Proxy Group
 
+
 # ------
 
 # > Internal Proxy Group
@@ -216,11 +216,11 @@ Netflix = select, 新加坡, 香港, 台湾, 日本, 美国, 韩国
 # ------
 
 # 节点选择
-节点选择 = select, policy-regex-filter=^(?=.*(.*))(?!.*((?i)回国|校园|游戏|教育|公告|邀请|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|到期|过期|已用|联系|邮箱|工单|群|(\b(GAME|USE|USED|TOTAL|EXPIRE|EMAIL)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$, no-alert=0, hidden=0, include-all-proxies=1, include-other-group=De-Key
+节点选择 = select, policy-regex-filter=^(?=.*(.*))(?!.*((?i)回国|校园|游戏|教育|公告|邀请|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|到期|过期|已用|联系|邮箱|工单|群|(\b(GAME|USE|USED|TOTAL|EXPIRE|EMAIL)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$, no-alert=0, hidden=0, include-all-proxies=0, include-other-group=De-Key
 
-Auto = url-test, policy-regex-filter=^(?=.*(.*))(?!.*((?i)回国|校园|游戏|教育|公告|邀请|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|到期|过期|已用|联系|邮箱|工单|群|(\b(GAME|USE|USED|TOTAL|EXPIRE|EMAIL)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$, interval=3000, tolerance=50, evaluate-before-use=1, no-alert=0, hidden=0, include-all-proxies=0, include-other-group=De-Key
+Auto = url-test, hidden=0, policy-regex-filter=^(?=.*(.*))(?!.*((?i)回国|校园|游戏|教育|公告|邀请|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|到期|过期|已用|联系|邮箱|工单|群|(\b(GAME|USE|USED|TOTAL|EXPIRE|EMAIL)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$, interval=3000, tolerance=50, evaluate-before-use=1, no-alert=0, include-all-proxies=0, include-other-group=De-Key
 
-SmartGroup = smart, policy-regex-filter=^(?=.*(.*))(?!.*((?i)回国|校园|游戏|教育|公告|邀请|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|到期|过期|已用|联系|邮箱|工单|群|(\b(GAME|USE|USED|TOTAL|EXPIRE|EMAIL)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$, policy-path=https://gist.githubusercontent.com/ColinYYCC/3be6923cf4dd1d89f66c66b0db16c962/raw/Rename, update-interval=0, no-alert=0, hidden=0, include-all-proxies=0
+SmartGroup = smart, policy-regex-filter=^(?=.*(.*))(?!.*((?i)回国|校园|游戏|教育|公告|邀请|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|到期|过期|已用|联系|邮箱|工单|群|(\b(GAME|USE|USED|TOTAL|EXPIRE|EMAIL)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$, no-alert=0, hidden=0, include-all-proxies=0, include-other-group=De-Key, policy-path=https://gist.githubusercontent.com/ColinYYCC/3be6923cf4dd1d89f66c66b0db16c962/raw/Rename, update-interval=10800
 # ------
 
 # 地区分流
@@ -247,6 +247,7 @@ PROXY = select, 全球节点, hidden=true
 # --- CUSTOM RULES ---
 # 自定义规则
 # # 您可以在此处插入自定义规则
+DOMAIN,front.fishport.cloud,DIRECT
 
 # 新增内置策略 NO-HYBRID，等价为 NO-HYBRID = direct, hybrid=off
 DOMAIN-SUFFIX,cmbchina.com,NO-HYBRID // 部分服务会校验请求的来源 IP，在开启 hybrid 时有可能因为请求IP变化导致无法正常登录和使用（如招商银行），可使用 NO-HYBRID 对特定请求单独关闭 All Hybrid
@@ -331,13 +332,14 @@ DOMAIN,boxjs.net,DIRECT
 # > Sub-Store
 DOMAIN-SUFFIX,vercel.app,Auto
 
+
 # Rulesets，规则集（每 24 小时后台自动更新）
 # 规则集包含多条子规则，可以是另一个本地 list 文件，或者是一个 URL
 # 内置了两个规则集：SYSTEM 和 LAN
 # 内置规则集的具体内容可在 Surge Mac 设置界面查看
 
 # Unbreak 后续规则修正
-RULE-SET,https://raw.githubusercontent.com/dler-io/Rules/main/Surge/Surge%203/Provider/Special.list,DIRECT,extended-matching // Unbreak 后续规则修正
+RULE-SET,https://github.com/Repcz/Tool/raw/X/Surge/Rules/Direct.list,DIRECT,extended-matching // Unbreak 后续规则修正
 
 # IP归属地更改
 RULE-SET,https://raw.githubusercontent.com/lwd-temp/anti-ip-attribution/main/generated/surge.list,归属地更改,extended-matching // IP归属地
@@ -446,13 +448,13 @@ RULE-SET,https://ruleset.skk.moe/List/ip/china_ip.conf,DIRECT,no-resolve
 RULE-SET,SYSTEM,DIRECT // SYSTEM 系统
 
 # ASN China 基于ASN 数据库判断域名和 IP 的归属地
-RULE-SET,https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/ruleset/ASN.China.list,DIRECT
+# RULE-SET,https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/ruleset/ASN.China.list,DIRECT
 
 # Surge 的自动 REJECT 保护丢包，防止应用循环请求
 IP-CIDR,0.0.0.0/32,REJECT,no-resolve
 
 # Local Area Network 本地局域网
-RULE-SET,LAN,DIRECT,no-resolve // Local Area Network 本地局域网
+RULE-SET,LAN,DIRECT // Local Area Network 本地局域网
 
 DOMAIN-SUFFIX,direct,DIRECT
 DOMAIN-SUFFIX,wpad,DIRECT
@@ -490,10 +492,10 @@ AND,((OR,((DOMAIN,time-ios.apple.com), (DOMAIN,time.apple.com), (DOMAIN-SUFFIX,p
 # DOMAIN-KEYWORD,-cn,DIRECT
 
 # GEOIP
-GEOIP,CN,DIRECT // IPinfo
+GEOIP,CN,DIRECT,no-resolve // IPinfo
 
 # Final DNS 查询失败走 Final 规则
-FINAL,漏网之鱼,dns-failed,notification-text="漏网之鱼",always-capture=Debug
+FINAL,漏网之鱼,notification-text="漏网之鱼",always-capture=Debug,dns-failed
 
 [Host]
 # --- CUSTOM HOSTS ---
@@ -914,11 +916,13 @@ SSID:"Apple Store" suspend=true
 # 需要 Web 验证登录的 Wi-Fi 网络以及路由器已经科学上网的 Surge 挂起
 
 [MITM]
+skip-server-cert-verify = false
 tcp-connection = true
 h2 = true
 hostname = www.google.cn
 hostname-disabled = gateway.icloud.com, gateway.icloud.com.cn, weather-data.apple.com, buy.itunes.apple.com
-
+ca-passphrase = 
+ca-p12 = 
 
 [Script]
 京东_开屏去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/startup/startup.js
