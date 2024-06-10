@@ -6,7 +6,7 @@
 #
 # Loon Version ≥ 3.1.7
 #
-# 最后更新时间: 2024-06-10 15:46
+# 最后更新时间: 2024-06-10 16:02
 #
 # ================
 
@@ -96,31 +96,31 @@ SG = NameRegex, FilterKey = "^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)
 US = NameRegex, FilterKey = "^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
 
 [Proxy Group]
-全球节点 = select,AUTO,香港节点,美国节点,狮城节点,日本节点,台湾节点,欧洲节点,img-url = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/Loon_9.png
+全球节点 = select,AUTO,香港节点,美国节点,狮城节点,日本节点,台湾节点,欧洲节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/Loon_9.png
 
 # 分流策略组
-国外网站 = select,香港节点,美国节点,狮城节点,日本节点,台湾节点,欧洲节点,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png
-国际媒体 = select,狮城节点,香港节点,美国节点,日本节点,台湾节点,欧洲节点,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
-微软服务 = select,香港节点,美国节点,狮城节点,日本节点,台湾节点,欧洲节点,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Microsoft.png
-谷歌服务 = select,香港节点,美国节点,狮城节点,日本节点,台湾节点,欧洲节点,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
-电报消息 = select,香港节点,美国节点,狮城节点,日本节点,台湾节点,欧洲节点,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png
-推特消息 = select,美国节点,香港节点,狮城节点,日本节点,台湾节点,欧洲节点,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Twitter.png
-AI = select,美国节点,香港节点,狮城节点,日本节点,台湾节点,欧洲节点,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png
-游戏平台 = select,游戏节点,香港节点,美国节点,欧洲节点,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Steam.png
-Emby = select,香港节点,美国节点,狮城节点,日本节点,台湾节点,欧洲节点,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
-Spotify = select,香港节点,美国节点,狮城节点,日本节点,台湾节点,欧洲节点,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png
-兜底分流 = fallback,全球节点,香港节点,美国节点,狮城节点,日本节点,台湾节点,欧洲节点,DIRECT,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
+国外网站 = select,香港节点,美国节点,狮城节点,日本节点,台湾节点,欧洲节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png
+国际媒体 = select,狮城节点,香港节点,美国节点,日本节点,台湾节点,欧洲节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
+微软服务 = select,香港节点,美国节点,狮城节点,日本节点,台湾节点,欧洲节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Microsoft.png
+谷歌服务 = select,香港节点,美国节点,狮城节点,日本节点,台湾节点,欧洲节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
+电报消息 = select,香港节点,美国节点,狮城节点,日本节点,台湾节点,欧洲节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png
+推特消息 = select,美国节点,香港节点,狮城节点,日本节点,台湾节点,欧洲节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Twitter.png
+AI = select,美国节点,香港节点,狮城节点,日本节点,台湾节点,欧洲节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png
+游戏平台 = select,游戏节点,香港节点,美国节点,欧洲节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Steam.png
+Emby = select,香港节点,美国节点,狮城节点,日本节点,台湾节点,欧洲节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
+Spotify = select,香港节点,美国节点,狮城节点,日本节点,台湾节点,欧洲节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png
+兜底分流 = fallback,全球节点,香港节点,美国节点,狮城节点,日本节点,台湾节点,欧洲节点,DIRECT,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
 
 # 地区策略组
-AUTO = url-test,All,interval = 300,tolerance = 30,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Server.png
-游戏节点 = load-balance,Game,interval = 300,max-timeout = 3000,algorithm = pcc,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png
-香港节点 = load-balance,HK,interval = 300,max-timeout = 3000,algorithm = pcc,img-url = https://raw.githubusercontent.com/c/Qure/master/IconSet/Color/Hong_Kong.png
-美国节点 = load-balance,US,interval = 300,max-timeout = 3000,algorithm = pcc,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
-狮城节点 = load-balance,SG,interval = 300,max-timeout = 3000,algorithm = pcc,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
-日本节点 = load-balance,JP,interval = 300,max-timeout = 3000,algorithm = pcc,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
-韩国节点 = load-balance,KR,interval = 300,max-timeout = 3000,algorithm = pcc,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
-台湾节点 = load-balance,TW,interval = 300,max-timeout = 3000,algorithm = pcc,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China.png
-欧洲节点 = load-balance,EU,interval = 300,max-timeout = 3000,algorithm = pcc,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/European_Union.png
+AUTO = url-test,All,url = http://latency-test.skk.moe/endpoint,interval = 300,tolerance = 30,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Server.png
+游戏节点 = load-balance,Game,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,algorithm = pcc,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png
+香港节点 = load-balance,HK,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,algorithm = pcc,img-url = https://raw.githubusercontent.com/c/Qure/master/IconSet/Color/Hong_Kong.png
+美国节点 = load-balance,US,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,algorithm = pcc,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
+狮城节点 = load-balance,SG,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,algorithm = pcc,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
+日本节点 = load-balance,JP,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,algorithm = pcc,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
+韩国节点 = load-balance,KR,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,algorithm = pcc,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
+台湾节点 = load-balance,TW,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,algorithm = pcc,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China.png
+欧洲节点 = load-balance,EU,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,algorithm = pcc,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/European_Union.png
 
 [Rule]
 FINAL,兜底分流
