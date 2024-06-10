@@ -84,30 +84,32 @@ De-Loon = https://gist.githubusercontent.com/ColinYYCC/3be6923cf4dd1d89f66c66b0d
 炸鱼薯条 = https://hirasawa.chipsfuck.fish/api/v1/client/subscribe?token=aa5b871a0652f2f420f6c74b820588bf,udp=true,fast-open=true,vmess-aead=true,enabled=false
 一元机场 = https://sub3.smallstrawberry.com/api/v1/client/subscribe?token=eb3b0babcb05cd13396a079961cb6a10,udp=true,fast-open=true,vmess-aead=true,enabled=false
 
+
 [Remote Filter]
-All = NameRegex, FilterKey = "."
-HK = NameRegex, FilterKey = "(?i)🇭🇰|香港|(\b(HK|Hong)\b)"
-US = NameRegex, FilterKey = "(?i)🇺🇸|美国|洛杉矶|圣何塞|(\b(US|United States)\b)"
-SG = NameRegex, FilterKey = "(?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\b)"
-JP = NameRegex, FilterKey = "(?i)🇯🇵|日本|东京|(\b(JP|Japan)\b)"
-TW = NameRegex, FilterKey = "(?i)🇨🇳|🇹🇼|台湾|(\b(TW|Tai|Taiwan)\b)"
-EU = NameRegex, FilterKey = "🇬🇧|🇫🇷|🇳🇱|🇮🇸|🇩🇪|🇺🇦|🇨🇭|🇪🇺"
+Game = NameRegex, FilterKey = "^(?=.*((?i)游戏|🎮|(\b(GAME)\b)))(?!.*((?i)回国|校园)).*$"
+All = NameRegex, FilterKey = "^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|(\b(USE|USED|TOTAL|EXPIRE|EMAIL|Panel)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$"
+HK = NameRegex, FilterKey = "^(?=.*((?i)🇭🇰|香港|(\b(HK|Hong)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+TW = NameRegex, FilterKey = "^(?=.*((?i)🇹🇼|台湾|(\b(TW|Tai|Taiwan)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+JP = NameRegex, FilterKey = "^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+KR = NameRegex, FilterKey = "^(?=.*((?i)🇰🇷|韩国|韓|首尔|(\b(KR|Korea)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+SG = NameRegex, FilterKey = "^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+US = NameRegex, FilterKey = "^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
 
 [Proxy Group]
 全球节点 = select,AUTO,香港节点,美国节点,狮城节点,日本节点,台湾节点,欧洲节点,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/Loon_9.png
 
 # 分流策略组
 国外网站 = select,香港节点,美国节点,狮城节点,日本节点,台湾节点,欧洲节点,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png
-国际媒体 = select,香港节点,美国节点,狮城节点,日本节点,台湾节点,欧洲节点,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
+国际媒体 = select,狮城节点,香港节点,美国节点,日本节点,台湾节点,欧洲节点,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
 微软服务 = select,香港节点,美国节点,狮城节点,日本节点,台湾节点,欧洲节点,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Microsoft.png
 谷歌服务 = select,香港节点,美国节点,狮城节点,日本节点,台湾节点,欧洲节点,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
 电报消息 = select,香港节点,美国节点,狮城节点,日本节点,台湾节点,欧洲节点,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png
-推特消息 = select,香港节点,美国节点,狮城节点,日本节点,台湾节点,欧洲节点,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Twitter.png
-AI = select,香港节点,美国节点,狮城节点,日本节点,台湾节点,欧洲节点,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png
+推特消息 = select,美国节点,香港节点,狮城节点,日本节点,台湾节点,欧洲节点,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Twitter.png
+AI = select,美国节点,香港节点,狮城节点,日本节点,台湾节点,欧洲节点,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png
 游戏平台 = select,香港节点,美国节点,欧洲节点,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Steam.png
 Emby = select,香港节点,美国节点,狮城节点,日本节点,台湾节点,欧洲节点,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
 Spotify = select,香港节点,美国节点,狮城节点,日本节点,台湾节点,欧洲节点,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png
-兜底分流 = select,全球节点,香港节点,美国节点,狮城节点,日本节点,台湾节点,欧洲节点,DIRECT,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
+兜底分流 = fallback,全球节点,香港节点,美国节点,狮城节点,日本节点,台湾节点,欧洲节点,DIRECT,url = http://cp.cloudflare.com/generate_204,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
 
 # 地区策略组
 AUTO = url-test,All,url = http://cp.cloudflare.com/generate_204,interval = 300,tolerance = 30,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Server.png
@@ -115,6 +117,7 @@ AUTO = url-test,All,url = http://cp.cloudflare.com/generate_204,interval = 300,t
 美国节点 = load-balance,US,url = http://cp.cloudflare.com/generate_204,interval = 300,max-timeout = 3000,algorithm = pcc,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
 狮城节点 = load-balance,SG,url = http://cp.cloudflare.com/generate_204,interval = 300,max-timeout = 3000,algorithm = pcc,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png
 日本节点 = load-balance,JP,url = http://cp.cloudflare.com/generate_204,interval = 300,max-timeout = 3000,algorithm = pcc,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
+韩国节点 = load-balance,KR,url = http://cp.cloudflare.com/generate_204,interval = 300,max-timeout = 3000,algorithm = pcc,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
 台湾节点 = load-balance,TW,url = http://cp.cloudflare.com/generate_204,interval = 300,max-timeout = 3000,algorithm = pcc,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China.png
 欧洲节点 = load-balance,EU,url = http://cp.cloudflare.com/generate_204,interval = 300,max-timeout = 3000,algorithm = pcc,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/European_Union.png
 
