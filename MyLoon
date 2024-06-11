@@ -11,8 +11,8 @@
 # ================
 
 [General]
-#skip-proxy = 127.0.0.1, 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, 100.64.0.0/10, 17.0.0.0/8, localhost, *.local, *.crashlytics.com
-#bypass-tun = 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12
+skip-proxy = 127.0.0.1, 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, 100.64.0.0/10, 17.0.0.0/8, localhost, *.local, *.crashlytics.com
+bypass-tun = 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12
 
 # ---(DNS 服务器)---
 # DNS 服务器 (如无必要不建议使用 DNS over HTTPS)
@@ -55,7 +55,7 @@ resource-parser = https://gitlab.com/sub-store/Sub-Store/-/releases/permalink/la
 ssid-trigger = "default":rule, "cellular":rule,"SI":DIRECT
 
 # > 以下配置的域名不会使用fakeip进行映射
-#real-ip = *.srv.nintendo.net, *.stun.playstation.net, xbox.*.microsoft.com, *.xboxlive.com*.srv.nintendo.net, *.stun.playstation.net, xbox.*.microsoft.com, *.xboxlive.com, *.battlenet.com.cn, *.battlenet.com, *.blzstatic.cn, *.battle.net
+real-ip = *.srv.nintendo.net, *.stun.playstation.net, xbox.*.microsoft.com, *.xboxlive.com*.srv.nintendo.net, *.stun.playstation.net, xbox.*.microsoft.com, *.xboxlive.com, *.battlenet.com.cn, *.battlenet.com, *.blzstatic.cn, *.battle.net
 
 # > interface-mode 指定流量使用哪个网络接口进行转发，目前包含三种模式:
 # Auto: 系统自动分配
