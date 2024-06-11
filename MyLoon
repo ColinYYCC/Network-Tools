@@ -11,8 +11,8 @@
 # ================
 
 [General]
-#skip-proxy = localhost,*.local,passenger.t3go.cn,e.crashlytics.com,captive.apple.com,seed-sequoia.siri.apple.com,sequoia.siri.apple.com,sequoia.apple.com,app.yinxiang.com,injections.adguard.org,local.adguard.org,cable.auth.com,*.id.ui.direct,www.baidu.com,yunbusiness.ccb.com,wxh.wo.cn,gate.lagou.com,www.abchina.com.cn,10.0.0.0/8,100.64.0.0/10,127.0.0.1/32,169.254.0.0/16,172.16.0.0/12,192.168.0.0/16,192.168.122.1/32,193.168.0.1/32,224.0.0.0/4,240.0.0.0/4,255.255.255.255/32,::1/128,fc00::/7,fd00::/8,fe80::/10,ff00::/8,2001::/32,2001:db8::/32,2002::/16,::ffff:0:0:0:0/1,::ffff:128:0:0:0/1
-#bypass-tun = 198.51.100.0/24,203.0.113.0/24,224.0.0.0/4,239.255.255.250/32,240.0.0.0/4,255.255.255.255/32
+#skip-proxy = 127.0.0.1, 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12, 100.64.0.0/10, 17.0.0.0/8, localhost, *.local, *.crashlytics.com
+#bypass-tun = 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12
 
 # ---(DNS 服务器)---
 # DNS 服务器 (如无必要不建议使用 DNS over HTTPS)
@@ -55,7 +55,7 @@ resource-parser = https://gitlab.com/sub-store/Sub-Store/-/releases/permalink/la
 ssid-trigger = "default":rule, "cellular":rule,"SI":DIRECT
 
 # > 以下配置的域名不会使用fakeip进行映射
-#real-ip = localhost,*.local,passenger.t3go.cn,e.crashlytics.com,captive.apple.com,seed-sequoia.siri.apple.com,sequoia.siri.apple.com,sequoia.apple.com,app.yinxiang.com,injections.adguard.org,local.adguard.org,cable.auth.com,*.id.ui.direct,www.baidu.com,yunbusiness.ccb.com,wxh.wo.cn,gate.lagou.com,www.abchina.com.cn,10.0.0.0/8,100.64.0.0/10,127.0.0.1/32,169.254.0.0/16,172.16.0.0/12,192.168.0.0/16,192.168.122.1/32,193.168.0.1/32,224.0.0.0/4,240.0.0.0/4,255.255.255.255/32,::1/128,fc00::/7,fd00::/8,fe80::/10,ff00::/8,2001::/32,2001:db8::/32,2002::/16,::ffff:0:0:0:0/1,::ffff:128:0:0:0/1
+#real-ip = *.srv.nintendo.net, *.stun.playstation.net, xbox.*.microsoft.com, *.xboxlive.com*.srv.nintendo.net, *.stun.playstation.net, xbox.*.microsoft.com, *.xboxlive.com, *.battlenet.com.cn, *.battlenet.com, *.blzstatic.cn, *.battle.net
 
 # > interface-mode 指定流量使用哪个网络接口进行转发，目前包含三种模式:
 # Auto: 系统自动分配
