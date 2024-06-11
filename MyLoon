@@ -57,6 +57,11 @@ ssid-trigger = "default":rule, "cellular":rule,"SI":DIRECT
 
 # > 以下配置的域名不会使用fakeip进行映射
 real-ip = *.srv.nintendo.net, *.stun.playstation.net, xbox.*.microsoft.com, *.xboxlive.com*.srv.nintendo.net, *.stun.playstation.net, xbox.*.microsoft.com, *.xboxlive.com, *.battlenet.com.cn, *.battlenet.com, *.blzstatic.cn, *.battle.net
+# real-ip =  *.126.net, *.blzstatic.cn, *.cmbchina.com, *.cmpassport.com, *.icitymobile.mobi, *.id.ui.direct, *.jegotrip.com.cn, *.kuwo.cn, *.lan, *.logon.battle.net, *.logon.battlenet.com.cn, *.mcdn.bilivideo.cn, *.msftconnecttest.com, *.msftncsi.com, *.music.163.com, *.music.migu.cn, *.ntp.org.cn, *.pingan.com.cn, *.pool.ntp.org, *.srv.nintendo.net, *.stun.playstation.net, *.xboxlive.com, *.xiami.com, *.y.qq.com, amobile.music.tc.qq.com, 
+api.joox.com, api-jooxtt.sanook.com, aqqmusic.tc.qq.com, auth.wosms.cn, cable.auth.com, DC._msDCS.*.*, detectportal.firefox.com, dl.stream.qqmusic.qq.com, GC._msDCS.*.*, global.stun.twilio.com, global.turn.twilio.com, id6.me, isure.stream.qqmusic.qq.com, joox.com, 
+localhost.*.qq.com, localhost.*.weixin.qq.com, mdn.open.wo.cn, mobileoc.music.tc.qq.com, music.163.com, music.migu.cn, music.taihe.com, musicapi.taihe.com, network-test.debian.org, ntp.*.com, ntp?.*.com, open.e.189.cn, PDC._msDCS.*.*, pool.ntp.org, proxy.golang.org, 
+resolver1.opendns.com, songsearch.kugou.com, speedtest.cros.wr.pvp.netstreamoc.music.tc.qq.com, stun.*, time.*.com, time.*.edu.cn, time.*.gov, time?.*.com, trackercdn.kugou.com, xbox.*.microsoft.com, y.qq.com, 
+
 
 # > interface-mode 指定流量使用哪个网络接口进行转发，目前包含三种模式:
 # Auto: 系统自动分配
