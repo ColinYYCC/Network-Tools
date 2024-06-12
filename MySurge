@@ -10,7 +10,7 @@
 # 更新时间：2024.06.10 12:56
 
 [General]
-# ---(通用)---
+# --- 通用 ---
 # 通用设置
 # > 警告信息
 # 不显示警告信息
@@ -47,7 +47,7 @@ ipv6 = false
 ipv6-vif = auto
 # ------
 
-# ---(Wi-Fi 访问)---
+# --- Wi-Fi 访问 ---
 # > 允许 Wi-Fi 访问 (仅 iOS，若允许远程访问将「false」改为「true」)
 allow-wifi-access = true
 # > 允许个人热点访问 (仅 iOS，若允许个人热点访问将「false」改为「true」)
@@ -66,13 +66,13 @@ http-listen = 0.0.0.0:6152
 socks5-listen = 0.0.0.0:6153
 # ------
 
-# ---(远程控制器)---
+# --- 远程控制器 ---
 # 允许 Surge 请求查看器或 Surge CLI 进行管理控制。
 # 如果允许由 Wi-Fi 控制则将「127.0.0.1」修改为「0.0.0.0」
 external-controller-access = Colin@0.0.0.0:6170
 # ------
 
-# ---(HTTP API)---
+# --- HTTP API ---
 # 仅Surge iOS 4.4.0 和 Surge Mac 4.0.0 以上版本支持通过 HTTP API 控制 Surge。
 http-api = Colin@0.0.0.0:6171
 http-api-tls = false
@@ -81,7 +81,7 @@ http-api-tls = false
 http-api-web-dashboard = true
 # ------
 
-# ---(兼容性)---
+# --- 兼容性 ---
 # > 兼容模式 (仅 iOS)
 compatibility-mode = 0
 # > 跳过代理
@@ -90,23 +90,21 @@ compatibility-mode = 0
 # skip-proxy = 10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 162.14.0.0/16, 162.159.192.0/24, 162.159.193.0/24, 162.159.195.0/24, 172.16.0.0/12, 192.168.0.0/16, 211.99.96.0/19, fc00::/7, fe80::/10, localhost, *.local, captive.apple.com, passenger.t3go.cn, *.ccb.com, wxh.wo.cn, *.abcchina.com, *.abcchina.com.cn
 skip-proxy = localhost, *.local, passenger.t3go.cn, e.crashlytics.com, captive.apple.com, app.yinxiang.com, injections.adguard.org, local.adguard.org, cable.auth.com, www.baidu.com, yunbusiness.ccb.com,*.bankcomm.com,*.ccb.com,*.boc.cn, 10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/12, 192.168.0.0/16, 224.0.0.0/3, ::1/128, fc00::/7, fd00::/8, fe80::/10, ff00::/8, 2001::/32, 2001:db8::/32, 2002::/16, ::ffff:0:0:0:0/1, ::ffff:128:0:0:0/1
 
-
 # 代理接管优先 （原来的兼容性已经移除）
 # > 排除简单主机名
 exclude-simple-hostnames = true
 
-# ---(实验性功能)---
+# --- 实验性功能 ---
 # > Network framwork
 # network-framework = false
 # ------
 
-# ---(DNS 服务器)---
+# --- DNS 服务器 ---
 # > DNS 服务器 (如无必要不建议使用 DNS over HTTPS)
 # 传统 DNS 服务器设置
 dns-server = 9.9.9.9, 149.112.112.112
 # 加密 DNS 服务器设置
 # encrypted-dns-server = https://dns.quad9.net/dns-query
-
 
 # > 从 /etc/hosts 读取 DNS 记录
 read-etc-hosts = true
@@ -120,18 +118,18 @@ encrypted-dns-follow-outbound-mode = true
 encrypted-dns-skip-cert-verification = false
 # ------
 
-# SSID 组策略
+# > SSID 组策略
 # 当 Wi-Fi 不是首选网络时 SSID 组策略使用默认策略（仅 macOS 版）
 use-default-policy-if-wifi-not-primary = false
 # ------
 
-# 其它
+# > 其它
 # show-primary-interface-changed-notification = true
 # proxy-settings-interface = Primary Interface (Auto)
 # menu-bar-show-speed = false
 # ------
 
-# ---(高级)---
+# --- 高级 ---
 # 高级设置
 
 # > 日志级别
@@ -144,7 +142,7 @@ show-error-page-for-reject = true
 # > Always Real IP Hosts
 # 当 Surge VIF 处理 DNS 问题时，此选项要求 Surge 返回一个真正的 IP 地址，而不是一个假 IP 地址。
 # DNS 数据包将被转发到上游 DNS 服务器。
-always-real-ip = *.lan, cable.auth.com, *.msftconnecttest.com, *.msftncsi.com, network-test.debian.org, detectportal.firefox.com, resolver1.opendns.com, *.srv.nintendo.net, *.stun.playstation.net, xbox.*.microsoft.com, *.xboxlive.com, stun.*, localhost.*.qq.com, *.logon.battlenet.com.cn, *.logon.battle.net, *.blzstatic.cn, music.163.com, *.music.163.com, *.126.net, musicapi.taihe.com, music.taihe.com, songsearch.kugou.com, trackercdn.kugou.com, *.kuwo.cn, api-jooxtt.sanook.com, api.joox.com, joox.com, y.qq.com, *.y.qq.com, streamoc.music.tc.qq.com, mobileoc.music.tc.qq.com, isure.stream.qqmusic.qq.com, dl.stream.qqmusic.qq.com, aqqmusic.tc.qq.com, amobile.music.tc.qq.com, *.xiami.com, *.music.migu.cn, music.migu.cn, proxy.golang.org, *.mcdn.bilivideo.cn, *.cmpassport.com, id6.me, open.e.189.cn, mdn.open.wo.cn, auth.wosms.cn, *.jegotrip.com.cn, *.icitymobile.mobi, *.pingan.com.cn, *.cmbchina.com, pool.ntp.org, *.pool.ntp.org, ntp.*.com, time.*.com, ntp?.*.com, time?.*.com, time.*.gov, time.*.edu.cn, *.ntp.org.cn, PDC._msDCS.*.*, DC._msDCS.*.*, GC._msDCS.*.*, speedtest.cros.wr.pvp.net
+always-real-ip = *.lan, *.localdomain, *.localhost, *.home.arpa, msftncsi.com, msftconnecttest.com, *.msftncsi.com, *.msftconnecttest.com, network-test.debian.org, detectportal.firefox.com, resolver1.opendns.com, *.ipv6.microsoft.com, *.srv.nintendo.net, *.stun.playstation.net, xbox.*.microsoft.com, *.xboxlive.com, turn.twilio.com, *.turn.twilio.com, stun.twilio.com, *.stun.twilio.com, stun.syncthing.net, stun.*.*, stun.*.*.*, controlplane.tailscale.com, time.*.com, time.*.gov, time.*.edu.cn, time.*.apple.com, time1.*.com, time2.*.com, time3.*.com, time4.*.com, time5.*.com, time6.*.com, time7.*.com, time8.*.com, time9.*.com, ntp.*.com, ntp1.*.com, ntp2.*.com, ntp3.*.com, ntp4.*.com, ntp5.*.com, ntp6.*.com, ntp7.*.com, time1.*.com, time2.*.com, time3.*.com, time4.*.com, time5.*.com, time6.*.com, time7.*.com, time8.*.com, ti me9.*.com, *.time.edu.cn, *.ntp.org.cn, *.pool.ntp.org, time1.cloud.tencent.com, local.adguard.org, injections.adguard.org, localhost.ptlogin2.qq.com, localhost.sec.qq.com, localhost.work.weixin.qq.com, PDC._msDCS.*.*, DC._msDCS.*.*, GC._msDCS.*.*, *.battlenet.com.cn, *.blzstatic.cn, *.battlenet.com
 
 # Hijack DNS
 # 默认情况下，Surge 只返回发送到 Surge DNS 地址的 DNS 查询的假 IP 地址(198.18.0.2)。
@@ -227,19 +225,19 @@ SmartGroup = smart, policy-regex-filter=^(?=.*(.*))(?!.*((?i)回国|校园|游�
 # ------
 
 # 地区分流
-香港 = load-balance, policy-regex-filter=^(?=.*((?i)🇭🇰|香港|(\b(HK|Hong)\b))).*$, no-alert=0, hidden=1, include-all-proxies=0, include-other-group=De-Key, persistent=1
+香港 = load-balance, policy-regex-filter=^(?=.*((?i)🇭🇰|香港|(\b(HK|Hong)\b))).*$, no-alert=0, hidden=1, include-all-proxies=0, persistent=1
 
-澳门 = load-balance, policy-regex-filter=^(?=.*((?i)🇲🇴|澳门|MAC)).*$, no-alert=0, hidden=1, include-all-proxies=0, include-other-group=De-Key, persistent=1
+澳门 = load-balance, policy-regex-filter=^(?=.*((?i)🇲🇴|澳门|MAC)).*$, no-alert=0, hidden=1, include-all-proxies=0, persistent=1
 
-台湾 = load-balance, policy-regex-filter=^(?=.*((?i)🇼🇸|台湾|(\b(TW|Tai|Taiwan|TWN)\b))).*$, no-alert=0, hidden=1, include-all-proxies=0, include-other-group=De-Key, persistent=1
+台湾 = load-balance, policy-regex-filter=^(?=.*((?i)🇼🇸|台湾|(\b(TW|Tai|Taiwan|TWN)\b))).*$, no-alert=0, hidden=1, include-all-proxies=0, persistent=1
 
-新加坡 = load-balance, policy-regex-filter=^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|Singapore|SGP)\b))).*$, no-alert=0, hidden=1, include-all-proxies=0, include-other-group=De-Key, persistent=1
+新加坡 = load-balance, policy-regex-filter=^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|Singapore|SGP)\b))).*$, no-alert=0, hidden=1, include-all-proxies=0, persistent=1
 
-日本 = load-balance, policy-regex-filter=^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan|JPN)\b))).*$, no-alert=0, hidden=1, include-all-proxies=0, include-other-group=De-Key, persistent=1
+日本 = load-balance, policy-regex-filter=^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan|JPN)\b))).*$, no-alert=0, hidden=1, include-all-proxies=0, persistent=1
 
-美国 = load-balance, policy-regex-filter=^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States|USA)\b))).*$, no-alert=0, hidden=1, include-all-proxies=0, include-other-group=De-Key, persistent=1
+美国 = load-balance, policy-regex-filter=^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States|USA)\b))).*$, no-alert=0, hidden=1, include-all-proxies=0, persistent=1
 
-韩国 = load-balance, policy-regex-filter=^(?=.*((?i)🇰🇷|韩|韓|首尔|(/b(KR|Korea)/b))).*$, no-alert=0, hidden=1, include-all-proxies=0, include-other-group=De-Key, persistent=1
+韩国 = load-balance, policy-regex-filter=^(?=.*((?i)🇰🇷|韩|韓|首尔|(/b(KR|Korea)/b))).*$, no-alert=0, hidden=1, include-all-proxies=0, persistent=1
 # ------
 
 # 兼容性修复
