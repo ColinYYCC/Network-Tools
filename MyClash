@@ -205,10 +205,7 @@ rule-providers:
 
   # 代理网站
   ProxyGFW: {<<: *c, path: ./rule-providers/ProxyGFW.list,  url: https://github.com/Repcz/Tool/raw/X/Clash/Rules/ProxyGFW.list}
-  
-
     
- 
 rules:
   #- SCRIPT,quic,REJECT
   #- RULE-SET,Download,DIRECT
