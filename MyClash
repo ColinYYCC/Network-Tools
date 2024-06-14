@@ -76,10 +76,10 @@ dns:
   # fakeip 过滤，以下地址不会下发 fakeip 映射用于连接
   fake-ip-filter: ['*.lan','*.direct', cable.auth.com, '*.msftconnecttest.com', '*.msftncsi.com', network-test.debian.org, detectportal.firefox.com, resolver1.opendns.com, '*.srv.nintendo.net', '*.stun.playstation.net', xbox.*.microsoft.com, '*.xboxlive.com', stun.*, global.turn.twilio.com, global.stun.twilio.com, app.yinxiang.com, injections.adguard.org, local.adguard.org, cable.auth.com, localhost.*.qq.com, localhost.*.weixin.qq.com, '*.logon.battlenet.com.cn', '*.logon.battle.net', '*.blzstatic.cn', music.163.com, '*.music.163.com', '*.126.net', musicapi.taihe.com, music.taihe.com, songsearch.kugou.com, trackercdn.kugou.com, '*.kuwo.cn', api-jooxtt.sanook.com, api.joox.com, joox.com, y.qq.com, '*.y.qq.com', streamoc.music.tc.qq.com, mobileoc.music.tc.qq.com, isure.stream.qqmusic.qq.com, dl.stream.qqmusic.qq.com, aqqmusic.tc.qq.com, amobile.music.tc.qq.com, '*.xiami.com', '*.music.migu.cn', music.migu.cn, proxy.golang.org, '*.mcdn.bilivideo.cn', '*.cmpassport.com', id6.me, open.e.189.cn, mdn.open.wo.cn, opencloud.wostore.cn, auth.wosms.cn, '*.jegotrip.com.cn', '*.icitymobile.mobi', '*.pingan.com.cn', '*.cmbchina.com', '*.10099.com.cn', pool.ntp.org, '*.pool.ntp.org', ntp.*.com, time.*.com, 'ntp?.*.com', 'time?.*.com', time.*.gov, time.*.edu.cn, '*.ntp.org.cn', PDC._msDCS.*.*, DC._msDCS.*.*, GC._msDCS.*.*]
   #默认的域名解析服务器
-  nameserver: [9.9.9.9， 149.112.112.112， quic://223.5.5.5, quic://223.6.6.6, https://1.12.12.12/dns-query, https://120.53.53.53/dns-query]                     
+  nameserver: [9.9.9.9, 149.112.112.112, quic://223.5.5.5, quic://223.6.6.6, https://1.12.12.12/dns-query, https://120.53.53.53/dns-query]                     
     
 # 策略组引用相关参数
-pg: &pg {type: select, proxies: [手动切换, 香港节点, 美国节点, 狮城节点, 日本节点, 台湾节点, 欧洲节点, DIRECT]}
+pg: &pg {type: select, proxies: [手动切换, 香港节点, 美国节点, 狮城节点, 日本节点, 台湾节点, 韩国节点, DIRECT]}
 # 订阅更新和延迟测试相关参数
 p: &p {type: http, interval: 86400, health-check: {enable: true, url: http://latency-test.skk.moe/endpoint, interval: 1800}}
 # 自动选择策略组：选取延迟最低节点
@@ -106,7 +106,7 @@ proxy-groups:
 
   #分流分组
 
-  - {name: 手动切换, type: select, include-all: true, proxies: [All, 香港节点, 美国节点, 狮城节点, 日本节点, 台湾节点, 欧洲节点, DIRECT], icon: https://github.com/clash-verge-rev/clash-verge-rev/raw/main/src-tauri/icons/icon.png}
+  - {name: 手动切换, type: select, include-all: true, proxies: [All, 香港节点, 美国节点, 狮城节点, 日本节点, 台湾节点, 韩国节点, DIRECT], icon: https://github.com/clash-verge-rev/clash-verge-rev/raw/main/src-tauri/icons/icon.png}
 
   - {name: 国外网站, <<: *pg, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png}
 
@@ -138,8 +138,6 @@ proxy-groups:
 
   - {name: 香港节点, <<: *url-test, filter: "(?i)🇭🇰|香港|(\b(HK|Hong)\b)", icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png}
 
-  - {name: 香港节点, <<: *url-test, filter: "(?i)🇭🇰|香港|(\b(HK|Hong)\b)", icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png}
-
   - {name: 美国节点, <<: *url-test, filter: "(?i)🇺🇸|美国|洛杉矶|圣何塞|(\b(US|United States)\b)", icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png}
 
   - {name: 狮城节点, <<: *url-test, filter: "(?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\b)", icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png}
@@ -148,7 +146,7 @@ proxy-groups:
 
   - {name: 台湾节点, <<: *url-test, filter: "(?i)🇨🇳|🇹🇼|台湾|(\b(TW|Tai|Taiwan)\b)", icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China.png}
 
-  - {name: 欧洲节点, <<: *url-test, filter: "🇬🇧|🇫🇷|🇳🇱|🇮🇸|🇩🇪|🇺🇦|🇨🇭|🇪🇺", icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/European_Union.png}
+  - {name: 韩国节点, <<: *url-test, filter: "^(?=.*((?i)🇰🇷|韩国|韓|首尔|(\b(KR|Korea)\b)))", icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png}
 
 rule-providers:
 
@@ -165,8 +163,8 @@ rule-providers:
   sogouinput: {<<: *c, path: ./sukkaw_ruleset/sogouinput.txt, url: https://ruleset.skk.moe/Clash/non_ip/sogouinput.txt}
 
   # 常见静态 CDN
-  cdn_domainset: {<<: *c, path: ./sukkaw_ruleset/cdn_domainset.txt, url: https://ruleset.skk.moe/Clash/domainset/cdn.txt}
-  cdn_non_ip: {<<: *c, path: ./sukkaw_ruleset/cdn_non_ip.txt, url: https://ruleset.skk.moe/Clash/non_ip/cdn.txt}
+  cdn_domainset: {<<: *d, path: ./sukkaw_ruleset/cdn_domainset.txt, url: https://ruleset.skk.moe/Clash/domainset/cdn.txt}
+  cdn_non_ip: {<<: *d, path: ./sukkaw_ruleset/cdn_non_ip.txt, url: https://ruleset.skk.moe/Clash/non_ip/cdn.txt}
 
   # 苹果服务
   Apple: {<<: *c, path: ./rule-providers/Apple.list,  url: https://github.com/Repcz/Tool/raw/X/Clash/Rules/Apple.list}
