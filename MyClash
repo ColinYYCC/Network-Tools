@@ -231,7 +231,7 @@ rules:
   - RULE-SET,ProxyMedia,国际媒体
   - RULE-SET,ProxyGFW,国外网站
   - RULE-SET,ChinaDomain,DIRECT
-  - RULE-SET,china_ip,DIRECT,no-resolve
+  - RULE-SET,china_ip,DIRECT
   - RULE-SET,Lan,DIRECT
   - GEOIP,CN,DIRECT,no-resolve
   - MATCH,兜底分流
