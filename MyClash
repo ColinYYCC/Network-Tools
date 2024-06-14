@@ -20,7 +20,7 @@ mode: rule
 # 设置日志输出级别: silent/error/warning/info/debug
 log-level: info
 # 全局 TLS 指纹
-global-client-fingerprint: brave
+global-client-fingerprint: chrome
 # 匹配所有进程（always/strict/off）
 find-process-mode: strict
 
