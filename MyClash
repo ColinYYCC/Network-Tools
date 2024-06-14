@@ -214,7 +214,7 @@ rule-providers:
 rules:
   #- SCRIPT,quic,REJECT
   #- RULE-SET,Download,DIRECT
-  - RULE-SET,AD,
+  - RULE-SET,AD,广告拦截
   - RULE-SET,sogouinput,广告拦截
   - RULE-SET,cdn_domainset,兜底分流
   - RULE-SET,cdn_non_ip,兜底分流
