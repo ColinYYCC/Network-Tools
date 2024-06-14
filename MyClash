@@ -57,7 +57,7 @@ tun:
   # 可选： system/gvisor/mixed；
   stack: mixed
   # dns劫持,一般设置为 any:53 即可, 即劫持所有53端口的udp流量
-  dns-hijack: [8.8.8.8:53,8.8.4.4:53]
+  dns-hijack: [8.8.8.8:53, 8.8.4.4:53]
   # 自动设置全局路由，可以自动将全局流量路由进入tun网卡。
   auto-route: true
   # 自动识别出口网卡
@@ -76,7 +76,7 @@ dns:
   # fakeip 过滤，以下地址不会下发 fakeip 映射用于连接
   fake-ip-filter: ['*.lan','*.direct', cable.auth.com, '*.msftconnecttest.com', '*.msftncsi.com', network-test.debian.org, detectportal.firefox.com, resolver1.opendns.com, '*.srv.nintendo.net', '*.stun.playstation.net', xbox.*.microsoft.com, '*.xboxlive.com', stun.*, global.turn.twilio.com, global.stun.twilio.com, app.yinxiang.com, injections.adguard.org, local.adguard.org, cable.auth.com, localhost.*.qq.com, localhost.*.weixin.qq.com, '*.logon.battlenet.com.cn', '*.logon.battle.net', '*.blzstatic.cn', music.163.com, '*.music.163.com', '*.126.net', musicapi.taihe.com, music.taihe.com, songsearch.kugou.com, trackercdn.kugou.com, '*.kuwo.cn', api-jooxtt.sanook.com, api.joox.com, joox.com, y.qq.com, '*.y.qq.com', streamoc.music.tc.qq.com, mobileoc.music.tc.qq.com, isure.stream.qqmusic.qq.com, dl.stream.qqmusic.qq.com, aqqmusic.tc.qq.com, amobile.music.tc.qq.com, '*.xiami.com', '*.music.migu.cn', music.migu.cn, proxy.golang.org, '*.mcdn.bilivideo.cn', '*.cmpassport.com', id6.me, open.e.189.cn, mdn.open.wo.cn, opencloud.wostore.cn, auth.wosms.cn, '*.jegotrip.com.cn', '*.icitymobile.mobi', '*.pingan.com.cn', '*.cmbchina.com', '*.10099.com.cn', pool.ntp.org, '*.pool.ntp.org', ntp.*.com, time.*.com, 'ntp?.*.com', 'time?.*.com', time.*.gov, time.*.edu.cn, '*.ntp.org.cn', PDC._msDCS.*.*, DC._msDCS.*.*, GC._msDCS.*.*]
   #默认的域名解析服务器
-  nameserver: [quic://223.5.5.5, quic://223.6.6.6, https://1.12.12.12/dns-query, https://120.53.53.53/dns-query]                     
+  nameserver: [9.9.9.9， 149.112.112.112， quic://223.5.5.5, quic://223.6.6.6, https://1.12.12.12/dns-query, https://120.53.53.53/dns-query]                     
     
 # 策略组引用相关参数
 pg: &pg {type: select, proxies: [手动切换, 香港节点, 美国节点, 狮城节点, 日本节点, 台湾节点, 欧洲节点, DIRECT]}
