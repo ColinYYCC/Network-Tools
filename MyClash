@@ -20,7 +20,7 @@ mode: rule
 # 设置日志输出级别: silent/error/warning/info/debug
 log-level: info
 # 全局 TLS 指纹
-global-client-fingerprint: chrome
+global-client-fingerprint: brave
 # 匹配所有进程（always/strict/off）
 find-process-mode: strict
 
@@ -57,7 +57,7 @@ tun:
   # 可选： system/gvisor/mixed；
   stack: mixed
   # dns劫持,一般设置为 any:53 即可, 即劫持所有53端口的udp流量
-  dns-hijack: [any:53]
+  dns-hijack: [8.8.8.8:53,8.8.4.4:53]
   # 自动设置全局路由，可以自动将全局流量路由进入tun网卡。
   auto-route: true
   # 自动识别出口网卡
@@ -134,7 +134,7 @@ proxy-groups:
 
   #节点地区分组
 
-  - {name: All, <<: *url-test, filter: "^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|(\b(USE|USED|TOTAL|EXPIRE|EMAIL|Panel)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$", icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Serve.png}
+  - {name: All, <<: *url-test, filter: "^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|(\b(USE|USED|TOTAL|EXPIRE|EMAIL|Panel)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$", icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Server.png}
 
   - {name: 香港节点, <<: *url-test, filter: "(?i)🇭🇰|香港|(\b(HK|Hong)\b)", icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png}
 
