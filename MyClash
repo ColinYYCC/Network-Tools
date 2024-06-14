@@ -27,7 +27,7 @@ find-process-mode: strict
 # 使用geoip.dat数据库
 geodata-mode: true
 geox-url:
-  geoip: "https://mirror.ghproxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.dat"
+  geoip: "https://github.com/xream/geoip/releases/latest/download/ipinfo.geoip.dat"
   geosite: "https://mirror.ghproxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat"
   mmdb: "https://github.com/xream/geoip/releases/latest/download/ipinfo.country.mmdb"
                          
