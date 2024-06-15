@@ -196,6 +196,10 @@ udp-policy-not-supported-behaviour = REJECT
 # IP归属地更改
 归属地更改 = select, DIRECT, 香港, 台湾, 新加坡, 日本, 美国, 韩国
 
+# Apple
+ Apple Services = select, 🌐直连, 🌑代理, 🇺🇳其他
+ Apple CDN = select,  Apple Services, 🌐直连, 🌑代理, 🇺🇳其他
+
 # Disney+
 Disney+ = select, 香港, 台湾, 新加坡, 日本, 美国, 韩国
 
@@ -332,7 +336,6 @@ DOMAIN,boxjs.net,DIRECT
 # > Sub-Store
 DOMAIN-SUFFIX,vercel.app,Auto
 
-
 # Rulesets，规则集（每 24 小时后台自动更新）
 # 规则集包含多条子规则，可以是另一个本地 list 文件，或者是一个 URL
 # 内置了两个规则集：SYSTEM 和 LAN
@@ -357,12 +360,6 @@ DOMAIN-SET,https://ruleset.skk.moe/List/domainset/speedtest.conf,PROXY,extended-
 # 静态CDN域名(強烈建議)
 DOMAIN-SET,https://ruleset.skk.moe/List/domainset/cdn.conf,PROXY,extended-matching // SukkaW静态CDN域名
 RULE-SET,https://ruleset.skk.moe/List/non_ip/cdn.conf,PROXY,extended-matching // SukkaW静态CDN域名
-
-# 苹果服务规则列表
-RULE-SET,https://raw.githubusercontent.com/dler-io/Rules/main/Surge/Surge%203/Provider/Apple.list,DIRECT,extended-matching // Apple
-
-# StreamingCN 中国流媒体服务
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/ChinaMedia/ChinaMedia.list,国內流媒体,extended-matching // ChinaMedia 中国流媒体服务
 
 # TV+
 PROCESS-NAME,/System/Applications/TV.app/Contents/MacOS/TV,国际流媒体 // TV+
@@ -397,14 +394,21 @@ RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/r
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GitHub/GitHub.list,全球节点,extended-matching // Github
 
 # Streaming 国际流媒体服务
-RULE-SET,https://ruleset.skk.moe/List/non_ip/stream.conf,国际流媒体,extended-matching
-RULE-SET,https://ruleset.skk.moe/List/ip/stream.conf,国际流媒体
+RULE-SET,https://ruleset.skk.moe/List/non_ip/stream.conf,国际流媒体,extended-matching // Streaming 国际流媒体服务
+RULE-SET,https://ruleset.skk.moe/List/ip/stream.conf,国际流媒体 // Streaming 国际流媒体服务(IP)
+
+# StreamingCN 中国流媒体服务
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/ChinaMedia/ChinaMedia.list,国內流媒体,extended-matching // ChinaMedia 中国流媒体服务
 
 # WeChat 微信
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/WeChat/WeChat.list,DIRECT,extended-matching
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/WeChat/WeChat.list,DIRECT,extended-matching // WeChat 微信
 
 # Telegram 电报
-RULE-SET,https://github.com/LucaLin233/Luca_Conf/blob/main/Surge/Rule/Telegram.list?raw=true,全球节点,extended-matching
+RULE-SET,https://github.com/LucaLin233/Luca_Conf/blob/main/Surge/Rule/Telegram.list?raw=true,全球节点,extended-matching // Telegram 电报
+
+# 苹果服务规则列表
+RULE-SET,https://ruleset.skk.moe/List/non_ip/apple_services.conf, Apple Services,extended-matching //  Apple Services
+DOMAIN-SET,https://ruleset.skk.moe/List/domainset/apple_cdn.conf, Apple CDN,extended-matching //  Apple CDN
 
 # > Game 游戏(不仅限于UDP, 包括相关CDN)
 # GameList
@@ -436,18 +440,20 @@ RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/r
 
 # China 中国直连
 RULE-SET,https://ruleset.skk.moe/List/non_ip/domestic.conf,DIRECT,extended-matching // 国內直连
-RULE-SET,https://ruleset.skk.moe/List/non_ip/direct.conf,DIRECT,extended-matching
-# Global 全球加速
-RULE-SET,https://ruleset.skk.moe/List/non_ip/global.conf,全球节点,extended-matching // Global 全球加速
+RULE-SET,https://ruleset.skk.moe/List/non_ip/direct.conf,DIRECT,extended-matching // 国內直连
+
+# 国外网站
+RULE-SET,https://ruleset.skk.moe/List/non_ip/global.conf,全球节点,extended-matching // 国外网站
+
 # China 中国直连 (IP)
-RULE-SET,https://ruleset.skk.moe/List/ip/domestic.conf,DIRECT
-RULE-SET,https://ruleset.skk.moe/List/ip/china_ip.conf,DIRECT,no-resolve
+RULE-SET,https://ruleset.skk.moe/List/ip/domestic.conf,DIRECT //  China 中国直连 (IP)
+RULE-SET,https://ruleset.skk.moe/List/ip/china_ip.conf,DIRECT,no-resolve //  China 中国直连 (IP)
 
 # SYSTEM 系统
 RULE-SET,SYSTEM,DIRECT // SYSTEM 系统
 
 # ASN China 基于ASN 数据库判断域名和 IP 的归属地
-# RULE-SET,https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/ruleset/ASN.China.list,DIRECT
+# RULE-SET,https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/ruleset/ASN.China.list,DIRECT // ASN CHINA
 
 # Surge 的自动 REJECT 保护丢包，防止应用循环请求
 IP-CIDR,0.0.0.0/32,REJECT,no-resolve
