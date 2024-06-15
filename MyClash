@@ -158,11 +158,11 @@ rule-providers:
       
   # 广告拦截
   AD: {<<: *c, path: ./rule-providers/AD.list, url: https://github.com/Repcz/Tool/raw/X/Clash/Rules/Reject.list}  
-  AD: {<<: *c, path: ./sukkaw_ruleset/reject_non_ip_no_drop.txt, url: https://ruleset.skk.moe/Clash/non_ip/reject-no-drop.txt}
-  AD: {<<: *c, path: ./sukkaw_ruleset/reject_non_ip_drop.txt, url: https://ruleset.skk.moe/Clash/non_ip/reject-drop.txt}
-  AD: {<<: *c, path: ./sukkaw_ruleset/reject_non_ip.txt, url: https://ruleset.skk.moe/Clash/non_ip/reject.txt}
-  # AD: {<<: *d, path: ./sukkaw_ruleset/reject_domainset.txt, url: https://ruleset.skk.moe/Clash/domainset/reject.txt}
-  AD: {<<: *c, path: ./sukkaw_ruleset/reject_ip.txt, url: https://ruleset.skk.moe/Clash/ip/reject.txt}
+  reject_non_ip_no_drop: {<<: *c, path: ./sukkaw_ruleset/reject_non_ip_no_drop.txt, url: https://ruleset.skk.moe/Clash/non_ip/reject-no-drop.txt}
+  reject_non_ip_drop: {<<: *c, path: ./sukkaw_ruleset/reject_non_ip_drop.txt, url: https://ruleset.skk.moe/Clash/non_ip/reject-drop.txt}
+  reject_non_ip: {<<: *c, path: ./sukkaw_ruleset/reject_non_ip.txt, url: https://ruleset.skk.moe/Clash/non_ip/reject.txt}
+  # reject_domainset: {<<: *d, path: ./sukkaw_ruleset/reject_domainset.txt, url: https://ruleset.skk.moe/Clash/domainset/reject.txt}
+  reject_ip: {<<: *c, path: ./sukkaw_ruleset/reject_ip.txt, url: https://ruleset.skk.moe/Clash/ip/reject.txt}
 
   # 搜狗输入法 隐私收集
   sogouinput: {<<: *c, path: ./sukkaw_ruleset/sogouinput.txt, url: https://ruleset.skk.moe/Clash/non_ip/sogouinput.txt}
@@ -217,6 +217,11 @@ rules:
   #- SCRIPT,quic,REJECT
   #- RULE-SET,Download,DIRECT
   - RULE-SET,AD,广告拦截
+  - RULE-SET,reject_non_ip_no_drop,广告拦截
+  - RULE-SET,reject_non_ip_drop,广告拦截
+  - RULE-SET,reject_non_ip,广告拦截
+  # - RULE-SET,reject_domainset,广告拦截
+  - RULE-SET,reject_ip,广告拦截
   - RULE-SET,sogouinput,广告拦截
   - RULE-SET,cdn_domainset,兜底分流
   - RULE-SET,cdn_non_ip,兜底分流
