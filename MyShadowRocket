@@ -57,7 +57,10 @@ udp-policy-not-supported-behaviour = REJECT
 🇰🇷 韩国节点 = url-test,url=http://latency-test.skk.moe/endpoint,interval=300,tolerance=0,timeout=3,select=0,policy-regex-filter=^(?=.*((?i)🇰🇷|韩国|韓|首尔|(\b(KR|Korea)\b)))
 
 # 广告拦截
-RULE-SET,https://github.com/Repcz/Tool/raw/X/Shadowrocket/Rules/Reject.list,REJECT-DREOP
+RULE-SET,https://ruleset.skk.moe/List/non_ip/reject.conf,REJECT
+# DOMAIN-SET,https://ruleset.skk.moe/List/domainset/reject.conf,REJECT-TINYGIF
+DOMAIN-SET,https://ruleset.skk.moe/List/domainset/reject_phishing.conf,REJECT
+# RULE-SET,https://ruleset.skk.moe/List/ip/reject.conf,REJECT-DROP
 
 # 静态CDN域名(強烈建議)
 DOMAIN-SET,https://ruleset.skk.moe/List/domainset/cdn.conf,🌏 国外网站
