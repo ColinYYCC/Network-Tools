@@ -157,18 +157,18 @@ rule-providers:
   Download: {<<: *c, path: ./rule-providers/Download.list,  url: https://github.com/Repcz/Tool/raw/X/Clash/Rules/Download.list}
       
   # 广告拦截
-  reject_non_ip_no_drop: {<<: *c, path: ./sukkaw_ruleset/reject_non_ip_no_drop.txt, url: https://ruleset.skk.moe/Clash/non_ip/reject-no-drop.txt}
-  reject_non_ip_drop: {<<: *c, path: ./sukkaw_ruleset/reject_non_ip_drop.txt, url: https://ruleset.skk.moe/Clash/non_ip/reject-drop.txt}
-  reject_non_ip: {<<: *c, path: ./sukkaw_ruleset/reject_non_ip.txt, url: https://ruleset.skk.moe/Clash/non_ip/reject.txt}
+  Reject_non_ip_no_drop: {<<: *c, path: ./sukkaw_ruleset/reject_non_ip_no_drop.txt, url: https://ruleset.skk.moe/Clash/non_ip/reject-no-drop.txt}
+  Reject_non_ip_drop: {<<: *c, path: ./sukkaw_ruleset/reject_non_ip_drop.txt, url: https://ruleset.skk.moe/Clash/non_ip/reject-drop.txt}
+  Reject_non_ip: {<<: *c, path: ./sukkaw_ruleset/reject_non_ip.txt, url: https://ruleset.skk.moe/Clash/non_ip/reject.txt}
   # reject_domainset: {<<: *d, path: ./sukkaw_ruleset/reject_domainset.txt, url: https://ruleset.skk.moe/Clash/domainset/reject.txt}
-  reject_ip: {<<: *c, path: ./sukkaw_ruleset/reject_ip.txt, url: https://ruleset.skk.moe/Clash/ip/reject.txt}
+  Reject_ip: {<<: *c, path: ./sukkaw_ruleset/reject_ip.txt, url: https://ruleset.skk.moe/Clash/ip/reject.txt}
 
   # 搜狗输入法 隐私收集
-  sogouinput: {<<: *c, path: ./sukkaw_ruleset/sogouinput.txt, url: https://ruleset.skk.moe/Clash/non_ip/sogouinput.txt}
+  Sogouinput: {<<: *c, path: ./sukkaw_ruleset/sogouinput.txt, url: https://ruleset.skk.moe/Clash/non_ip/sogouinput.txt}
 
   # 常见静态 CDN
-  cdn_domainset: {<<: *d, path: ./sukkaw_ruleset/cdn_domainset.txt, url: https://ruleset.skk.moe/Clash/domainset/cdn.txt}
-  cdn_non_ip: {<<: *d, path: ./sukkaw_ruleset/cdn_non_ip.txt, url: https://ruleset.skk.moe/Clash/non_ip/cdn.txt}
+  Cdn_domainset: {<<: *d, path: ./sukkaw_ruleset/cdn_domainset.txt, url: https://ruleset.skk.moe/Clash/domainset/cdn.txt}
+  Cdn_non_ip: {<<: *d, path: ./sukkaw_ruleset/cdn_non_ip.txt, url: https://ruleset.skk.moe/Clash/non_ip/cdn.txt}
 
   # 苹果服务
   Apple: {<<: *c, path: ./rule-providers/Apple.list,  url: https://github.com/Repcz/Tool/raw/X/Clash/Rules/Apple.list}
@@ -183,14 +183,8 @@ rule-providers:
   Google: {<<: *c, path: ./rule-providers/Google.list,  url: https://github.com/Repcz/Tool/raw/X/Clash/Rules/Google.list}
 
   # 电报消息
-  Telegram: {<<: *c, path: ./rule-providers/Telegram.list,  url: https://github.com/Repcz/Tool/raw/X/Clash/Rules/Telegram.list}
   Telegram_non_ip: {<<: *c, path: ./sukkaw_ruleset/telegram_non_ip.txt, url: https://ruleset.skk.moe/Clash/non_ip/telegram.txt}
   Telegram_ip: {<<: *c, path: ./sukkaw_ruleset/telegram_ip.txt, url: https://ruleset.skk.moe/Clash/ip/telegram.txt}
-    
-
-rules:
-  - RULE-SET,telegram_non_ip,[Replace with your policy]
-  - RULE-SET,telegram_ip,[Replace with your policy]
 
   # 推特消息
   Twitter: {<<: *c, path: ./rule-providers/Twitter.list,  url: https://github.com/Repcz/Tool/raw/X/Clash/Rules/Twitter.list}
@@ -208,28 +202,29 @@ rules:
   # 国际媒体
   ProxyMedia: {<<: *c, path: ./rule-providers/ProxyMedia.list,  url: https://github.com/Repcz/Tool/raw/X/Clash/Rules/ProxyMedia.list}
 
+  # 代理网站
+  Global_non_ip: {<<: *c, path: ./sukkaw_ruleset/global_non_ip.tx, url: https://ruleset.skk.moe/Clash/non_ip/global.txt}
+   
   # 中国大陆
   ChinaDomain: {<<: *c, path: ./rule-providers/ChinaDomain.list,  url: https://github.com/Repcz/Tool/raw/X/Clash/Rules/ChinaDomain.list}
-  domestic_non_ip: {<<: *c, path: ./sukkaw_ruleset/domestic_non_ip.txt, url: https://ruleset.skk.moe/Clash/non_ip/domestic.txt}
-  direct_non_ip: {<<: *c, path: ./sukkaw_ruleset/direct_non_ip.txt, url: https://ruleset.skk.moe/Clash/non_ip/direct.txt}
-  domestic_ip: {<<: *i, path: ./sukkaw_ruleset/domestic_ip.txt, url: https://ruleset.skk.moe/Clash/ip/domestic.txt}
-  china_ip: {<<: *i, path: ./sukkaw_ruleset/china_ip.txt, url: https://ruleset.skk.moe/Clash/ip/china_ip.txt}
+  Domestic_non_ip: {<<: *c, path: ./sukkaw_ruleset/domestic_non_ip.txt, url: https://ruleset.skk.moe/Clash/non_ip/domestic.txt}
+  Direct_non_ip: {<<: *c, path: ./sukkaw_ruleset/direct_non_ip.txt, url: https://ruleset.skk.moe/Clash/non_ip/direct.txt}
+  Domestic_ip: {<<: *i, path: ./sukkaw_ruleset/domestic_ip.txt, url: https://ruleset.skk.moe/Clash/ip/domestic.txt}
+  China_ip: {<<: *i, path: ./sukkaw_ruleset/china_ip.txt, url: https://ruleset.skk.moe/Clash/ip/china_ip.txt}
 
-  # 代理网站
-  ProxyGFW: {<<: *c, path: ./rule-providers/ProxyGFW.list,  url: https://github.com/Repcz/Tool/raw/X/Clash/Rules/ProxyGFW.list}
     
 rules:
   #- SCRIPT,quic,REJECT
   #- RULE-SET,Download,DIRECT
   - RULE-SET,AD,广告拦截
-  - RULE-SET,reject_non_ip_no_drop,广告拦截
-  - RULE-SET,reject_non_ip_drop,广告拦截
-  - RULE-SET,reject_non_ip,广告拦截
-  # - RULE-SET,reject_domainset,广告拦截
-  - RULE-SET,reject_ip,广告拦截
-  - RULE-SET,sogouinput,广告拦截
-  - RULE-SET,cdn_domainset,兜底分流
-  - RULE-SET,cdn_non_ip,兜底分流
+  - RULE-SET,Reject_non_ip_no_drop,广告拦截
+  - RULE-SET,Reject_non_ip_drop,广告拦截
+  - RULE-SET,Reject_non_ip,广告拦截
+  # - RULE-SET,Reject_domainset,广告拦截
+  - RULE-SET,Reject_ip,广告拦截
+  - RULE-SET,Sogouinput,广告拦截
+  - RULE-SET,Cdn_domainset,兜底分流
+  - RULE-SET,Cdn_non_ip,兜底分流
   - RULE-SET,AI,AI
   - RULE-SET,Apple,苹果服务
   - RULE-SET,OneDrive,微软服务
@@ -244,12 +239,13 @@ rules:
   - RULE-SET,Epic,游戏平台
   - RULE-SET,Emby,Emby
   - RULE-SET,ProxyMedia,国际媒体
-  - RULE-SET,ProxyGFW,国外网站
+  - RULE-SET,Global_non_ip,国外网站
+  - RULE-SET,Global_non_ip,国外网站
   - RULE-SET,ChinaDomain,DIRECT
-  - RULE-SET,domestic_non_ip,DIRECT
-  - RULE-SET,direct_non_ip,DIRECT
-  - RULE-SET,domestic_ip,DIRECT
-  - RULE-SET,china_ip,DIRECT
+  - RULE-SET,Domestic_non_ip,DIRECT
+  - RULE-SET,Direct_non_ip,DIRECT
+  - RULE-SET,Domestic_ip,DIRECT
+  - RULE-SET,China_ip,DIRECT,no-resolve
   - RULE-SET,Lan,DIRECT
   - GEOIP,CN,DIRECT,no-resolve
   - MATCH,兜底分流
