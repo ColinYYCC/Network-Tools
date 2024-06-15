@@ -58,9 +58,7 @@ udp-policy-not-supported-behaviour = REJECT
 
 # 广告拦截
 RULE-SET,https://ruleset.skk.moe/List/non_ip/reject.conf,REJECT-DROP
-# DOMAIN-SET,https://ruleset.skk.moe/List/domainset/reject.conf,REJECT-TINYGIF
 DOMAIN-SET,https://ruleset.skk.moe/List/domainset/reject_phishing.conf,REJECT-DROP
-# RULE-SET,https://ruleset.skk.moe/List/ip/reject.conf,REJECT-DROP
 
 # 静态CDN域名(強烈建議)
 DOMAIN-SET,https://ruleset.skk.moe/List/domainset/cdn.conf,🌏 国外网站
