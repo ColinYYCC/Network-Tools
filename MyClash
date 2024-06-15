@@ -157,7 +157,6 @@ rule-providers:
   Download: {<<: *c, path: ./rule-providers/Download.list,  url: https://github.com/Repcz/Tool/raw/X/Clash/Rules/Download.list}
       
   # 广告拦截
-  AD: {<<: *c, path: ./rule-providers/AD.list, url: https://github.com/Repcz/Tool/raw/X/Clash/Rules/Reject.list}  
   reject_non_ip_no_drop: {<<: *c, path: ./sukkaw_ruleset/reject_non_ip_no_drop.txt, url: https://ruleset.skk.moe/Clash/non_ip/reject-no-drop.txt}
   reject_non_ip_drop: {<<: *c, path: ./sukkaw_ruleset/reject_non_ip_drop.txt, url: https://ruleset.skk.moe/Clash/non_ip/reject-drop.txt}
   reject_non_ip: {<<: *c, path: ./sukkaw_ruleset/reject_non_ip.txt, url: https://ruleset.skk.moe/Clash/non_ip/reject.txt}
@@ -185,6 +184,13 @@ rule-providers:
 
   # 电报消息
   Telegram: {<<: *c, path: ./rule-providers/Telegram.list,  url: https://github.com/Repcz/Tool/raw/X/Clash/Rules/Telegram.list}
+  Telegram_non_ip: {<<: *c, path: ./sukkaw_ruleset/telegram_non_ip.txt, url: https://ruleset.skk.moe/Clash/non_ip/telegram.txt}
+  Telegram_ip: {<<: *c, path: ./sukkaw_ruleset/telegram_ip.txt, url: https://ruleset.skk.moe/Clash/ip/telegram.txt}
+    
+
+rules:
+  - RULE-SET,telegram_non_ip,[Replace with your policy]
+  - RULE-SET,telegram_ip,[Replace with your policy]
 
   # 推特消息
   Twitter: {<<: *c, path: ./rule-providers/Twitter.list,  url: https://github.com/Repcz/Tool/raw/X/Clash/Rules/Twitter.list}
@@ -196,19 +202,18 @@ rule-providers:
   # AI平台
   AI: {<<: *c, path: ./rule-providers/AI.list,  url: https://github.com/Repcz/Tool/raw/X/Clash/Rules/AI.list}
 
-  # 中国大陆
-  ChinaDomain: {<<: *c, path: ./rule-providers/ChinaDomain.list,  url: https://github.com/Repcz/Tool/raw/X/Clash/Rules/ChinaDomain.list}
-  domestic_non_ip: {<<: *c, path: ./sukkaw_ruleset/domestic_non_ip.txt, url: https://ruleset.skk.moe/Clash/non_ip/domestic.txt}
-  direct_non_ip: {<<: *c, path: ./sukkaw_ruleset/direct_non_ip.txt, url: https://ruleset.skk.moe/Clash/non_ip/direct.txt}
-    
-  # chnroute CIDR
-  china_ip: {<<: *i, path: ./sukkaw_ruleset/china_ip.txt, url: https://ruleset.skk.moe/Clash/ip/china_ip.txt}
-
   # Emby
   Emby: {<<: *c, path: ./rule-providers/Emby.list,  url: https://github.com/Repcz/Tool/raw/X/Clash/Rules/Emby.list}
 
   # 国际媒体
   ProxyMedia: {<<: *c, path: ./rule-providers/ProxyMedia.list,  url: https://github.com/Repcz/Tool/raw/X/Clash/Rules/ProxyMedia.list}
+
+  # 中国大陆
+  ChinaDomain: {<<: *c, path: ./rule-providers/ChinaDomain.list,  url: https://github.com/Repcz/Tool/raw/X/Clash/Rules/ChinaDomain.list}
+  domestic_non_ip: {<<: *c, path: ./sukkaw_ruleset/domestic_non_ip.txt, url: https://ruleset.skk.moe/Clash/non_ip/domestic.txt}
+  direct_non_ip: {<<: *c, path: ./sukkaw_ruleset/direct_non_ip.txt, url: https://ruleset.skk.moe/Clash/non_ip/direct.txt}
+  domestic_ip: {<<: *i, path: ./sukkaw_ruleset/domestic_ip.txt, url: https://ruleset.skk.moe/Clash/ip/domestic.txt}
+  china_ip: {<<: *i, path: ./sukkaw_ruleset/china_ip.txt, url: https://ruleset.skk.moe/Clash/ip/china_ip.txt}
 
   # 代理网站
   ProxyGFW: {<<: *c, path: ./rule-providers/ProxyGFW.list,  url: https://github.com/Repcz/Tool/raw/X/Clash/Rules/ProxyGFW.list}
@@ -232,7 +237,8 @@ rules:
   - RULE-SET,Microsoft,微软服务
   - RULE-SET,YouTube,谷歌服务
   - RULE-SET,Google,谷歌服务
-  - RULE-SET,Telegram,电报消息
+  - RULE-SET,Telegram_non_ip,电报消息
+  - RULE-SET,Telegram_ip,电报消息
   - RULE-SET,Twitter,推特消息
   - RULE-SET,Steam,游戏平台
   - RULE-SET,Epic,游戏平台
@@ -242,6 +248,7 @@ rules:
   - RULE-SET,ChinaDomain,DIRECT
   - RULE-SET,domestic_non_ip,DIRECT
   - RULE-SET,direct_non_ip,DIRECT
+  - RULE-SET,domestic_ip,DIRECT
   - RULE-SET,china_ip,DIRECT
   - RULE-SET,Lan,DIRECT
   - GEOIP,CN,DIRECT,no-resolve
