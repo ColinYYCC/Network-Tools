@@ -185,13 +185,18 @@ udp-policy-not-supported-behaviour = REJECT
 
 [Proxy Group]
 # > External Proxy Group
+# 去重订阅（需要配合Sub-Store脚本https://raw.githubusercontent.com/Keywos/rule/main/cname.js#bs=10&cd=2000&flag=使用）
+De-Surge = select, policy-path=[填入订阅], update-interval=10800, no-alert=0, hidden=true, include-all-proxies=0
+# 重命名订阅（需要配合Sub-Store脚本https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Sub-Store/NodeRename.js使用）
+Rename=select, policy-path=[填入订阅], update-interval=10800, no-alert=0, hidden=true, include-all-proxies=0
 
+# > 机场订阅
 
 # ------
 
 # > Internal Proxy Group
 # 节点选项
-全球节点 = select, SmartGroup, Auto, 香港, 台湾, 新加坡, 日本, 美国, 韩国, 节点选择
+全球节点 = select, SmartGroup, Auto, 香港, 台湾, 新加坡, 日本, 美国, 韩国, 节点选择, no-alert=0, hidden=0, include-all-proxies=0, include-other-group=FishChips
 
 # IP归属地更改
 归属地更改 = select, DIRECT, 香港, 台湾, 新加坡, 日本, 美国, 韩国
@@ -220,27 +225,27 @@ Netflix = select, 新加坡, 香港, 台湾, 日本, 美国, 韩国
 # ------
 
 # 节点选择
-节点选择 = select, policy-regex-filter=^(?=.*(.*))(?!.*((?i)回国|校园|游戏|教育|公告|邀请|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|到期|过期|已用|联系|邮箱|工单|群|(\b(GAME|USE|USED|TOTAL|EXPIRE|EMAIL)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$, no-alert=0, hidden=0, include-all-proxies=0
+节点选择 = select, policy-regex-filter=^(?=.*(.*))(?!.*((?i)回国|校园|游戏|教育|公告|邀请|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|到期|过期|已用|联系|邮箱|工单|群|(\b(GAME|USE|USED|TOTAL|EXPIRE|EMAIL)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$, no-alert=0, hidden=0, include-all-proxies=Rename
 
-Auto = url-test, hidden=0, policy-regex-filter=^(?=.*(.*))(?!.*((?i)回国|校园|游戏|教育|公告|邀请|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|到期|过期|已用|联系|邮箱|工单|群|(\b(GAME|USE|USED|TOTAL|EXPIRE|EMAIL)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$, interval=3000, tolerance=50, evaluate-before-use=1, no-alert=0, hidden=0, include-all-proxies=0
+Auto = url-test, hidden=0, policy-regex-filter=^(?=.*(.*))(?!.*((?i)回国|校园|游戏|教育|公告|邀请|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|到期|过期|已用|联系|邮箱|工单|群|(\b(GAME|USE|USED|TOTAL|EXPIRE|EMAIL)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$, interval=3000, tolerance=50, evaluate-before-use=1, no-alert=0, include-all-proxies=0, include-other-group=De-Surge
 
-SmartGroup = smart, policy-regex-filter=^(?=.*(.*))(?!.*((?i)回国|校园|游戏|教育|公告|邀请|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|到期|过期|已用|联系|邮箱|工单|群|(\b(GAME|USE|USED|TOTAL|EXPIRE|EMAIL)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$, no-alert=0, hidden=0, include-all-proxies=0
+SmartGroup = smart, policy-regex-filter=^(?=.*(.*))(?!.*((?i)回国|校园|游戏|教育|公告|邀请|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|到期|过期|已用|联系|邮箱|工单|群|(\b(GAME|USE|USED|TOTAL|EXPIRE|EMAIL)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$, no-alert=0, hidden=0, include-all-proxies=Rename
 # ------
 
 # 地区分流
-香港 = load-balance, policy-regex-filter=^(?=.*((?i)🇭🇰|香港|(\b(HK|Hong)\b))).*$, no-alert=0, hidden=1, include-all-proxies=0, persistent=1
+香港 = load-balance, policy-regex-filter=^(?=.*((?i)🇭🇰|香港|(\b(HK|Hong)\b))).*$, no-alert=0, hidden=1, include-all-proxies=0, persistent=1, include-other-group=De-Surge
 
-澳门 = load-balance, policy-regex-filter=^(?=.*((?i)🇲🇴|澳门|MAC)).*$, no-alert=0, hidden=1, include-all-proxies=0, persistent=1
+澳门 = load-balance, policy-regex-filter=^(?=.*((?i)🇲🇴|澳门|MAC)).*$, no-alert=0, hidden=1, include-all-proxies=0, persistent=1, include-other-group=De-Surge
 
-台湾 = load-balance, policy-regex-filter=^(?=.*((?i)🇼🇸|台湾|(\b(TW|Tai|Taiwan|TWN)\b))).*$, no-alert=0, hidden=1, include-all-proxies=0, persistent=1
+台湾 = load-balance, policy-regex-filter=^(?=.*((?i)🇼🇸|台湾|(\b(TW|Tai|Taiwan|TWN)\b))).*$, no-alert=0, hidden=1, include-all-proxies=0, persistent=1, include-other-group=De-Surge
 
-新加坡 = load-balance, policy-regex-filter=^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|Singapore|SGP)\b))).*$, no-alert=0, hidden=1, include-all-proxies=0, persistent=1
+新加坡 = load-balance, policy-regex-filter=^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|Singapore|SGP)\b))).*$, no-alert=0, hidden=1, include-all-proxies=0, persistent=1, include-other-group=De-Surge
 
-日本 = load-balance, policy-regex-filter=^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan|JPN)\b))).*$, no-alert=0, hidden=1, include-all-proxies=0, persistent=1
+日本 = load-balance, policy-regex-filter=^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan|JPN)\b))).*$, no-alert=0, hidden=1, include-all-proxies=0, persistent=1, include-other-group=De-Surge
 
-美国 = load-balance, policy-regex-filter=^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States|USA)\b))).*$, no-alert=0, hidden=1, include-all-proxies=0, persistent=1
+美国 = load-balance, policy-regex-filter=^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States|USA)\b))).*$, no-alert=0, hidden=1, include-all-proxies=0, persistent=1, include-other-group=De-Surge
 
-韩国 = load-balance, policy-regex-filter=^(?=.*((?i)🇰🇷|韩|韓|首尔|(/b(KR|Korea)/b))).*$, no-alert=0, hidden=1, include-all-proxies=0, persistent=1
+韩国 = load-balance, policy-regex-filter=^(?=.*((?i)🇰🇷|韩|韓|首尔|(/b(KR|Korea)/b))).*$, no-alert=0, hidden=1, include-all-proxies=0, persistent=1, include-other-group=De-Surge
 # ------
 
 # 兼容性修复
@@ -446,8 +451,8 @@ RULE-SET,https://ruleset.skk.moe/List/non_ip/domestic.conf,DIRECT,extended-match
 RULE-SET,https://ruleset.skk.moe/List/non_ip/direct.conf,DIRECT,extended-matching // 国內直连
 
 # China 中国直连 (IP)
-RULE-SET,https://ruleset.skk.moe/List/ip/domestic.conf,DIRECT //  China 中国直连 (IP)
-RULE-SET,https://ruleset.skk.moe/List/ip/china_ip.conf,DIRECT,no-resolve //  China 中国直连 (IP)
+RULE-SET,https://ruleset.skk.moe/List/ip/domestic.conf,DIRECT // China 中国直连 (IP)
+RULE-SET,https://ruleset.skk.moe/List/ip/china_ip.conf,DIRECT,no-resolve // China 中国直连 (IP)
 
 # SYSTEM 系统
 RULE-SET,SYSTEM,DIRECT // SYSTEM 系统
@@ -890,47 +895,37 @@ upos-sz-upcdntx.bilivideo.com = server:https://doh.pub/dns-query // BiliBili upo
 # 该段定义针对 HTTP 请求的 URL 重定向规则
 # 有两种重定向方式: "header" 和 "302"
 
-[Rewrite]
-# 解锁了「模块」功能的用户可以使用 General.sgmodule 后可移除 [URL Rewrite] 及 [MITM] 的「hostname = www.google.cn,api.abema.io」部分
-# 建议必选使用 General.sgmodule，其他 .sgmodule 按需加入
-# https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Module/General.sgmodule
-# https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Module/Block/Advertising.sgmodule
-# https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Module/Block/AdvertisingPlus.sgmodule
-# https://raw.githubusercontent.com/DivineEngine/Profiles/master/Surge/Module/Block/YouTubeAds.sgmodule
-# 未解锁「模块」功能的用户不要删除以下内容，参照说明(https://github.com/DivineEngine/Profiles/tree/master/Surge)使用快捷指令更新相关内容。
-
 [SSID Setting]
-# 该段仅在 iOS 版本下生效。 
-# 你可以为某些特定的 WiFi 网络设置设置参数
+# 该段仅在
+# 你可以为某些特定的
 # 参数:
-# suspend: "true" 或 "false"
-# 在该网络下 Surge 将暂停工作。 请注意，如果你在该网络下直接启动 Surge，那么 
-# Surge 依然会工作。只有当从其他网络切换到该网络时，Surge 才会暂停。
-#
-# SSID Setting 段表达式（适用 SUBNET 规则）
-# 可使用 MCCMNC:100-200 匹配特定数据网络
-# 可使用 SSID:value 特定匹配 SSID，支持通配符
-# 可使用 BSSID:value 特定匹配 BSSID，支持通配符
-# 可使用 ROUTER:value 特定匹配路由地址
-# 可使用 TYPE:WIFI 匹配所有 WiFi 网络
-# 可使用 TYPE:CELLULAR 匹配所有数据网络
-# 可使用 TYPE:WIRED 匹配所有有线网络（iOS 上支持 USB 网络适配
-# 参数 cellular-fallback 可单独控制一些 Wi-Fi 下的 all-hybrid 和 wifi-assist 行为
-# cellular-fallback=default 使用 [General] 中的 all-hybrid 和 wifi-assist 配置
-# cellular-fallback=off 关闭 all-hybrid 和 wifi-assist
-# cellular-fallback=hybrid 开启 all-hybrid 
-# cellular-fallback=wifi-assist 开启 wifi-assist
-# 如无前缀则按照旧版规则匹配 SSID、BSSID、路由地址
-# SSID Setting 段内容从上至下依次匹配，匹配到第一个结果后立刻终止
-#
-# 中国用户若使用 TFO 建议强制关闭数据网络上的 TFO，避免产生问题，然后在已测试过的网络上强制开启。只有这样配置后方可充分享受 TFO 的优势。
-#
-# 连接到 Apple Store 的 Wi-Fi网络时 Surge 暂停工作
-SSID:"Apple Store" suspend=true
-# 需要 Web 验证登录的 Wi-Fi 网络以及路由器已经科学上网的 Surge 挂起
+# suspend:
+# 在该网络下
+# Surge
+# 
+# SSID
+# 可使用
+# 可使用
+# 可使用
+# 可使用
+# 可使用
+# 可使用
+# 可使用
+# 参数
+# cellular-fallback=default
+# cellular-fallback=off
+# cellular-fallback=hybrid
+# cellular-fallback=wifi-assist
+# 如无前缀则按照旧版规则匹配
+# SSID
+# 
+# 中国用户若使用
+# 
+# 连接到
+"SSID:"Apple
+# 需要
 
 [MITM]
-skip-server-cert-verify = false
 tcp-connection = true
 h2 = true
 hostname = www.google.cn
