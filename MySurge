@@ -439,7 +439,6 @@ RULE-SET,https://ruleset.skk.moe/List/non_ip/domestic.conf,DIRECT,extended-match
 RULE-SET,https://ruleset.skk.moe/List/non_ip/direct.conf,DIRECT,extended-matching
 # Global 全球加速
 RULE-SET,https://ruleset.skk.moe/List/non_ip/global.conf,全球节点,extended-matching // Global 全球加速
-RULE-SET,https://ruleset.skk.moe/List/non_ip/global_plus.conf,全球节点,extended-matching
 # China 中国直连 (IP)
 RULE-SET,https://ruleset.skk.moe/List/ip/domestic.conf,DIRECT
 RULE-SET,https://ruleset.skk.moe/List/ip/china_ip.conf,DIRECT,no-resolve
