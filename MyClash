@@ -211,7 +211,6 @@ rule-providers:
   Direct_non_ip: {<<: *c, path: ./sukkaw_ruleset/direct_non_ip.txt, url: https://ruleset.skk.moe/Clash/non_ip/direct.txt}
   Domestic_ip: {<<: *i, path: ./sukkaw_ruleset/domestic_ip.txt, url: https://ruleset.skk.moe/Clash/ip/domestic.txt}
   China_ip: {<<: *i, path: ./sukkaw_ruleset/china_ip.txt, url: https://ruleset.skk.moe/Clash/ip/china_ip.txt}
-
     
 rules:
   #- SCRIPT,quic,REJECT
