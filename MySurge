@@ -197,8 +197,8 @@ udp-policy-not-supported-behaviour = REJECT
 归属地更改 = select, DIRECT, 香港, 台湾, 新加坡, 日本, 美国, 韩国
 
 # Apple
- Apple Services = select, 🌐直连, 🌑代理, 🇺🇳其他
- Apple CDN = select,  Apple Services, 🌐直连, 🌑代理, 🇺🇳其他
+ Apple Services = select, DIRECT, 全球节点, 节点选择
+ Apple CDN = select,  Apple Services, DIRECT, 节点选择
 
 # Disney+
 Disney+ = select, 香港, 台湾, 新加坡, 日本, 美国, 韩国
