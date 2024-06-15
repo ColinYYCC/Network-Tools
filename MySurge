@@ -401,6 +401,9 @@ RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/r
 RULE-SET,https://ruleset.skk.moe/List/non_ip/stream.conf,国际流媒体,extended-matching // Streaming 国际流媒体服务
 RULE-SET,https://ruleset.skk.moe/List/ip/stream.conf,国际流媒体 // Streaming 国际流媒体服务(IP)
 
+# 国外网站
+RULE-SET,https://ruleset.skk.moe/List/non_ip/global.conf,全球节点,extended-matching // 国外网站
+
 # Telegram 电报
 RULE-SET,https://github.com/LucaLin233/Luca_Conf/blob/main/Surge/Rule/Telegram.list?raw=true,全球节点,extended-matching // Telegram 电报
 
@@ -431,9 +434,6 @@ RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/r
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Supercell/Supercell.list,🎮游戏 // 部落冲突 Supercell
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/UBI/UBI.list,🎮游戏 // UBI
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Xbox/Xbox.list,🎮游戏 // Xbox
-
-# 国外网站
-RULE-SET,https://ruleset.skk.moe/List/non_ip/global.conf,全球节点,extended-matching // 国外网站
 
 # StreamingCN 中国流媒体服务
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/ChinaMedia/ChinaMedia.list,国內流媒体,extended-matching // ChinaMedia 中国流媒体服务
