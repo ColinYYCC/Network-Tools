@@ -56,6 +56,14 @@ udp-policy-not-supported-behaviour = REJECT
 🇨🇳 台湾节点 = url-test,url=http://latency-test.skk.moe/endpoint,interval=300,tolerance=0,timeout=3,select=0,policy-regex-filter=(?i)🇨🇳|🇹🇼|台湾|(\b(TW|Tai|Taiwan)\b)
 🇰🇷 韩国节点 = url-test,url=http://latency-test.skk.moe/endpoint,interval=300,tolerance=0,timeout=3,select=0,policy-regex-filter=^(?=.*((?i)🇰🇷|韩国|韓|首尔|(\b(KR|Korea)\b)))
 
+[Rule]
+
+# 局域网 
+RULE-SET,https://github.com/Repcz/Tool/raw/X/Clash/Rules/Lan.list,DIRECT,no-solve
+
+# 下载服务
+RULE-SET,https://github.com/Repcz/Tool/raw/X/Clash/Rules/Download.list,DIRECT
+
 # 广告拦截
 RULE-SET,https://ruleset.skk.moe/List/non_ip/reject.conf,REJECT
 # DOMAIN-SET,https://ruleset.skk.moe/List/domainset/reject.conf,REJECT-TINYGIF
@@ -66,11 +74,11 @@ DOMAIN-SET,https://ruleset.skk.moe/List/domainset/reject_phishing.conf,REJECT
 DOMAIN-SET,https://ruleset.skk.moe/List/domainset/cdn.conf,🌏 国外网站
 RULE-SET,https://ruleset.skk.moe/List/non_ip/cdn.conf,🌏 国外网站
 
+# Telegram
+RULE-SET,https://github.com/LucaLin233/Luca_Conf/blob/main/Surge/Rule/Telegram.list?raw=true,📟 电报消息
+
 # OpenAI
 RULE-SET,https://github.com/Repcz/Tool/raw/X/Shadowrocket/Rules/AI.list,🤖 AI
-
-# Telegram
-RULE-SET,https://github.com/Repcz/Tool/raw/X/Shadowrocket/Rules/Telegram.list,📟 电报消息
 
 # Twitter
 RULE-SET,https://github.com/Repcz/Tool/raw/X/Shadowrocket/Rules/Twitter.list,🐦 推特消息
@@ -79,6 +87,10 @@ RULE-SET,https://github.com/Repcz/Tool/raw/X/Shadowrocket/Rules/Twitter.list,�
 RULE-SET,https://github.com/Repcz/Tool/raw/X/Shadowrocket/Rules/Github.list,🖥️ 微软服务
 RULE-SET,https://github.com/Repcz/Tool/raw/X/Shadowrocket/Rules/OneDrive.list,🖥️ 微软服务
 RULE-SET,https://github.com/Repcz/Tool/raw/X/Shadowrocket/Rules/Microsoft.list,🖥️ 微软服务
+
+# 苹果服务
+RULE-SET,https://github.com/Repcz/Tool/raw/X/Surge/Rules/AppleProxy.list,🌏 国外网站
+RULE-SET,https://github.com/Repcz/Tool/raw/X/Shadowrocket/Rules/Apple.list,DIRECT
 
 # 谷歌服务
 RULE-SET,https://github.com/Repcz/Tool/raw/X/Shadowrocket/Rules/YouTube.list,🌌 谷歌服务
@@ -98,27 +110,25 @@ RULE-SET,https://github.com/Repcz/Tool/raw/X/Shadowrocket/Rules/TikTok.list,📽
 # Emby
 RULE-SET,https://github.com/Repcz/Tool/raw/X/Shadowrocket/Rules/Emby.list,📽️ Emby
 
+# Github
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GitHub/GitHub.list,全球节点,extended-matching // Github
+
+# 国外网站
+RULE-SET,https://ruleset.skk.moe/List/non_ip/global.conf,🌏 国外网站
+
+# WeChat 微信
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/WeChat/WeChat.list,DIRECT
+
 # China 中国直连
 RULE-SET,https://ruleset.skk.moe/List/non_ip/domestic.conf,DIRECT
 RULE-SET,https://ruleset.skk.moe/List/non_ip/direct.conf,DIRECT
 
-# Global 全球加速
-RULE-SET,https://ruleset.skk.moe/List/non_ip/global.conf,🌏 国外网站
-RULE-SET,https://ruleset.skk.moe/List/non_ip/global_plus.conf,🌏 国外网站 
-
 # China 中国直连 (IP)
 RULE-SET,https://ruleset.skk.moe/List/ip/domestic.conf,DIRECT
 RULE-SET,https://ruleset.skk.moe/List/ip/china_ip.conf,DIRECT
-
-# 苹果服务
-RULE-SET,https://github.com/Repcz/Tool/raw/X/Surge/Rules/AppleProxy.list,🌏 国外网站
-RULE-SET,https://github.com/Repcz/Tool/raw/X/Shadowrocket/Rules/Apple.list,DIRECT
  
 # Surge 的自动 REJECT 保护丢包，防止应用循环请求
 IP-CIDR,0.0.0.0/32,REJECT
-
-# 局域网
-RULE-SET,https://github.com/Repcz/Tool/raw/X/Shadowrocket/Rules/Lan.list,DIRECT
 
 # 国内规则
 GEOIP,CN,DIRECT
