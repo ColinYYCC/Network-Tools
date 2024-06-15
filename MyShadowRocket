@@ -65,6 +65,7 @@ DOMAIN-SET,https://ruleset.skk.moe/List/domainset/reject_phishing.conf,REJECT-DR
 # 静态CDN域名(強烈建議)
 DOMAIN-SET,https://ruleset.skk.moe/List/domainset/cdn.conf,🌏 国外网站
 RULE-SET,https://ruleset.skk.moe/List/non_ip/cdn.conf,🌏 国外网站
+
 # OpenAI
 RULE-SET,https://github.com/Repcz/Tool/raw/X/Shadowrocket/Rules/AI.list,🤖 AI
 
@@ -104,6 +105,7 @@ RULE-SET,https://ruleset.skk.moe/List/non_ip/direct.conf,DIRECT
 # Global 全球加速
 RULE-SET,https://ruleset.skk.moe/List/non_ip/global.conf,🌏 国外网站
 RULE-SET,https://ruleset.skk.moe/List/non_ip/global_plus.conf,🌏 国外网站 
+
 # China 中国直连 (IP)
 RULE-SET,https://ruleset.skk.moe/List/ip/domestic.conf,DIRECT
 RULE-SET,https://ruleset.skk.moe/List/ip/china_ip.conf,DIRECT
