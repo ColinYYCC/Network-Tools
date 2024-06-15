@@ -896,36 +896,37 @@ upos-sz-upcdntx.bilivideo.com = server:https://doh.pub/dns-query // BiliBili upo
 # 有两种重定向方式: "header" 和 "302"
 
 [SSID Setting]
-# 该段仅在
-# 你可以为某些特定的
+# 该段仅在 iOS 版本下生效。 
+# 你可以为某些特定的 WiFi 网络设置设置参数
 # 参数:
-# suspend:
-# 在该网络下
-# Surge
-# 
-# SSID
-# 可使用
-# 可使用
-# 可使用
-# 可使用
-# 可使用
-# 可使用
-# 可使用
-# 参数
-# cellular-fallback=default
-# cellular-fallback=off
-# cellular-fallback=hybrid
-# cellular-fallback=wifi-assist
-# 如无前缀则按照旧版规则匹配
-# SSID
-# 
-# 中国用户若使用
-# 
-# 连接到
-"SSID:"Apple
-# 需要
+# suspend: "true" 或 "false"
+# 在该网络下 Surge 将暂停工作。 请注意，如果你在该网络下直接启动 Surge，那么 
+# Surge 依然会工作。只有当从其他网络切换到该网络时，Surge 才会暂停。
+#
+# SSID Setting 段表达式（适用 SUBNET 规则）
+# 可使用 MCCMNC:100-200 匹配特定数据网络
+# 可使用 SSID:value 特定匹配 SSID，支持通配符
+# 可使用 BSSID:value 特定匹配 BSSID，支持通配符
+# 可使用 ROUTER:value 特定匹配路由地址
+# 可使用 TYPE:WIFI 匹配所有 WiFi 网络
+# 可使用 TYPE:CELLULAR 匹配所有数据网络
+# 可使用 TYPE:WIRED 匹配所有有线网络（iOS 上支持 USB 网络适配
+# 参数 cellular-fallback 可单独控制一些 Wi-Fi 下的 all-hybrid 和 wifi-assist 行为
+# cellular-fallback=default 使用 [General] 中的 all-hybrid 和 wifi-assist 配置
+# cellular-fallback=off 关闭 all-hybrid 和 wifi-assist
+# cellular-fallback=hybrid 开启 all-hybrid 
+# cellular-fallback=wifi-assist 开启 wifi-assist
+# 如无前缀则按照旧版规则匹配 SSID、BSSID、路由地址
+# SSID Setting 段内容从上至下依次匹配，匹配到第一个结果后立刻终止
+#
+# 中国用户若使用 TFO 建议强制关闭数据网络上的 TFO，避免产生问题，然后在已测试过的网络上强制开启。只有这样配置后方可充分享受 TFO 的优势。
+#
+# 连接到 Apple Store 的 Wi-Fi网络时 Surge 暂停工作
+SSID:"Apple Store" suspend=true
+# 需要 Web 验证登录的 Wi-Fi 网络以及路由器已经科学上网的 Surge 挂起
 
 [MITM]
+skip-server-cert-verify = false
 tcp-connection = true
 h2 = true
 hostname = www.google.cn
