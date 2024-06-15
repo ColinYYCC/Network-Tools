@@ -30,7 +30,7 @@ private-ip-answer = true
 # 直连域名解析失败后使用代理。false表示不启用。
 dns-direct-fallback-proxy = false
 # DNS劫持。有些设备或软件总是使用硬编码的DNS服务器，例如Netflix通过Google DNS(8.8.8.8或8.8.4.4)发送请求，您可以使用此选项来劫持查询。
-hijack-dns = 8.8.8.8:53,8.8.4.4:53
+hijack-dns = 8.8.8.8:53, 8.8.4.4:53
 # 当UDP流量匹配到规则里不支持UDP转发的节点策略时重新选择回退行为，可选行为包括DIRECT、REJECT。DIRECT表示直连转发UDP流量，REJECT表示拒绝转发UDP流量。
 udp-policy-not-supported-behaviour = REJECT
 
