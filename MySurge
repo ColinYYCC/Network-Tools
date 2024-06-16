@@ -187,6 +187,7 @@ udp-policy-not-supported-behaviour = REJECT
 # > External Proxy Group
 # 去重订阅（需要配合Sub-Store脚本https://raw.githubusercontent.com/Keywos/rule/main/cname.js#bs=10&cd=2000&flag=使用）
 De-Surge = select, policy-path=[填入订阅], update-interval=10800, no-alert=0, hidden=true, include-all-proxies=0
+
 # 重命名订阅（需要配合Sub-Store脚本https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Sub-Store/NodeRename.js使用）
 Rename=select, policy-path=[填入订阅], update-interval=10800, no-alert=0, hidden=true, include-all-proxies=0
 
