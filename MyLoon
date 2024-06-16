@@ -6,13 +6,13 @@
 #
 # Loon Version ≥ 3.1.7
 #
-# 最后更新时间: 2024-06-11 23:27
+# 最后更新时间: 2024-06-16 15:27
 #
 # ================
 
 [General]
-skip-proxy = 192.168.0.0/24, 10.0.0.0/8, 172.16.0.0/12, 127.0.0.1, localhost, *.local
-bypass-tun = 192.168.0.0/16, 10.0.0.0/8, 172.16.0.0/12
+skip-proxy = 192.168.0.0/24,10.0.0.0/8,172.16.0.0/12,127.0.0.1,localhost,*.local
+bypass-tun = 192.168.0.0/16,10.0.0.0/8,172.16.0.0/12
 
 # ---(DNS 服务器)---
 # DNS 服务器 (如无必要不建议使用 DNS over HTTPS)
@@ -56,7 +56,7 @@ resource-parser = https://gitlab.com/sub-store/Sub-Store/-/releases/permalink/la
 ssid-trigger = "default":rule, "cellular":rule,"SI":DIRECT
 
 # > 以下配置的域名不会使用fakeip进行映射
-real-ip = *.srv.nintendo.net, *.stun.playstation.net, xbox.*.microsoft.com, *.xboxlive.com*.srv.nintendo.net, *.stun.playstation.net, xbox.*.microsoft.com, *.xboxlive.com, *.battlenet.com.cn, *.battlenet.com, *.blzstatic.cn, *.battle.net
+real-ip = *.srv.nintendo.net,*.stun.playstation.net,xbox.*.microsoft.com,*.xboxlive.com*.srv.nintendo.net,*.stun.playstation.net,xbox.*.microsoft.com,*.xboxlive.com,*.battlenet.com.cn,*.battlenet.com,*.blzstatic.cn,*.battle.net
 
 # > interface-mode 指定流量使用哪个网络接口进行转发，目前包含三种模式:
 # Auto: 系统自动分配
@@ -80,6 +80,7 @@ geoip-url = https://github.com/xream/geoip/releases/latest/download/ipinfo.count
 [Proxy]
 
 [Remote Proxy]
+
 # ------
 
 [Remote Filter]
@@ -94,25 +95,25 @@ US = NameRegex, FilterKey = "^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄�
 # ------
 
 [Proxy Group]
-全球节点 = select,AUTO,香港节点,美国节点,狮城节点,日本节点,台湾节点,欧洲节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/Loon_9.png
+全球节点 = select,UrlTest,香港节点,美国节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/Loon_9.png
 # ------
 
 # 分流策略组
-国外网站 = select,香港节点,美国节点,狮城节点,日本节点,台湾节点,欧洲节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png
-国际媒体 = select,狮城节点,香港节点,美国节点,日本节点,台湾节点,欧洲节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
-微软服务 = select,香港节点,美国节点,狮城节点,日本节点,台湾节点,欧洲节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Microsoft.png
-谷歌服务 = select,香港节点,美国节点,狮城节点,日本节点,台湾节点,欧洲节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
-电报消息 = select,香港节点,美国节点,狮城节点,日本节点,台湾节点,欧洲节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png
-推特消息 = select,美国节点,香港节点,狮城节点,日本节点,台湾节点,欧洲节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Twitter.png
-AI = select,美国节点,香港节点,狮城节点,日本节点,台湾节点,欧洲节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png
-游戏平台 = select,游戏节点,香港节点,美国节点,欧洲节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Steam.png
-Emby = select,香港节点,美国节点,狮城节点,日本节点,台湾节点,欧洲节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
-Spotify = select,香港节点,美国节点,狮城节点,日本节点,台湾节点,欧洲节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png
-兜底切换 = fallback,香港节点,美国节点,狮城节点,日本节点,韩国节点,台湾节点,url = http://latency-test.skk.moe/endpoint,interval = 600,max-timeout = 3000,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
+国外网站 = select,UrlTest,香港节点,美国节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png
+国际媒体 = select,UrlTest,狮城节点,香港节点,美国节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
+微软服务 = select,UrlTest,香港节点,美国节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Microsoft.png
+谷歌服务 = select,UrlTest,香港节点,美国节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
+电报消息 = select,UrlTest,香港节点,美国节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png
+推特消息 = select,UrlTest,美国节点,香港节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Twitter.png
+AI = select,UrlTest,美国节点,香港节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png
+游戏平台 = select,UrlTest,游戏节点,香港节点,美国节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Steam.png
+Emby = select,UrlTest,香港节点,美国节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
+Spotify = select,UrlTest,香港节点,美国节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png
+兜底切换 = fallback,UrlTest,香港节点,美国节点,狮城节点,日本节点,韩国节点,台湾节点,url = http://latency-test.skk.moe/endpoint,interval = 600,max-timeout = 3000,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
 # ------
 
 # 地区策略组
-AUTO = url-test,All,url = http://latency-test.skk.moe/endpoint,interval = 300,tolerance = 30,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Server.png
+UrlTest = url-test,All,url = http://latency-test.skk.moe/endpoint,interval = 300,tolerance = 30,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Server.png
 游戏节点 = load-balance,Game,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,algorithm = pcc,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png
 香港节点 = load-balance,HK,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,algorithm = pcc,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
 美国节点 = load-balance,US,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,algorithm = pcc,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
@@ -120,7 +121,6 @@ AUTO = url-test,All,url = http://latency-test.skk.moe/endpoint,interval = 300,to
 日本节点 = load-balance,JP,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,algorithm = pcc,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png
 韩国节点 = load-balance,KR,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,algorithm = pcc,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png
 台湾节点 = load-balance,TW,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,algorithm = pcc,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China.png
-欧洲节点 = load-balance,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,algorithm = pcc,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/European_Union.png
 # ------
 
 [Rule]
@@ -149,55 +149,55 @@ https://github.com/Repcz/Tool/raw/X/Loon/Rules/ProxyGFW.list, policy=国外网�
 https://github.com/Repcz/Tool/raw/X/Loon/Rules/AppleProxy.list, policy=国外网站, tag=AppleProxy, enabled=true
 https://github.com/Repcz/Tool/raw/X/Loon/Rules/Apple.list, policy=DIRECT, tag=Apple, enabled=true
 https://github.com/Repcz/Tool/raw/X/Loon/Rules/Lan.list, policy=DIRECT, tag=LAN, enabled=true
-https://github.com/Repcz/Tool/raw/X/Loon/Rules/FILTER_REGION.list, policy=DIRECT, tag=CN, enabled=
+https://github.com/Repcz/Tool/raw/X/Loon/Rules/FILTER_REGION.list, policy=DIRECT, tag=CN, enabled=true
 # ------
 
 [Plugin]
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Block_HTTPDNS.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/LoonGallery.plugin, policy = 兜底切换, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Cainiao_remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/CaixinMedia_remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/CoolApk_remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Taobao_remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Tieba_remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/JD_remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Weibo_remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Zhihu_remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/BabyTree_remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/RedPaper_remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/PiPiXia_remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/IThome_remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/QQMusic_remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Reddit_remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/QQKSong_remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Spotify_remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/YouTube_remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/AliYunDrive_remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Amap_remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/BaiduNetDisk_remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Himalaya_remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/QiDian_remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/DragonRead_remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Umetrip_remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/BaiduSearchWebpage_remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Bilibili_remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Remove_ads_by_keli.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Baidu_input_method_remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/NeteaseCloudMusic_remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/smzdm_remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Weixin_Official_Accounts_remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/WexinMiniPrograms_Remove_ads.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/JD_Price.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/QuickSearch.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Prevent_DNS_Leaks.plugin, policy = 兜底切换, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Node_detection_tool.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/TestFlight.plugin, policy = DIRECT, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Weixin_external_links_unlock.plugin, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Fileball_mount.plugin, enabled = false
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Auto_Join_TF.plugin, policy = DIRECT, enabled = false
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/BoxJs.plugin, policy = 兜底切换, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Sub-Store.plugin, policy = 兜底切换, enabled = true
-https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Script-Hub.plugin, policy = 兜底切换, enabled = true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Block_HTTPDNS.plugin, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/LoonGallery.plugin, policy=兜底切换, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Cainiao_remove_ads.plugin, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/CaixinMedia_remove_ads.plugin, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/CoolApk_remove_ads.plugin, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Taobao_remove_ads.plugin, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Tieba_remove_ads.plugin, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/JD_remove_ads.plugin, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Weibo_remove_ads.plugin, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Zhihu_remove_ads.plugin, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/BabyTree_remove_ads.plugin, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/RedPaper_remove_ads.plugin, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/PiPiXia_remove_ads.plugin, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/IThome_remove_ads.plugin, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/QQMusic_remove_ads.plugin, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Reddit_remove_ads.plugin, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/QQKSong_remove_ads.plugin, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Spotify_remove_ads.plugin, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/YouTube_remove_ads.plugin, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/AliYunDrive_remove_ads.plugin, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Amap_remove_ads.plugin, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/BaiduNetDisk_remove_ads.plugin, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Himalaya_remove_ads.plugin, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/QiDian_remove_ads.plugin, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/DragonRead_remove_ads.plugin, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Umetrip_remove_ads.plugin, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/BaiduSearchWebpage_remove_ads.plugin, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Bilibili_remove_ads.plugin, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Remove_ads_by_keli.plugin, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Baidu_input_method_remove_ads.plugin, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/NeteaseCloudMusic_remove_ads.plugin, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/smzdm_remove_ads.plugin, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Weixin_Official_Accounts_remove_ads.plugin, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/WexinMiniPrograms_Remove_ads.plugin, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/JD_Price.plugin, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/QuickSearch.plugin, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Prevent_DNS_Leaks.plugin, policy=兜底切换, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Node_detection_tool.plugin, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/TestFlight.plugin, policy=DIRECT, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Weixin_external_links_unlock.plugin, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Fileball_mount.plugin, enabled=false
+https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Auto_Join_TF.plugin, policy=DIRECT, enabled=false
+https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/BoxJs.plugin, policy=兜底切换, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Sub-Store.plugin, policy=兜底切换, enabled=true
+https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Script-Hub.plugin, policy=兜底切换, enabled=true
 # ------
 
 [Host]
@@ -762,5 +762,7 @@ upos-sz-upcdntx.bilivideo.com = server:https://doh.pub/dns-query
 [Script]
 
 [Mitm]
+ca-p12 = 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
+ca-passphrase = 229K6BS4
 skip-server-cert-verify = false
 hostname = www.google.cn
