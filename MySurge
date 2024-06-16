@@ -195,8 +195,8 @@ Rename=select, policy-path=[填入订阅], update-interval=10800, no-alert=0, hi
 # ------
 
 # > Internal Proxy Group
-# 节点选项
-全球节点 = select, SmartGroup, Auto, 香港, 台湾, 新加坡, 日本, 美国, 韩国, 节点选择, no-alert=0, hidden=0, include-all-proxies=0, include-other-group=FishChips
+# > 节点分流
+节点选择 = select, SmartGroup, Auto, 香港, 台湾, 新加坡, 日本, 美国, 韩国, 所有节点, no-alert=0, hidden=0, include-all-proxies=0
 
 # IP归属地更改
 归属地更改 = select, DIRECT, 香港, 台湾, 新加坡, 日本, 美国, 韩国
@@ -224,13 +224,12 @@ Netflix = select, 新加坡, 香港, 台湾, 日本, 美国, 韩国
 漏网之鱼 = select, 全球节点, 节点选择, DIRECT
 # ------
 
-# 节点选择
-节点选择 = select, policy-regex-filter=^(?=.*(.*))(?!.*((?i)回国|校园|游戏|教育|公告|邀请|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|到期|过期|已用|联系|邮箱|工单|群|(\b(GAME|USE|USED|TOTAL|EXPIRE|EMAIL)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$, no-alert=0, hidden=0, include-all-proxies=Rename
+# > 节点选择
+所有节点 = select, policy-regex-filter=^(?=.*(.*))(?!.*((?i)回国|校园|游戏|教育|公告|邀请|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|到期|过期|已用|联系|邮箱|工单|群|(\b(GAME|USE|USED|TOTAL|EXPIRE|EMAIL)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$, no-alert=0, hidden=0, include-all-proxies=0, include-other-group=Rename
 
 Auto = url-test, hidden=0, policy-regex-filter=^(?=.*(.*))(?!.*((?i)回国|校园|游戏|教育|公告|邀请|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|到期|过期|已用|联系|邮箱|工单|群|(\b(GAME|USE|USED|TOTAL|EXPIRE|EMAIL)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$, interval=3000, tolerance=50, evaluate-before-use=1, no-alert=0, include-all-proxies=0, include-other-group=De-Surge
 
-SmartGroup = smart, policy-regex-filter=^(?=.*(.*))(?!.*((?i)回国|校园|游戏|教育|公告|邀请|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|到期|过期|已用|联系|邮箱|工单|群|(\b(GAME|USE|USED|TOTAL|EXPIRE|EMAIL)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$, no-alert=0, hidden=0, include-all-proxies=Rename
-# ------
+SmartGroup = smart, policy-regex-filter=^(?=.*(.*))(?!.*((?i)回国|校园|游戏|教育|公告|邀请|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|到期|过期|已用|联系|邮箱|工单|群|(\b(GAME|USE|USED|TOTAL|EXPIRE|EMAIL)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$, no-alert=0, hidden=0, include-all-proxies=0, include-other-group=Rename
 
 # 地区分流
 香港 = load-balance, policy-regex-filter=^(?=.*((?i)🇭🇰|香港|(\b(HK|Hong)\b))).*$, no-alert=0, hidden=1, include-all-proxies=0, persistent=1, include-other-group=De-Surge
@@ -249,7 +248,7 @@ SmartGroup = smart, policy-regex-filter=^(?=.*(.*))(?!.*((?i)回国|校园|游�
 # ------
 
 # 兼容性修复
-PROXY = select, 全球节点, hidden=true
+PROXY = select, 节点选择, hidden=true
 # ------
 
 [Rule]
