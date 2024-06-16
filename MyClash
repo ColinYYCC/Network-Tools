@@ -111,47 +111,47 @@ proxy-groups:
 
   - {name: 国外网站, <<: *pg, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png}
 
-  - {name: 国际媒体, <<: *pg, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png}
+  - {name: 国际媒体, <<: *pg, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/blob/master/Universal/Netflix.png}
 
-  - {name: 苹果服务, <<: *pg, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_1.png}
+  - {name: 苹果服务, <<: *pg, icon: https://raw.githubusercontent.com/Koolson/Semporia/Hand-Painted-icon/blob/master/Social_Media/Apple.png}
 
-  - {name: 微软服务, <<: *pg, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Microsoft.png}
+  - {name: 微软服务, <<: *pg, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/blob/master/Universal/Microsoft.png}
 
-  - {name: 谷歌服务, <<: *pg, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png}
+  - {name: 谷歌服务, <<: *pg, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/blob/master/Google_Suite/Google.png}
 
-  - {name: 电报消息, <<: *pg, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png}
+  - {name: 电报消息, <<: *pg, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/blob/master/Social_Media/Telegram.png}
 
-  - {name: 推特消息, <<: *pg, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Twitter.png}
+  - {name: 推特消息, <<: *pg, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/blob/master/Social_Media/Twitter.png}
 
   - {name: AI, <<: *pg, icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png}
 
-  - {name: 游戏平台, <<: *pg, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png}
+  - {name: 游戏平台, <<: *pg, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/blob/master/Universal/Steam.png}
 
   - {name: Emby, <<: *pg, include-all: true, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png}
 
-  - {name: 广告拦截, type: select, proxies: [REJECT, DIRECT], icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Advertising.png}
+  - {name: 广告拦截, type: select, proxies: [REJECT, DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/blob/master/Universal/Reject.orig.png}
 
-  - {name: 兜底分流, <<: *pg, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color//Final.png}
+  - {name: 兜底分流, <<: *pg, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color//Final_1.png}
 
   #节点地区分组
 
-  - {name: UrlTest, <<: *url-test, filter: "^(?=.*(.))", icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Server.png}
+  - {name: UrlTest, <<: *url-test, filter: "^(?=.*(.))", icon: https://raw.githubusercontent.comSemporia/Hand-Painted-icon/blob/master/Universal/Auto_Speed.png}
 
   - {name: Fallback, <<: *fallback, filter: "^(?=.*(.))", icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Server.png}
 
-  - {name: 负载均衡, <<: *load-balance, filter: "^(?=.*(.))", icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Server.png}
+  - {name: 负载均衡, <<: *load-balance, filter: "^(?=.*(.))", icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Available.png}
 
-  - {name: 香港节点, <<: *url-test, filter: "(?i)🇭🇰|香港|(\b(HK|Hong)\b)", icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png}
+  - {name: 香港节点, <<: *url-test, filter: "(?i)🇭🇰|香港|(\b(HK|Hong)\b)", icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/blob/master/Rectangular/Hong_Kong.png}
 
-  - {name: 美国节点, <<: *url-test, filter: "(?i)🇺🇸|美国|洛杉矶|圣何塞|(\b(US|United States)\b)", icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png}
+  - {name: 美国节点, <<: *url-test, filter: "(?i)🇺🇸|美国|洛杉矶|圣何塞|(\b(US|United States)\b)", icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/blob/master/Rectangular/United_States.png}
 
-  - {name: 狮城节点, <<: *url-test, filter: "(?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\b)", icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png}
+  - {name: 狮城节点, <<: *url-test, filter: "(?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\b)", icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/blob/master/Rectangular/Singapore.png}
 
-  - {name: 日本节点, <<: *url-test, filter: "(?i)🇯🇵|日本|东京|(\b(JP|Japan)\b)", icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png}
+  - {name: 日本节点, <<: *url-test, filter: "(?i)🇯🇵|日本|东京|(\b(JP|Japan)\b)", icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/blob/master/Rectangular/Japan.png}
 
-  - {name: 台湾节点, <<: *url-test, filter: "(?i)🇨🇳|🇹🇼|台湾|(\b(TW|Tai|Taiwan)\b)", icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China.png}
+  - {name: 台湾节点, <<: *url-test, filter: "(?i)🇨🇳|🇹🇼|台湾|(\b(TW|Tai|Taiwan)\b)", icon: https://raw.githubusercontent.com/KSemporia/Hand-Painted-icon/blob/master/Rectangular/China.png}
 
-  - {name: 韩国节点, <<: *url-test, filter: "^(?=.*((?i)🇰🇷|韩国|韓|首尔|(\b(KR|Korea)\b)))", icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Korea.png}
+  - {name: 韩国节点, <<: *url-test, filter: "^(?=.*((?i)🇰🇷|韩国|韓|首尔|(\b(KR|Korea)\b)))", icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/blob/master/Rectangular/Korea.png}
 
 rule-providers:
 
