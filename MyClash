@@ -111,11 +111,11 @@ proxy-groups:
 
   - {name: 国外网站, <<: *pg, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png}
 
-  - {name: 国际媒体, <<: *pg, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png}
+  - {name: 国际媒体, <<: *pg, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Netflix_Letter.png}
 
   - {name: 苹果服务, <<: *pg, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_1.png}
 
-  - {name: 微软服务, <<: *pg, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/blob/master/Universal/Microsoft.png}
+  - {name: 微软服务, <<: *pg, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Microsoft.png}
 
   - {name: 谷歌服务, <<: *pg, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png}
 
@@ -135,7 +135,7 @@ proxy-groups:
 
   #节点地区分组
 
-  - {name: UrlTest, <<: *url-test, filter: "^(?=.*(.))", icon: https://raw.githubusercontent.comSemporia/Hand-Painted-icon/blob/master/Universal/Auto_Speed.png}
+  - {name: UrlTest, <<: *url-test, filter: "^(?=.*(.))", icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Speedtest.png}
 
   - {name: Fallback, <<: *fallback, filter: "^(?=.*(.))", icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Server.png}
 
