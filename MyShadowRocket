@@ -40,19 +40,21 @@ udp-policy-not-supported-behaviour = REJECT
 
 [Proxy Group]
 
-🌏 国外网站 = select,🛰️ 所有节点,🇭🇰 香港节点,🇺🇸 美国节点,🇸🇬 狮城节点,🇯🇵 日本节点,🇨🇳 台湾节点,🇰🇷 韩国节点,interval=86400,timeout=3,select=0,url=http://latency-test.skk.moe/endpoint
-📽️ 国际媒体 = select,🇸🇬 狮城节点,🛰️ 所有节点,🇭🇰 香港节点,🇺🇸 美国节点,🇯🇵 日本节点,🇨🇳 台湾节点,🇰🇷 韩国节点,interval=86400,timeout=3,select=0,url=http://latency-test.skk.moe/endpoint
-🖥️ 微软服务 = select,🛰️ 所有节点,🇭🇰 香港节点,🇺🇸 美国节点,🇸🇬 狮城节点,🇯🇵 日本节点,🇨🇳 台湾节点,🇰🇷 韩国节点,interval=86400,timeout=3,select=0,url=http://latency-test.skk.moe/endpoint
-🌌 谷歌服务 = select,🇭🇰 香港节点,🛰️ 所有节点,🇺🇸 美国节点,🇸🇬 狮城节点,🇯🇵 日本节点,🇨🇳 台湾节点,🇰🇷 韩国节点,interval=86400,timeout=3,select=0,url=http://latency-test.skk.moe/endpoint
-📟 电报消息 = select,🇭🇰 香港节点,🛰️ 所有节点,🇺🇸 美国节点,🇸🇬 狮城节点,🇯🇵 日本节点,🇨🇳 台湾节点,🇰🇷 韩国节点,interval=86400,timeout=3,select=0,url=http://latency-test.skk.moe/endpoint
-🐦 推特消息 = select,🇭🇰 香港节点,🛰️ 所有节点,🇺🇸 美国节点,🇸🇬 狮城节点,🇯🇵 日本节点,🇨🇳 台湾节点,🇰🇷 韩国节点,interval=86400,timeout=3,select=0,url=http://latency-test.skk.moe/endpoint
-🤖 AI = select,🇺🇸 美国节点,🛰️ 所有节点,🇭🇰 香港节点,🇸🇬 狮城节点,🇯🇵 日本节点,🇨🇳 台湾节点,🇰🇷 韩国节点,interval=86400,timeout=3,select=0,url=http://latency-test.skk.moe/endpoint
-🎮 游戏平台 = select,🛰️ 所有节点,🇭🇰 香港节点,🇺🇸 美国节点,🇸🇬 狮城节点,🇯🇵 日本节点,🇨🇳 台湾节点,🇰🇷 韩国节点,interval=86400,timeout=3,select=0,url=http://latency-test.skk.moe/endpoint
-📽️ Emby = select,🇸🇬 狮城节点,🛰️ 所有节点,🇭🇰 香港节点,🇺🇸 美国节点,🇯🇵 日本节点,🇨🇳 台湾节点,🇰🇷 韩国节点,DIRECT,use=true,interval=86400,url=http://latency-test.skk.moe/endpoint,timeout=3,select=0,policy-regex-filter=.
-🎵 Spotify = select,🛰️ 所有节点,🇭🇰 香港节点,🇺🇸 美国节点,🇸🇬 狮城节点,🇯🇵 日本节点,🇨🇳 台湾节点,🇰🇷 韩国节点,interval=86400,timeout=3,select=0,url=http://latency-test.skk.moe/endpoint
-🐟 兜底分流 = select,🛰️ 所有节点,🇭🇰 香港节点,🇺🇸 美国节点,🇸🇬 狮城节点,🇯🇵 日本节点,🇨🇳 台湾节点,🇰🇷 韩国节点,DIRECT,interval=86400,timeout=3,select=0,url=http://latency-test.skk.moe/endpoint
+🌏 国外网站 = select,🛰️ 自动选择,🔯 故障转移,🔮 负载均衡,🇭🇰 香港节点,🇺🇸 美国节点,🇸🇬 狮城节点,🇯🇵 日本节点,🇨🇳 台湾节点,🇰🇷 韩国节点,interval=86400,timeout=3,select=0,url=http://latency-test.skk.moe/endpoint
+📽️ 国际媒体 = select,🇸🇬 狮城节点,🛰️ 自动选择,🔯 故障转移,🔮 负载均衡,🇭🇰 香港节点,🇺🇸 美国节点,🇯🇵 日本节点,🇨🇳 台湾节点,🇰🇷 韩国节点,interval=86400,timeout=3,select=0,url=http://latency-test.skk.moe/endpoint
+🖥️ 微软服务 = select,🛰️ 自动选择,🔯 故障转移,🔮 负载均衡,🇭🇰 香港节点,🇺🇸 美国节点,🇸🇬 狮城节点,🇯🇵 日本节点,🇨🇳 台湾节点,🇰🇷 韩国节点,interval=86400,timeout=3,select=0,url=http://latency-test.skk.moe/endpoint
+🌌 谷歌服务 = select,🇭🇰 香港节点,🛰️ 自动选择,🔯 故障转移,🔮 负载均衡,🇺🇸 美国节点,🇸🇬 狮城节点,🇯🇵 日本节点,🇨🇳 台湾节点,🇰🇷 韩国节点,interval=86400,timeout=3,select=0,url=http://latency-test.skk.moe/endpoint
+📟 电报消息 = select,🇭🇰 香港节点,🛰️ 自动选择,🔯 故障转移,🔮 负载均衡,🇺🇸 美国节点,🇸🇬 狮城节点,🇯🇵 日本节点,🇨🇳 台湾节点,🇰🇷 韩国节点,interval=86400,timeout=3,select=0,url=http://latency-test.skk.moe/endpoint
+🐦 推特消息 = select,🇭🇰 香港节点,🛰️ 自动选择,🔯 故障转移,🔮 负载均衡,🇺🇸 美国节点,🇸🇬 狮城节点,🇯🇵 日本节点,🇨🇳 台湾节点,🇰🇷 韩国节点,interval=86400,timeout=3,select=0,url=http://latency-test.skk.moe/endpoint
+🤖 AI = select,🇺🇸 美国节点,🛰️ 自动选择,🔯 故障转移,🔮 负载均衡,🇭🇰 香港节点,🇸🇬 狮城节点,🇯🇵 日本节点,🇨🇳 台湾节点,🇰🇷 韩国节点,interval=86400,timeout=3,select=0,url=http://latency-test.skk.moe/endpoint
+🎮 游戏平台 = select,🛰️ 自动选择,🔯 故障转移,🔮 负载均衡,🇭🇰 香港节点,🇺🇸 美国节点,🇸🇬 狮城节点,🇯🇵 日本节点,🇨🇳 台湾节点,🇰🇷 韩国节点,interval=86400,timeout=3,select=0,url=http://latency-test.skk.moe/endpoint
+📽️ Emby = select,🇸🇬 狮城节点,🛰️ 自动选择,🔯 故障转移,🔮 负载均衡,🇭🇰 香港节点,🇺🇸 美国节点,🇯🇵 日本节点,🇨🇳 台湾节点,🇰🇷 韩国节点,DIRECT,use=true,interval=86400,url=http://latency-test.skk.moe/endpoint,timeout=3,select=0,policy-regex-filter=.
+🎵 Spotify = select,🛰️ 自动选择,🔯 故障转移,🔮 负载均衡,🇭🇰 香港节点,🇺🇸 美国节点,🇸🇬 狮城节点,🇯🇵 日本节点,🇨🇳 台湾节点,🇰🇷 韩国节点,interval=86400,timeout=3,select=0,url=http://latency-test.skk.moe/endpoint
+🐟 兜底分流 = select,🛰️ 自动选择,🔯 故障转移,🔮 负载均衡,🇭🇰 香港节点,🇺🇸 美国节点,🇸🇬 狮城节点,🇯🇵 日本节点,🇨🇳 台湾节点,🇰🇷 韩国节点,DIRECT,interval=86400,timeout=3,select=0,url=http://latency-test.skk.moe/endpoint
 
-🛰️ 所有节点 = url-test,url=http://latency-test.skk.moe/endpoint,interval=300,tolerance=0,timeout=3,select=0,policy-regex-filter=^(?=.*(.*))
+🛰️ 自动选择 = url-test,url=http://latency-test.skk.moe/endpoint,interval=300,tolerance=0,timeout=3,select=0,policy-regex-filter=^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
+🔯 故障转移 = fallback,url=http://latency-test.skk.moe/endpoint,interval=300,tolerance=0,timeout=3,select=0,policy-regex-filter=^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
+🔮 负载均衡 = load-balance,url=http://latency-test.skk.moe/endpoint,interval=300,tolerance=0,timeout=3,select=0,policy-regex-filter=^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$
 🇭🇰 香港节点 = url-test,url=http://latency-test.skk.moe/endpoint,interval=300,tolerance=0,timeout=3,select=0,policy-regex-filter=(?i)🇭🇰|香港|(\b(HK|Hong)\b)
 🇺🇸 美国节点 = url-test,url=http://latency-test.skk.moe/endpoint,interval=300,tolerance=0,timeout=3,select=0,policy-regex-filter=(?i)🇺🇸|美国|洛杉矶|圣何塞|(\b(US|United States)\b)
 🇸🇬 狮城节点 = url-test,url=http://latency-test.skk.moe/endpoint,interval=300,tolerance=0,timeout=3,select=0,policy-regex-filter=(?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\b)
@@ -110,6 +112,10 @@ RULE-SET,https://github.com/Repcz/Tool/raw/X/Shadowrocket/Rules/Disney.list,📽
 RULE-SET,https://github.com/Repcz/Tool/raw/X/Shadowrocket/Rules/PrimeVideo.list,📽️ 国际媒体
 RULE-SET,https://github.com/Repcz/Tool/raw/X/Shadowrocket/Rules/HBO.list,📽️ 国际媒体
 RULE-SET,https://github.com/Repcz/Tool/raw/X/Shadowrocket/Rules/TikTok.list,📽️ 国际媒体
+
+# Streaming 国际流媒体服务
+RULE-SET,https://ruleset.skk.moe/List/non_ip/stream.conf,📽️ 国际媒体
+RULE-SET,https://ruleset.skk.moe/List/ip/stream.conf,📽️ 国际媒体
 
 # Emby
 RULE-SET,https://github.com/Repcz/Tool/raw/X/Shadowrocket/Rules/Emby.list,📽️ Emby
