@@ -1,13 +1,8 @@
 # 基于[@Repcz](https://raw.githubusercontent.com/Repcz/Tool/X/Loon/Loon.conf)修改
 # Author:https://github.com/ColinYYCC
-# 
-#
 # 以 ';' 或 '#' 或 '//' 开头的配置文件行为注释行
 #
 # Loon Version ≥ 3.1.7
-#
-# 最后更新时间: 2024-06-16 15:27
-#
 # ================
 
 [General]
