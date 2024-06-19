@@ -376,8 +376,8 @@ DOMAIN-SET,https://ruleset.skk.moe/List/domainset/cdn.conf,PROXY,extended-matchi
 RULE-SET,https://ruleset.skk.moe/List/non_ip/cdn.conf,PROXY,extended-matching // SukkaW静态CDN域名
 
 # 苹果服务规则列表
-RULE-SET,https://github.com/Repcz/Tool/raw/X/Surge/Rules/AppleProxy.list, Apple Services,extended-matching //  Apple Services
-RULE-SET,https://github.com/Repcz/Tool/raw/X/Surge/Rules/Apple.list,DIRECT,extended-matching //  Apple Services
+RULE-SET,https://ruleset.skk.moe/List/non_ip/apple_cdn.conf,DIRECT //  Apple CDN
+RULE-SET,https://ruleset.skk.moe/List/non_ip/apple_services.conf, Apple Services,extended-matching //  Apple Services
 
 # TV+
 PROCESS-NAME,/System/Applications/TV.app/Contents/MacOS/TV,国际流媒体 // TV+
