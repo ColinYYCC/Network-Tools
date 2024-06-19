@@ -205,8 +205,7 @@ Rename = select, policy-path=[输入你的机场订阅链接], update-interval=1
 归属地更改 = select, DIRECT, 香港, 台湾, 新加坡, 日本, 美国, 韩国
 
 # Apple
- Apple Services = select, DIRECT, 节点选择
- Apple CDN = select,  Apple Services, 全球节点, DIRECT
+ Apple Services = select, DIRECT, 🛰️ 自动选择, 🔯 故障转移, 🔮 负载均衡
 
 # Netflix
 Netflix = select, 新加坡, 香港, 澳门, 台湾, 日本, 美国, 韩国, 🛰️ 自动选择, 🔯 故障转移, 🔮 负载均衡
@@ -378,8 +377,8 @@ DOMAIN-SET,https://ruleset.skk.moe/List/domainset/cdn.conf,PROXY,extended-matchi
 RULE-SET,https://ruleset.skk.moe/List/non_ip/cdn.conf,PROXY,extended-matching // SukkaW静态CDN域名
 
 # 苹果服务规则列表
-RULE-SET,https://ruleset.skk.moe/List/non_ip/apple_services.conf, Apple Services,extended-matching //  Apple Services
-DOMAIN-SET,https://ruleset.skk.moe/List/domainset/apple_cdn.conf, Apple CDN,extended-matching //  Apple CDN
+RULE-SET,https://github.com/Repcz/Tool/raw/X/Surge/Rules/AppleProxy.list, Apple Services,extended-matching //  Apple Services
+RULE-SET,https://github.com/Repcz/Tool/raw/X/Surge/Rules/Apple.list,DIRECT,extended-matching //  Apple Services
 
 # TV+
 PROCESS-NAME,/System/Applications/TV.app/Contents/MacOS/TV,国际流媒体 // TV+
