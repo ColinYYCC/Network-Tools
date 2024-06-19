@@ -170,18 +170,18 @@ rule-providers:
   Download: {<<: *c, path: ./RuleSet/Download.list,  url: https://github.com/Repcz/Tool/raw/X/Clash/Rules/Download.list}
       
   # 广告拦截
-  Reject_non_ip_no_drop: {<<: *c, path: ./sukkaw_ruleset/reject_non_ip_no_drop.txt, url: https://ruleset.skk.moe/Clash/non_ip/reject-no-drop.txt}
-  Reject_non_ip_drop: {<<: *c, path: ./sukkaw_ruleset/reject_non_ip_drop.txt, url: https://ruleset.skk.moe/Clash/non_ip/reject-drop.txt}
-  Reject_non_ip: {<<: *c, path: ./sukkaw_ruleset/reject_non_ip.txt, url: https://ruleset.skk.moe/Clash/non_ip/reject.txt}
-  # reject_domainset: {<<: *d, path: ./sukkaw_ruleset/reject_domainset.txt, url: https://ruleset.skk.moe/Clash/domainset/reject.txt}
-  Reject_ip: {<<: *c, path: ./sukkaw_ruleset/reject_ip.txt, url: https://ruleset.skk.moe/Clash/ip/reject.txt}
+  Reject_non_ip_no_drop: {<<: *c, path: ./RuleSet/reject_non_ip_no_drop.txt, url: https://ruleset.skk.moe/Clash/non_ip/reject-no-drop.txt}
+  Reject_non_ip_drop: {<<: *c, path: ./RuleSet/reject_non_ip_drop.txt, url: https://ruleset.skk.moe/Clash/non_ip/reject-drop.txt}
+  Reject_non_ip: {<<: *c, path: ./RuleSet/reject_non_ip.txt, url: https://ruleset.skk.moe/Clash/non_ip/reject.txt}
+  # reject_domainset: {<<: *d, path: ./RuleSet/reject_domainset.txt, url: https://ruleset.skk.moe/Clash/domainset/reject.txt}
+  Reject_ip: {<<: *c, path: ./RuleSet/reject_ip.txt, url: https://ruleset.skk.moe/Clash/ip/reject.txt}
 
   # 搜狗输入法 隐私收集
   Sogouinput: {<<: *c, path: ./RuleSet/sogouinput.txt, url: https://ruleset.skk.moe/Clash/non_ip/sogouinput.txt}
 
   # 常见静态 CDN
-  Cdn_domainset: {<<: *d, path: ./rule-providers/cdn_domainset.txt, url: https://ruleset.skk.moe/Clash/domainset/cdn.txt}
-  Cdn_non_ip: {<<: *d, path: ./rule-providers/cdn_non_ip.txt, url: https://ruleset.skk.moe/Clash/non_ip/cdn.txt}
+  Cdn_domainset: {<<: *d, path: ./RuleSet/cdn_domainset.txt, url: https://ruleset.skk.moe/Clash/domainset/cdn.txt}
+  Cdn_non_ip: {<<: *d, path: ./RuleSet/cdn_non_ip.txt, url: https://ruleset.skk.moe/Clash/non_ip/cdn.txt}
 
   # 苹果服务
   Apple Service: {<<: *c, path: ./RuleSet/apple_services.conf,  url: https://ruleset.skk.moe/List/non_ip/apple_services.conf}
