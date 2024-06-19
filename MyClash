@@ -216,8 +216,8 @@ rule-providers:
   # 国际媒体
   ProxyMedia: {<<: *c, path: ./RuleSet/ProxyMedia.list,  url: https://github.com/Repcz/Tool/raw/X/Clash/Rules/ProxyMedia.list}
 
-  # 代理网站
-  Global_non_ip: {<<: *c, path: ./RuleSet/global_non_ip.tx, url: https://ruleset.skk.moe/Clash/non_ip/global.txt}
+  # 国外网站
+  国外网站: {<<: *c, path: ./RuleSet/global_non_ip.tx, url: https://ruleset.skk.moe/Clash/non_ip/global.txt}
    
   # 中国大陆
   ChinaDomain: {<<: *c, path: ./RuleSet/ChinaDomain.list,  url: https://github.com/Repcz/Tool/raw/X/Clash/Rules/ChinaDomain.list}
@@ -253,8 +253,7 @@ rules:
   - RULE-SET,Epic,游戏平台
   - RULE-SET,Emby,Emby
   - RULE-SET,ProxyMedia,国际媒体
-  - RULE-SET,Global_non_ip,国外网站
-  - RULE-SET,Global_non_ip,国外网站
+  - RULE-SET,国外网站,国外网站
   - RULE-SET,ChinaDomain,DIRECT
   - RULE-SET,Domestic_non_ip,DIRECT
   - RULE-SET,Direct_non_ip,DIRECT
