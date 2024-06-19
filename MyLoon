@@ -95,25 +95,28 @@ US = NameRegex, FilterKey = "^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄�
 # ------
 
 [Proxy Group]
-全球节点 = select,UrlTest,香港节点,美国节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/Loon_9.png
+全球节点 = select,🛰️ 自动选择,🔯 故障转移,🔮 负载均衡,香港节点,美国节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/Loon_9.png
 # ------
 
 # 分流策略组
-国外网站 = select,UrlTest,香港节点,美国节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png
-国际媒体 = select,UrlTest,狮城节点,香港节点,美国节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
-微软服务 = select,UrlTest,香港节点,美国节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Microsoft.png
-谷歌服务 = select,UrlTest,香港节点,美国节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
-电报消息 = select,UrlTest,香港节点,美国节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png
-推特消息 = select,UrlTest,美国节点,香港节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Twitter.png
-AI = select,UrlTest,美国节点,香港节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png
-游戏平台 = select,UrlTest,游戏节点,香港节点,美国节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Steam.png
-Emby = select,UrlTest,香港节点,美国节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
-Spotify = select,UrlTest,香港节点,美国节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png
-兜底切换 = fallback,UrlTest,香港节点,美国节点,狮城节点,日本节点,韩国节点,台湾节点,url = http://latency-test.skk.moe/endpoint,interval = 600,max-timeout = 3000,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
+国外网站 = select,🛰️ 自动选择,🔯 故障转移,🔮 负载均衡t,香港节点,美国节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Global.png
+国际媒体 = select,🛰️ 自动选择,🔯 故障转移,🔮 负载均衡,狮城节点,香港节点,美国节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/YouTube.png
+微软服务 = select,🛰️ 自动选择,🔯 故障转移,🔮 负载均衡,香港节点,美国节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Microsoft.png
+谷歌服务 = select,🛰️ 自动选择,🔯 故障转移,🔮 负载均衡,香港节点,美国节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Google_Search.png
+电报消息 = select,🛰️ 自动选择,🔯 故障转移,🔮 负载均衡,香港节点,美国节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png
+推特消息 = select,🛰️ 自动选择,🔯 故障转移,🔮 负载均衡,美国节点,香港节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Twitter.png
+Apple Service =  select,🛰️ 自动选择,🔯 故障转移,🔮 负载均衡,美国节点,香港节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_1.png
+AI = select,🛰️ 自动选择,🔯 故障转移,🔮 负载均衡,美国节点,香港节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png
+游戏平台 = select,🛰️ 自动选择,🔯 故障转移,🔮 负载均衡,游戏节点,香港节点,美国节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Steam.png
+Emby = select,🛰️ 自动选择,🔯 故障转移,🔮 负载均衡,香港节点,美国节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
+Spotify = select,🛰️ 自动选择,🔯 故障转移,🔮 负载均衡,香港节点,美国节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Spotify.png
+兜底切换 = fallback,🛰️ 自动选择,🔯 故障转移,🔮 负载均衡,DIRECT,香港节点,美国节点,狮城节点,日本节点,韩国节点,台湾节点,url = http://latency-test.skk.moe/endpoint,interval = 600,max-timeout = 3000,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png
 # ------
 
 # 地区策略组
-UrlTest = url-test,All,url = http://latency-test.skk.moe/endpoint,interval = 300,tolerance = 30,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Server.png
+🛰️ 自动选择 = url-test,All,url = http://latency-test.skk.moe/endpoint,interval = 300,tolerance = 30,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Auto_Speed.png
+🔯 故障转移 = url-test,All,url = http://latency-test.skk.moe/endpoint,interval = 300,tolerance = 30,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Server.png
+🔮 负载均衡 = url-test,All,url = http://latency-test.skk.moe/endpoint,interval = 300,tolerance = 30,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Available.png
 游戏节点 = load-balance,Game,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,algorithm = pcc,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png
 香港节点 = load-balance,HK,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,algorithm = pcc,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png
 美国节点 = load-balance,US,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,algorithm = pcc,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png
@@ -131,6 +134,8 @@ https://github.com/Repcz/Tool/raw/X/Loon/Rules/Reject.list, policy=REJECT, tag=R
 https://github.com/Repcz/Tool/raw/X/Loon/Rules/AI.list, policy=AI, tag=AI, enabled=true
 https://github.com/Repcz/Tool/raw/X/Loon/Rules/YouTube.list, policy=谷歌服务, tag=Youtube, enabled=true
 https://github.com/Repcz/Tool/raw/X/Loon/Rules/Google.list, policy=谷歌服务, tag=Google, enabled=true
+
+
 https://github.com/Repcz/Tool/raw/X/Loon/Rules/Microsoft.list, policy=微软服务, tag=Microsoft, enabled=true
 https://github.com/Repcz/Tool/raw/X/Loon/Rules/Github.list, policy=微软服务, tag=Github, enabled=true
 https://github.com/Repcz/Tool/raw/X/Loon/Rules/Steam.list, policy=游戏平台, tag=Steam, enabled=true
