@@ -137,7 +137,7 @@ proxy-groups:
 
   - {name: Emby, <<: *pg, include-all: true, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png}
 
-  - {name: 广告拦截, type: select, proxies: [REJECT, DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Reject.orig.png}
+  - {name: 广告拦截, type: select, proxies: [REJECT-DROP, DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Reject.orig.png}
 
   - {name: 兜底分流, <<: *pg, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color//Final_1.png}
 
@@ -170,11 +170,11 @@ rule-providers:
   Download: {<<: *c, path: ./RuleSet/Download.list,  url: https://github.com/Repcz/Tool/raw/X/Clash/Rules/Download.list}
       
   # 广告拦截
-  Reject_non_ip_no_drop: {<<: *c, path: ./RuleSet/reject_non_ip_no_drop.txt, url: https://ruleset.skk.moe/Clash/non_ip/reject-no-drop.txt}
-  Reject_non_ip_drop: {<<: *c, path: ./RuleSet/reject_non_ip_drop.txt, url: https://ruleset.skk.moe/Clash/non_ip/reject-drop.txt}
-  Reject_non_ip: {<<: *c, path: ./RuleSet/reject_non_ip.txt, url: https://ruleset.skk.moe/Clash/non_ip/reject.txt}
-  # reject_domainset: {<<: *d, path: ./RuleSet/reject_domainset.txt, url: https://ruleset.skk.moe/Clash/domainset/reject.txt}
-  Reject_ip: {<<: *c, path: ./RuleSet/reject_ip.txt, url: https://ruleset.skk.moe/Clash/ip/reject.txt}
+  Reject_non_ip_no_drop: {<<: *c, path: ./sukkaw_ruleset/reject_non_ip_no_drop.txt, url: https://ruleset.skk.moe/Clash/non_ip/reject-no-drop.txt}
+  Reject_non_ip_drop: {<<: *c, path: ./sukkaw_ruleset/reject_non_ip_drop.txt, url: https://ruleset.skk.moe/Clash/non_ip/reject-drop.txt}
+  Reject_non_ip: {<<: *c, path: ./sukkaw_ruleset/reject_non_ip.txt, url: https://ruleset.skk.moe/Clash/non_ip/reject.txt}
+  # reject_domainset: {<<: *d, path: ./sukkaw_ruleset/reject_domainset.txt, url: https://ruleset.skk.moe/Clash/domainset/reject.txt}
+  Reject_ip: {<<: *c, path: ./sukkaw_ruleset/reject_ip.txt, url: https://ruleset.skk.moe/Clash/ip/reject.txt}
 
   # 搜狗输入法 隐私收集
   Sogouinput: {<<: *c, path: ./RuleSet/sogouinput.txt, url: https://ruleset.skk.moe/Clash/non_ip/sogouinput.txt}
