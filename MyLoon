@@ -134,8 +134,8 @@ https://github.com/Repcz/Tool/raw/X/Loon/Rules/Reject.list, policy=REJECT, tag=R
 https://github.com/Repcz/Tool/raw/X/Loon/Rules/AI.list, policy=AI, tag=AI, enabled=true
 https://github.com/Repcz/Tool/raw/X/Loon/Rules/YouTube.list, policy=谷歌服务, tag=Youtube, enabled=true
 https://github.com/Repcz/Tool/raw/X/Loon/Rules/Google.list, policy=谷歌服务, tag=Google, enabled=true
-
-
+https://ruleset.skk.moe/List/non_ip/apple_services.conf, policy=Apple Service, tag=Apple Service, enabled=true
+https://ruleset.skk.moe/List/non_ip/apple_cdn.conf, policy=Apple Service, tag=Apple CDN, enabled=true
 https://github.com/Repcz/Tool/raw/X/Loon/Rules/Microsoft.list, policy=微软服务, tag=Microsoft, enabled=true
 https://github.com/Repcz/Tool/raw/X/Loon/Rules/Github.list, policy=微软服务, tag=Github, enabled=true
 https://github.com/Repcz/Tool/raw/X/Loon/Rules/Steam.list, policy=游戏平台, tag=Steam, enabled=true
