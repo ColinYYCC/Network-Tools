@@ -236,7 +236,7 @@ rules:
   - RULE-SET,Reject_non_ip,广告拦截
   # - RULE-SET,Reject_domainset,广告拦截
   - RULE-SET,Reject_ip,广告拦截
-  - RULE-SET,adrules,REJECT
+  - RULE-SET,adrules,广告拦截
   - RULE-SET,Sogouinput,广告拦截
   - RULE-SET,Cdn_domainset,兜底分流
   - RULE-SET,Cdn_non_ip,兜底分流
