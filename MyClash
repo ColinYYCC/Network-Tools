@@ -121,7 +121,7 @@ proxy-groups:
 
   - {name: 国际媒体, <<: *pg, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Netflix.png}
 
-  - {name: 苹果服务, <<: *pg, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Apple_1.png}
+  - {name: 苹果服务, <<: *pg, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Apple.png}
 
   - {name: 微软服务, <<: *pg, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Microsoft.png}
 
