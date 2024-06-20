@@ -137,7 +137,7 @@ https://github.com/Repcz/Tool/raw/X/Loon/Rules/Github.list, policy=微软服务,
 https://github.com/Repcz/Tool/raw/X/Loon/Rules/Steam.list, policy=游戏平台, tag=Steam, enabled=true
 https://github.com/Repcz/Tool/raw/X/Loon/Rules/Epic.list, policy=游戏平台, tag=Epic, enabled=true
 https://github.com/Repcz/Tool/raw/X/Loon/Rules/Twitter.list, policy=推特消息, tag=Twitter, enabled=true
-https://github.com/Repcz/Tool/raw/X/Loon/Rules/Telegram.list, policy=电报消息, tag=Telegram, enabled=true
+https://github.com/LucaLin233/Luca_Conf/blob/main/Surge/Rule/Telegram.list?raw=true,, policy=电报消息, tag=Telegram, enabled=true
 https://github.com/Repcz/Tool/raw/X/Loon/Rules/Emby.list, policy=Emby, tag=Emby, enabled=true
 https://github.com/Repcz/Tool/raw/X/Loon/Rules/Spotify.list, policy=Spotify, tag=Spotif, enabled=true
 https://github.com/Repcz/Tool/raw/X/Loon/Rules/Bahamut.list, policy=国际媒体, tag=Bahamut, enabled=true
@@ -146,9 +146,15 @@ https://github.com/Repcz/Tool/raw/X/Loon/Rules/Disney.list, policy=国际媒体,
 https://github.com/Repcz/Tool/raw/X/Loon/Rules/PrimeVideo.list, policy=国际媒体, tag=PrimeVideo, enabled=true
 https://github.com/Repcz/Tool/raw/X/Loon/Rules/HBO.list, policy=国际媒体, tag=HBO, enabled=true
 https://github.com/Repcz/Tool/raw/X/Loon/Rules/TikTok.list, policy=国际媒体, tag=TikTok, enabled=true
-https://github.com/Repcz/Tool/raw/X/Loon/Rules/ProxyGFW.list, policy=国外网站, tag=Proxy, enabled=true
-https://github.com/Repcz/Tool/raw/X/Loon/Rules/AppleProxy.list, policy=国外网站, tag=AppleProxy, enabled=true
-https://github.com/Repcz/Tool/raw/X/Loon/Rules/Apple.list, policy=DIRECT, tag=Apple, enabled=true
+https://ruleset.skk.moe/List/non_ip/stream.conf, policy=国际媒体, tag=Streaming 国际流媒体服务, enabled=true
+https://ruleset.skk.moe/List/ip/stream.conf, policy=国际媒体, tag=Streaming 国际流媒体服务(IP), enabled=true
+https://ruleset.skk.moe/List/non_ip/global.conf, policy=国外网站, tag=Proxy, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/ChinaMedia/ChinaMedia.list, policy=DIRECT, tag=ChinaMedia 中国流媒体服务, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/WeChat/WeChat.list, policy=DIRECT, tag=WeChat 微信, enabled=true
+https://ruleset.skk.moe/List/non_ip/domestic.conf, policy=DIRECT, tag=国內直连, enabled=true
+https://ruleset.skk.moe/List/non_ip/direct.conf, policy=DIRECT, tag=国內直连, enabled=true
+https://ruleset.skk.moe/List/ip/domestic.conf, policy=DIRECT, tag=China 中国直连 (IP), enabled=true
+https://ruleset.skk.moe/List/ip/china_ip.conf, policy=DIRECT, tag=China 中国直连 (IP), enabled=true
 https://github.com/Repcz/Tool/raw/X/Loon/Rules/Lan.list, policy=DIRECT, tag=LAN, enabled=true
 https://github.com/Repcz/Tool/raw/X/Loon/Rules/FILTER_REGION.list, policy=DIRECT, tag=CN, enabled=true
 # ------
