@@ -238,8 +238,8 @@ rules:
   - RULE-SET,Reject_ip,广告拦截
   - RULE-SET,adrules,广告拦截
   - RULE-SET,Sogouinput,广告拦截
-  - RULE-SET,Cdn_domainset,兜底分流
-  - RULE-SET,Cdn_non_ip,兜底分流
+  - RULE-SET,Cdn_domainset,漏网之鱼
+  - RULE-SET,Cdn_non_ip,漏网之鱼
   - RULE-SET,AI,AI
   - RULE-SET,Apple Service,苹果服务
   - RULE-SET,Apple CDN,DIRECT
