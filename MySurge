@@ -319,7 +319,7 @@ PROCESS-NAME,parsecd,DIRECT
 PROCESS-NAME,SunloginClient_Desktop,DIRECT
 PROCESS-NAME,SunloginClient_Helper,DIRECT
 # Todesk
-DOMAIN-KEYWOR,todesk,DIRECT
+DOMAIN-KEYWORD,todesk,DIRECT
 # 百度网盘
 PROCESS-NAME,BaiduNetdisk_mac,DIRECT
 
