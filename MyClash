@@ -139,7 +139,7 @@ proxy-groups:
 
   - {name: 广告拦截, type: select, proxies: [REJECT-DROP, DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Reject.orig.png}
 
-  - {name: 兜底分流, <<: *pg, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color//Final_1.png}
+  - {name: 漏网之鱼, <<: *pg, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Snapfish.png}
 
   #节点地区分组
 
@@ -261,4 +261,4 @@ rules:
   - RULE-SET,Direct_non_ip,DIRECT
   - RULE-SET,China_ip,DIRECT,no-resolve
   - GEOIP,CN,DIRECT,no-resolve
-  - MATCH,兜底分流
+  - MATCH,漏网之鱼
