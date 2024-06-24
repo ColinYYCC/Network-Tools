@@ -121,11 +121,11 @@ proxy-groups:
 
   - {name: 国际媒体, <<: *pg, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Netflix.png}
 
-  - {name: 苹果服务, <<: *pg, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Apple.png}
+  - {name: 苹果服务, <<: *pg, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Apple.png}
 
   - {name: 微软服务, <<: *pg, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Microsoft.png}
 
-  - {name: 谷歌服务, <<: *pg, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Google_Suite/Google.png}
+  - {name: 谷歌服务, <<: *pg, icon: https://github.com/tugepaopao/Image-Storage/raw/master/cartoon/Cute/google.png}
 
   - {name: 电报消息, <<: *pg, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png}
 
@@ -133,7 +133,7 @@ proxy-groups:
 
   - {name: AI, <<: *pg, icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png}
 
-  - {name: 游戏平台, type : select, include-all: true, filter: *FilterGame, proxies: [DIRECT, 手动切换], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Steam.png}
+  - {name: 游戏平台, type : select, include-all: true, filter: *FilterGame, proxies: [DIRECT, 手动切换], icon: https://github.com/tugepaopao/Image-Storage/raw/master/hand-painted/35.png}
 
   - {name: Emby, <<: *pg, include-all: true, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png}
 
