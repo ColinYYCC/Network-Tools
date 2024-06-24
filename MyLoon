@@ -6,7 +6,7 @@
 # ================
 
 [General]
-skip-proxy =  localhost, *.local, passenger.t3go.cn, e.crashlytics.com, captive.apple.com, app.yinxiang.com, injections.adguard.org, local.adguard.org, cable.auth.com, www.baidu.com, yunbusiness.ccb.com,*.bankcomm.com,*.ccb.com,*.boc.cn, 10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/12, 192.168.0.0/16, 224.0.0.0/3, ::1/128, fc00::/7, fd00::/8, fe80::/10, ff00::/8, 2001::/32, 2001:db8::/32, 2002::/16, ::ffff:0:0:0:0/1, ::ffff:128:0:0:0/1
+skip-proxy = localhost,*.local,passenger.t3go.cn,e.crashlytics.com,captive.apple.com,app.yinxiang.com,injections.adguard.org,local.adguard.org,cable.auth.com,www.baidu.com,yunbusiness.ccb.com,*.bankcomm.com,*.ccb.com,*.boc.cn,10.0.0.0/8,100.64.0.0/10,127.0.0.0/8,169.254.0.0/16,172.16.0.0/12,192.168.0.0/16,224.0.0.0/3,::1/128,fc00::/7,fd00::/8,fe80::/10,ff00::/8,2001::/32,2001:db8::/32,2002::/16,::ffff:0:0:0:0/1,::ffff:128:0:0:0/1
 
 # ---(DNS 服务器)---
 # DNS 服务器 (如无必要不建议使用 DNS over HTTPS)
@@ -50,7 +50,7 @@ resource-parser = https://gitlab.com/sub-store/Sub-Store/-/releases/permalink/la
 ssid-trigger = "default":rule, "cellular":rule,"SI":DIRECT
 
 # > 以下配置的域名不会使用fakeip进行映射
-real-ip = *.lan, *.id.ui.direct, cable.auth.com, *.msftconnecttest.com, *.msftncsi.com, network-test.debian.org, detectportal.firefox.com, resolver1.opendns.com, *.srv.nintendo.net, *.stun.playstation.net, xbox.*.microsoft.com, *.xboxlive.com, stun.*, global.turn.twilio.com, global.stun.twilio.com, app.yinxiang.com, injections.adguard.org, local.adguard.org, cable.auth.com, localhost.*.qq.com, localhost.*.weixin.qq.com, *.logon.battlenet.com.cn, *.logon.battle.net, *.blzstatic.cn, music.163.com, *.music.163.com, *.126.net, musicapi.taihe.com, music.taihe.com, songsearch.kugou.com, trackercdn.kugou.com, *.kuwo.cn, api-jooxtt.sanook.com, api.joox.com, joox.com, y.qq.com, *.y.qq.com, streamoc.music.tc.qq.com, mobileoc.music.tc.qq.com, isure.stream.qqmusic.qq.com, dl.stream.qqmusic.qq.com, aqqmusic.tc.qq.com, amobile.music.tc.qq.com, *.xiami.com, *.music.migu.cn, music.migu.cn, proxy.golang.org, *.mcdn.bilivideo.cn, *.cmpassport.com, id6.me, open.e.189.cn, opencloud.wostore.cn, auth.wosms.cn, id.mail.wo.cn, mdn.open.wo.cn, hmrz.wo.cn, *.jegotrip.com.cn, *.icitymobile.mobi, *.pingan.com.cn, *.cmbchina.com, pool.ntp.org, *.pool.ntp.org, ntp.*.com, time.*.com, ntp?.*.com, time?.*.com, time.*.gov, time.*.edu.cn, *.ntp.org.cn, PDC._msDCS.*.*, DC._msDCS.*.*, GC._msDCS.*.*
+real-ip = *.lan,*.id.ui.direct,cable.auth.com,*.msftconnecttest.com,*.msftncsi.com,network-test.debian.org,detectportal.firefox.com,resolver1.opendns.com,*.srv.nintendo.net,*.stun.playstation.net,xbox.*.microsoft.com,*.xboxlive.com,stun.*,global.turn.twilio.com,global.stun.twilio.com,app.yinxiang.com,injections.adguard.org,local.adguard.org,cable.auth.com,localhost.*.qq.com,localhost.*.weixin.qq.com,*.logon.battlenet.com.cn,*.logon.battle.net,*.blzstatic.cn,music.163.com,*.music.163.com,*.126.net,musicapi.taihe.com,music.taihe.com,songsearch.kugou.com,trackercdn.kugou.com,*.kuwo.cn,api-jooxtt.sanook.com,api.joox.com,joox.com,y.qq.com,*.y.qq.com,streamoc.music.tc.qq.com,mobileoc.music.tc.qq.com,isure.stream.qqmusic.qq.com,dl.stream.qqmusic.qq.com,aqqmusic.tc.qq.com,amobile.music.tc.qq.com,*.xiami.com,*.music.migu.cn,music.migu.cn,proxy.golang.org,*.mcdn.bilivideo.cn,*.cmpassport.com,id6.me,open.e.189.cn,opencloud.wostore.cn,auth.wosms.cn,id.mail.wo.cn,mdn.open.wo.cn,hmrz.wo.cn,*.jegotrip.com.cn,*.icitymobile.mobi,*.pingan.com.cn,*.cmbchina.com,pool.ntp.org,*.pool.ntp.org,ntp.*.com,time.*.com,ntp?.*.com,time?.*.com,time.*.gov,time.*.edu.cn,*.ntp.org.cn,PDC._msDCS.*.*,DC._msDCS.*.*,GC._msDCS.*.*
 
 # > interface-mode 指定流量使用哪个网络接口进行转发，目前包含三种模式:
 # Auto: 系统自动分配
@@ -74,7 +74,7 @@ geoip-url = https://github.com/xream/geoip/releases/latest/download/ipinfo.count
 [Proxy]
 
 [Remote Proxy]
-
+[填入机场订阅]
 # ------
 
 [Remote Filter]
@@ -99,7 +99,7 @@ US = NameRegex, FilterKey = "^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄�
 谷歌服务 = select,🛰️ 自动选择,🔯 故障转移,🔮 负载均衡,香港节点,美国节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://github.com/tugepaopao/Image-Storage/raw/master/cartoon/Cute/google.png
 电报消息 = select,🛰️ 自动选择,🔯 故障转移,🔮 负载均衡,香港节点,美国节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://github.com/tugepaopao/Image-Storage/raw/master/hand-painted/36.png
 推特消息 = select,🛰️ 自动选择,🔯 故障转移,🔮 负载均衡,美国节点,香港节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Twitter.png
-Apple Service =  select,🛰️ 自动选择,🔯 故障转移,🔮 负载均衡,美国节点,香港节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Apple.png
+Apple Service = select,🛰️ 自动选择,🔯 故障转移,🔮 负载均衡,美国节点,香港节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Apple.png
 AI = select,🛰️ 自动选择,🔯 故障转移,🔮 负载均衡,美国节点,香港节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png
 游戏平台 = select,🛰️ 自动选择,🔯 故障转移,游戏节点,香港节点,美国节点,url = http://latency-test.skk.moe/endpoint,img-url = https://github.com/tugepaopao/Image-Storage/raw/master/hand-painted/35.png
 Emby = select,🛰️ 自动选择,🔯 故障转移,🔮 负载均衡,香港节点,美国节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
@@ -109,15 +109,15 @@ Spotify = select,🛰️ 自动选择,🔯 故障转移,🔮 负载均衡,香港
 
 # 地区策略组
 🛰️ 自动选择 = url-test,All,url = http://latency-test.skk.moe/endpoint,interval = 300,tolerance = 30,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Auto_Speed.png
-🔯 故障转移 = fallback,All,url = http://latency-test.skk.moe/endpoint,interval = 300,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Server.png
-🔮 负载均衡 = load-balance,All,url = http://latency-test.skk.moe/endpoint,interval = 300,algorithm = pcc,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Available.png
-游戏节点 = url-test,Game,url = http://latency-test.skk.moe/endpoint,interval = 300,tolerance = 30,max-timeout = 3000,algorithm = pcc,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png
-香港节点 = fallback,HK,url = http://latency-test.skk.moe/endpoint,interval = 300,algorithm = pcc,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png
-美国节点 = fallback,US,url = http://latency-test.skk.moe/endpoint,interval = 300,algorithm = pcc,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/United_States.png
-狮城节点 = fallback,SG,url = http://latency-test.skk.moe/endpoint,interval = 300,algorithm = pcc,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Singapore.png}
-日本节点 = fallback,JP,url = http://latency-test.skk.moe/endpoint,interval = 300,algorithm = pcc,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Japan.png
-韩国节点 = fallback,KR,url = http://latency-test.skk.moe/endpoint,interval = 300,algorithm = pcc,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/South_Korea.png
-台湾节点 = fallback,TW,url = http://latency-test.skk.moe/endpoint,interval = 300,algorithm = pcc,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Taiwan.png
+🔯 故障转移 = fallback,All,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Server.png
+🔮 负载均衡 = load-balance,All,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,algorithm = pcc,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Available.png
+游戏节点 = url-test,Game,url = http://latency-test.skk.moe/endpoint,interval = 300,tolerance = 30,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png
+香港节点 = fallback,HK,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png
+美国节点 = fallback,US,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/United_States.png
+狮城节点 = fallback,SG,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Singapore.png}
+日本节点 = fallback,JP,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Japan.png
+韩国节点 = fallback,KR,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/South_Korea.png
+台湾节点 = fallback,TW,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Taiwan.png
 # ------
 
 [Rule]
@@ -127,11 +127,11 @@ FINAL,漏网之鱼
 https://github.com/Repcz/Tool/raw/X/Loon/Rules/Reject.list, policy=REJECT, tag=Reject, enabled=true
 https://adrules.top/adrules-surge.conf, policy=REJECT-DROP, tag=Adrules, enabled=true
 https://ruleset.skk.moe/List/non_ip/reject.conf, policy=REJECT-DROP, tag=Reject, enabled=true
-# https://ruleset.skk.moe/List/domainset/reject.conf, policy=REJECT-TINYGIF, tag=Reject-D, enabled=true
+https://ruleset.skk.moe/List/domainset/reject.conf, policy=REJECT-TINYGIF, tag=Reject-D, enabled=false
 https://ruleset.skk.moe/List/domainset/reject_phishing.conf, policy=REJECT-DROP, tag=reject_phishing, enabled=true
-# https://ruleset.skk.moe/List/ip/reject.conf, policy=REJECT-DROP, tag=Adrules, enabled=true
-https://ruleset.skk.moe/List/domainset/cdn.conf, policy=PROXY, tag=SukkaW静态CDN域名，enabled=true
-https://ruleset.skk.moe/List/non_ip/cdn.conf, policy=PROXY, tag=SukkaW静态CDN域名, enabled=true
+https://ruleset.skk.moe/List/ip/reject.conf, policy=REJECT-DROP, tag=reject, enabled=false
+https://ruleset.skk.moe/List/domainset/cdn.conf, policy=全球节点, tag=SukkaW静态CDN域名, enabled=true
+https://ruleset.skk.moe/List/non_ip/cdn.conf, policy=全球节点, tag=SukkaW静态CDN域名, enabled=true
 https://github.com/Repcz/Tool/raw/X/Loon/Rules/AI.list, policy=AI, tag=AI, enabled=true
 https://github.com/Repcz/Tool/raw/X/Loon/Rules/YouTube.list, policy=谷歌服务, tag=Youtube, enabled=true
 https://github.com/Repcz/Tool/raw/X/Loon/Rules/Google.list, policy=谷歌服务, tag=Google, enabled=true
@@ -142,7 +142,7 @@ https://github.com/Repcz/Tool/raw/X/Loon/Rules/Github.list, policy=微软服务,
 https://github.com/Repcz/Tool/raw/X/Loon/Rules/Steam.list, policy=游戏平台, tag=Steam, enabled=true
 https://github.com/Repcz/Tool/raw/X/Loon/Rules/Epic.list, policy=游戏平台, tag=Epic, enabled=true
 https://github.com/Repcz/Tool/raw/X/Loon/Rules/Twitter.list, policy=推特消息, tag=Twitter, enabled=true
-https://github.com/LucaLin233/Luca_Conf/blob/main/Surge/Rule/Telegram.list?raw=true,, policy=电报消息, tag=Telegram, enabled=true
+https://github.com/LucaLin233/Luca_Conf/blob/main/Surge/Rule/Telegram.list?raw=true, policy=电报消息, tag=Telegram, enabled=true
 https://github.com/Repcz/Tool/raw/X/Loon/Rules/Emby.list, policy=Emby, tag=Emby, enabled=true
 https://github.com/Repcz/Tool/raw/X/Loon/Rules/Spotify.list, policy=Spotify, tag=Spotif, enabled=true
 https://github.com/Repcz/Tool/raw/X/Loon/Rules/Bahamut.list, policy=国际媒体, tag=Bahamut, enabled=true
@@ -774,5 +774,7 @@ upos-sz-upcdntx.bilivideo.com = server:https://doh.pub/dns-query
 [Script]
 
 [Mitm]
+ca-p12 =
+ca-passphrase =
 skip-server-cert-verify = false
 hostname = www.google.cn
