@@ -127,7 +127,7 @@ proxy-groups:
 
   - {name: 谷歌服务, <<: *pg, icon: https://github.com/tugepaopao/Image-Storage/raw/master/cartoon/Cute/google.png}
 
-  - {name: 电报消息, <<: *pg, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Telegram.png}
+  - {name: 电报消息, <<: *pg, icon: https://github.com/tugepaopao/Image-Storage/raw/master/hand-painted/36.png}
 
   - {name: 推特消息, <<: *pg, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Twitter.png}
 
