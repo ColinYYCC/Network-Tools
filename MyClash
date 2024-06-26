@@ -177,9 +177,6 @@ rule-providers:
   reject_domainset: {<<: *d, path: ./RuleSet/reject_domainset.txt, url: https://ruleset.skk.moe/Clash/domainset/reject.txt}
   Reject_ip: {<<: *c, path: ./RuleSet/reject_ip.txt, url: https://ruleset.skk.moe/Clash/ip/reject.txt}
 
-
-
-
   # 搜狗输入法 隐私收集
   Sogouinput: {<<: *c, path: ./RuleSet/sogouinput.txt, url: https://ruleset.skk.moe/Clash/non_ip/sogouinput.txt}
 
@@ -193,7 +190,7 @@ rule-providers:
 
   # 微软服务 
   OneDrive: {<<: *c, path: ./RuleSet/OneDrive.list,  url: https://github.com/Repcz/Tool/raw/X/Clash/Rules/OneDrive.list}
-  Github: {<<: *c, path: ./RuleSet/Github.list,  url: https://github.com/Repcz/Tool/raw/X/Clash/Rules/Github.list}
+  Github: {<<: *c, path: ./RuleSet/Github.list,  url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GitHub/GitHub.list}
   Microsoft: {<<: *c, path: ./RuleSet/Microsoft.list,  url: https://github.com/Repcz/Tool/raw/X/Clash/Rules/Microsoft.list}
 
   # 谷歌服务
@@ -201,8 +198,7 @@ rule-providers:
   Google: {<<: *c, path: ./RuleSet/Google.list,  url: https://github.com/Repcz/Tool/raw/X/Clash/Rules/Google.list}
 
   # 电报消息
-  Telegram_non_ip: {<<: *c, path: ./RuleSet/telegram_non_ip.txt, url: https://ruleset.skk.moe/Clash/non_ip/telegram.txt}
-  Telegram_ip: {<<: *c, path: ./RuleSet/telegram_ip.txt, url: https://ruleset.skk.moe/Clash/ip/telegram.txt}
+  Telegram: {<<: *c, path: ./RuleSet/telegram_non_ip.txt, url: https://github.com/LucaLin233/Luca_Conf/blob/main/Surge/Rule/Telegram.list?raw=true}
 
   # 推特消息
   Twitter: {<<: *c, path: ./RuleSet/Twitter.list,  url: https://github.com/Repcz/Tool/raw/X/Clash/Rules/Twitter.list}
@@ -251,8 +247,7 @@ rules:
   - RULE-SET,Microsoft,微软服务
   - RULE-SET,YouTube,谷歌服务
   - RULE-SET,Google,谷歌服务
-  - RULE-SET,Telegram_non_ip,电报消息
-  - RULE-SET,Telegram_ip,电报消息
+  - RULE-SET,Telegram,电报消息
   - RULE-SET,Twitter,推特消息
   - RULE-SET,Steam,游戏平台
   - RULE-SET,Epic,游戏平台
