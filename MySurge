@@ -230,9 +230,9 @@ HBO GO = select, 香港, 澳门, 台湾, 新加坡, 日本, 美国, 韩国, 🛰
 # ------
 
 # > 节点分流
-SmartGroup = smart, policy-regex-filter=^(?=.*(.*))(?!.*((?i)回国|校园|游戏|教育|公告|邀请|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|到期|过期|已用|联系|邮箱|工单|群|(\b(GAME|USE|USED|TOTAL|EXPIRE|EMAIL)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$, no-alert=0, hidden=0, include-all-proxies=0, include-other-group=Rename
+SmartGroup = smart, policy-regex-filter=^(?=.*(.*))(?!.*((?i)回国|校园|游戏|教育|公告|邀请|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|到期|过期|已用|联系|邮箱|工单|群|(\b(GAME|USE|USED|TOTAL|EXPIRE|EMAIL)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$, no-alert=0, hidden=0, include-all-proxies=0
 
-节点选择 = select, policy-regex-filter=^(?=.*(.*))(?!.*((?i)回国|校园|游戏|教育|公告|邀请|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|到期|过期|已用|联系|邮箱|工单|群|(\b(GAME|USE|USED|TOTAL|EXPIRE|EMAIL)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$, no-alert=0, hidden=0, include-all-proxies=0, include-other-group=Rename
+节点选择 = select, policy-regex-filter=^(?=.*(.*))(?!.*((?i)回国|校园|游戏|教育|公告|邀请|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|到期|过期|已用|联系|邮箱|工单|群|(\b(GAME|USE|USED|TOTAL|EXPIRE|EMAIL)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$, no-alert=0, hidden=0, include-all-proxies=0
 
 🛰️ 自动选择 = url-test, hidden=0, policy-regex-filter=^(?=.*(.*))(?!.*((?i)回国|校园|游戏|教育|公告|邀请|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|到期|过期|已用|联系|邮箱|工单|群|(\b(GAME|USE|USED|TOTAL|EXPIRE|EMAIL)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$, interval=3000, tolerance=50, evaluate-before-use=1, no-alert=0, include-all-proxies=0, include-other-group=De-Surge
 
@@ -363,10 +363,11 @@ RULE-SET,https://raw.githubusercontent.com/lwd-temp/anti-ip-attribution/main/gen
 
 # Advertising 广告拦截 / Privacy 隐私保护 / Malware 拦截 / Phiishing 拦截
 RULE-SET,https://adrules.top/adrules-surge.conf,REJECT-DROP,extended-matching
-RULE-SET,https://ruleset.skk.moe/List/non_ip/reject.conf,REJECT-DROP,extended-matching
-# DOMAIN-SET,https://ruleset.skk.moe/List/domainset/reject.conf,REJECT-TINYGIF,extended-matching
-DOMAIN-SET,https://ruleset.skk.moe/List/domainset/reject_phishing.conf,REJECT-DROP,extended-matching
-# RULE-SET,https://ruleset.skk.moe/List/ip/reject.conf,REJECT-DROP,no-resolve
+DOMAIN-SET,https://ruleset.skk.moe/List/domainset/reject.conf,REJECT-TINYGIF,extended-matching
+RULE-SET,https://ruleset.skk.moe/List/non_ip/reject.conf,REJECT,extended-matching
+RULE-SET,https://ruleset.skk.moe/List/non_ip/reject-no-drop.conf,REJECT-NO-DROP,extended-matching // 防止 PCDN
+RULE-SET,https://ruleset.skk.moe/List/non_ip/reject-drop.conf,REJECT-DROP,extended-matching //  Adobe 系列软件内部的跟踪
+RULE-SET,https://ruleset.skk.moe/List/ip/reject.conf,REJECT-DROP // 广告拦截 IP
 
 # SpeedTest 测速
 DOMAIN-SET,https://ruleset.skk.moe/List/domainset/speedtest.conf,PROXY,extended-matching // SpeedTest
