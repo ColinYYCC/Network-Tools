@@ -167,7 +167,7 @@ rule-providers:
   Lan: {<<: *c, path: ./RuleSet/Lan.list,  url: https://github.com/Repcz/Tool/raw/X/Clash/Rules/Lan.list}
 
   # 下载服务
-  Download: {<<: *c, path: ./RuleSet/Download.list,  url: https://github.com/Repcz/Tool/raw/X/Clash/Rules/Download.list}
+  Download: {<<: *c, path: ./RuleSet/Download.list,  url: https://ruleset.skk.moe/Clash/non_ip/direct.txt}
       
   # 广告拦截
   adrules: {<<: *c, path: ./RuleSet/adrules.list, url: https://adrules.top/adrules.list}
