@@ -168,7 +168,13 @@ force-http-engine-hosts = *.ott.cibntv.net, 123.59.31.1, 119.18.193.135, 122.14.
 include-all-networks = false
 
 # 包含本地网络请求
-include-local-networks = false
+include-local-networks = true
+
+# 包含APNS
+include-apns = true
+
+# 包含蜂窝服务
+include-cellular-services = true
 
 # > 游戏优化模式
 # 游戏优化:开启后会提高处理 UDP 流量的优先级，当系统负载高时会有比较明显的作用 (如高性能联机游戏)
