@@ -187,6 +187,7 @@ rule-providers:
   # 苹果服务
   Apple Service: {<<: *c, path: ./RuleSet/apple_services.conf,  url: https://ruleset.skk.moe/List/non_ip/apple_services.conf}
   Apple CDN: {<<: *c, path: ./RuleSet/apple_cdn.conf,  url: https://ruleset.skk.moe/List/non_ip/apple_cdn.conf}
+  云上贵州: {<<: *c, path: ./RuleSet/apple_cdn.conf,  url: https://ruleset.skk.moe/List/non_ip/apple_cn.conf}
 
   # 微软服务 
   OneDrive: {<<: *c, path: ./RuleSet/OneDrive.list,  url: https://github.com/Repcz/Tool/raw/X/Clash/Rules/OneDrive.list}
@@ -246,6 +247,7 @@ rules:
   - RULE-SET,AI,AI
   - RULE-SET,Apple Service,苹果服务
   - RULE-SET,Apple CDN,DIRECT
+  - RULE-SET,云上贵州,DIRECT
   - RULE-SET,OneDrive,微软服务
   - RULE-SET,Github,国外网站
   - RULE-SET,Microsoft,微软服务
