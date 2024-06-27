@@ -217,7 +217,13 @@ rule-providers:
   ProxyMedia: {<<: *c, path: ./RuleSet/ProxyMedia.list,  url: https://github.com/Repcz/Tool/raw/X/Clash/Rules/ProxyMedia.list}
 
   # 国外网站
-  国外网站: {<<: *c, path: ./RuleSet/global_non_ip.tx, url: https://ruleset.skk.moe/Clash/non_ip/global.txt}
+  国外网站: {<<: *c, path: ./RuleSet/global_non_ip.txt, url: https://ruleset.skk.moe/Clash/non_ip/global.txt}
+
+  # Apple 国内 CDN 
+  Apple 国内 CDN : {<<: *c, path: ./RuleSet/apple_cdn.conf, url: https://ruleset.skk.moe/List/non_ip/apple_cdn.conf}
+
+  # Microsoft 国内 CDN
+  Microsoft 国内 CDN: {<<: *c, path: ./RuleSet/microsoft_cdn.conf, url: https://ruleset.skk.moe/List/non_ip/microsoft_cdn.conf}
    
   # 中国大陆
   ChinaDomain: {<<: *c, path: ./RuleSet/ChinaDomain.list,  url: https://github.com/Repcz/Tool/raw/X/Clash/Rules/ChinaDomain.list}
@@ -254,6 +260,8 @@ rules:
   - RULE-SET,Emby,Emby
   - RULE-SET,ProxyMedia,国际媒体
   - RULE-SET,国外网站,国外网站
+  - RULE-SET,Apple 国内 CDN,DIRECT
+  - RULE-SET,Microsoft 国内 CDN,DIRECT
   - RULE-SET,ChinaDomain,DIRECT
   - RULE-SET,Domestic_non_ip,DIRECT
   - RULE-SET,Direct_non_ip,DIRECT
