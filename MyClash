@@ -190,8 +190,8 @@ rule-providers:
 
   # 微软服务 
   OneDrive: {<<: *c, path: ./RuleSet/OneDrive.list,  url: https://github.com/Repcz/Tool/raw/X/Clash/Rules/OneDrive.list}
-  Github: {<<: *c, path: ./RuleSet/Github.list,  url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GitHub/GitHub.list}
   Microsoft: {<<: *c, path: ./RuleSet/Microsoft.list,  url: https://github.com/Repcz/Tool/raw/X/Clash/Rules/Microsoft.list}
+  Microsoft 国内 CDN: {<<: *c, path: ./RuleSet/microsoft_cdn.conf, url: https://ruleset.skk.moe/List/non_ip/microsoft_cdn.conf}
 
   # 谷歌服务
   YouTube: {<<: *c, path: ./RuleSet/YouTube.list,  url: https://github.com/Repcz/Tool/raw/X/Clash/Rules/YouTube.list}
@@ -218,13 +218,11 @@ rule-providers:
 
   # 国外网站
   国外网站: {<<: *c, path: ./RuleSet/global_non_ip.txt, url: https://ruleset.skk.moe/Clash/non_ip/global.txt}
+  Github: {<<: *c, path: ./RuleSet/Github.list,  url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GitHub/GitHub.list}
 
   # Apple 国内 CDN 
   Apple 国内 CDN : {<<: *c, path: ./RuleSet/apple_cdn.conf, url: https://ruleset.skk.moe/List/non_ip/apple_cdn.conf}
 
-  # Microsoft 国内 CDN
-  Microsoft 国内 CDN: {<<: *c, path: ./RuleSet/microsoft_cdn.conf, url: https://ruleset.skk.moe/List/non_ip/microsoft_cdn.conf}
-   
   # 中国大陆
   ChinaDomain: {<<: *c, path: ./RuleSet/ChinaDomain.list,  url: https://github.com/Repcz/Tool/raw/X/Clash/Rules/ChinaDomain.list}
   Domestic_non_ip: {<<: *c, path: ./RuleSet/domestic_non_ip.txt, url: https://ruleset.skk.moe/Clash/non_ip/domestic.txt}
@@ -249,8 +247,9 @@ rules:
   - RULE-SET,Apple Service,苹果服务
   - RULE-SET,Apple CDN,DIRECT
   - RULE-SET,OneDrive,微软服务
-  - RULE-SET,Github,微软服务
+  - RULE-SET,Github,国外网站
   - RULE-SET,Microsoft,微软服务
+  - RULE-SET,Microsoft 国内 CDN,DIRECT
   - RULE-SET,YouTube,谷歌服务
   - RULE-SET,Google,谷歌服务
   - RULE-SET,Telegram,电报消息
@@ -260,8 +259,6 @@ rules:
   - RULE-SET,Emby,Emby
   - RULE-SET,ProxyMedia,国际媒体
   - RULE-SET,国外网站,国外网站
-  - RULE-SET,Apple 国内 CDN,DIRECT
-  - RULE-SET,Microsoft 国内 CDN,DIRECT
   - RULE-SET,ChinaDomain,DIRECT
   - RULE-SET,Domestic_non_ip,DIRECT
   - RULE-SET,Direct_non_ip,DIRECT
