@@ -355,9 +355,6 @@ DOMAIN-SUFFIX,vercel.app,全球节点
 # 内置了两个规则集：SYSTEM 和 LAN
 # 内置规则集的具体内容可在 Surge Mac 设置界面查看
 
-# Unbreak 后续规则修正
-RULE-SET,https://github.com/Repcz/Tool/raw/X/Surge/Rules/Direct.list,DIRECT,extended-matching // Unbreak 后续规则修正
-
 # IP归属地更改
 RULE-SET,https://raw.githubusercontent.com/lwd-temp/anti-ip-attribution/main/generated/surge.list,归属地更改,extended-matching // IP归属地
 
@@ -378,6 +375,7 @@ RULE-SET,https://ruleset.skk.moe/List/non_ip/cdn.conf,PROXY,extended-matching //
 
 # 苹果服务规则列表
 RULE-SET,https://ruleset.skk.moe/List/non_ip/apple_cdn.conf,DIRECT //  Apple CDN
+RULE-SET,https://ruleset.skk.moe/List/non_ip/apple_cn.conf,DIRECT // 云上贵州
 RULE-SET,https://ruleset.skk.moe/List/non_ip/apple_services.conf, Apple Services,extended-matching //  Apple Services
 
 # TV+
@@ -410,14 +408,12 @@ https://github.com/Repcz/Tool/raw/X/Loon/Rules/Emby.list, policy=Emby, tag=Emby,
 # BiliBili
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/BiliBiliIntl/BiliBiliIntl.list,国际流媒体,extended-matching // Bilibili🇺🇳
 
-# Github
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GitHub/GitHub.list,全球节点,extended-matching // Github
-
 # Streaming 国际流媒体服务
 RULE-SET,https://ruleset.skk.moe/List/non_ip/stream.conf,国际流媒体,extended-matching // Streaming 国际流媒体服务
 RULE-SET,https://ruleset.skk.moe/List/ip/stream.conf,国际流媒体 // Streaming 国际流媒体服务(IP)
 
 # 国外网站
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GitHub/GitHub.list,全球节点,extended-matching // Github
 RULE-SET,https://ruleset.skk.moe/List/non_ip/global.conf,全球节点,extended-matching // 国外网站
 
 # Telegram 电报
@@ -454,13 +450,11 @@ RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/r
 # StreamingCN 中国流媒体服务
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/ChinaMedia/ChinaMedia.list,国內流媒体,extended-matching // ChinaMedia 中国流媒体服务
 
-# WeChat 微信
+# > 国內直连
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/WeChat/WeChat.list,DIRECT,extended-matching // WeChat 微信
-
 # China 中国直连
 RULE-SET,https://ruleset.skk.moe/List/non_ip/domestic.conf,DIRECT,extended-matching // 国內直连
 RULE-SET,https://ruleset.skk.moe/List/non_ip/direct.conf,DIRECT,extended-matching // 国內直连
-
 # China 中国直连 (IP)
 RULE-SET,https://ruleset.skk.moe/List/ip/domestic.conf,DIRECT // China 中国直连 (IP)
 RULE-SET,https://ruleset.skk.moe/List/ip/china_ip.conf,DIRECT,no-resolve // China 中国直连 (IP)
