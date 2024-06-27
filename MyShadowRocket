@@ -66,13 +66,15 @@ udp-policy-not-supported-behaviour = REJECT
 RULE-SET,https://github.com/Repcz/Tool/raw/X/Clash/Rules/Lan.list,DIRECT
 
 # 下载服务
-RULE-SET,https://github.com/Repcz/Tool/raw/X/Clash/Rules/Download.list,DIRECT
+RULE-SET,https://ruleset.skk.moe/Clash/non_ip/direct.txt,DIRECT
 
 # 广告拦截
-RULE-SET,https://ruleset.skk.moe/List/non_ip/reject.conf,REJECT
-# DOMAIN-SET,https://ruleset.skk.moe/List/domainset/reject.conf,REJECT-TINYGIF
-DOMAIN-SET,https://ruleset.skk.moe/List/domainset/reject_phishing.conf,REJECT
-# RULE-SET,https://ruleset.skk.moe/List/ip/reject.conf,REJECT-DROP
+RULE-SET,https://adrules.top/adrules.list,REJECT-DROP
+RULE-SET,https://ruleset.skk.moe/Clash/non_ip/reject-no-drop.txt,REJECT-DROP
+RULE-SET,https://ruleset.skk.moe/Clash/non_ip/reject-drop.txt,REJECT-DROP
+RULE-SET,https://ruleset.skk.moe/Clash/non_ip/reject.txt,REJECT-DROP
+# RULE-SET,https://ruleset.skk.moe/Clash/domainset/reject.txt,REJECT-DROP
+RULE-SET,https://ruleset.skk.moe/Clash/ip/reject.txt,REJECT-DROP
 
 # 静态CDN域名(強烈建議)
 DOMAIN-SET,https://ruleset.skk.moe/List/domainset/cdn.conf,🌏 国外网站
@@ -88,13 +90,14 @@ RULE-SET,https://github.com/Repcz/Tool/raw/X/Shadowrocket/Rules/AI.list,🤖 AI
 RULE-SET,https://github.com/Repcz/Tool/raw/X/Shadowrocket/Rules/Twitter.list,🐦 推特消息
 
 # 微软服务
-RULE-SET,https://github.com/Repcz/Tool/raw/X/Shadowrocket/Rules/Github.list,🖥️ 微软服务
 RULE-SET,https://github.com/Repcz/Tool/raw/X/Shadowrocket/Rules/OneDrive.list,🖥️ 微软服务
 RULE-SET,https://github.com/Repcz/Tool/raw/X/Shadowrocket/Rules/Microsoft.list,🖥️ 微软服务
+RULE-SET,https://ruleset.skk.moe/List/non_ip/microsoft_cdn.conf,DIRECT
 
 # 苹果服务
 RULE-SET,https://github.com/Repcz/Tool/raw/X/Surge/Rules/AppleProxy.list,🌏 国外网站
 RULE-SET,https://github.com/Repcz/Tool/raw/X/Shadowrocket/Rules/Apple.list,DIRECT
+RULE-SET,https://ruleset.skk.moe/List/non_ip/apple_cn.conf,DIRECT
 
 # 谷歌服务
 RULE-SET,https://github.com/Repcz/Tool/raw/X/Shadowrocket/Rules/YouTube.list,🌌 谷歌服务
@@ -118,19 +121,18 @@ RULE-SET,https://ruleset.skk.moe/List/ip/stream.conf,📽️ 国际媒体
 # Emby
 RULE-SET,https://github.com/Repcz/Tool/raw/X/Shadowrocket/Rules/Emby.list,📽️ Emby
 
-# Github
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GitHub/GitHub.list,🌏 国外网站
-
 # 国外网站
 RULE-SET,https://ruleset.skk.moe/List/non_ip/global.conf,🌏 国外网站
+# Github
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GitHub/GitHub.list,🌏 国外网站
 
 # WeChat 微信
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/WeChat/WeChat.list,DIRECT
 
+# > 国內直连
 # China 中国直连
 RULE-SET,https://ruleset.skk.moe/List/non_ip/domestic.conf,DIRECT
 RULE-SET,https://ruleset.skk.moe/List/non_ip/direct.conf,DIRECT
-
 # China 中国直连 (IP)
 RULE-SET,https://ruleset.skk.moe/List/ip/domestic.conf,DIRECT
 RULE-SET,https://ruleset.skk.moe/List/ip/china_ip.conf,DIRECT
