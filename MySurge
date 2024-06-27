@@ -204,7 +204,7 @@ Rename = select, policy-path=[输入你的机场订阅链接], update-interval=1
 
 # --- Internal Proxy Group ---
 # > 配置分流
-全球节点 = select, SmartGroup, 香港, 台湾, 新加坡, 日本, 美国, 韩国, 🛰️ 自动选择, 🔯 故障转移, 🔮 负载均衡, 节点选择, no-alert=0, hidden=0, include-all-proxies=0, include-other-group=Rename
+全球节点 = select, SmartGroup, 香港, 台湾, 新加坡, 日本, 美国, 韩国, 🛰️ 自动选择, 🔯 故障转移, 🔮 负载均衡, 节点选择, no-alert=0, hidden=0, include-all-proxies=0
 
 # IP归属地更改
 归属地更改 = select, DIRECT, 香港, 台湾, 新加坡, 日本, 美国, 韩国
@@ -238,9 +238,9 @@ Emby = select, 香港, 澳门, 台湾, 新加坡, 日本, 美国, 韩国, 🛰�
 # ------
 
 # > 节点分流
-SmartGroup = smart, policy-regex-filter=^(?=.*(.*))(?!.*((?i)回国|校园|游戏|教育|公告|邀请|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|到期|过期|已用|联系|邮箱|工单|群|(\b(GAME|USE|USED|TOTAL|EXPIRE|EMAIL)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$, no-alert=0, hidden=0, include-all-proxies=0
+SmartGroup = smart, policy-regex-filter=^(?=.*(.*))(?!.*((?i)回国|校园|游戏|教育|公告|邀请|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|到期|过期|已用|联系|邮箱|工单|群|(\b(GAME|USE|USED|TOTAL|EXPIRE|EMAIL)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$, no-alert=0, hidden=0, include-all-proxies=Rename
 
-节点选择 = select, policy-regex-filter=^(?=.*(.*))(?!.*((?i)回国|校园|游戏|教育|公告|邀请|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|到期|过期|已用|联系|邮箱|工单|群|(\b(GAME|USE|USED|TOTAL|EXPIRE|EMAIL)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$, no-alert=0, hidden=0, include-all-proxies=0
+节点选择 = select, policy-regex-filter=^(?=.*(.*))(?!.*((?i)回国|校园|游戏|教育|公告|邀请|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|到期|过期|已用|联系|邮箱|工单|群|(\b(GAME|USE|USED|TOTAL|EXPIRE|EMAIL)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$, no-alert=0, hidden=0, include-all-proxies=Rename
 
 🛰️ 自动选择 = url-test, hidden=0, policy-regex-filter=^(?=.*(.*))(?!.*((?i)回国|校园|游戏|教育|公告|邀请|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|到期|过期|已用|联系|邮箱|工单|群|(\b(GAME|USE|USED|TOTAL|EXPIRE|EMAIL)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$, interval=3000, tolerance=50, evaluate-before-use=1, no-alert=0, include-all-proxies=0, include-other-group=De-Surge
 
