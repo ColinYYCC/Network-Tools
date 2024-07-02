@@ -212,7 +212,7 @@ Rename = select, policy-path=[输入你的机场订阅链接], update-interval=1
  Apple Services = select, 🛰️ 自动选择, 🔯 故障转移, 🔮 负载均衡, DIRECT
 
 # Telegram
-Telegram - select, 🛰️ 自动选择, 🔯 故障转移, 🔮 负载均衡, DIRECT
+Telegram = select, 🛰️ 自动选择, 🔯 故障转移, 🔮 负载均衡, DIRECT
 
 # Netflix
 Netflix = select, 新加坡, 香港, 澳门, 台湾, 日本, 美国, 韩国, 🛰️ 自动选择, 🔯 故障转移, 🔮 负载均衡
