@@ -267,7 +267,7 @@ SmartGroup = smart, policy-regex-filter=^(?=.*(.*))(?!.*((?i)回国|校园|游�
 # ------
 
 # 兼容性修复
-PROXY = select, 全球节点, hidden=true
+PROXY = select, 自选节点, hidden=true
 # ------
 
 [Rule]
