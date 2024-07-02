@@ -358,7 +358,7 @@ DOMAIN,yacd.haishan.me,DIRECT
 DOMAIN,boxjs.com,DIRECT
 DOMAIN,boxjs.net,DIRECT
 # > Sub-Store
-DOMAIN-SUFFIX,vercel.app,全球节点
+DOMAIN-SUFFIX,vercel.app,PROXY
 
 # Rulesets，规则集（每 24 小时后台自动更新）
 # 规则集包含多条子规则，可以是另一个本地 list 文件，或者是一个 URL
