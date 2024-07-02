@@ -192,14 +192,13 @@ udp-policy-not-supported-behaviour = REJECT
 # --- External Proxy Group ---
 # > Sub-Store订阅
 # 去重订阅（需要配合Sub-Store脚本https://raw.githubusercontent.com/Keywos/rule/main/cname.js#bs=10&cd=2000&flag=使用）
-De-Surge = select, policy-path=[输入你的机场订阅链接], update-interval=10800, no-alert=0, hidden=true, include-all-proxies=0
+De-Surge = select, policy-path=[输入你的机场订阅链接], update-interval=10800, no-alert=0, hidden=true, include-all-proxies=0 // De-Surge
 
 # 重命名订阅（需要配合Sub-Store脚本https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Sub-Store/NodeRename.js使用）
-Rename = select, policy-path=[输入你的机场订阅链接], update-interval=10800, no-alert=0, hidden=true, include-all-proxies=0
+Rename = select, policy-path=[输入你的机场订阅链接], update-interval=10800, no-alert=0, hidden=true, include-all-proxies=0 // Rename
 
 # > 机场订阅
 [机场名字] = select, policy-path=[输入你的机场订阅链接], update-interval=10800, no-alert=0, hidden=true, include-all-proxies=0
-
 # ------
 
 # --- Internal Proxy Group ---
