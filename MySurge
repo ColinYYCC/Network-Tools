@@ -203,52 +203,52 @@ Rename = select, policy-path=[输入你的机场订阅链接], update-interval=1
 
 # --- Internal Proxy Group ---
 # > 配置分流
-自选节点 = select, SmartGroup, 香港, 台湾, 新加坡, 日本, 美国, 韩国, 🛰️ 自动选择, 🔯 故障转移, 🔮 负载均衡, 节点选择, no-alert=0, hidden=0, include-all-proxies=0
+自选节点 = select, SmartGroup, 香港, 台湾, 新加坡, 日本, 美国, 韩国, 自动选择, 故障转移, 负载均衡, 节点选择, no-alert=0, hidden=0, include-all-proxies=0, icon-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Surge_01.png
 
 # IP归属地更改
-归属地更改 = select, DIRECT, 香港, 台湾, 新加坡, 日本, 美国, 韩国
+归属地更改 = select, DIRECT, 香港, 台湾, 新加坡, 日本, 美国, 韩国, icon-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Periscope.png
 
 # Apple
- Apple Services = select, 🛰️ 自动选择, 🔯 故障转移, 🔮 负载均衡, DIRECT
+Apple Services = select, 自动选择, 故障转移, 负载均衡, DIRECT, icon-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Apple.png
 
 # Telegram
-Telegram = select, 🛰️ 自动选择, 🔯 故障转移, 🔮 负载均衡, DIRECT
+Telegram = select, 自动选择, 故障转移, 负载均衡, DIRECT, icon-url=https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/telegram(blue1).png
 
 # Netflix
-Netflix = select, 新加坡, 香港, 澳门, 台湾, 日本, 美国, 韩国, 🛰️ 自动选择, 🔯 故障转移, 🔮 负载均衡
+Netflix = select, 新加坡, 香港, 澳门, 台湾, 日本, 美国, 韩国, 自动选择, 故障转移, 负载均衡, icon-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Netflix.png
 # YouTube
-YouTube = select, 香港, 澳门, 台湾, 新加坡, 日本, 美国, 韩国, 🛰️ 自动选择, 🔯 故障转移, 🔮 负载均衡
+YouTube = select, 香港, 澳门, 台湾, 新加坡, 日本, 美国, 韩国, 自动选择, 故障转移, 负载均衡, icon-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/YouTube.png
 # Disney+
-Disney+ = select, 新加坡, 香港, 澳门, 台湾, 日本, 美国, 韩国, 🛰️ 自动选择, 🔯 故障转移, 🔮 负载均衡
+Disney+ = select, 新加坡, 香港, 澳门, 台湾, 日本, 美国, 韩国, 自动选择, 故障转移, 负载均衡, icon-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Disney.png
 # Spotify
-Spotify = select, 香港, 澳门, 台湾, 新加坡, 日本, 美国, 韩国, 🛰️ 自动选择, 🔯 故障转移, 🔮 负载均衡
+Spotify = select, 香港, 澳门, 台湾, 新加坡, 日本, 美国, 韩国, 自动选择, 故障转移, 负载均衡, icon-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Spotify.png
 # HBO GO ASIA
-HBO GO = select, 香港, 澳门, 台湾, 新加坡, 日本, 美国, 韩国, 🛰️ 自动选择, 🔯 故障转移, 🔮 负载均衡
-#Emby
-Emby = select, 香港, 澳门, 台湾, 新加坡, 日本, 美国, 韩国, 🛰️ 自动选择, 🔯 故障转移, 🔮 负载均衡
+HBO GO = select, 香港, 澳门, 台湾, 新加坡, 日本, 美国, 韩国, 自动选择, 故障转移, 负载均衡, icon-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/HBO_GO_1.png
+# Emby
+Emby = select, 香港, 澳门, 台湾, 新加坡, 日本, 美国, 韩国, 自动选择, 故障转移, 负载均衡, icon-url=https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/emby.png
 # 游戏
-👾游戏 = select, DIRECT, 自选节点, 🛰️ 自动选择, 🔯 故障转移, 🔮 负载均衡, 节点选择
+游戏 = select, DIRECT, 自选节点, 自动选择, 故障转移, 负载均衡, 节点选择, icon-url=https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/switch.png
 
 # 国际流媒体服务
-国际流媒体 = select, 🛰️ 自动选择, 香港, 台湾, 新加坡, 日本, 美国, 韩国, 🔯 故障转移, 🔮 负载均衡, DIRECT
+国际流媒体 = select, 自动选择, 香港, 台湾, 新加坡, 日本, 美国, 韩国, 故障转移, 负载均衡, DIRECT, icon-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Twitter.png
 
 # 中国流媒体服务（面向海外版本）
-国內流媒体 = select, DIRECT, 香港, 台湾, 新加坡, 🛰️ 自动选择, 🔯 故障转移, 🔮 负载均衡
+国內流媒体 = select, DIRECT, 香港, 台湾, 新加坡, 自动选择, 故障转移, 负载均衡, icon-url=https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/bilibili(1).png
 
 # 白名单模式 PROXY，黑名单模式 DIRECT
-漏网之鱼 = select, 自选节点, DIRECT, 🛰️ 自动选择, 🔯 故障转移, 🔮 负载均衡, 节点选择
+漏网之鱼 = select, 自选节点, DIRECT, 自动选择, 故障转移, 负载均衡, 节点选择, icon-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Snapfish.png
 # ------
 
 # > 节点分流
-SmartGroup = smart, policy-regex-filter=^(?=.*(.*))(?!.*((?i)回国|校园|游戏|教育|公告|邀请|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|到期|过期|已用|联系|邮箱|工单|群|(\b(GAME|USE|USED|TOTAL|EXPIRE|EMAIL)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$, no-alert=0, hidden=0, include-other-group=Rename
+SmartGroup = smart, policy-regex-filter=^(?=.*(.*))(?!.*((?i)回国|校园|游戏|教育|公告|邀请|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|到期|过期|已用|联系|邮箱|工单|群|(\b(GAME|USE|USED|TOTAL|EXPIRE|EMAIL)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$, no-alert=0, hidden=0, include-all-proxies=0, include-other-group=Rename, icon-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/group/GetSomeFries.png
 
-节点选择 = select, policy-regex-filter=^(?=.*(.*))(?!.*((?i)回国|校园|游戏|教育|公告|邀请|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|到期|过期|已用|联系|邮箱|工单|群|(\b(GAME|USE|USED|TOTAL|EXPIRE|EMAIL)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$, no-alert=0, hidden=0, include-other-group=Rename
+节点选择 = select, policy-regex-filter=^(?=.*(.*))(?!.*((?i)回国|校园|游戏|教育|公告|邀请|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|到期|过期|已用|联系|邮箱|工单|群|(\b(GAME|USE|USED|TOTAL|EXPIRE|EMAIL)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$, no-alert=0, hidden=0, include-all-proxies=0, include-other-group=Rename, icon-url=https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/ip.png
 
-🛰️ 自动选择 = url-test, hidden=0, policy-regex-filter=^(?=.*(.*))(?!.*((?i)回国|校园|游戏|教育|公告|邀请|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|到期|过期|已用|联系|邮箱|工单|群|(\b(GAME|USE|USED|TOTAL|EXPIRE|EMAIL)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$, interval=3000, tolerance=50, evaluate-before-use=1, no-alert=0, include-all-proxies=0, include-other-group=De-Surge
+自动选择 = url-test, hidden=0, policy-regex-filter=^(?=.*(.*))(?!.*((?i)回国|校园|游戏|教育|公告|邀请|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|到期|过期|已用|联系|邮箱|工单|群|(\b(GAME|USE|USED|TOTAL|EXPIRE|EMAIL)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$, interval=3000, tolerance=50, evaluate-before-use=1, no-alert=0, include-all-proxies=0, include-other-group=De-Surge, icon-url=https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/quanqiu(3).png
 
-🔯 故障转移 = fallback, hidden=0, policy-regex-filter=^(?=.*(.*))(?!.*((?i)回国|校园|游戏|教育|公告|邀请|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|到期|过期|已用|联系|邮箱|工单|群|(\b(GAME|USE|USED|TOTAL|EXPIRE|EMAIL)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$, interval=3000, evaluate-before-use=1, no-alert=0, include-all-proxies=0, include-other-group=De-Surge
+故障转移 = fallback, hidden=0, policy-regex-filter=^(?=.*(.*))(?!.*((?i)回国|校园|游戏|教育|公告|邀请|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|到期|过期|已用|联系|邮箱|工单|群|(\b(GAME|USE|USED|TOTAL|EXPIRE|EMAIL)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$, interval=3000, evaluate-before-use=1, no-alert=0, include-all-proxies=0, include-other-group=De-Surge, icon-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/select.png
 
-🔮 负载均衡 = load-balance, hidden=0, policy-regex-filter=^(?=.*(.*))(?!.*((?i)回国|校园|游戏|教育|公告|邀请|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|到期|过期|已用|联系|邮箱|工单|群|(\b(GAME|USE|USED|TOTAL|EXPIRE|EMAIL)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$, interval=3000, tolerance=50, evaluate-before-use=1, no-alert=0, include-all-proxies=0, persistent=1, include-other-group=De-Surge
+负载均衡 = load-balance, hidden=0, policy-regex-filter=^(?=.*(.*))(?!.*((?i)回国|校园|游戏|教育|公告|邀请|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|到期|过期|已用|联系|邮箱|工单|群|(\b(GAME|USE|USED|TOTAL|EXPIRE|EMAIL)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$, interval=3000, tolerance=50, evaluate-before-use=1, no-alert=0, include-all-proxies=0, persistent=1, include-other-group=De-Surge, icon-url=https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/loadbalance.png
 
 # 地区分流
 香港 = load-balance, policy-regex-filter=^(?=.*((?i)🇭🇰|香港|(\b(HK|Hong)\b))).*$, no-alert=0, hidden=1, include-all-proxies=0, persistent=1, include-other-group=De-Surge
@@ -373,7 +373,7 @@ RULE-SET,https://adrules.top/adrules-surge.conf,REJECT-DROP,extended-matching
 # DOMAIN-SET,https://ruleset.skk.moe/List/domainset/reject.conf,REJECT-TINYGIF,extended-matching
 RULE-SET,https://ruleset.skk.moe/List/non_ip/reject.conf,REJECT,extended-matching
 RULE-SET,https://ruleset.skk.moe/List/non_ip/reject-no-drop.conf,REJECT-NO-DROP,extended-matching // 防止 PCDN
-RULE-SET,https://ruleset.skk.moe/List/non_ip/reject-drop.conf,REJECT-DROP,extended-matching //  Adobe 系列软件内部的跟踪
+RULE-SET,https://ruleset.skk.moe/List/non_ip/reject-drop.conf,REJECT-DROP,extended-matching // Adobe 系列软件内部的跟踪
 RULE-SET,https://ruleset.skk.moe/List/ip/reject.conf,REJECT-DROP // 广告拦截 IP
 
 # SpeedTest 测速
@@ -386,14 +386,14 @@ RULE-SET,https://ruleset.skk.moe/List/non_ip/cdn.conf,PROXY,extended-matching //
 # 苹果服务规则列表
 RULE-SET,https://ruleset.skk.moe/List/non_ip/apple_cdn.conf,DIRECT //  Apple CDN
 RULE-SET,https://ruleset.skk.moe/List/non_ip/apple_cn.conf,DIRECT // 云上贵州
-RULE-SET,https://ruleset.skk.moe/List/non_ip/apple_services.conf, Apple Services,extended-matching //  Apple Services
+RULE-SET,https://ruleset.skk.moe/List/non_ip/apple_services.conf,Apple Services,extended-matching //  Apple Services
 
 # TV+
 PROCESS-NAME,/System/Applications/TV.app/Contents/MacOS/TV,国际流媒体 // TV+
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/AppleTV/AppleTV.list,国际流媒体,extended-matching // TV+
 # Disney+
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Disney/Disney.list,Disney+,extended-matching // Disney+
-#Emby
+# Emby
 RULE-SET,https://github.com/Repcz/Tool/raw/X/Surge/Rules/Emby.list,Emby,extended-matching // Emby
 # Netflix
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Netflix/Netflix.list,Netflix,extended-matching // Netflix
@@ -430,33 +430,33 @@ RULE-SET,https://ruleset.skk.moe/List/non_ip/global.conf,自选节点,extended-m
 # Telegram 电报
 RULE-SET,https://github.com/LucaLin233/Luca_Conf/blob/main/Surge/Rule/Telegram.list?raw=true,Telegram,extended-matching // Telegram 电报
 
-# > Game 游戏(不仅限于UDP, 包括相关CDN)
+# > 👾Game 游戏(不仅限于UDP, 包括相关CDN)
 # GameList
-# RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Game/Game.list,👾游戏 // GameList
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Blizzard/Blizzard.list,👾游戏 // 暴雪娱乐 Blizzard
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Classic/Classic.list,👾游戏 // Classic
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/DiabloIII/DiabloIII.list,👾游戏 // 暗黑破坏神III DiabloIII
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Hearthstone/Hearthstone.list,👾游戏 // 炉石传说 Hearthstone
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/HeroesoftheStorm/HeroesoftheStorm.list,👾游戏 // 风暴英雄 HeroesoftheStorm
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Rockstar/Rockstar.list,👾游戏 // 侠盗猎车手 Rockstar
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Overwatch/Overwatch.list,👾游戏 // 守望先锋 Overwatch
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/StarCraftII/StarCraftII.list,👾游戏 // 星海爭霸II StarCraftII
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/WildRift/WildRift.list,👾游戏 // 英雄联盟手游 WildRift
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/WorldofWarcraft/WorldofWarcraft.list,👾游戏 // 魔兽世界WorldofWarcraft
+# RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Game/Game.list,游戏 // GameList
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Blizzard/Blizzard.list,游戏 // 暴雪娱乐 Blizzard
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Classic/Classic.list,游戏 // Classic
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/DiabloIII/DiabloIII.list,游戏 // 暗黑破坏神III DiabloIII
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Hearthstone/Hearthstone.list,游戏 // 炉石传说 Hearthstone
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/HeroesoftheStorm/HeroesoftheStorm.list,游戏 // 风暴英雄 HeroesoftheStorm
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Rockstar/Rockstar.list,游戏 // 侠盗猎车手 Rockstar
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Overwatch/Overwatch.list,游戏 // 守望先锋 Overwatch
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/StarCraftII/StarCraftII.list,游戏 // 星海爭霸II StarCraftII
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/WildRift/WildRift.list,游戏 // 英雄联盟手游 WildRift
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/WorldofWarcraft/WorldofWarcraft.list,游戏 // 魔兽世界WorldofWarcraft
 
 # Game Publisher
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Discord/Discord.list,👾游戏 // Discord
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/EA/EA.list,👾游戏 // EA
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Epic/Epic.list,👾游戏 // Epic
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/HoYoverse/HoYoverse.list,👾游戏 // 米哈游
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Nintendo/Nintendo.list,👾游戏 // 任天堂 Nintendo
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Origin/Origin.list,👾游戏 // Origin
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/PlayStation/PlayStation.list,👾游戏 // PlayStation
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Steam/Steam.list,👾游戏 // Steam
-# RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/SteamCN/SteamCN.list,👾游戏 // SteamCN
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Supercell/Supercell.list,👾游戏 // 部落冲突 Supercell
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/UBI/UBI.list,👾游戏 // UBI
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Xbox/Xbox.list,👾游戏 // Xbox
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Discord/Discord.list,游戏 // Discord
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/EA/EA.list,游戏 // EA
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Epic/Epic.list,游戏 // Epic
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/HoYoverse/HoYoverse.list,游戏 // 米哈游
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Nintendo/Nintendo.list,游戏 // 任天堂 Nintendo
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Origin/Origin.list,游戏 // Origin
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/PlayStation/PlayStation.list,游戏 // PlayStation
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Steam/Steam.list,游戏 // Steam
+# RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/SteamCN/SteamCN.list,游戏 // SteamCN
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Supercell/Supercell.list,游戏 // 部落冲突 Supercell
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/UBI/UBI.list,游戏 // UBI
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Xbox/Xbox.list,游戏 // Xbox
 
 # StreamingCN 中国流媒体服务
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/ChinaMedia/ChinaMedia.list,国內流媒体,extended-matching // ChinaMedia 中国流媒体服务
