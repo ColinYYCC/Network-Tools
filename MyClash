@@ -270,8 +270,8 @@ rules:
   - RULE-SET,ChinaDomain,DIRECT
   - RULE-SET,Domestic_non_ip,DIRECT
   - RULE-SET,Direct_non_ip,DIRECT
-  - RULE-SET,China_ip,DIRECT
-  - GEOIP,CN,DIRECT
+  - RULE-SET,China_ip,DIRECT,no-resolve
+  - GEOIP,CN,DIRECT,no-resolve
   - MATCH,漏网之鱼
 
 url-rewrite:
