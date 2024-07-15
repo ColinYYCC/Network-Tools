@@ -78,11 +78,11 @@ dns:
   # 模式：redir-host或fake-ip
   enhanced-mode: fake-ip
   # DNS监听地址
-  listen: 0.0.0.0:1053
+  listen: 0.0.0.0:53
   # Fake-IP解析地址池
   fake-ip-range: 28.0.0.1/8
   # fakeip 过滤，以下地址不会下发 fakeip 映射用于连接
-  fake-ip-filter: ['*.lan','*.direct', cable.auth.com, '*.msftconnecttest.com', '*.msftncsi.com', network-test.debian.org, detectportal.firefox.com, resolver1.opendns.com, '*.srv.nintendo.net', '*.stun.playstation.net', xbox.*.microsoft.com, '*.xboxlive.com', stun.*, global.turn.twilio.com, global.stun.twilio.com, app.yinxiang.com, injections.adguard.org, local.adguard.org, cable.auth.com, localhost.*.qq.com, localhost.*.weixin.qq.com, '*.logon.battlenet.com.cn', '*.logon.battle.net', '*.blzstatic.cn', music.163.com, '*.music.163.com', '*.126.net', musicapi.taihe.com, music.taihe.com, songsearch.kugou.com, trackercdn.kugou.com, '*.kuwo.cn', api-jooxtt.sanook.com, api.joox.com, joox.com, y.qq.com, '*.y.qq.com', streamoc.music.tc.qq.com, mobileoc.music.tc.qq.com, isure.stream.qqmusic.qq.com, dl.stream.qqmusic.qq.com, aqqmusic.tc.qq.com, amobile.music.tc.qq.com, '*.xiami.com', '*.music.migu.cn', music.migu.cn, proxy.golang.org, '*.mcdn.bilivideo.cn', '*.cmpassport.com', id6.me, open.e.189.cn, mdn.open.wo.cn, opencloud.wostore.cn, auth.wosms.cn, '*.jegotrip.com.cn', '*.icitymobile.mobi', '*.pingan.com.cn', '*.cmbchina.com', '*.10099.com.cn', pool.ntp.org, '*.pool.ntp.org', ntp.*.com, time.*.com, 'ntp?.*.com', 'time?.*.com', time.*.gov, time.*.edu.cn, '*.ntp.org.cn', PDC._msDCS.*.*, DC._msDCS.*.*, GC._msDCS.*.*]
+  fake-ip-filter: ['*.lan', 'cable.auth.com', '*.msftconnecttest.com', '*.msftncsi.com', 'network-test.debian.org', 'detectportal.firefox.com', 'resolver1.opendns.com', '*.srv.nintendo.net', '*.stun.playstation.net', 'xbox.*.microsoft.com', '*.xboxlive.com', 'stun.*', 'global.turn.twilio.com', 'global.stun.twilio.com', 'localhost.*.qq.com', 'localhost.*.weixin.qq.com', '*.logon.battlenet.com.cn', '*.logon.battle.net', '*.blzstatic.cn', 'music.163.com', '*.music.163.com', '*.126.net', 'musicapi.taihe.com', 'music.taihe.com', 'songsearch.kugou.com', 'trackercdn.kugou.com', '*.kuwo.cn', 'api-jooxtt.sanook.com', 'api.joox.com', 'joox.com', 'y.qq.com', '*.y.qq.com', 'streamoc.music.tc.qq.com', 'mobileoc.music.tc.qq.com', 'isure.stream.qqmusic.qq.com', 'dl.stream.qqmusic.qq.com', 'aqqmusic.tc.qq.com', 'amobile.music.tc.qq.com', '*.xiami.com', '*.music.migu.cn', 'music.migu.cn', 'proxy.golang.org', '*.mcdn.bilivideo.cn', '*.cmpassport.com', 'id6.me', 'open.e.189.cn', 'mdn.open.wo.cn', 'opencloud.wostore.cn', 'auth.wosms.cn', '*.jegotrip.com.cn', '*.icitymobile.mobi', '*.pingan.com.cn', '*.cmbchina.com', 'pool.ntp.org', '*.pool.ntp.org', 'ntp.*.com', 'time.*.com', 'ntp?.*.com', 'time?.*.com', 'time.*.gov', 'time.*.edu.cn', '*.ntp.org.cn', 'PDC._msDCS.*.*', 'DC._msDCS.*.*', 'GC._msDCS.*.*']
   #默认的域名解析服务器
   default-nameserver: [9.9.9.9, 149.112.112.112]                     
     
@@ -126,13 +126,13 @@ proxy-groups:
 
   - {name: 手动切换, type: select, include-all: true, proxies: [ 🛰️ 自动选择, 香港节点, 美国节点, 狮城节点, 日本节点, 台湾节点, 韩国节点, 🔯 故障转移, 🔮 负载均衡, DIRECT], icon: https://github.com/clash-verge-rev/clash-verge-rev/raw/main/src-tauri/icons/icon.png}
 
-  - {name: 国外网站, <<: *pg, icon: https://raw.githubusercontent.com/tugepaopao/Image-Storage/master/hand-painted/56.png}
+  - {name: 🌏 国外网站, <<: *pg, icon: https://raw.githubusercontent.com/tugepaopao/Image-Storage/master/hand-painted/56.png}
 
-  - {name: 国际媒体, <<: *pg, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Netflix.png}
+  - {name: 📽️ 国际媒体, <<: *pg, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Netflix.png}
 
-  - {name: 苹果服务, <<: *pg, icon: https://github.com/tugepaopao/Image-Storage/raw/master/cartoon/Cute/apple.png}
+  - {name: 🍎 苹果服务, <<: *pg, icon: https://github.com/tugepaopao/Image-Storage/raw/master/cartoon/Cute/apple.png}
 
-  - {name: 微软服务, <<: *pg, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Microsoft.png}
+  - {name: 🖥️ 微软服务, <<: *pg, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Microsoft.png}
 
   - {name: 谷歌服务, <<: *pg, icon: https://github.com/tugepaopao/Image-Storage/raw/master/cartoon/Cute/google.png}
 
@@ -248,14 +248,14 @@ rules:
   - RULE-SET,Reject_domainset,广告拦截
   - RULE-SET,Reject_ip,广告拦截
   - RULE-SET,Sogouinput,广告拦截
-  - RULE-SET,Cdn_domainset,国外网站
-  - RULE-SET,Cdn_non_ip,国外网站
+  - RULE-SET,Cdn_domainset,🌏 国外网站
+  - RULE-SET,Cdn_non_ip,🌏 国外网站
   - RULE-SET,AI,AI
-  - RULE-SET,Apple Service,苹果服务
+  - RULE-SET,Apple Service,🍎 苹果服务
   - RULE-SET,Apple CDN,DIRECT
   - RULE-SET,云上贵州,DIRECT
   - RULE-SET,OneDrive,微软服务
-  - RULE-SET,Github,国外网站
+  - RULE-SET,Github,🌏 国外网站
   - RULE-SET,Microsoft,微软服务
   - RULE-SET,Microsoft 国内 CDN,DIRECT
   - RULE-SET,YouTube,谷歌服务
@@ -265,8 +265,8 @@ rules:
   - RULE-SET,Steam,游戏平台
   - RULE-SET,Epic,游戏平台
   - RULE-SET,Emby,Emby
-  - RULE-SET,ProxyMedia,国际媒体
-  - RULE-SET,国外网站,国外网站
+  - RULE-SET,ProxyMedia,📽️ 国际媒体
+  - RULE-SET,国外网站,🌏 国外网站
   - RULE-SET,ChinaDomain,DIRECT
   - RULE-SET,Domestic_non_ip,DIRECT
   - RULE-SET,Direct_non_ip,DIRECT
