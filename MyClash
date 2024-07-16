@@ -126,13 +126,13 @@ proxy-groups:
 
   - {name: 手动切换, type: select, include-all: true, proxies: [ 🛰️ 自动选择, 香港节点, 美国节点, 狮城节点, 日本节点, 台湾节点, 韩国节点, 🔯 故障转移, 🔮 负载均衡, DIRECT ], icon: https://github.com/clash-verge-rev/clash-verge-rev/raw/main/src-tauri/icons/icon.png}
 
-  - {name: 🌏 国外网站, <<: *pg, icon: https://raw.githubusercontent.com/tugepaopao/Image-Storage/master/hand-painted/56.png}
+  - {name: 国外网站, <<: *pg, icon: https://raw.githubusercontent.com/tugepaopao/Image-Storage/master/hand-painted/56.png}
 
-  - {name: 📽️ 国际媒体, <<: *pg, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Netflix.png}
+  - {name: 国际媒体, <<: *pg, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Netflix.png}
 
-  - {name: 🍎 苹果服务, <<: *pg, icon: https://github.com/tugepaopao/Image-Storage/raw/master/cartoon/Cute/apple.png}
+  - {name: 苹果服务, <<: *pg, icon: https://github.com/tugepaopao/Image-Storage/raw/master/cartoon/Cute/apple.png}
 
-  - {name: 🖥️ 微软服务, <<: *pg, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Microsoft.png}
+  - {name: 微软服务, <<: *pg, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Microsoft.png}
 
   - {name: 谷歌服务, <<: *pg, icon: https://github.com/tugepaopao/Image-Storage/raw/master/cartoon/Cute/google.png}
 
@@ -248,15 +248,15 @@ rules:
   - RULE-SET,Reject_domainset,广告拦截
   - RULE-SET,Reject_ip,广告拦截
   - RULE-SET,Sogouinput,广告拦截
-  - RULE-SET,Cdn_domainset,🌏 国外网站
-  - RULE-SET,Cdn_non_ip,🌏 国外网站
+  - RULE-SET,Cdn_domainset,国外网站
+  - RULE-SET,Cdn_non_ip,国外网站
   - RULE-SET,AI,AI
-  - RULE-SET,Apple Service,🍎 苹果服务
+  - RULE-SET,Apple Service,苹果服务
   - RULE-SET,Apple CDN,DIRECT
   - RULE-SET,云上贵州,DIRECT
-  - RULE-SET,Github,🌏 国外网站
-  - RULE-SET,OneDrive,🖥️ 微软服务
-  - RULE-SET,Microsoft,🖥️ 微软服务
+  - RULE-SET,Github,国外网站
+  - RULE-SET,OneDrive,微软服务
+  - RULE-SET,Microsoft,微软服务
   - RULE-SET,Microsoft 国内 CDN,DIRECT
   - RULE-SET,YouTube,谷歌服务
   - RULE-SET,Google,谷歌服务
@@ -265,8 +265,8 @@ rules:
   - RULE-SET,Steam,游戏平台
   - RULE-SET,Epic,游戏平台
   - RULE-SET,Emby,Emby
-  - RULE-SET,ProxyMedia,📽️ 国际媒体
-  - RULE-SET,国外网站,🌏 国外网站
+  - RULE-SET,ProxyMedia,国际媒体
+  - RULE-SET,国外网站,国外网站
   - RULE-SET,ChinaDomain,DIRECT
   - RULE-SET,Domestic_non_ip,DIRECT
   - RULE-SET,Direct_non_ip,DIRECT
