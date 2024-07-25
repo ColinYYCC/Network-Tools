@@ -245,7 +245,7 @@ rules:
   - RULE-SET,Reject_non_ip_no_drop,广告拦截
   - RULE-SET,Reject_non_ip_drop,广告拦截
   - RULE-SET,Reject_non_ip,广告拦截
-  - RULE-SET,Reject_domainset,广告拦截
+  #- RULE-SET,Reject_domainset,广告拦截
   #- RULE-SET,Reject_ip,广告拦截
   - RULE-SET,Sogouinput,广告拦截
   - RULE-SET,Cdn_domainset,国外网站
