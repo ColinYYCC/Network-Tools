@@ -224,7 +224,7 @@ Disney+ = select, 新加坡, 香港, 澳门, 台湾, 日本, 美国, 韩国, �
 # Spotify
 Spotify = select, 香港, 澳门, 台湾, 新加坡, 日本, 美国, 韩国, 🎲自动选择, 🔯故障转移, 🔮负载均衡, icon-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Spotify.png
 # HBO GO ASIA
-HBO GO = select, 香港, 澳门, 台湾, 新加坡, 日本, 美国, 韩国, 🎲自动选择, 🔯故障转移, 🔮负载均衡, icon-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/HBO_GO_1.png
+HBO GO = select, 香港, 澳门, 台湾, 新加坡, 日本, 美国, 韩国, 🎲自动选择, 🔯故障转移, 🔮负载均衡, icon-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/HBO_2.png
 # Emby
 Emby = select, 香港, 澳门, 台湾, 新加坡, 日本, 美国, 韩国, 🎲自动选择, 🔯故障转移, 🔮负载均衡, icon-url=https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/emby.png
 # 游戏
@@ -234,7 +234,7 @@ Emby = select, 香港, 澳门, 台湾, 新加坡, 日本, 美国, 韩国, 🎲�
 国际流媒体 = select, 🎲自动选择, 香港, 台湾, 新加坡, 日本, 美国, 韩国, 🔯故障转移, 🔮负载均衡, DIRECT, icon-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Twitter.png
 
 # 中国流媒体服务（面向海外版本）
-国內流媒体 = select, DIRECT, 香港, 台湾, 新加坡, 🎲自动选择, 🔯故障转移, 🔮负载均衡, icon-url=https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/bilibili(1).png
+国內流媒体 = select, DIRECT, 香港, 台湾, 新加坡, 🎲自动选择, 🔯故障转移, 🔮负载均衡, icon-url=https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/bilibilitv.png
 
 # 白名单模式 PROXY，黑名单模式 DIRECT
 漏网之鱼 = select, 自选节点, DIRECT, 🎲自动选择, 🔯故障转移, 🔮负载均衡, 🥡节点选择, icon-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Snapfish.png
@@ -375,7 +375,7 @@ RULE-SET,https://adrules.top/adrules-surge.conf,REJECT-DROP,extended-matching
 RULE-SET,https://ruleset.skk.moe/List/non_ip/reject.conf,REJECT,extended-matching
 RULE-SET,https://ruleset.skk.moe/List/non_ip/reject-no-drop.conf,REJECT-NO-DROP,extended-matching // 防止 PCDN
 RULE-SET,https://ruleset.skk.moe/List/non_ip/reject-drop.conf,REJECT-DROP,extended-matching // Adobe 系列软件内部的跟踪
-RULE-SET,https://ruleset.skk.moe/List/ip/reject.conf,REJECT-DROP // 广告拦截 IP
+# RULE-SET,https://ruleset.skk.moe/List/ip/reject.conf,REJECT-DROP // 广告拦截 IP
 
 # SpeedTest 测速
 DOMAIN-SET,https://ruleset.skk.moe/List/domainset/speedtest.conf,PROXY,extended-matching // SpeedTest
