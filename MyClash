@@ -22,6 +22,8 @@ log-level: info
 global-client-fingerprint: chrome
 # 匹配所有进程（always/strict/off）
 find-process-mode: strict
+# 遊戏优化模式
+disable-udp: false
 
 # 使用geoip.dat数据库
 geodata-mode: true
