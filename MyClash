@@ -13,7 +13,7 @@ tcp-concurrent: true
 # 允许局域网的连接（可用来共享代理）
 allow-lan: true
 # 开启 IPv6 总开关，关闭阻断所有 IPv6 链接和屏蔽 DNS 请求 AAAA 记录  
-ipv6: false
+ipv6: true
 # 规则模式：rule/global/direct/script
 mode: rule
 # 设置日志输出级别: silent/error/warning/info/debug
@@ -154,21 +154,21 @@ proxy-groups:
 
   - {name: 🛰️ 自动选择, <<: *url-test, filter: *FilterAll, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Auto_Speed.png}
 
-  - {name: 🔯 故障转移, <<: *fallback, filter: *FilterAll, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Server.png}
+  - {name: 🔯 故障转移, <<: *fallback, filter: *FilterAll, hidden=true, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Server.png}
 
-  - {name: 🔮 负载均衡, <<: *load-balance, filter: *FilterAll, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Available.png}
+  - {name: 🔮 负载均衡, <<: *load-balance, filter: *FilterAll, hidden=true, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Available.png}
 
-  - {name: 香港节点, <<: *fallback, filter: *FilterHK, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png}
+  - {name: 香港节点, <<: *fallback, filter: *FilterHK, hidden=true, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png}
 
-  - {name: 美国节点, <<: *fallback, filter: *FilterUS, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/United_States.png}
+  - {name: 美国节点, <<: *fallback, filter: *FilterUS, hidden=true, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/United_States.png}
 
-  - {name: 狮城节点, <<: *fallback, filter: *FilterSG, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Singapore.png}
+  - {name: 狮城节点, <<: *fallback, filter: *FilterSG, hidden=true, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Singapore.png}
 
-  - {name: 日本节点, <<: *fallback, filter: *FilterJP, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Japan.png}
+  - {name: 日本节点, <<: *fallback, filter: *FilterJP, hidden=true, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Japan.png}
 
-  - {name: 台湾节点, <<: *fallback, filter: *FilterTW, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Taiwan.png}
+  - {name: 台湾节点, <<: *fallback, filter: *FilterTW, hidden=true, vicon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Taiwan.png}
 
-  - {name: 韩国节点, <<: *fallback, filter: *FilterKR, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/South_Korea.png}
+  - {name: 韩国节点, <<: *fallback, filter: *FilterKR, hidden=true, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/South_Korea.png}
 
 rule-providers:
 
