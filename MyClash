@@ -247,6 +247,7 @@ rules:
   - RULE-SET,Reject_non_ip_drop,广告拦截
   - RULE-SET,Reject_non_ip,广告拦截
   - RULE-SET,Sogouinput,广告拦截
+  - DOMAIN-SUFFIX,zoom.us,国外网站
   - RULE-SET,Cdn_domainset,国外网站
   - RULE-SET,Cdn_non_ip,国外网站
   - RULE-SET,AI,AI
