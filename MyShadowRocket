@@ -77,8 +77,6 @@ RULE-SET,https://adrules.top/adrules.list,REJECT-DROP
 RULE-SET,https://ruleset.skk.moe/Clash/non_ip/reject-no-drop.txt,REJECT-DROP
 RULE-SET,https://ruleset.skk.moe/Clash/non_ip/reject-drop.txt,REJECT-DROP
 RULE-SET,https://ruleset.skk.moe/Clash/non_ip/reject.txt,REJECT-DROP
-# RULE-SET,https://ruleset.skk.moe/Clash/domainset/reject.txt,REJECT-DROP
-RULE-SET,https://ruleset.skk.moe/Clash/ip/reject.txt,REJECT-DROP
 
 # 静态CDN域名(強烈建議)
 DOMAIN-SET,https://ruleset.skk.moe/List/domainset/cdn.conf,🌏 国外网站
