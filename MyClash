@@ -183,8 +183,6 @@ rule-providers:
       
   # 广告拦截
   adrules: {<<: *c, path: ./RuleSet/adrules.list, url: https://adrules.top/adrules.list}
-  Reject_non_ip_no_drop: {<<: *c, path: ./RuleSet/reject_non_ip_no_drop.txt, url: https://ruleset.skk.moe/Clash/non_ip/reject-no-drop.txt}
-  Reject_non_ip_drop: {<<: *c, path: ./RuleSet/reject_non_ip_drop.txt, url: https://ruleset.skk.moe/Clash/non_ip/reject-drop.txt}
   Reject_non_ip: {<<: *c, path: ./RuleSet/reject_non_ip.txt, url: https://ruleset.skk.moe/Clash/non_ip/reject.txt}
 
   # 搜狗输入法 隐私收集
@@ -243,16 +241,14 @@ rules:
   #- SCRIPT,quic,REJECT
   #- RULE-SET,Download,DIRECT
   - RULE-SET,adrules,广告拦截
-  - RULE-SET,Reject_non_ip_no_drop,广告拦截
-  - RULE-SET,Reject_non_ip_drop,广告拦截
   - RULE-SET,Reject_non_ip,广告拦截
   - RULE-SET,Sogouinput,广告拦截
+  - RULE-SET,AI,AI
+  - RULE-SET,云上贵州,DIRECT
+  - RULE-SET,Apple CDN,DIRECT
   - DOMAIN-SUFFIX,zoom.us,国外网站
   - RULE-SET,Cdn_domainset,国外网站
   - RULE-SET,Cdn_non_ip,国外网站
-  - RULE-SET,AI,AI
-  - RULE-SET,Apple CDN,DIRECT
-  - RULE-SET,云上贵州,DIRECT
   - RULE-SET,Apple Service,苹果服务
   - RULE-SET,Github,国外网站
   - RULE-SET,OneDrive,微软服务
