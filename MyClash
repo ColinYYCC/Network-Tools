@@ -236,7 +236,7 @@ rule-providers:
   China_ip: {<<: *i, path: ./RuleSet/china_ip.txt, url: https://ruleset.skk.moe/Clash/ip/china_ip.txt}
     
 rules:
-  - RULE-SET,Lan,DIRECT
+  - GEOIP,Lan,DIRECT
   #- SCRIPT,quic,REJECT
   #- RULE-SET,Download,DIRECT
   - RULE-SET,adrules,广告拦截
