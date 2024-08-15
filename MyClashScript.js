@@ -1,8 +1,8 @@
-// 参考 Verge Rev 示例 Script 配置
+// 参考 Lucy（@Repcz） 示例 Script 配置
 //
 // Clash Verg Rev Version ≥ 1.7.2
 //
-// 最后更新时间: 2024-08-13 21:30
+// 最后更新时间: 2024-08-15 21:30
 
 // 规则集通用配置
 const ruleProviderCommon = {
