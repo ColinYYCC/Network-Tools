@@ -266,6 +266,7 @@ rules:
   - RULE-SET,Domestic_non_ip,DIRECT
   - RULE-SET,Direct_non_ip,DIRECT
   - RULE-SET,China_ip,DIRECT,no-resolve
+  - RULE-SET,Domestic_ip,DIRECT,no-resolve
   - GEOIP,CN,DIRECT,no-resolve
   - MATCH,漏网之鱼
 
