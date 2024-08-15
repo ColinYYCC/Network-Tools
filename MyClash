@@ -240,13 +240,13 @@ rule-providers:
 rules:
   #- SCRIPT,quic,REJECT
   #- RULE-SET,Download,DIRECT
-  - RULE-SET,adrules,广告拦截
-  - RULE-SET,Reject_non_ip,广告拦截
-  - RULE-SET,Sogouinput,广告拦截
-  - RULE-SET,AI,AI
   - RULE-SET,云上贵州,DIRECT
   - RULE-SET,Apple CDN,DIRECT
+  - RULE-SET,Sogouinput,广告拦截
+  - RULE-SET,adrules,广告拦截
+  - RULE-SET,Reject_non_ip,广告拦截
   - DOMAIN-SUFFIX,zoom.us,国外网站
+  - RULE-SET,AI,AI
   - RULE-SET,Cdn_domainset,国外网站
   - RULE-SET,Cdn_non_ip,国外网站
   - RULE-SET,Apple Service,苹果服务
