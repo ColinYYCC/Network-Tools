@@ -150,7 +150,7 @@ proxy-groups:
 
   - {name: 广告拦截, type: select, proxies: [REJECT-DROP, DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Reject.orig.png}
 
-  - {name: 漏网之鱼, type: select, include-all: true, proxies: [ 🔯 故障转移, 🛰️ 自动选择, 🔮 负载均衡, DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Snapfish.png}
+  - {name: 漏网之鱼, type: select, include-all: true, proxies: [🔯 故障转移, 🛰️ 自动选择, 🔮 负载均衡, DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Snapfish.png}
 
   #节点地区分组
 
