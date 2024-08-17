@@ -28,7 +28,7 @@ function main(config) {
   }
 
   // 覆盖通用配置
-  config["mixed-port"] = "7893";
+  config["mixed-port"] = "7890";
   config["tcp-concurrent"] = true;
   config["allow-lan"] = true;
   config["ipv6"] = false;
@@ -36,12 +36,15 @@ function main(config) {
   config["log-level"] = "info";
   config["find-process-mode"] = "strict";
   config["global-client-fingerprint"] = "chrome";
+  config["external-controller"] = "127.0.0.1:9090";
+  config["external-ui"] = "ui";
+  config["external-ui-url"] = "https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip";
 
   // 覆盖 dns 配置
   config["dns"] = {
     "enable": true,
     "listen": "0.0.0.0:1053",
-    "ipv6": true,
+    "ipv6": false,
     "enhanced-mode": "fake-ip",
     "fake-ip-range": "198.18.0.1/16",
     "fake-ip-filter":[
