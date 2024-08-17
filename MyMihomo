@@ -88,10 +88,22 @@ dns:
 
 # 锚点参数
 pg: &pg {type: select, proxies: [手动切换, 香港节点, 美国节点, 狮城节点, 日本节点, 台湾节点, 韩国节点, 🔯 故障转移, 🔮 负载均衡, DIRECT]}
-url-test: &url-test {type: url-test, url: http://latency-test.skk.moe/endpoint, interval: 300, tolerance: 0, include-all: true}
-c: &c {type: http, behavior: classical, format: text, interval: 86400}
+# 订阅更新和延迟测试相关参数
+p: &p {type: http, interval: 86400, health-check: {enable: true, url: http://latency-test.skk.moe/endpoint, interval: 1800}}
+# 自动选择策略组：选取延迟最低节点
+url-test: &url-test {type: url-test, lazy: true, url: http://latency-test.skk.moe/endpoint, interval: 300, tolerance: 0, include-all: true}
+# 手动选择策略组：手动选择想要的节点/策略组
+select: &select {type: select, include-all: true}
+# 故障回退策略组：策略组将按顺序选择你列表中第一个可用的节点
 fallback: &fallback {type: fallback, lazy: true, url: http://latency-test.skk.moe/endpoint, interval: 300, include-all: true}
+# 负载均衡策略组：不同的请求将使用不同的代理节点
 load-balance: &load-balance {type: load-balance, lazy: true, strategy: consistent-hashing, url: http://latency-test.skk.moe/endpoint, interval: 300, include-all: true}
+# classical规则相关
+c: &c {type: http, behavior: classical, format: text, interval: 86400}
+# domain规则相关
+d: &d {type: http, behavior: domain, format: text, interval: 86400}
+# ipcidr规则相关
+i: &i {type: http, behavior: ipcidr, format: text, interval: 86400}
 
 proxy-groups:
 
@@ -100,23 +112,23 @@ proxy-groups:
   - {name: 国际媒体, <<: *pg, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Netflix.png}
   - {name: 苹果服务, <<: *pg, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Apple.png}
   - {name: 微软服务, <<: *pg, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Microsoft.png}
-  - {name: 谷歌服务, <<: *pg, icon: https://github.com/tugepaopao/Image-Storage/raw/master/cartoon/Cute/google.png}}
+  - {name: 谷歌服务, <<: *pg, icon: https://github.com/tugepaopao/Image-Storage/raw/master/cartoon/Cute/google.png}
   - {name: 电报消息, <<: *pg, icon: https://github.com/tugepaopao/Image-Storage/raw/master/hand-painted/36.png}
   - {name: 推特消息, <<: *pg, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Twitter.png}
   - {name: AI, <<: *pg, https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png}
   - {name: 游戏平台, <<: *pg, icon: https://github.com/tugepaopao/Image-Storage/raw/master/hand-painted/35.png}
   - {name: Emby, <<: *pg, include-all: true, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png}
-  - {name: 广告拦截, type: select, proxies: [REJECT, DIRECT], icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Advertising.png}
+  - {name: 广告拦截, type: select, proxies: [REJECT, DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Reject.orig.png}
   - {name: 漏网之鱼, type: select, include-all: true, proxies: [🛰️ 自动选择, 香港节点, 美国节点, 狮城节点, 日本节点, 台湾节点, 韩国节点, 🔯 故障转移, 🔮 负载均衡, DIRECT], icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png}
-  - {name: 香港节点, <<: *fallback, filter: "^(?=.*((?i)🇭🇰|香港|(\b(HK|Hong)\b))).*$", icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png}
-  - {name: 韩国节点, <<: *fallback, filter: "^(?=.*((?i)🇰🇷|韩国|韓|首尔|(\b(KR|Korea)\b))).*$", icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China.png}
-  - {name: 美国节点, <<: *fallback, filter: "^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States)\b))).*$, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png}
-  - {name: 狮城节点, <<: *fallback, filter: "^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\b))).*$", icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png}
-  - {name: 日本节点, <<: *fallback, filter: "^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan)\b))).*$", icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png}
-  - {name: 台湾节点, <<: *fallback, filter: "^(?=.*((?i)🇹🇼|台湾|(\b(TW|Tai|Taiwan)\b))).*$", icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China.png}
-  - {name: 🛰️ 自动选择, <<: *url-test, filter: *FilterAll, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Auto_Speed.png}
-  - {name: 🔯 故障转移, <<: *fallback, filter: *FilterAll, hidden: true, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Server.png}
-  - {name: 🔮 负载均衡, <<: *load-balance, filter: *FilterAll, hidden: true, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Available.png}
+  - {name: 香港节点, <<: *fallback, filter: "^(?=.*((?i)🇭🇰|香港|(\b(HK|Hong)\b))).*$", hidden: true, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png}
+  - {name: 韩国节点, <<: *fallback, filter: "^(?=.*((?i)🇰🇷|韩国|韓|首尔|(\b(KR|Korea)\b))).*$", hidden: true, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China.png}
+  - {name: 美国节点, <<: *fallback, filter: "^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States)\b))).*$", hidden: true, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/United_States.png}
+  - {name: 狮城节点, <<: *fallback, filter: "^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\b))).*$", hidden: true, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Singapore.png}
+  - {name: 日本节点, <<: *fallback, filter: "^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan)\b))).*$", hidden: true, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Japan.png}
+  - {name: 台湾节点, <<: *fallback, filter: "^(?=.*((?i)🇹🇼|台湾|(\b(TW|Tai|Taiwan)\b))).*$", hidden: true, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Taiwan.png}
+  - {name: 🛰️ 自动选择, <<: *url-test, filter: "^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author)\b))).*$", proxy-groups:, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Auto_Speed.png}
+  - {name: 🔯 故障转移, <<: *fallback, filter: "^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author)\b))).*$", hidden: true, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Server.png}
+  - {name: 🔮 负载均衡, <<: *load-balance, filter: "^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author)\b))).*$", hidden: true, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Available.png}
 
 rule-providers:
   Sogouinput: {<<: *c, path: ./RuleSet/sogouinput.txt, url: https://ruleset.skk.moe/Clash/non_ip/sogouinput.txt}
@@ -139,11 +151,11 @@ rule-providers:
   Disney: {<<: *c, path: ./rule-providers/Disney.list,  url: https://github.com/Repcz/Tool/raw/X/Clash/Rules/Disney.list}
   PrimeVideo: {<<: *c, path: ./rule-providers/PrimeVideo.list,  url: https://github.com/Repcz/Tool/raw/X/Clash/Rules/PrimeVideo.list}
   HBO: {<<: *c, path: ./rule-providers/HBO.list,  url: https://github.com/Repcz/Tool/raw/X/Clash/Rules/HBO.list}
-  China: {<<: *c, path: ./RuleSet/ChinaDomain.list,  url: https://github.com/Repcz/Tool/raw/X/Clash/Rules/ChinaDomain.list}
-  China: {<<: *c, path: ./RuleSet/domestic_non_ip.txt, url: https://ruleset.skk.moe/Clash/non_ip/domestic.txt}
-  China: {<<: *c, path: ./RuleSet/direct_non_ip.txt, url: https://ruleset.skk.moe/Clash/non_ip/direct.txt}
-  China: {<<: *c, path: ./RuleSet/domestic_ip.txt, url: https://ruleset.skk.moe/Clash/ip/domestic.txt}
-  China: {<<: *i, path: ./RuleSet/china_ip.txt, url: https://ruleset.skk.moe/Clash/ip/china_ip.txt}
+  ChinaDomain: {<<: *c, path: ./RuleSet/ChinaDomain.list,  url: https://github.com/Repcz/Tool/raw/X/Clash/Rules/ChinaDomain.list}
+  Domestic_non_ip: {<<: *c, path: ./RuleSet/domestic_non_ip.txt, url: https://ruleset.skk.moe/Clash/non_ip/domestic.txt}
+  Direct_non_ip: {<<: *c, path: ./RuleSet/direct_non_ip.txt, url: https://ruleset.skk.moe/Clash/non_ip/direct.txt}
+  Domestic_ip: {<<: *c, path: ./RuleSet/domestic_ip.txt, url: https://ruleset.skk.moe/Clash/ip/domestic.txt}
+  China_ip: {<<: *i, path: ./RuleSet/china_ip.txt, url: https://ruleset.skk.moe/Clash/ip/china_ip.txt}
 
 rules:
  - RULE-SET,云上贵州,DIRECT
@@ -171,7 +183,11 @@ rules:
   - GEOSITE,github,微软服务
   - GEOSITE,microsoft,微软服务
   - GEOSITE,gfw,国外网站
-  - RULE-SET,China,DIRECT
+  - RULE-SET,ChinaDomain,DIRECT
+  - RULE-SET,Domestic_non_ip,DIRECT
+  - RULE-SET,Direct_non_ip,DIRECT
+  - RULE-SET,China_ip,DIRECT,no-resolve
+  - RULE-SET,Domestic_ip,DIRECT,no-resolve
   - GEOIP,lan,DIRECT
   - GEOIP,CN,DIRECT
   - MATCH,漏网之鱼
