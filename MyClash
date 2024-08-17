@@ -168,7 +168,7 @@ proxy-groups:
 
   - {name: 日本节点, <<: *fallback, filter: *FilterJP, hidden: true, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Japan.png}
 
-  - {name: 台湾节点, <<: *fallback, filter: *FilterTW, hidden: true, vicon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Taiwan.png}
+  - {name: 台湾节点, <<: *fallback, filter: *FilterTW, hidden: true, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Taiwan.png}
 
   - {name: 韩国节点, <<: *fallback, filter: *FilterKR, hidden: true, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/South_Korea.png}
 
