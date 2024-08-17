@@ -38,7 +38,7 @@ geodata-mode: true
 geox-url:
   geoip: "https://github.com/xream/geoip/releases/latest/download/ipinfo.geoip.dat"
   geosite: "https://mirror.ghproxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat"
-  mmdb: "https://github.com/xream/geoip/releases/latest/download/ipinfo.country.mmdb“
+  mmdb: "https://github.com/xream/geoip/releases/latest/download/ipinfo.country.mmdb"
   asn: "https://github.com/xream/geoip/releases/latest/download/ipinfo.asn.mmdb"
 
 profile:
