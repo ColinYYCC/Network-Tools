@@ -107,7 +107,7 @@ i: &i {type: http, behavior: ipcidr, format: text, interval: 86400}
 
 proxy-groups:
 
-  - {name: 手动切换, type: select, include-all: true, proxies: [🛰️ 自动选择, 香港节点, 美国节点, 狮城节点, 日本节点, 台湾节点, 韩国节点, 🔯 故障转移, 🔮 负载均衡, DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Auto_Speed.png}
+  - {name: 手动切换, type: select, include-all: true, proxies: [🛰️ 自动选择, 香港节点, 美国节点, 狮城节点, 日本节点, 台湾节点, 韩国节点, 🔮 负载均衡, DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Auto_Speed.png}
   - {name: 国外网站, <<: *pg, icon: https://raw.githubusercontent.com/tugepaopao/Image-Storage/master/hand-painted/56.png}
   - {name: 国际媒体, <<: *pg, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Netflix.png}
   - {name: 苹果服务, <<: *pg, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Apple.png}
@@ -119,7 +119,7 @@ proxy-groups:
   - {name: 游戏平台, <<: *pg, icon: https://github.com/tugepaopao/Image-Storage/raw/master/hand-painted/35.png}
   - {name: Emby, <<: *pg, include-all: true, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png}
   - {name: 广告拦截, type: select, proxies: [REJECT, DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Reject.orig.png}
-  - {name: 漏网之鱼, type: select, include-all: true, proxies: [🛰️ 自动选择, 香港节点, 美国节点, 狮城节点, 日本节点, 台湾节点, 韩国节点, 🔯 故障转移, 🔮 负载均衡, DIRECT], icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png}
+  - {name: 漏网之鱼, type: select, include-all: true, proxies: [🛰️ 自动选择, 香港节点, 美国节点, 狮城节点, 日本节点, 台湾节点, 韩国节点, 🔮 负载均衡, DIRECT], icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Final.png}
   - {name: 香港节点, <<: *fallback, filter: "^(?=.*((?i)🇭🇰|香港|(\b(HK|Hong)\b))).*$", hidden: true, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png}
   - {name: 韩国节点, <<: *fallback, filter: "^(?=.*((?i)🇰🇷|韩国|韓|首尔|(\b(KR|Korea)\b))).*$", hidden: true, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China.png}
   - {name: 美国节点, <<: *fallback, filter: "^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States)\b))).*$", hidden: true, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/United_States.png}
@@ -127,7 +127,6 @@ proxy-groups:
   - {name: 日本节点, <<: *fallback, filter: "^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan)\b))).*$", hidden: true, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Japan.png}
   - {name: 台湾节点, <<: *fallback, filter: "^(?=.*((?i)🇹🇼|台湾|(\b(TW|Tai|Taiwan)\b))).*$", hidden: true, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Taiwan.png}
   - {name: 🛰️ 自动选择, <<: *url-test, filter: "^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author)\b))).*$", proxy-groups:, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Auto_Speed.png}
-  - {name: 🔯 故障转移, <<: *fallback, filter: "^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author)\b))).*$", hidden: true, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Server.png}
   - {name: 🔮 负载均衡, <<: *load-balance, filter: "^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author)\b))).*$", hidden: true, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Available.png}
 
 rule-providers:
