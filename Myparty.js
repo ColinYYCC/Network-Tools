@@ -293,15 +293,15 @@ function main(config) {
       "+.zjcdn.com": "180.184.1.1", // 字节跳动 CDN
 
     // > BiliBili
-    "upos-sz-mirrorali.bilivideo.com": "https://dns.alidns.com/dns-query", // BiliBili upos视频服务器（阿里云）
-    "upos-sz-mirrorali?.bilivideo.com": "https://dns.alidns.com/dns-query", // BiliBili upos视频服务器（阿里云）
-    "upos-sz-mirrorali??.bilivideo.com": "https://dns.alidns.com/dns-query", // BiliBili upos视频服务器（阿里云）
-    "upos-sz-mirrorbos.bilivideo.com": "180.76.76.76", // BiliBili upos视频服务器（百度云）
-    "upos-sz-mirrorcos.bilivideo.com": "https://doh.pub/dns-query", // BiliBili upos视频服务器（腾讯云）
-    "upos-sz-mirrorcos?.bilivideo.com": "https://doh.pub/dns-query", // BiliBili upos视频服务器（腾讯云）
-    "upos-sz-mirrorcos??.bilivideo.com": "https://doh.pub/dns-query", // BiliBili upos视频服务器（腾讯云）
-    "upos-sz-upcdnbd??.bilivideo.com": "180.76.76.76", // BiliBili upos视频服务器（百度云）
-    "upos-sz-upcdntx.bilivideo.com": "https://doh.pub/dns-query", // BiliBili upos视频服务器（腾讯云）
+      "upos-sz-mirrorali.bilivideo.com": "https://dns.alidns.com/dns-query", // BiliBili upos视频服务器（阿里云）
+      "upos-sz-mirrorali?.bilivideo.com": "https://dns.alidns.com/dns-query", // BiliBili upos视频服务器（阿里云）
+      "upos-sz-mirrorali??.bilivideo.com": "https://dns.alidns.com/dns-query", // BiliBili upos视频服务器（阿里云）
+      "upos-sz-mirrorbos.bilivideo.com": "180.76.76.76", // BiliBili upos视频服务器（百度云）
+      "upos-sz-mirrorcos.bilivideo.com": "https://doh.pub/dns-query", // BiliBili upos视频服务器（腾讯云）
+      "upos-sz-mirrorcos?.bilivideo.com": "https://doh.pub/dns-query", // BiliBili upos视频服务器（腾讯云）
+      "upos-sz-mirrorcos??.bilivideo.com": "https://doh.pub/dns-query", // BiliBili upos视频服务器（腾讯云）
+      "upos-sz-upcdnbd??.bilivideo.com": "180.76.76.76", // BiliBili upos视频服务器（百度云）
+      "upos-sz-upcdntx.bilivideo.com": "https://doh.pub/dns-query", // BiliBili upos视频服务器（腾讯云）
 
     // > 🇨🇳 CHN
     // CNNIC SDNS
