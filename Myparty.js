@@ -448,11 +448,35 @@ function main(config) {
       "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/ProxyGFW.list",
       "path": "./rule-providers/ProxyGFW.list"
     },
-    "China": {
+    "ChinaDomain": {
       ...ruleProviderCommon,
       "behavior": "classical",
       "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/ChinaDomain.list",
-      "path": "./rule-providers/China.list"
+      "path": "./rule-providers/ChinaDomain.list"
+    },
+    "Domestic_non_ip": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://ruleset.skk.moe/Clash/non_ip/domestic.txt",
+      "path": "./rule-providers/domestic.txt"
+    },
+    "Direct_non_ip": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://ruleset.skk.moe/Clash/non_ip/direct.txt",
+      "path": "./rule-providers/direct.txt"
+    },
+    "Domestic_ip": {
+      ...ruleProviderCommon,
+      "behavior": "ipcidr",
+      "url": "https://ruleset.skk.moe/Clash/ip/domestic.txt",
+      "path": "./rule-providers/domestic.txt"
+    },
+    "China_ip": {
+      ...ruleProviderCommon,
+      "behavior": "ipcidr",
+      "url": "https://ruleset.skk.moe/Clash/ip/china_ip.txt",
+      "path": "./rule-providers/china_ip.txt"
     }
   };
 
@@ -482,7 +506,11 @@ function main(config) {
     "GEOSITE,github,微软服务",
     "GEOSITE,microsoft,微软服务",
     "GEOSITE,gfw,国外网站",
-    "RULE-SET,China,DIRECT",
+    "RULE-SET,ChinaDomain,DIRECT",
+    "RULE-SET,Domestic_non_ip,DIRECT",
+    "RULE-SET,Direct_non_ip,DIRECT",
+    "RULE-SET,China_ip,DIRECT,no-resolve",
+    "RULE-SET,Domestic_ip,DIRECT,no-resolve",
     "GEOIP,lan,DIRECT",
     "GEOIP,CN,DIRECT",
     "MATCH,漏网之鱼"
