@@ -340,15 +340,15 @@ function main(config) {
       "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Github.list",
       "path": "./rule-providers/Github.list"
     },
-    "Cdn_domainset": {
+    "静态CDN 域名": {
     ...ruleProviderCommon,
-    "behavior": "classical",
+    "behavior": "domain",
     "url": "https://ruleset.skk.moe/Clash/domainset/cdn.txt",
     "path": "./RuleSet/cdn_domainset.txt"
     },
     "Cdn_non_ip": {
     ...ruleProviderCommon,
-    "behavior": "classical",
+    "behavior": "domain",
     "url": "https://ruleset.skk.moe/Clash/non_ip/cdn.txt",
     "path": "./RuleSet/cdn_non_ip.txt"
     },
@@ -499,6 +499,9 @@ function main(config) {
     "RULE-SET,Sogouinput,广告拦截",
     "RULE-SET,Reject_non_ip,广告拦截",
     "RULE-SET,adrules,广告拦截",
+    "RULE-SET,静态CDN 域名,国外网站",
+    "RULE-SET,Cdn_non_ip,国外网站",
+    "GEOSITE,github,微软服务",
     "RULE-SET,AI,AI",
     "RULE-SET,Apple Service,苹果服务",
     "RULE-SET,YouTube,谷歌服务",
@@ -515,7 +518,6 @@ function main(config) {
     "RULE-SET,PrimeVideo,国际媒体",
     "RULE-SET,HBO,国际媒体",
     "GEOSITE,onedrive,微软服务",
-    "GEOSITE,github,微软服务",
     "GEOSITE,microsoft,微软服务",
     "GEOSITE,gfw,国外网站",
     "RULE-SET,ChinaDomain,DIRECT",
