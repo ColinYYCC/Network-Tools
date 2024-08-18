@@ -96,7 +96,7 @@ function main(config) {
       ...groupBaseOption,
       "name": "手动切换",
       "type": "select",
-      "proxies": ["香港节点", "美国节点", "狮城节点", "日本节点", "台湾节点", "DIRECT"],
+      "proxies": ["🛰️ 自动选择", "香港节点", "美国节点", "韩国节点", "狮城节点", "日本节点", "台湾节点", "🔯 故障转移", "🔮 负载均衡", "DIRECT"],
       "include-all": true,
       "icon": "https://github.com/clash-verge-rev/clash-verge-rev/raw/main/src-tauri/icons/icon.png"
     },
@@ -104,63 +104,63 @@ function main(config) {
       ...groupBaseOption,
       "name": "国外网站",
       "type": "select",
-      "proxies": ["手动切换", "香港节点", "美国节点", "狮城节点", "日本节点", "台湾节点", "DIRECT"],
+      "proxies": ["手动切换", "香港节点", "美国节点", "韩国节点", "狮城节点", "日本节点", "台湾节点", "🔯 故障转移", "🔮 负载均衡", "DIRECT"],
       "icon": "https://raw.githubusercontent.com/tugepaopao/Image-Storage/master/hand-painted/56.png"
     },
     {
       ...groupBaseOption,
       "name": "国际媒体",
       "type": "select",
-      "proxies": ["手动切换", "香港节点", "美国节点", "狮城节点", "日本节点", "台湾节点", "DIRECT"],
+      "proxies": ["手动切换", "香港节点", "美国节点", "韩国节点", "狮城节点", "日本节点", "台湾节点", "🔯 故障转移", "🔮 负载均衡", "DIRECT"],
       "icon": "https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Netflix.png"
     },
     {
       ...groupBaseOption,
       "name": "苹果服务",
       "type": "select",
-      "proxies": ["手动切换", "香港节点", "美国节点", "狮城节点", "日本节点", "台湾节点", "DIRECT"],
+      "proxies": ["手动切换", "香港节点", "美国节点", "韩国节点", "狮城节点", "日本节点", "台湾节点", "🔯 故障转移", "🔮 负载均衡", "DIRECT"],
       "icon": "https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Apple.png"
     },
     {
       ...groupBaseOption,
       "name": "微软服务",
       "type": "select",
-      "proxies": ["手动切换", "香港节点", "美国节点", "狮城节点", "日本节点", "台湾节点", "DIRECT"],
+      "proxies": ["手动切换", "香港节点", "美国节点", "韩国节点", "狮城节点", "日本节点", "台湾节点", "🔯 故障转移", "🔮 负载均衡", "DIRECT"],
       "icon": "https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Microsoft.png"
     },
     {
       ...groupBaseOption,
       "name": "谷歌服务",
       "type": "select",
-      "proxies": ["手动切换", "香港节点", "美国节点", "狮城节点", "日本节点", "台湾节点", "DIRECT"],
+      "proxies": ["手动切换", "香港节点", "美国节点", "韩国节点", "狮城节点", "日本节点", "台湾节点", "🔯 故障转移", "🔮 负载均衡", "DIRECT"],
       "icon": "https://github.com/tugepaopao/Image-Storage/raw/master/cartoon/Cute/google.png"
     },
     {
       ...groupBaseOption,
       "name": "电报消息",
       "type": "select",
-      "proxies": ["手动切换", "香港节点", "美国节点", "狮城节点", "日本节点", "台湾节点", "DIRECT"],
+      "proxies": ["手动切换", "香港节点", "美国节点", "韩国节点", "狮城节点", "日本节点", "台湾节点", "🔯 故障转移", "🔮 负载均衡", "DIRECT"],
       "icon": "https://github.com/tugepaopao/Image-Storage/raw/master/hand-painted/36.png"
     },
     {
       ...groupBaseOption,
       "name": "推特消息",
       "type": "select",
-      "proxies": ["手动切换", "香港节点", "美国节点", "狮城节点", "日本节点", "台湾节点", "DIRECT"],
+      "proxies": ["手动切换", "香港节点", "美国节点", "韩国节点", "狮城节点", "日本节点", "台湾节点", "🔯 故障转移", "🔮 负载均衡", "DIRECT"],
       "icon": "https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Twitter.png"
     },
     {
       ...groupBaseOption,
       "name": "AI",
       "type": "select",
-      "proxies": ["手动切换", "香港节点", "美国节点", "狮城节点", "日本节点", "台湾节点", "DIRECT"],
+      "proxies": ["手动切换", "香港节点", "美国节点", "韩国节点", "狮城节点", "日本节点", "台湾节点", "🔯 故障转移", "🔮 负载均衡", "DIRECT"],
       "icon": "https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png"
     },    
     {
       ...groupBaseOption,
       "name": "游戏平台",
       "type": "select",
-      "proxies": ["手动切换", "香港节点", "美国节点", "狮城节点", "日本节点", "台湾节点", "DIRECT"],
+      "proxies": ["手动切换", "香港节点", "美国节点", "韩国节点", "狮城节点", "日本节点", "台湾节点", "🔯 故障转移", "🔮 负载均衡", "DIRECT"],
       "icon": "https://github.com/tugepaopao/Image-Storage/raw/master/hand-painted/35.png"
     },    
     {
@@ -168,7 +168,7 @@ function main(config) {
       "name": "Emby",
       "type": "select",
       "include-all": true,
-      "proxies": ["手动切换", "香港节点", "美国节点", "狮城节点", "日本节点", "台湾节点", "DIRECT"],
+      "proxies": ["手动切换", "香港节点", "美国节点", "韩国节点", "狮城节点", "日本节点", "台湾节点", "🔯 故障转移", "🔮 负载均衡", "DIRECT"],
       "icon": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png"
     },
     {
@@ -182,7 +182,7 @@ function main(config) {
       ...groupBaseOption,
       "name": "漏网之鱼",
       "type": "select",
-      "proxies": ["手动切换", "香港节点", "美国节点", "狮城节点", "日本节点", "台湾节点", "DIRECT"],
+      "proxies": ["手动切换", "香港节点", "美国节点", "韩国节点", "狮城节点", "日本节点", "台湾节点", "🔯 故障转移", "🔮 负载均衡", "DIRECT"],
       "icon": "https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Snapfish.png"
     },
     // 地区分组
