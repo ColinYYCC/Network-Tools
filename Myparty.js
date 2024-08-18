@@ -499,7 +499,7 @@ function main(config) {
     "DOMAIN,injections.adguard.org,DIRECT",
     "DOMAIN,local.adguard.org,DIRECT",
   // Zoom
-    "PROCESS-NAME,Zoom,Proxy",
+    "PROCESS-NAME,Zoom,国外网站",
   
   // Client
   // Proxy
@@ -575,7 +575,7 @@ function main(config) {
     "DOMAIN,boxjs.com,DIRECT",
     "DOMAIN,boxjs.net,DIRECT",
   // Sub-Store
-    "DOMAIN-SUFFIX,vercel.app,PROXY",
+    "DOMAIN-SUFFIX,vercel.app,国外网站",
 
   // Rulesets，规则集（每 24 小时后台自动更新）
   // 规则集包含多条子规则，可以是另一个本地 list 文件，或者是一个 URL
