@@ -494,14 +494,102 @@ function main(config) {
 
   // 覆盖规则
   config["rules"] = [
+  // Process 程序规则
+  // AdGuard
+    "DOMAIN,injections.adguard.org,DIRECT",
+    "DOMAIN,local.adguard.org,DIRECT",
+  // Zoom
+    "PROCESS-NAME,Zoom,Proxy",
+  
+  // Client
+  // Proxy
+    "PROCESS-NAME,*Clash*,DIRECT",
+    "PROCESS-NAME,*clash*,DIRECT",
+    "PROCESS-NAME,Surge*,DIRECT",
+    "PROCESS-NAME,v2ray,DIRECT",
+    "PROCESS-NAME,xray,DIRECT",
+    "PROCESS-NAME,naive,DIRECT",
+    "PROCESS-NAME,Trojan,DIRECT",
+    "PROCESS-NAME,Trojan-go,DIRECT",
+    "PROCESS-NAME,ss-local,DIRECT",
+    "PROCESS-NAME,ssr-local,DIRECT",
+    "PROCESS-NAME,privoxy,DIRECT",
+    "PROCESS-NAME,leaf,DIRECT",
+    "PROCESS-NAME,UUBooster,DIRECT",
+
+  // Downloader
+    "PROCESS-NAME,BaiduNetdisk,DIRECT",
+    "PROCESS-NAME,*Folx*,DIRECT",
+    "PROCESS-NAME,*Thunder*,DIRECT",
+    "PROCESS-NAME,*DownloadService*,DIRECT",
+    "PROCESS-NAME,*Soda*,DIRECT",
+    "PROCESS-NAME,*p4pclient*,DIRECT",
+    "PROCESS-NAME,aria2c,DIRECT",
+    "PROCESS-NAME,fdm,DIRECT",
+    "PROCESS-NAME,Folx,DIRECT",
+    "PROCESS-NAME,NetTransport,DIRECT",
+    "PROCESS-NAME,amuled,DIRECT",
+    "PROCESS-NAME,Motrix.app,DIRECT",
+    "DOMAIN-SUFFIX,smtp,DIRECT",
+    "DOMAIN-KEYWORD,aria2,DIRECT",
+
+  // Xunlei
+    "PROCESS-NAME,Thunder,DIRECT",
+    "PROCESS-NAME,ThunderVIP,DIRECT",
+    "DOMAIN-SUFFIX,xunlei.com,DIRECT",
+
+  // tailscale
+    "PROCESS-NAME,tailscaled,DIRECT",
+  // Parsec
+    "PROCESS-NAME,parsecd,DIRECT",
+  // 向日葵远程
+    "PROCESS-NAME,SunloginClient_Desktop,DIRECT",
+    "PROCESS-NAME,SunloginClient_Helper,DIRECT",
+  // Todesk
+    "DOMAIN-KEYWORD,todesk,DIRECT",
+  // 百度网盘
+    "PROCESS-NAME,BaiduNetdisk_mac,DIRECT",
+
+  // BT
+    "PROCESS-NAME,BitComet,DIRECT",
+    "PROCESS-NAME,DownloadService,DIRECT",
+    "PROCESS-NAME,qBittorrent,DIRECT",
+    "PROCESS-NAME,qbittorrent-nox,DIRECT",
+    "PROCESS-NAME,Transmission,DIRECT",
+    "PROCESS-NAME,transmission-daemon,DIRECT",
+    "PROCESS-NAME,transmission-qt,DIRECT",
+    "PROCESS-NAME,uTorrent,DIRECT",
+    "PROCESS-NAME,WebTorrent,DIRECT",
+    "PROCESS-NAME,WebTorrent Helper,DIRECT",
+    "DOMAIN-KEYWORD,announce,DIRECT",
+    "DOMAIN-KEYWORD,torrent,DIRECT",
+    "DOMAIN-KEYWORD,tracker,DIRECT",
+
+  // Web Controller 网页控制器规则
+  // Surge
+    "DOMAIN,yasd.royli.dev,DIRECT",
+  // Clash
+    "DOMAIN,clash.razord.top,DIRECT",
+    "DOMAIN,yacd.haishan.me,DIRECT",
+  // BoxJs
+    "DOMAIN,boxjs.com,DIRECT",
+    "DOMAIN,boxjs.net,DIRECT",
+  // Sub-Store
+    "DOMAIN-SUFFIX,vercel.app,PROXY",
+
+  // Rulesets，规则集（每 24 小时后台自动更新）
+  // 规则集包含多条子规则，可以是另一个本地 list 文件，或者是一个 URL
+  // 内置了两个规则集：SYSTEM 和 LAN
+  // 内置规则集的具体内容可在 Surge Mac 设置界面查看
+    
     "RULE-SET,云上贵州,DIRECT",
     "RULE-SET,Apple CDN,DIRECT",
     "RULE-SET,Sogouinput,广告拦截",
     "RULE-SET,Reject_non_ip,广告拦截",
     "RULE-SET,adrules,广告拦截",
+    "GEOSITE,github,微软服务",
     "RULE-SET,静态CDN 域名,国外网站",
     "RULE-SET,Cdn_non_ip,国外网站",
-    "GEOSITE,github,微软服务",
     "RULE-SET,AI,AI",
     "RULE-SET,Apple Service,苹果服务",
     "RULE-SET,YouTube,谷歌服务",
@@ -525,6 +613,36 @@ function main(config) {
     "RULE-SET,Direct_non_ip,DIRECT",
     "RULE-SET,China_ip,DIRECT,no-resolve",
     "RULE-SET,Domestic_ip,DIRECT,no-resolve",
+    "IP-CIDR,0.0.0.0/32,REJECT,no-resolve", // 自动 REJECT 保护丢包，防止应用循环请求
+
+    "DOMAIN-SUFFIX,direct,DIRECT",
+    "DOMAIN-SUFFIX,wpad,DIRECT",
+    "DOMAIN-SUFFIX,localhost,DIRECT",
+    "DOMAIN-SUFFIX,invalid,DIRECT",
+    "DOMAIN-SUFFIX,onion,DIRECT",
+    "DOMAIN-SUFFIX,test,DIRECT",
+    "DOMAIN-SUFFIX,lan,DIRECT",
+    "DOMAIN-SUFFIX,intranet,DIRECT",
+    "DOMAIN-SUFFIX,internal,DIRECT",
+    "DOMAIN-SUFFIX,private,DIRECT",
+    "DOMAIN-SUFFIX,home,DIRECT",
+    "DOMAIN-SUFFIX,corp,DIRECT",
+    "IP-CIDR,169.254.0.0/16,DIRECT",
+    "IP-CIDR,224.0.0.0/4,DIRECT",
+    "IP-CIDR,240.0.0.0/4,DIRECT",
+    "IP-CIDR,255.255.255.255/32,DIRECT",
+    "IP-CIDR6,fc00::/7,DIRECT",
+    "IP-CIDR6,fd00::/8,DIRECT",
+    "IP-CIDR6,ff00::/8,DIRECT",
+    "IP-CIDR6,ff01::/16,DIRECT",
+    "IP-CIDR6,ff02::/16,DIRECT",
+    "IP-CIDR6,ff03::/16,DIRECT",
+    "IP-CIDR6,ff04::/16,DIRECT",
+    "IP-CIDR6,ff05::/16,DIRECT",
+    "IP-CIDR6,2001:db8::/32,DIRECT",
+    "IP-CIDR6,2002::/16,DIRECT",
+
+    
     "GEOIP,lan,DIRECT",
     "GEOIP,CN,DIRECT",
     "MATCH,漏网之鱼"
