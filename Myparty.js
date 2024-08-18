@@ -334,6 +334,12 @@ function main(config) {
       "url": "https://adrules.top/adrules.list",
       "path": "./rule-providers/adrules.list"
     },
+    "Github": {
+      ...ruleProviderCommon,
+      "behavior": "classical",
+      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Github.list",
+      "path": "./rule-providers/Github.list"
+    },
     "Google": {
       ...ruleProviderCommon,
       "behavior": "classical",
@@ -349,7 +355,7 @@ function main(config) {
     "Telegram": {
       ...ruleProviderCommon,
       "behavior": "classical",
-      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Telegram.list",
+      "url": "https://github.com/LucaLin233/Luca_Conf/blob/main/Surge/Rule/Telegram.list?raw=true",
       "path": "./rule-providers/Telegram.list"
     },
     "Twitter": {
@@ -424,12 +430,6 @@ function main(config) {
       "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/OneDrive.list",
       "path": "./rule-providers/OneDrive.list"
     },
-    "Github": {
-      ...ruleProviderCommon,
-      "behavior": "classical",
-      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Github.list",
-      "path": "./rule-providers/Github.list"
-    },
     "Microsoft": {
       ...ruleProviderCommon,
       "behavior": "classical",
@@ -468,13 +468,13 @@ function main(config) {
     },
     "Domestic_ip": {
       ...ruleProviderCommon,
-      "behavior": "ipcidr",
+      "behavior": "classical",
       "url": "https://ruleset.skk.moe/Clash/ip/domestic.txt",
       "path": "./rule-providers/domestic.txt"
     },
     "China_ip": {
       ...ruleProviderCommon,
-      "behavior": "ipcidr",
+      "behavior": "classical",
       "url": "https://ruleset.skk.moe/Clash/ip/china_ip.txt",
       "path": "./rule-providers/china_ip.txt"
     }
