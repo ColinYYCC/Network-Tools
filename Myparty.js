@@ -322,17 +322,17 @@ function main(config) {
       "url": "https://ruleset.skk.moe/Clash/non_ip/sogouinput.txt",
       "path": "./rule-providers/sogouinput.txt"
     },
-      "Reject_non_ip": {
+      "reject_domainset": {
       ...ruleProviderCommon,
       "behavior": "classical",
-      "url": "https://ruleset.skk.moe/Clash/non_ip/reject.txt",
-      "path": "./rule-providers/reject.txt"
+      "url": "https://ruleset.skk.moe/Clash/domainset/reject.txt",
+      "path": "./rule-providers/reject_domainset.txt"
     },
-    "adrules": {
+    "reject_extra_domainset": {
       ...ruleProviderCommon,
       "behavior": "classical",
-      "url": "https://adrules.top/adrules.list",
-      "path": "./rule-providers/adrules.list"
+      "url": "https://ruleset.skk.moe/Clash/domainset/reject_extra.txt",
+      "path": "./rule-providers/reject_domainset_extra.txt"
     },
     "Github": {
       ...ruleProviderCommon,
@@ -585,8 +585,8 @@ function main(config) {
     "RULE-SET,云上贵州,DIRECT",
     "RULE-SET,Apple CDN,DIRECT",
     "RULE-SET,Sogouinput,广告拦截",
-    "RULE-SET,Reject_non_ip,广告拦截",
-    "RULE-SET,adrules,广告拦截",
+    "RULE-SET,reject_domainset,广告拦截",
+    "RULE-SET,reject_extra_domainset,广告拦截",
     "GEOSITE,github,微软服务",
     "RULE-SET,静态CDN 域名,国外网站",
     "RULE-SET,Cdn_non_ip,国外网站",
