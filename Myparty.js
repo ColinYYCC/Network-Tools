@@ -340,6 +340,18 @@ function main(config) {
       "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Github.list",
       "path": "./rule-providers/Github.list"
     },
+    "Cdn_domainset": {
+    ...ruleProviderCommon,
+    "behavior": "classical",
+    "url": "https://ruleset.skk.moe/Clash/domainset/cdn.txt",
+    "path": "./RuleSet/cdn_domainset.txt"
+    },
+    "Cdn_non_ip": {
+    ...ruleProviderCommon,
+    "behavior": "classical",
+    "url": "https://ruleset.skk.moe/Clash/non_ip/cdn.txt",
+    "path": "./RuleSet/cdn_non_ip.txt"
+    },
     "Google": {
       ...ruleProviderCommon,
       "behavior": "classical",
