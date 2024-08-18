@@ -257,6 +257,42 @@ function main(config) {
       "include-all": true,
       "filter": "(?i)🇨🇳|🇹🇼|台湾|(\b(TW|Tai|Taiwan)\b)",
       "icon": "https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Taiwan.png"
+    },
+    {
+      ...groupBaseOption,
+      "name": "🛰️ 自动选择",
+      "type": "url-test",
+      "lazy": true,
+      "interval": 300,
+      "tolerance": 0,
+      "hidden": true,
+      "include-all": true,
+      "exclude-filter": "(?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author)\b)",
+      "icon": "https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Auto_Speed.png"
+    },
+    {
+      ...groupBaseOption,
+      "name": "🔯 故障转移",
+      "type": "fallback",
+      "lazy": true,
+      "interval": 300,
+      "tolerance": 0,
+      "hidden": true,
+      "include-all": true,
+      "exclude-filter": "(?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author)\b)",
+      "icon": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Server.png"
+    },
+    {
+      ...groupBaseOption,
+      "name": "🔮 负载均衡",
+      "type": "load-balance",
+      "lazy": true,
+      "interval": 300,
+      "tolerance": 0,
+      "hidden": true,
+      "include-all": true,
+      "exclude-filter": "(?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author)\b)",
+      "icon": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Available.png"
     }
   ];
 
