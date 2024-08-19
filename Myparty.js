@@ -587,7 +587,7 @@ function main(config) {
     "RULE-SET,Sogouinput,广告拦截",
     "RULE-SET,reject_domainset,广告拦截",
     "RULE-SET,reject_extra_domainset,广告拦截",
-    "GEOSITE,github,微软服务",
+    "GEOSITE,github,国外网站",
     "RULE-SET,静态CDN 域名,国外网站",
     "RULE-SET,Cdn_non_ip,国外网站",
     "RULE-SET,AI,AI",
