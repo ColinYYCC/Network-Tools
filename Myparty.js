@@ -90,6 +90,22 @@ function main(config) {
     "dns-hijack": ["8.8.8.8:53","8.8.4.4:53"]
   };
 
+    // 创建代理组的函数
+  function createProxyGroup(name, type, icon, proxies) {
+    return {
+      name,
+      type,
+      url: "http://latency-test.skk.moe/endpoint",
+      icon,
+      interval: 300,
+      tolerance: type === "url-test" ? 20 : undefined,
+      timeout: type === "url-test" ? 2000 : undefined,
+      lazy: true,
+      proxies: proxies.length > 0 ? proxies : ["DIRECT"],
+      strategy: type === "load-balance" ? "consistent-hashing" : undefined
+    };
+  }
+
   // 覆盖策略组
   config["proxy-groups"] = [
     {
