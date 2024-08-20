@@ -174,8 +174,6 @@ proxy-groups:
 
 rule-providers:
 
-
-
   # 下载服务
   Download: {<<: *c, path: ./RuleSet/Download.list,  url: https://ruleset.skk.moe/Clash/non_ip/direct.txt}
       
@@ -332,15 +330,14 @@ rules:
   - RULE-SET,Sogouinput,广告拦截
   - RULE-SET,adrules,广告拦截
   - RULE-SET,Reject_non_ip,广告拦截
-  - DOMAIN-SUFFIX,zoom.us,国外网站
   - RULE-SET,AI,AI
   - RULE-SET,Cdn_domainset,国外网站
   - RULE-SET,Cdn_non_ip,国外网站
   - RULE-SET,Apple Service,苹果服务
   - RULE-SET,Github,国外网站
+  - RULE-SET,Microsoft 国内 CDN,DIRECT
   - RULE-SET,OneDrive,微软服务
   - RULE-SET,Microsoft,微软服务
-  - RULE-SET,Microsoft 国内 CDN,DIRECT
   - RULE-SET,YouTube,谷歌服务
   - RULE-SET,Google,谷歌服务
   - RULE-SET,Telegram,电报消息
