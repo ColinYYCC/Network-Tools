@@ -64,6 +64,8 @@ function main(config) {
     "mmdb": "https://github.com/xream/geoip/releases/latest/download/ipinfo.country.mmdb",
     "asn": "https://github.com/xream/geoip/releases/latest/download/ipinfo.asn.mmdb"
   };
+  config["geo-auto-update"] = true;
+  config["geo-update-interval"] = 24;
 
   // 覆盖 sniffer 配置
   config["sniffer"] = {
