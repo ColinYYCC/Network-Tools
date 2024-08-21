@@ -659,6 +659,9 @@ function main(config) {
     "IP-CIDR6,2001:db8::/32,DIRECT",
     "IP-CIDR6,2002::/16,DIRECT",
 
+    "OR,((DEST-PORT,25), (DEST-PORT,110), (DEST-PORT,143), (DEST-PORT,465), (DEST-PORT,587)),DIRECT" // 邮件服务默认端口
+    "AND,((OR,((DOMAIN,time-ios.apple.com), (DOMAIN,time.apple.com), (DOMAIN-SUFFIX,pool.ntp.org))), (DEST-PORT,123)),DIRECT" // NTP服务默认端口
+
     
     "GEOIP,lan,DIRECT",
     "GEOIP,CN,DIRECT",
