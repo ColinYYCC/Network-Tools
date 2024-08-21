@@ -45,7 +45,7 @@ function main(config) {
     "listen": "0.0.0.0:1053",
     "ipv6": false,
     "enhanced-mode": "fake-ip",
-    "fake-ip-range": "198.18.0.1/16",
+    "fake-ip-range": "28.0.0.1/18",
     "fake-ip-filter":["+.lan", "*", "+.local"],
     "default-nameserver": ["9.9.9.9", "149.112.112.112", "system"],
     "nameserver": ["9.9.9.9", "149.112.112.112"],
