@@ -90,22 +90,6 @@ function main(config) {
     "dns-hijack": ["8.8.8.8:53","8.8.4.4:53"]
   };
 
-    // 创建代理组的函数
-  function createProxyGroup(name, type, icon, proxies) {
-    return {
-      name,
-      type,
-      url: "http://latency-test.skk.moe/endpoint",
-      icon,
-      interval: 300,
-      tolerance: type === "url-test" ? 20 : undefined,
-      timeout: type === "url-test" ? 2000 : undefined,
-      lazy: true,
-      proxies: proxies.length > 0 ? proxies : ["DIRECT"],
-      strategy: type === "load-balance" ? "consistent-hashing" : undefined
-    };
-  }
-
   // 覆盖策略组
   config["proxy-groups"] = [
     {
@@ -270,7 +254,6 @@ function main(config) {
       "interval": 300,
       "tolerance": 0,
       "hidden": true,
-      "proxies": proxies.length > 0 ? proxies : ["DIRECT"],
       "include-all": true,
       "filter": "(?i)🇨🇳|🇹🇼|台湾|(\b(TW|Tai|Taiwan)\b)",
       "icon": "https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Taiwan.png"
@@ -284,7 +267,7 @@ function main(config) {
       "tolerance": 30,
       "hidden": true,
       "include-all": true,
-      "exclude-filter": "^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$",
+      "exclude-filter": "^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\dG))))",
       "icon": "https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Auto_Speed.png"
     },
     {
@@ -296,7 +279,7 @@ function main(config) {
       "tolerance": 0,
       "hidden": true,
       "include-all": true,
-      "exclude-filter": "^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$",
+      "exclude-filter": "(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\dG))))",
       "icon": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Server.png"
     },
     {
@@ -308,7 +291,7 @@ function main(config) {
       "tolerance": 0,
       "hidden": true,
       "include-all": true,
-      "exclude-filter": "^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$",
+      "exclude-filter": "(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\dG))))",
       "icon": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Available.png"
     }
   ];
@@ -658,10 +641,6 @@ function main(config) {
     "IP-CIDR6,ff05::/16,DIRECT",
     "IP-CIDR6,2001:db8::/32,DIRECT",
     "IP-CIDR6,2002::/16,DIRECT",
-
-    "OR,((DEST-PORT,25), (DEST-PORT,110), (DEST-PORT,143), (DEST-PORT,465), (DEST-PORT,587)),DIRECT" // 邮件服务默认端口
-    "AND,((OR,((DOMAIN,time-ios.apple.com), (DOMAIN,time.apple.com), (DOMAIN-SUFFIX,pool.ntp.org))), (DEST-PORT,123)),DIRECT" // NTP服务默认端口
-
     
     "GEOIP,lan,DIRECT",
     "GEOIP,CN,DIRECT",
