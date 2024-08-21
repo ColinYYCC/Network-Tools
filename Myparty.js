@@ -270,6 +270,7 @@ function main(config) {
       "interval": 300,
       "tolerance": 0,
       "hidden": true,
+      "proxies": proxies.length > 0 ? proxies : ["DIRECT"],
       "include-all": true,
       "filter": "(?i)🇨🇳|🇹🇼|台湾|(\b(TW|Tai|Taiwan)\b)",
       "icon": "https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Taiwan.png"
