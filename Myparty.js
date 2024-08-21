@@ -47,8 +47,8 @@ function main(config) {
     "enhanced-mode": "fake-ip",
     "fake-ip-range": "198.18.0.1/16",
     "fake-ip-filter":["+.lan", "*", "+.local"],
-    "default-nameserver": ["223.5.5.5", "119.29.29.29", "system"],
-    "nameserver": ["223.5.5.5", "119.29.29.29"],
+    "default-nameserver": ["9.9.9.9", "149.112.112.112", "system"],
+    "nameserver": ["9.9.9.9", "149.112.112.112"],
     "nameserver-policy":{
       "geosite:cn": "system",
       "geosite:gfw": ["9.9.9.9", "149.112.112.112"],
