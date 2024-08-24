@@ -42,7 +42,6 @@ function main(config, profileName) {
       }
     });
   }
- };
 
   // 覆盖通用配置
   config["mixed-port"] = "7890";
