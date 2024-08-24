@@ -19,28 +19,12 @@ const groupBaseOption = {
 };
 
 // 程序入口
-function main(config, profileName) {
-  // 检查 config 中是否有 proxy-providers 属性
-  if (config['proxy-providers']) {
-    // 遍历每个代理提供者
-    Object.keys(config['proxy-providers']).forEach(provider => {
-      const providerConfig = config['proxy-providers'][provider];
-      
-      // 检查是否有 url 属性，并进行替换
-      if (providerConfig.url) {
-        switch (provider) {
-          case '订阅一':
-            providerConfig.url = "自己的订阅链接1";
-            break;
-          case '订阅二':
-            providerConfig.url = "自己的订阅链接2";
-            break;
-          default:
-            console.warn(`未知的代理提供者: ${provider}`);
-            break;
-        }
-      }
-    });
+function main(config) {
+  const proxyCount = config?.proxies?.length ?? 0;
+  const proxyProviderCount =
+    typeof config?.["proxy-providers"] === "object" ? Object.keys(config["proxy-providers"]).length : 0;
+  if (proxyCount === 0 && proxyProviderCount === 0) {
+    throw new Error("配置文件中未找到任何代理");
   }
 
   // 覆盖通用配置
@@ -67,12 +51,13 @@ function main(config, profileName) {
     "nameserver": ["9.9.9.9", "149.112.112.112"],
     "nameserver-policy": {
       "geosite:cn": "system",
-      "geosite:gfw": ["9.9.9.9", "149.112.112.112"],
-      "geolocation-!cn": ["quic://223.5.5.5", "quic://223.6.6.6", "https://1.12.12.12/dns-query", "https://120.53.53.53/dns-query"]
+      "geosite:gfw,geolocation-!cn": ["9.9.9.9", "149.112.112.112"]
     }
   };
 
   // 覆盖 geodata 配置
+  config["geo-auto-update"] = true;
+  config["geo-update-interval"] = 24;
   config["geodata-mode"] = true;
   config["geox-url"] = {
     "geoip": "https://github.com/xream/geoip/releases/latest/download/ipinfo.geoip.dat",
@@ -80,8 +65,6 @@ function main(config, profileName) {
     "mmdb": "https://github.com/xream/geoip/releases/latest/download/ipinfo.country.mmdb",
     "asn": "https://github.com/xream/geoip/releases/latest/download/ipinfo.asn.mmdb"
   };
-  config["geo-auto-update"] = true;
-  config["geo-update-interval"] = 24;
 
   // 覆盖 sniffer 配置
   config["sniffer"] = {
