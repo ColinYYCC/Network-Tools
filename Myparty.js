@@ -19,7 +19,7 @@ const groupBaseOption = {
 };
 
 // 程序入口
- function main(config, profileName) {
+function main(config, profileName) {
   // 检查 config 中是否有 proxy-providers 属性
   if (config['proxy-providers']) {
     // 遍历每个代理提供者
