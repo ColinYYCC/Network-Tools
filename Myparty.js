@@ -496,11 +496,11 @@ function main(config) {
   // 覆盖规则
   config["rules"] = [
   // Process 程序规则
+  // Zoom
+    "PROCESS-NAME,Zoom,国外网站",
   // AdGuard
     "DOMAIN,injections.adguard.org,DIRECT",
     "DOMAIN,local.adguard.org,DIRECT",
-  // Zoom
-    "PROCESS-NAME,Zoom,国外网站",
   
   // Client
   // Proxy
@@ -588,7 +588,6 @@ function main(config) {
     "RULE-SET,Sogouinput,广告拦截",
     "RULE-SET,reject_domainset,广告拦截",
     "RULE-SET,reject_extra_domainset,广告拦截",
-    "GEOSITE,github,国外网站",
     "RULE-SET,静态CDN 域名,国外网站",
     "RULE-SET,Cdn_non_ip,国外网站",
     "RULE-SET,AI,AI",
@@ -606,6 +605,7 @@ function main(config) {
     "RULE-SET,Disney,国际媒体",
     "RULE-SET,PrimeVideo,国际媒体",
     "RULE-SET,HBO,国际媒体",
+    "GEOSITE,github,国外网站",
     "GEOSITE,onedrive,微软服务",
     "GEOSITE,microsoft,微软服务",
     "GEOSITE,gfw,国外网站",
