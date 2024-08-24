@@ -19,13 +19,29 @@ const groupBaseOption = {
 };
 
 // 程序入口
-function main(config) {
-  const proxyCount = config?.proxies?.length ?? 0;
-  const proxyProviderCount =
-    typeof config?.["proxy-providers"] === "object" ? Object.keys(config["proxy-providers"]).length : 0;
-  if (proxyCount === 0 && proxyProviderCount === 0) {
-    throw new Error("配置文件中未找到任何代理");
-  }
+ function main(config, profileName) {
+  // 检查 config 中是否有 proxy-providers 属性
+  if (config['proxy-providers']) {
+    // 遍历每个代理提供者
+    Object.keys(config['proxy-providers']).forEach(provider => {
+      const providerConfig = config['proxy-providers'][provider];
+      
+      // 检查是否有 url 属性，并进行替换
+      if (providerConfig.url) {
+        switch (provider) {
+          case '订阅一':
+            providerConfig.url = "自己的订阅链接1";
+            break;
+          case '订阅二':
+            providerConfig.url = "自己的订阅链接2";
+            break;
+          default:
+            console.warn(`未知的代理提供者: ${provider}`);
+            break;
+        }
+      }
+    });
+  };
 
   // 覆盖通用配置
   config["mixed-port"] = "7890";
