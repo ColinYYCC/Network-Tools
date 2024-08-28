@@ -497,7 +497,7 @@ function main(config) {
   config["rules"] = [
   // Process 程序规则
   // Zoom
-    "PROCESS-NAME,Zoom,国外网站",
+    "DOMAIN-SUFFIX,Zoom.us,国外网站",
   // AdGuard
     "DOMAIN,injections.adguard.org,DIRECT",
     "DOMAIN,local.adguard.org,DIRECT",
