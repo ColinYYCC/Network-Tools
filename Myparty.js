@@ -296,9 +296,11 @@ function main(config) {
       "icon": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Available.png"
     }
   ];
-
+  if (!config['rule-providers']) {
+    config['rule-providers'] = {};
+  }
   // 覆盖规则集
-  config["rule-providers"] = {
+  config["rule-providers"] = Object.assign(config["rule-providers"], {
     "Apple CDN": {
       ...ruleProviderCommon,
       "behavior": "classical",
