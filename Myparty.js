@@ -304,166 +304,196 @@ function main(config) {
     "Apple CDN": {
       "behavior": "classical",
       "url": "https://ruleset.skk.moe/List/non_ip/apple_cdn.conf",
-      "path": "./rules/apple_cdn.conf"
+      "path": "./rules/apple_cdn.conf",
+      "interval": 86400,
     },
     "云上贵州": {
       "behavior": "classical",
       "url": "https://ruleset.skk.moe/List/non_ip/apple_cn.conf",
-      "path": "./rules/apple_cn.conf"
+      "path": "./rules/apple_cn.conf",
+      "interval": 86400,
     },
     "Apple Service": {
       "behavior": "classical",
       "url": "https://ruleset.skk.moe/List/non_ip/apple_services.conf",
-      "path": "./rules/apple_services.conf"
+      "path": "./rules/apple_services.conf",
+      "interval": 86400,
     },
     "Sogouinput": {
       "behavior": "classical",
       "url": "https://ruleset.skk.moe/Clash/non_ip/sogouinput.txt",
-      "path": "./rules/sogouinput.txt"
+      "path": "./rules/sogouinput.txt",
+      "interval": 86400,
     },
-      "reject_domainset": {
+    "reject_domainset": {
       "behavior": "classical",
       "url": "https://ruleset.skk.moe/Clash/domainset/reject.txt",
-      "path": "./rules/reject_domainset.txt"
+      "path": "./rules/reject_domainset.txt",
+      "interval": 86400,
     },
     "reject_extra_domainset": {
       "behavior": "classical",
       "url": "https://ruleset.skk.moe/Clash/domainset/reject_extra.txt",
-      "path": "./rules/reject_domainset_extra.txt"
+      "path": "./rules/reject_domainset_extra.txt",
+      "interval": 86400,
     },
     "Github": {
       "behavior": "classical",
       "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Github.list",
-      "path": "./rules/Github.list"
+      "path": "./rules/Github.list",
+      "interval": 86400,
     },
     "静态CDN 域名": {
-    ...ruleProviderCommon,
-    "behavior": "domain",
-    "url": "https://ruleset.skk.moe/Clash/domainset/cdn.txt",
-    "path": "./RuleSet/cdn_domainset.txt"
+      "behavior": "domain",
+      "url": "https://ruleset.skk.moe/Clash/domainset/cdn.txt",
+      "path": "./RuleSet/cdn_domainset.txt",
+      "interval": 86400,
     },
     "Cdn_non_ip": {
-    ...ruleProviderCommon,
-    "behavior": "domain",
-    "url": "https://ruleset.skk.moe/Clash/non_ip/cdn.txt",
-    "path": "./RuleSet/cdn_non_ip.txt"
+      "behavior": "domain",
+      "url": "https://ruleset.skk.moe/Clash/non_ip/cdn.txt",
+      "path": "./RuleSet/cdn_non_ip.txt",
+      "interval": 86400,
     },
     "Google": {
       "behavior": "classical",
       "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Google.list",
-      "path": "./rules/Google.list"
+      "path": "./rules/Google.list",
+      "interval": 86400,
     },
     "YouTube": {
       "behavior": "classical",
       "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/YouTube.list",
-      "path": "./rules/YouTube.list"
+      "path": "./rules/YouTube.list",
+      "interval": 86400,
     },
     "Telegram": {
       "behavior": "classical",
       "url": "https://github.com/LucaLin233/Luca_Conf/blob/main/Surge/Rule/Telegram.list?raw=true",
-      "path": "./rules/Telegram.list"
+      "path": "./rules/Telegram.list",
+      "interval": 86400,
     },
     "Twitter": {
       "behavior": "classical",
       "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Twitter.list",
-      "path": "./rules/Twitter.list"
+      "path": "./rules/Twitter.list",
+      "interval": 86400,
     },
     "Steam": {
       "behavior": "classical",
       "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Steam.list",
-      "path": "./rules/Steam.list"
+      "path": "./rules/Steam.list",
+      "interval": 86400,
     },
     "Epic": {
       "behavior": "classical",
       "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Epic.list",
-      "path": "./rules/Epic.list"
+      "path": "./rules/Epic.list",
+      "interval": 86400,
     },
     "AI": {
       "behavior": "classical",
       "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/AI.list",
-      "path": "./rules/AI.list"
+      "path": "./rules/AI.list",
+      "interval": 86400,
     },
     "Emby": {
       "behavior": "classical",
       "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Emby.list",
-      "path": "./rules/Emby.list"
+      "path": "./rules/Emby.list",
+      "interval": 86400,
     },
     "Spotify": {
       "behavior": "classical",
       "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Spotify.list",
-      "path": "./rules/Spotify.list"
+      "path": "./rules/Spotify.list",
+      "interval": 86400,
     },
     "Bahamut": {
       "behavior": "classical",
       "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Bahamut.list",
-      "path": "./rules/Bahamut.list"
+      "path": "./rules/Bahamut.list",
+      "interval": 86400,
     },
     "Netflix": {
       "behavior": "classical",
       "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Netflix.list",
-      "path": "./rules/Netflix.list"
+      "path": "./rules/Netflix.list",
+      "interval": 86400,
     },
     "Disney": {
       "behavior": "classical",
       "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Disney.list",
-      "path": "./rules/Disney.list"
+      "path": "./rules/Disney.list",
+      "interval": 86400,
     },
     "PrimeVideo": {
       "behavior": "classical",
       "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/PrimeVideo.list",
-      "path": "./rules/PrimeVideo.list"
+      "path": "./rules/PrimeVideo.list",
+      "interval": 86400,
     },
     "HBO": {
       "behavior": "classical",
       "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/HBO.list",
-      "path": "./rules/HBO.list"
+      "path": "./rules/HBO.list",
+      "interval": 86400,
     },
     "OneDrive": {
       "behavior": "classical",
       "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/OneDrive.list",
-      "path": "./rules/OneDrive.list"
+      "path": "./rules/OneDrive.list",
+      "interval": 86400,
     },
     "Microsoft": {
       "behavior": "classical",
       "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Microsoft.list",
-      "path": "./rules/Microsoft.list"
+      "path": "./rules/Microsoft.list",
+      "interval": 86400,
     },
     "Lan": {
       "behavior": "classical",
       "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Lan.list",
-      "path": "./rules/Lan.list"
+      "path": "./rules/Lan.list",
+      "interval": 86400,
     },
     "ProxyGFW": {
       "behavior": "classical",
       "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/ProxyGFW.list",
-      "path": "./rules/ProxyGFW.list"
+      "path": "./rules/ProxyGFW.list",
+      "interval": 86400,
     },
     "ChinaDomain": {
       "behavior": "classical",
       "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/ChinaDomain.list",
-      "path": "./rules/ChinaDomain.list"
+      "path": "./rules/ChinaDomain.list",
+      "interval": 86400,
     },
     "Domestic_non_ip": {
       "behavior": "classical",
       "url": "https://ruleset.skk.moe/Clash/non_ip/domestic.txt",
-      "path": "./rules/domestic.txt"
+      "path": "./rules/domestic.txt",
+      "interval": 86400,
     },
     "Direct_non_ip": {
       "behavior": "classical",
       "url": "https://ruleset.skk.moe/Clash/non_ip/direct.txt",
-      "path": "./rules/direct.txt"
+      "path": "./rules/direct.txt",
+      "interval": 86400,
     },
     "Domestic_ip": {
       "behavior": "classical",
       "url": "https://ruleset.skk.moe/Clash/ip/domestic.txt",
-      "path": "./rules/domestic.txt"
+      "path": "./rules/domestic.txt",
+      "interval": 86400,
     },
     "China_ip": {
       "behavior": "classical",
       "url": "https://ruleset.skk.moe/Clash/ip/china_ip.txt",
-      "path": "./rules/china_ip.txt"
-    }
-  };
+      "path": "./rules/china_ip.txt",
+      "interval": 86400,
+    },
+  });
 
   // 覆盖规则
   config["rules"] = [
@@ -617,7 +647,7 @@ function main(config) {
     
     "GEOIP,lan,DIRECT",
     "GEOIP,CN,DIRECT",
-    "MATCH,漏网之鱼"
+    "MATCH,漏网之鱼",
   ];
 
   // 返回修改后的配置
