@@ -489,7 +489,7 @@ function main(config) {
       ...ruleProviderCommon,
     },
     "China_ip": {
-      "behavior": "classical",
+      "behavior": "ipcidr",
       "url": "https://ruleset.skk.moe/Clash/ip/china_ip.txt",
       "path": "./rules/china_ip.txt",
       ...ruleProviderCommon,
