@@ -302,7 +302,7 @@ function main(config) {
   // 覆盖规则集
   config["rule-providers"] = Object.assign(config["rule-providers"], {
     "Apple CDN": {
-      "behavior": "classical",
+      "behavior": "domain",
       "url": "https://ruleset.skk.moe/Clash/domainset/apple_cdn.txt",
       "path": "./rules/apple_cdn.txt",
       ...ruleProviderCommon,
@@ -326,13 +326,13 @@ function main(config) {
       ...ruleProviderCommon,
     },
     "reject_domainset": {
-      "behavior": "classical",
+      "behavior": "domain",
       "url": "https://ruleset.skk.moe/Clash/domainset/reject.txt",
       "path": "./rules/reject_domainset.txt",
       ...ruleProviderCommon,
     },
     "reject_extra_domainset": {
-      "behavior": "classical",
+      "behavior": "domain",
       "url": "https://ruleset.skk.moe/Clash/domainset/reject_extra.txt",
       "path": "./rules/reject_domainset_extra.txt",
       ...ruleProviderCommon,
@@ -350,7 +350,7 @@ function main(config) {
       ...ruleProviderCommon,
     },
     "Cdn_non_ip": {
-      "behavior": "domain",
+      "behavior": "classical",
       "url": "https://ruleset.skk.moe/Clash/non_ip/cdn.txt",
       "path": "./RuleSet/cdn_non_ip.txt",
       ...ruleProviderCommon,
