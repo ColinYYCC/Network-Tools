@@ -46,7 +46,7 @@ function main(config) {
     "ipv6": false,
     "enhanced-mode": "fake-ip",
     "fake-ip-range": "28.0.0.1/18",
-    "fake-ip-filter": ["+.lan", "*", "+.local"],
+    "fake-ip-filter": ["*", "+.lan", "+.local", "+.direct", "+.msftconnecttest.com", "+.msftncsi.com"],
     "default-nameserver": ["9.9.9.9", "149.112.112.112", "system"],
     "nameserver": ["9.9.9.9", "149.112.112.112"],
     "nameserver-policy": {
@@ -303,43 +303,43 @@ function main(config) {
       ...ruleProviderCommon,
       "behavior": "classical",
       "url": "https://ruleset.skk.moe/List/non_ip/apple_cdn.conf",
-      "path": "./rule-providers/apple_cdn.conf"
+      "path": "./rules/apple_cdn.conf"
     },
     "云上贵州": {
       ...ruleProviderCommon,
       "behavior": "classical",
       "url": "https://ruleset.skk.moe/List/non_ip/apple_cn.conf",
-      "path": "./rule-providers/apple_cn.conf"
+      "path": "./rules/apple_cn.conf"
     },
     "Apple Service": {
       ...ruleProviderCommon,
       "behavior": "classical",
       "url": "https://ruleset.skk.moe/List/non_ip/apple_services.conf",
-      "path": "./rule-providers/apple_services.conf"
+      "path": "./rules/apple_services.conf"
     },
     "Sogouinput": {
       ...ruleProviderCommon,
       "behavior": "classical",
       "url": "https://ruleset.skk.moe/Clash/non_ip/sogouinput.txt",
-      "path": "./rule-providers/sogouinput.txt"
+      "path": "./rules/sogouinput.txt"
     },
       "reject_domainset": {
       ...ruleProviderCommon,
       "behavior": "classical",
       "url": "https://ruleset.skk.moe/Clash/domainset/reject.txt",
-      "path": "./rule-providers/reject_domainset.txt"
+      "path": "./rules/reject_domainset.txt"
     },
     "reject_extra_domainset": {
       ...ruleProviderCommon,
       "behavior": "classical",
       "url": "https://ruleset.skk.moe/Clash/domainset/reject_extra.txt",
-      "path": "./rule-providers/reject_domainset_extra.txt"
+      "path": "./rules/reject_domainset_extra.txt"
     },
     "Github": {
       ...ruleProviderCommon,
       "behavior": "classical",
       "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Github.list",
-      "path": "./rule-providers/Github.list"
+      "path": "./rules/Github.list"
     },
     "静态CDN 域名": {
     ...ruleProviderCommon,
@@ -357,139 +357,139 @@ function main(config) {
       ...ruleProviderCommon,
       "behavior": "classical",
       "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Google.list",
-      "path": "./rule-providers/Google.list"
+      "path": "./rules/Google.list"
     },
     "YouTube": {
       ...ruleProviderCommon,
       "behavior": "classical",
       "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/YouTube.list",
-      "path": "./rule-providers/YouTube.list"
+      "path": "./rules/YouTube.list"
     },
     "Telegram": {
       ...ruleProviderCommon,
       "behavior": "classical",
       "url": "https://github.com/LucaLin233/Luca_Conf/blob/main/Surge/Rule/Telegram.list?raw=true",
-      "path": "./rule-providers/Telegram.list"
+      "path": "./rules/Telegram.list"
     },
     "Twitter": {
       ...ruleProviderCommon,
       "behavior": "classical",
       "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Twitter.list",
-      "path": "./rule-providers/Twitter.list"
+      "path": "./rules/Twitter.list"
     },
     "Steam": {
       ...ruleProviderCommon,
       "behavior": "classical",
       "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Steam.list",
-      "path": "./rule-providers/Steam.list"
+      "path": "./rules/Steam.list"
     },
     "Epic": {
       ...ruleProviderCommon,
       "behavior": "classical",
       "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Epic.list",
-      "path": "./rule-providers/Epic.list"
+      "path": "./rules/Epic.list"
     },
     "AI": {
       ...ruleProviderCommon,
       "behavior": "classical",
       "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/AI.list",
-      "path": "./rule-providers/AI.list"
+      "path": "./rules/AI.list"
     },
     "Emby": {
       ...ruleProviderCommon,
       "behavior": "classical",
       "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Emby.list",
-      "path": "./rule-providers/Emby.list"
+      "path": "./rules/Emby.list"
     },
     "Spotify": {
       ...ruleProviderCommon,
       "behavior": "classical",
       "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Spotify.list",
-      "path": "./rule-providers/Spotify.list"
+      "path": "./rules/Spotify.list"
     },
     "Bahamut": {
       ...ruleProviderCommon,
       "behavior": "classical",
       "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Bahamut.list",
-      "path": "./rule-providers/Bahamut.list"
+      "path": "./rules/Bahamut.list"
     },
     "Netflix": {
       ...ruleProviderCommon,
       "behavior": "classical",
       "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Netflix.list",
-      "path": "./rule-providers/Netflix.list"
+      "path": "./rules/Netflix.list"
     },
     "Disney": {
       ...ruleProviderCommon,
       "behavior": "classical",
       "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Disney.list",
-      "path": "./rule-providers/Disney.list"
+      "path": "./rules/Disney.list"
     },
     "PrimeVideo": {
       ...ruleProviderCommon,
       "behavior": "classical",
       "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/PrimeVideo.list",
-      "path": "./rule-providers/PrimeVideo.list"
+      "path": "./rules/PrimeVideo.list"
     },
     "HBO": {
       ...ruleProviderCommon,
       "behavior": "classical",
       "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/HBO.list",
-      "path": "./rule-providers/HBO.list"
+      "path": "./rules/HBO.list"
     },
     "OneDrive": {
       ...ruleProviderCommon,
       "behavior": "classical",
       "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/OneDrive.list",
-      "path": "./rule-providers/OneDrive.list"
+      "path": "./rules/OneDrive.list"
     },
     "Microsoft": {
       ...ruleProviderCommon,
       "behavior": "classical",
       "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Microsoft.list",
-      "path": "./rule-providers/Microsoft.list"
+      "path": "./rules/Microsoft.list"
     },
     "Lan": {
       ...ruleProviderCommon,
       "behavior": "classical",
       "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Lan.list",
-      "path": "./rule-providers/Lan.list"
+      "path": "./rules/Lan.list"
     },
     "ProxyGFW": {
       ...ruleProviderCommon,
       "behavior": "classical",
       "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/ProxyGFW.list",
-      "path": "./rule-providers/ProxyGFW.list"
+      "path": "./rules/ProxyGFW.list"
     },
     "ChinaDomain": {
       ...ruleProviderCommon,
       "behavior": "classical",
       "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/ChinaDomain.list",
-      "path": "./rule-providers/ChinaDomain.list"
+      "path": "./rules/ChinaDomain.list"
     },
     "Domestic_non_ip": {
       ...ruleProviderCommon,
       "behavior": "classical",
       "url": "https://ruleset.skk.moe/Clash/non_ip/domestic.txt",
-      "path": "./rule-providers/domestic.txt"
+      "path": "./rules/domestic.txt"
     },
     "Direct_non_ip": {
       ...ruleProviderCommon,
       "behavior": "classical",
       "url": "https://ruleset.skk.moe/Clash/non_ip/direct.txt",
-      "path": "./rule-providers/direct.txt"
+      "path": "./rules/direct.txt"
     },
     "Domestic_ip": {
       ...ruleProviderCommon,
       "behavior": "classical",
       "url": "https://ruleset.skk.moe/Clash/ip/domestic.txt",
-      "path": "./rule-providers/domestic.txt"
+      "path": "./rules/domestic.txt"
     },
     "China_ip": {
       ...ruleProviderCommon,
       "behavior": "classical",
       "url": "https://ruleset.skk.moe/Clash/ip/china_ip.txt",
-      "path": "./rule-providers/china_ip.txt"
+      "path": "./rules/china_ip.txt"
     }
   };
 
