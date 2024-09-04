@@ -372,6 +372,7 @@ RULE-SET,https://raw.githubusercontent.com/lwd-temp/anti-ip-attribution/main/gen
 # Advertising 广告拦截 / Privacy 隐私保护 / Malware 拦截 / Phiishing 拦截
 RULE-SET,https://adrules.top/adrules-surge.conf,REJECT-DROP,extended-matching
 # DOMAIN-SET,https://ruleset.skk.moe/List/domainset/reject.conf,REJECT-TINYGIF,extended-matching
+# DOMAIN-SET,https://ruleset.skk.moe/List/domainset/reject_extra.conf,REJECT-TINYGIF,extended-matching
 RULE-SET,https://ruleset.skk.moe/List/non_ip/reject.conf,REJECT,extended-matching
 RULE-SET,https://ruleset.skk.moe/List/non_ip/reject-no-drop.conf,REJECT-NO-DROP,extended-matching // 防止 PCDN
 RULE-SET,https://ruleset.skk.moe/List/non_ip/reject-drop.conf,REJECT-DROP,extended-matching // Adobe 系列软件内部的跟踪
