@@ -71,6 +71,10 @@ RULE-SET,https://github.com/Repcz/Tool/raw/X/Clash/Rules/Lan.list,DIRECT
 # 下载服务
 RULE-SET,https://ruleset.skk.moe/Clash/non_ip/direct.txt,DIRECT
 
+# 苹果服务
+DOMAIN-SET,https://ruleset.skk.moe/List/domainset/apple_cdn.conf,DIRECT
+RULE-SET,https://ruleset.skk.moe/List/non_ip/apple_services.conf, Apple Service
+
 # 搜狗输入法 隐私收集
 RULE-SET,https://ruleset.skk.moe/Clash/non_ip/sogouinput.txt,REJECT-DROP
 
@@ -83,11 +87,6 @@ RULE-SET,https://ruleset.skk.moe/Clash/non_ip/reject.txt,REJECT-DROP
 # 静态CDN域名(強烈建議)
 DOMAIN-SET,https://ruleset.skk.moe/List/domainset/cdn.conf,🌏 国外网站
 DOMAIN-SET,https://ruleset.skk.moe/List/non_ip/cdn.conf,🌏 国外网站
-
-# 苹果服务
-RULE-SET,https://ruleset.skk.moe/List/non_ip/apple_services.conf, Apple Service
-DOMAIN-SET,https://ruleset.skk.moe/List/domainset/apple_cdn.conf,DIRECT
-RULE-SET,https://ruleset.skk.moe/List/non_ip/apple_cn.conf,DIRECT
 
 # Telegram
 RULE-SET,https://github.com/LucaLin233/Luca_Conf/blob/main/Surge/Rule/Telegram.list?raw=true,📟 电报消息
