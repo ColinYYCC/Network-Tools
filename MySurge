@@ -379,7 +379,6 @@ RULE-SET,https://ruleset.skk.moe/List/non_ip/reject-drop.conf,REJECT-DROP,extend
 
 # 苹果服务规则列表
 RULE-SET,https://ruleset.skk.moe/List/non_ip/apple_cdn.conf,DIRECT //  Apple CDN
-RULE-SET,https://ruleset.skk.moe/List/non_ip/apple_cn.conf,DIRECT // 云上贵州
 RULE-SET,https://ruleset.skk.moe/List/non_ip/apple_services.conf,Apple Services,extended-matching //  Apple Services
 
 # SpeedTest 测速
