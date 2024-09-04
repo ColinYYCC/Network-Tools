@@ -130,8 +130,8 @@ https://ruleset.skk.moe/List/non_ip/reject.conf, policy=REJECT-DROP, tag=Reject,
 https://ruleset.skk.moe/List/domainset/reject.conf, policy=REJECT-TINYGIF, tag=Reject-D, enabled=false
 https://ruleset.skk.moe/List/domainset/reject_phishing.conf, policy=REJECT-DROP, tag=reject_phishing, enabled=true
 https://ruleset.skk.moe/List/ip/reject.conf, policy=REJECT-DROP, tag=reject, enabled=false
-https://ruleset.skk.moe/List/domainset/cdn.conf, policy=全球节点, tag=SukkaW静态CDN域名, enabled=true
-https://ruleset.skk.moe/List/non_ip/cdn.conf, policy=全球节点, tag=SukkaW静态CDN域名, enabled=true
+https://ruleset.skk.moe/List/domainset/cdn.conf, policy=国外网站, tag=SukkaW静态CDN域名, enabled=true
+https://ruleset.skk.moe/List/non_ip/cdn.conf, policy=国外网站, tag=SukkaW静态CDN域名, enabled=true
 https://github.com/Repcz/Tool/raw/X/Loon/Rules/AI.list, policy=AI, tag=AI, enabled=true
 https://github.com/Repcz/Tool/raw/X/Loon/Rules/YouTube.list, policy=谷歌服务, tag=Youtube, enabled=true
 https://github.com/Repcz/Tool/raw/X/Loon/Rules/Google.list, policy=谷歌服务, tag=Google, enabled=true
