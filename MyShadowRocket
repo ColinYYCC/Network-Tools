@@ -72,8 +72,9 @@ RULE-SET,https://github.com/Repcz/Tool/raw/X/Clash/Rules/Lan.list,DIRECT
 RULE-SET,https://ruleset.skk.moe/Clash/non_ip/direct.txt,DIRECT
 
 # 苹果服务
-DOMAIN-SET,https://ruleset.skk.moe/List/domainset/apple_cdn.conf,DIRECT
 RULE-SET,https://ruleset.skk.moe/List/non_ip/apple_services.conf, Apple Service
+DOMAIN-SET,https://ruleset.skk.moe/List/domainset/apple_cdn.conf,DIRECT
+
 
 # 搜狗输入法 隐私收集
 RULE-SET,https://ruleset.skk.moe/Clash/non_ip/sogouinput.txt,REJECT-DROP
