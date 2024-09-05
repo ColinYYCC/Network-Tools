@@ -121,6 +121,7 @@ Spotify = select,🛰️ 自动选择,🔯 故障转移,🔮 负载均衡,香港
 # ------
 
 [Rule]
+GEOIP,!CN,国外网站
 FINAL,漏网之鱼
 
 [Remote Rule]
