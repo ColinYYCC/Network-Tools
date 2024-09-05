@@ -378,10 +378,6 @@ RULE-SET,https://ruleset.skk.moe/List/non_ip/reject-no-drop.conf,REJECT-NO-DROP,
 RULE-SET,https://ruleset.skk.moe/List/non_ip/reject-drop.conf,REJECT-DROP,extended-matching // Adobe 系列软件内部的跟踪
 # RULE-SET,https://ruleset.skk.moe/List/ip/reject.conf,REJECT-DROP // 广告拦截 IP
 
-# 苹果服务规则列表
-RULE-SET,https://ruleset.skk.moe/List/non_ip/apple_cdn.conf,DIRECT //  Apple CDN
-RULE-SET,https://ruleset.skk.moe/List/non_ip/apple_services.conf,Apple Services,extended-matching //  Apple Services
-
 # SpeedTest 测速
 DOMAIN-SET,https://ruleset.skk.moe/List/domainset/speedtest.conf,PROXY,extended-matching // SpeedTest
 
@@ -458,6 +454,10 @@ RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/r
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Supercell/Supercell.list,游戏 // 部落冲突 Supercell
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/UBI/UBI.list,游戏 // UBI
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Xbox/Xbox.list,游戏 // Xbox
+
+# 苹果服务规则列表
+RULE-SET,https://ruleset.skk.moe/List/non_ip/apple_services.conf,Apple Services,extended-matching //  Apple Services
+RULE-SET,https://ruleset.skk.moe/List/non_ip/apple_cdn.conf,DIRECT //  Apple CDN
 
 # StreamingCN 中国流媒体服务
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/ChinaMedia/ChinaMedia.list,国內流媒体,extended-matching // ChinaMedia 中国流媒体服务
