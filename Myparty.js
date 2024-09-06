@@ -611,7 +611,7 @@ function main(config) {
     "RULE-SET,China_ip,DIRECT,no-resolve",
     "RULE-SET,Domestic_ip,DIRECT,no-resolve",
     
-    "RULE-SET,LAN,DIRECT",
+    "RULE-SET,Lan,DIRECT",
     "GEOIP,CN,DIRECT",
     "MATCH,漏网之鱼",
   ];
