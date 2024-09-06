@@ -301,22 +301,10 @@ function main(config) {
   }
   // 覆盖规则集
   config["rule-providers"] = Object.assign(config["rule-providers"], {
-    "Apple CDN": {
+    "Special": {
       "behavior": "domain",
-      "url": "https://ruleset.skk.moe/Clash/domainset/apple_cdn.txt",
-      "path": "./rules/apple_cdn.txt",
-      ...ruleProviderCommon,
-    },
-    "云上贵州": {
-      "behavior": "classical",
-      "url": "https://ruleset.skk.moe/Clash/non_ip/apple_services.txt",
-      "path": "./rules/apple_services.txt",
-      ...ruleProviderCommon,
-    },
-    "Apple Service": {
-      "behavior": "classical",
-      "url": "https://ruleset.skk.moe/Clash/non_ip/apple_services.txt",
-      "path": "./rules/apple_services.txt",
+      "url": "https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Special.yaml",
+      "path": "./rules/Special.yaml",
       ...ruleProviderCommon,
     },
     "Sogouinput": {
@@ -325,16 +313,10 @@ function main(config) {
       "path": "./rules/sogouinput.txt",
       ...ruleProviderCommon,
     },
-    "reject_domainset": {
+    "Reject": {
       "behavior": "domain",
-      "url": "https://ruleset.skk.moe/Clash/domainset/reject.txt",
-      "path": "./rules/reject_domainset.txt",
-      ...ruleProviderCommon,
-    },
-    "reject_extra_domainset": {
-      "behavior": "domain",
-      "url": "https://ruleset.skk.moe/Clash/domainset/reject_extra.txt",
-      "path": "./rules/reject_domainset_extra.txt",
+      "url": "https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/Reject.yaml",
+      "path": "./rules/Reject.yaml",
       ...ruleProviderCommon,
     },
     "Github": {
@@ -366,7 +348,6 @@ function main(config) {
       "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/YouTube.list",
       "path": "./rules/YouTube.list",
       ...ruleProviderCommon,
-
     },
     "Telegram": {
       "behavior": "classical",
@@ -454,14 +435,26 @@ function main(config) {
     },
     "Lan": {
       "behavior": "classical",
-      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/Lan.list",
-      "path": "./rules/Lan.list",
+      "url": "https://fastly.jsdelivr.net/gh/dler-io/Rules@main/Clash/Provider/LAN.yaml",
+      "path": "./rules/Lan.yaml",
       ...ruleProviderCommon,
     },
     "ProxyGFW": {
       "behavior": "classical",
       "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/ProxyGFW.list",
       "path": "./rules/ProxyGFW.list",
+      ...ruleProviderCommon,
+    },
+    "Apple Service": {
+      "behavior": "classical",
+      "url": "https://ruleset.skk.moe/Clash/non_ip/apple_services.txt",
+      "path": "./rules/apple_services.txt",
+      ...ruleProviderCommon,
+     },
+    "Apple CDN": {
+      "behavior": "domain",
+      "url": "https://ruleset.skk.moe/Clash/domainset/apple_cdn.txt",
+      "path": "./rules/apple_cdn.txt",
       ...ruleProviderCommon,
     },
     "ChinaDomain": {
@@ -586,15 +579,12 @@ function main(config) {
   // 内置了两个规则集：SYSTEM 和 LAN
   // 内置规则集的具体内容可在 Surge Mac 设置界面查看
     
-    "RULE-SET,云上贵州,DIRECT",
-    "RULE-SET,Apple CDN,DIRECT",
+    "RULE-SET,Special,广告拦截",
     "RULE-SET,Sogouinput,广告拦截",
-    "RULE-SET,reject_domainset,广告拦截",
-    "RULE-SET,reject_extra_domainset,广告拦截",
+    "RULE-SET,Reject,广告拦截",
     "RULE-SET,静态CDN 域名,国外网站",
     "RULE-SET,Cdn_non_ip,国外网站",
     "RULE-SET,AI,AI",
-    "RULE-SET,Apple Service,苹果服务",
     "RULE-SET,YouTube,谷歌服务",
     "RULE-SET,Google,谷歌服务",
     "RULE-SET,Telegram,电报消息",
@@ -612,6 +602,8 @@ function main(config) {
     "GEOSITE,onedrive,微软服务",
     "GEOSITE,microsoft,微软服务",
     "GEOSITE,gfw,国外网站",
+    "RULE-SET,Apple Service,苹果服务",
+    "RULE-SET,Apple CDN,DIRECT",
     "RULE-SET,ChinaDomain,DIRECT",
     "RULE-SET,Domestic_non_ip,DIRECT",
     "RULE-SET,Direct_non_ip,DIRECT",
@@ -647,6 +639,7 @@ function main(config) {
     "IP-CIDR6,2002::/16,DIRECT",
     
     "GEOIP,lan,DIRECT",
+    "GEOIP,!CN,国外网站",
     "GEOIP,CN,DIRECT",
     "MATCH,漏网之鱼",
   ];
