@@ -186,12 +186,12 @@ rule-providers:
     url: 'https://adrules.top/adrules.list'
 
   # 常见静态 CDN
-  Cdn_domainset: 
+  CDNdomainset: 
     <<: *RuleProviders
     path: './rules/cdn_domainset.txt
     url: 'https://ruleset.skk.moe/Clash/domainset/cdn.txt'
 
-  Cdn_non_ip: 
+  CDNnonip: 
     <<: *RuleProviders 
     path: './rules/cdn_non_ip.txt'
     url: 'https://ruleset.skk.moe/Clash/non_ip/cdn.txt'
@@ -396,8 +396,8 @@ rules:
 
   - RULE-SET, Sogouinput, REJECT
   - RULE-SET, ADRules, REJECT
-  - RULE-SET, Cdn_domainset, 国外网站
-  - RULE-SET, Cdn_non_ip, 国外网站
+  - RULE-SET, CDNdomainset, 国外网站
+  - RULE-SET, CDNnonip, 国外网站
   - RULE-SET, Lan, DIRECT
   - RULE-SET, Direct, DIRECT
   - RULE-SET, Proxy, 漏网之鱼
