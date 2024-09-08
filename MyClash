@@ -135,7 +135,7 @@ proxy-groups:
   - {name: App Store, type: select, proxies: [DIRECT, 香港策略, 台湾策略, 日本策略, 韩国策略, 新国策略, 美国策略], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Apple.png}
   - {name: 1Password, type: select, proxies: [DIRECT, 香港策略, 台湾策略, 日本策略, 韩国策略, 新国策略, 美国策略]}
   - {name: Microsoft, type: select, proxies: [DIRECT, 香港策略, 台湾策略, 日本策略, 韩国策略, 新国策略, 美国策略], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Microsoft.png}
-  - {name: Netflix, type: select, proxies: [香港策略, 台湾策略, 日本策略, 韩国策略, 新国策略, 美国策略]}
+  - {name: Netflix, type: select, proxies: [香港策略, 台湾策略, 日本策略, 韩国策略, 新国策略, 美国策略], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Netflix.png}
   - {name: Emby, type: select, proxies: [DIRECT, 香港策略, 台湾策略, 日本策略, 韩国策略, 新国策略, 美国策略], icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png}
   - {name: 漏网之鱼, type: select, include-all-providers: true, proxies: [🔯 故障转移, 🛰️ 自动选择, 🔮 负载均衡, DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Snapfish.png}
 
