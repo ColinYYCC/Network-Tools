@@ -141,7 +141,7 @@ proxy-groups:
 
   - {name: 🛰️ 自动选择, <<: *UrlTest, filter: *FilterAll, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Auto_Speed.png}
   - {name: 🔯 故障转移, <<: *FallBack, filter: *FilterAll, hidden: true, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Server.png}
-  - {name: 🔮 负载均衡, <<: *Load-Balance, filter: *FilterAll, hidden: true, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Available.png}
+  - {name: 🔮 负载均衡, <<: *LoadBalance, filter: *FilterAll, hidden: true, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Available.png}
   - {name: 香港策略, type: select, proxies: [⏱香港时延优选策略组, 🚥香港故障转移策略组, 🎛香港负载均衡策略组], hidden: true, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png}
   - {name: 台湾策略, type: select, proxies: [⏱台湾时延优选策略组, 🚥台湾故障转移策略组, 🎛台湾负载均衡策略组], hidden: true, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Taiwan.png}
   - {name: 日本策略, type: select, proxies: [⏱日本时延优选策略组, 🚥日本故障转移策略组, 🎛日本负载均衡策略组], hidden: true, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Japan.png}
