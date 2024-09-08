@@ -132,7 +132,8 @@ proxy-groups:
   - {name: AI, type: select, proxies: [美国策略, 香港策略, 台湾策略, 日本策略, 韩国策略, 新国策略, DIRECT], icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png}
   - {name: TikTok, type: select, include-all-providers: true, filter: *FilterAll}
   - {name: Telegram, type: select, proxies: [🔮 负载均衡, 🔯 故障转移, 🛰️ 自动选择, 香港策略, 台湾策略, 日本策略, 韩国策略, 新国策略, 美国策略], icon: https://github.com/tugepaopao/Image-Storage/raw/master/hand-painted/36.png}
-  - {name: App Store, type: select, proxies: [DIRECT, 香港策略, 台湾策略, 日本策略, 韩国策略, 新国策略, 美国策略], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Apple.png}  - {name: 1Password, type: select, proxies: [DIRECT, 香港策略, 台湾策略, 日本策略, 韩国策略, 新国策略, 美国策略]}
+  - {name: App Store, type: select, proxies: [DIRECT, 香港策略, 台湾策略, 日本策略, 韩国策略, 新国策略, 美国策略], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Apple.png}
+  - {name: 1Password, type: select, proxies: [DIRECT, 香港策略, 台湾策略, 日本策略, 韩国策略, 新国策略, 美国策略]}
   - {name: Microsoft, type: select, proxies: [DIRECT, 香港策略, 台湾策略, 日本策略, 韩国策略, 新国策略, 美国策略], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Microsoft.png}
   - {name: Netflix, type: select, proxies: [香港策略, 台湾策略, 日本策略, 韩国策略, 新国策略, 美国策略]}
   - {name: Emby, type: select, proxies: [DIRECT, 香港策略, 台湾策略, 日本策略, 韩国策略, 新国策略, 美国策略], icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png}
