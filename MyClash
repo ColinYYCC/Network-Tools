@@ -1,240 +1,317 @@
-# 參考Lucy（@Repcz）
-# Author:https://github.com/ColinYYCC
-# 以 '#' 或 '//' 开头的配置文件行为注释行
-#
-# Mihomo Version ≥ 1.8.5
-#
-# ================
+# mihomo 配置
+# 日期：2024-06-26 15:31:03
+# 配置作者：https://t.me/iKeLee
+# 适用版本：所有使用 mihomo 核心的程序
+port: 7890
+socks-port: 7891
+mixed-port: 7892
+redir-port: 7893
+tproxy-port: 7894
 
-# 混合端口 HTTP和SOCKS5用一个端口
-mixed-port: 7893
-# TCP 并发连接所有 IP, 将使用最快握手的 TCP
-tcp-concurrent: true
-# 允许局域网的连接（可用来共享代理）
-allow-lan: true
-# 开启 IPv6 总开关，关闭阻断所有 IPv6 链接和屏蔽 DNS 请求 AAAA 记录  
-ipv6: true
-# 规则模式：rule/global/direct/script
-mode: rule
-# 设置日志输出级别: silent/error/warning/info/debug
-log-level: info
-# 全局 TLS 指纹
-global-client-fingerprint: chrome
-# 匹配所有进程（always/strict/off）
-find-process-mode: strict
-# 遊戏优化模式
-disable-udp: false
-
-# 使用geoip.dat数据库
-geodata-mode: true
-geox-url:
-  geoip: "https://github.com/xream/geoip/releases/latest/download/ipinfo.geoip.dat"
-  geosite: "https://mirror.ghproxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat"
-  mmdb: "https://github.com/xream/geoip/releases/latest/download/ipinfo.country.mmdb"
-  asn: "https://github.com/xream/geoip/releases/latest/download/ipinfo.asn.mmdb"
-
+unified-delay: true
+geodata-mode: false
 geodata-loader: standard
-# GEO数据库自动更新
 geo-auto-update: true
-# GEO数据库间隔
 geo-update-interval: 24
-                         
-profile:
-  # 存储 select 选择记录
-  store-selected: true 
-  # 持久化 fake-ip
-  store-fake-ip: true  
+tcp-concurrent: true
+find-process-mode: strict
+global-client-fingerprint: chrome
 
-# 嗅探域名 可选配置
-sniffer:               
+allow-lan: true
+mode: rule
+log-level: info
+ipv6: true
+udp: true
+
+external-controller: 0.0.0.0:9090
+# external-ui: ui
+# external-ui-url: 'https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip'
+
+geox-url:
+  geoip: 'https://github.com/xream/geoip/releases/latest/download/ipinfo.geoip.dat'
+  # geosite: 'https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/geosite.dat'
+  mmdb: 'https://gitlab.com/Masaiki/GeoIP2-CN/-/raw/release/Country.mmdb'
+  asn: 'https://gitlab.com/Loon0x00/loon_data/-/raw/main/geo/GeoLite2-ASN.mmdb'
+
+profile:
+  store-selected: true
+  store-fake-ip: true
+
+sniffer:
   enable: true
-  # 强制 DNS 映射
   force-dns-mapping: true
-  # 是否使用嗅探结果作为实际访问，默认 true
-  parse-pure-ip: true  
+  parse-pure-ip: true
+  override-destination: true
   sniff:
-    TLS:
-      ports: [443, 8443]
     HTTP:
       ports: [80, 8080-8880]
       override-destination: true
+    TLS:
+      ports: [443, 8443]
     QUIC:
       ports: [443, 8443]
+  force-domain:
+    - +.v2ex.com
 
-# Tun 配置  
+  skip-domain:
+    - Mijia Cloud
+
 tun:
   enable: true
-  # 可选： system/gvisor/mixed；
-  stack: mixed
-  # dns劫持,一般设置为 any:53 即可, 即劫持所有53端口的udp流量
-  dns-hijack: [8.8.8.8:53, 8.8.4.4:53]
-  # 自动设置全局路由，可以自动将全局流量路由进入tun网卡。
+  stack: system
+  dns-hijack:
+    - any:53
   auto-route: true
-  # 自动识别出口网卡
   auto-detect-interface: true
-        
+
 dns:
   enable: true
-  # IPV6解析开关；如果为false，将返回ipv6结果为空
-  ipv6: false
-  # 模式：redir-host或fake-ip
+  listen: 0.0.0.0:1053
+  ipv6: true
   enhanced-mode: fake-ip
-  # DNS监听地址
-  listen: 0.0.0.0:53
-  # Fake-IP解析地址池
   fake-ip-range: 28.0.0.1/8
-  # fakeip 过滤，以下地址不会下发 fakeip 映射用于连接
-  fake-ip-filter: ['*.lan', 'cable.auth.com', '*.msftconnecttest.com', '*.msftncsi.com', 'network-test.debian.org', 'detectportal.firefox.com', 'resolver1.opendns.com', '*.srv.nintendo.net', '*.stun.playstation.net', 'xbox.*.microsoft.com', '*.xboxlive.com', 'stun.*', 'global.turn.twilio.com', 'global.stun.twilio.com', 'localhost.*.qq.com', 'localhost.*.weixin.qq.com', '*.logon.battlenet.com.cn', '*.logon.battle.net', '*.blzstatic.cn', 'music.163.com', '*.music.163.com', '*.126.net', 'musicapi.taihe.com', 'music.taihe.com', 'songsearch.kugou.com', 'trackercdn.kugou.com', '*.kuwo.cn', 'api-jooxtt.sanook.com', 'api.joox.com', 'joox.com', 'y.qq.com', '*.y.qq.com', 'streamoc.music.tc.qq.com', 'mobileoc.music.tc.qq.com', 'isure.stream.qqmusic.qq.com', 'dl.stream.qqmusic.qq.com', 'aqqmusic.tc.qq.com', 'amobile.music.tc.qq.com', '*.xiami.com', '*.music.migu.cn', 'music.migu.cn', 'proxy.golang.org', '*.mcdn.bilivideo.cn', '*.cmpassport.com', 'id6.me', 'open.e.189.cn', 'mdn.open.wo.cn', 'opencloud.wostore.cn', 'auth.wosms.cn', '*.jegotrip.com.cn', '*.icitymobile.mobi', '*.pingan.com.cn', '*.cmbchina.com', 'pool.ntp.org', '*.pool.ntp.org', 'ntp.*.com', 'time.*.com', 'ntp?.*.com', 'time?.*.com', 'time.*.gov', 'time.*.edu.cn', '*.ntp.org.cn', 'PDC._msDCS.*.*', 'DC._msDCS.*.*', 'GC._msDCS.*.*']
-  #默认的域名解析服务器
-  default-nameserver: [9.9.9.9, 149.112.112.112]  
-    
-# 策略组引用相关参数
-pg: &pg {type: select, proxies: [手动切换, 香港节点, 美国节点, 狮城节点, 日本节点, 台湾节点, 韩国节点, 🔯 故障转移, 🔮 负载均衡, DIRECT]}
-# 订阅更新和延迟测试相关参数
-p: &p {type: http, interval: 86400, health-check: {enable: true, url: http://latency-test.skk.moe/endpoint, interval: 1800}}
-# 自动选择策略组：选取延迟最低节点
-url-test: &url-test {type: url-test, lazy: true, url: http://latency-test.skk.moe/endpoint, interval: 300, tolerance: 0, include-all: true}
-# 手动选择策略组：手动选择想要的节点/策略组
-select: &select {type: select, include-all: true}
-# 故障回退策略组：策略组将按顺序选择你列表中第一个可用的节点
-fallback: &fallback {type: fallback, lazy: true, url: http://latency-test.skk.moe/endpoint, interval: 300, include-all: true}
-# 负载均衡策略组：不同的请求将使用不同的代理节点
-load-balance: &load-balance {type: load-balance, lazy: true, strategy: consistent-hashing, url: http://latency-test.skk.moe/endpoint, interval: 300, include-all: true}
-# classical规则相关
-c: &c {type: http, behavior: classical, format: text, interval: 86400}
-# domain规则相关
-d: &d {type: http, behavior: domain, format: text, interval: 86400}
-# ipcidr规则相关
-i: &i {type: http, behavior: ipcidr, format: text, interval: 86400}
+  fake-ip-filter:
+    - "*"
+    - +.lan
+  default-nameserver:
+    - 9.9.9.9
+    - 149.112.112.112
+  nameserver:
+    - https://223.5.5.5/dns-query#h3=true
+    - https://223.6.6.6/dns-query#h3=true
 
-proxy-providers:
-  Subscribe: {<<: *p, path: ./RuleSet/Sub.yaml, url: http://your-service-provider}
-    # 在此将"http://your-service-provider"替换为你的机场订阅，推荐使用 base64 或者 node list
-    # Sub-Store生成的链接,可以直接替换上述 url 引号中的部分,具体见 Sub-Store 教程  
+# 锚点 - 节点订阅的参数 [每小时更新一次订阅节点，每 6 秒一次健康检查]
+NodeParam: &NodeParam {type: http, interval: 3600, health-check: {enable: true, url: 'http://cp.cloudflare.com', interval: 6}}
+
+# 锚点 - 节点订阅
+proxy-providers: 
+  机场名称1:
+    url: '机场1的订阅URL'
+    <<: *NodeParam
+    path: './proxy_providers/机场名称1.yaml'
+    override:
+      additional-prefix: "[机场名称1] " # 为订阅节点添加机场名称前缀
+  机场名称2:
+    url: '机场2的订阅URL'
+    <<: *NodeParam
+    path: './proxy_providers/机场名称2.yaml'
+    override:
+      additional-prefix: "[机场名称2] " # 为订阅节点添加机场名称前缀
 
 # 锚点 - 节点筛选组
-FilterHK: &FilterHK '^(?=.*((?i)🇭🇰|香港|(\b(HK|Hong)\b))).*$'
-FilterJP: &FilterJP '^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan)\b))).*$'
-FilterKR: &FilterKR '^(?=.*((?i)🇰🇷|韩国|韓|首尔|(\b(KR|Korea)\b))).*$'
-FilterSG: &FilterSG '^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\b))).*$'
-FilterUS: &FilterUS '^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States)\b))).*$'
-FilterTW: &FilterTW '^(?=.*((?i)🇹🇼|台湾|(\b(TW|Tai|Taiwan)\b))).*$'
-FilterGame: &FilterGame '^(?=.*((?i)游戏|🎮|(\b(GAME)\b))).*$'
+FilterHK: &FilterHK '^(?=.*((?i)🇭🇰|香港|(\b(HK|Hong)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
+FilterTW: &FilterTW '^(?=.*((?i)🇹🇼|台湾|(\b(TW|Tai|Taiwan)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
+FilterJP: &FilterJP '^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
+FilterKR: &FilterKR '^(?=.*((?i)🇰🇷|韩国|韓|首尔|(\b(KR|Korea)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
+FilterSG: &FilterSG '^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
+FilterUS: &FilterUS '^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
+FilterUK: &FilterUK '^(?=.*((?i)🇬🇧|英国|伦敦|(\b(UK|United Kingdom)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
+FilterFR: &FilterFR '^(?=.*((?i)🇫🇷|法国|(\b(FR|France)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
+FilterDE: &FilterDE '^(?=.*((?i)🇩🇪|德国|(\b(DE|Germany)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$'
+FilterGame: &FilterGame '^(?=.*((?i)游戏|🎮|(\b(GAME)\b)))(?!.*((?i)回国|校园)).*$'
 FilterAll: &FilterAll '^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$'
-               
-proxy-groups:
 
-  #分流分组
+# 策略组参数锚点
+# 锚点 - 全部参数
+pg: &pg {type: select, proxies: [🛰️ 自动选择,  🔯 故障转移, 🔮 负载均衡, 香港策略, 台湾策略, 日本策略, 韩国策略, 新国策略, 美国策略, DIRECT]}
+# 锚点 - 时延优选参数 [每 6 秒一次惰性健康检查，容差 20ms，时延超过 2 秒判定为失败，失败 3 次则自动触发健康检查]
+UrlTest: &UrlTest {type: url-test, interval: 6, tolerance: 20, lazy: true, url: 'http://latency-test.skk.moe/endpoint', disable-udp: false, timeout: 2000, max-failed-times: 3, hidden: true, include-all-providers: true}
+# 锚点 - 故障转移参数 [每 6 秒一次惰性健康检查，时延超过 2 秒判定为失败，失败 3 次则自动触发健康检查]
+FallBack: &FallBack {type: fallback, interval: 6, lazy: true, url: 'http://latency-test.skk.moe/endpoint', disable-udp: false, timeout: 2000, max-failed-times: 3, hidden: true, include-all-providers: true}
+# 锚点 - 负载均衡参数 [每 6 秒一次惰性健康检查，时延超过 2 秒判定为失败，失败 3 次则自动触发健康检查]
+LoadBalance: &LoadBalance {type: load-balance, interval: 6, lazy: true, url: 'http://latency-test.skk.moe/endpoint', disable-udp: false, strategy: consistent-hashing, timeout: 2000, max-failed-times: 3, hidden: true, include-all-providers: true}
+# 锚点 - 规则参数 [每小时更新一次订阅规则，更新规则时使用直连策略]
+RuleProviders: &RuleProviders {type: http, behavior: classical, interval: 3600, format: yaml, proxy: DIRECT}
 
-  - {name: 手动切换, type: select, include-all: true, proxies: [ 🛰️ 自动选择, 香港节点, 美国节点, 狮城节点, 日本节点, 台湾节点, 韩国节点, 🔯 故障转移, 🔮 负载均衡, DIRECT], icon: https://github.com/clash-verge-rev/clash-verge-rev/raw/main/src-tauri/icons/icon.png}
-
+# 策略组
+proxy-groups: 
+  - {name: 游戏选择, type: select, include-all-providers: true, filter: *FilterGame, proxies: [DIRECT, 全球选择], icon: https://github.com/tugepaopao/Image-Storage/raw/master/hand-painted/35.png}
+  - {name: 全球选择, type: select, include-all-providers: true, filter: *FilterAll, icon: https://raw.githubusercontent.com/Irrucky/Tool/main/Surge/icon/surge_3.png}
   - {name: 国外网站, <<: *pg, icon: https://raw.githubusercontent.com/tugepaopao/Image-Storage/master/hand-painted/56.png}
+  - {name: 境外下载, type: select, include-all-providers: true, filter: *FilterAll, proxies: [DIRECT]}
+  - {name: AI, type: select, proxies: [美国策略, 香港策略, 台湾策略, 日本策略, 韩国策略, 新国策略, DIRECT], icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png}
+  - {name: TikTok, type: select, include-all-providers: true, filter: *FilterAll}
+  - {name: Telegram, type: select, proxies: [🔮 负载均衡, 🔯 故障转移, 🛰️ 自动选择, 香港策略, 台湾策略, 日本策略, 韩国策略, 新国策略, 美国策略], icon: https://github.com/tugepaopao/Image-Storage/raw/master/hand-painted/36.png}
+  - {name: App Store, type: select, proxies: [DIRECT, 香港策略, 台湾策略, 日本策略, 韩国策略, 新国策略, 美国策略], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Apple.png}  - {name: 1Password, type: select, proxies: [DIRECT, 香港策略, 台湾策略, 日本策略, 韩国策略, 新国策略, 美国策略]}
+  - {name: Microsoft, type: select, proxies: [DIRECT, 香港策略, 台湾策略, 日本策略, 韩国策略, 新国策略, 美国策略], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Microsoft.png}
+  - {name: Netflix, type: select, proxies: [香港策略, 台湾策略, 日本策略, 韩国策略, 新国策略, 美国策略]}
+  - {name: Emby, type: select, proxies: [DIRECT, 香港策略, 台湾策略, 日本策略, 韩国策略, 新国策略, 美国策略], icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png}
+  - {name: 漏网之鱼, type: select, include-all-providers: true, proxies: [🔯 故障转移, 🛰️ 自动选择, 🔮 负载均衡, DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Snapfish.png}
 
-  - {name: 国际媒体, <<: *pg, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Netflix.png}
+  - {name: 🛰️ 自动选择, <<: *UrlTest, filter: *FilterAll, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Auto_Speed.png}
+  - {name: 🔯 故障转移, <<: *FallBack, filter: *FilterAll, hidden: true, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Server.png}
+  - {name: 🔮 负载均衡, <<: *Load-Balance, filter: *FilterAll, hidden: true, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Available.png}
+  - {name: 香港策略, type: select, proxies: [⏱香港时延优选策略组, 🚥香港故障转移策略组, 🎛香港负载均衡策略组], hidden: true, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png}
+  - {name: 台湾策略, type: select, proxies: [⏱台湾时延优选策略组, 🚥台湾故障转移策略组, 🎛台湾负载均衡策略组], hidden: true, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Taiwan.png}
+  - {name: 日本策略, type: select, proxies: [⏱日本时延优选策略组, 🚥日本故障转移策略组, 🎛日本负载均衡策略组], hidden: true, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Japan.png}
+  - {name: 韩国策略, type: select, proxies: [⏱韩国时延优选策略组, 🚥韩国故障转移策略组, 🎛韩国负载均衡策略组], hidden: true, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/South_Korea.png}
+  - {name: 新国策略, type: select, proxies: [⏱新国时延优选策略组, 🚥新国故障转移策略组, 🎛新国负载均衡策略组], hidden: true, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Singapore.png}
+  - {name: 美国策略, type: select, proxies: [⏱美国时延优选策略组, 🚥美国故障转移策略组, 🎛美国负载均衡策略组], hidden: true, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/United_States.png}
 
-  - {name: 苹果服务, <<: *pg, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Apple.png}
+# 时延优选策略组
+  - {name: ⏱香港时延优选策略组, <<: *UrlTest, filter: *FilterHK}
+  - {name: ⏱台湾时延优选策略组, <<: *UrlTest, filter: *FilterTW}
+  - {name: ⏱日本时延优选策略组, <<: *UrlTest, filter: *FilterJP}
+  - {name: ⏱韩国时延优选策略组, <<: *UrlTest, filter: *FilterKR}
+  - {name: ⏱新国时延优选策略组, <<: *UrlTest, filter: *FilterSG}
+  - {name: ⏱美国时延优选策略组, <<: *UrlTest, filter: *FilterUS}
 
-  - {name: 微软服务, <<: *pg, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Microsoft.png}
+# 故障转移策略组
+  - {name: 🚥香港故障转移策略组, <<: *FallBack, filter: *FilterHK}
+  - {name: 🚥台湾故障转移策略组, <<: *FallBack, filter: *FilterTW}
+  - {name: 🚥日本故障转移策略组, <<: *FallBack, filter: *FilterJP}
+  - {name: 🚥韩国故障转移策略组, <<: *FallBack, filter: *FilterKR}
+  - {name: 🚥新国故障转移策略组, <<: *FallBack, filter: *FilterSG}
+  - {name: 🚥美国故障转移策略组, <<: *FallBack, filter: *FilterUS}
 
-  - {name: 谷歌服务, <<: *pg, icon: https://github.com/tugepaopao/Image-Storage/raw/master/cartoon/Cute/google.png}
+# 负载均衡策略组
+  - {name: 🎛香港负载均衡策略组, <<: *LoadBalance, filter: *FilterHK}
+  - {name: 🎛台湾负载均衡策略组, <<: *LoadBalance, filter: *FilterTW}
+  - {name: 🎛日本负载均衡策略组, <<: *LoadBalance, filter: *FilterJP}
+  - {name: 🎛韩国负载均衡策略组, <<: *LoadBalance, filter: *FilterKR}
+  - {name: 🎛新国负载均衡策略组, <<: *LoadBalance, filter: *FilterSG}
+  - {name: 🎛美国负载均衡策略组, <<: *LoadBalance, filter: *FilterUS}
 
-  - {name: 电报消息, <<: *pg, icon: https://github.com/tugepaopao/Image-Storage/raw/master/hand-painted/36.png}
-
-  - {name: 推特消息, <<: *pg, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Twitter.png}
-
-  - {name: AI, <<: *pg, icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png}
-
-  - {name: 游戏平台, type : select, include-all: true, filter: *FilterGame, proxies: [DIRECT, 手动切换], icon: https://github.com/tugepaopao/Image-Storage/raw/master/hand-painted/35.png}
-
-  - {name: Emby, <<: *pg, include-all: true, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png}
-
-  - {name: 广告拦截, type: select, proxies: [REJECT-DROP, DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Reject.orig.png}
-
-  - {name: 漏网之鱼, type: select, include-all: true, proxies: [🔯 故障转移, 🛰️ 自动选择, 🔮 负载均衡, DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Snapfish.png}
-
-  #节点地区分组
-
-  - {name: 🛰️ 自动选择, <<: *url-test, filter: *FilterAll, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Auto_Speed.png}
-
-  - {name: 🔯 故障转移, <<: *fallback, filter: *FilterAll, hidden: true, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Server.png}
-
-  - {name: 🔮 负载均衡, <<: *load-balance, filter: *FilterAll, hidden: true, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Available.png}
-
-  - {name: 香港节点, <<: *fallback, filter: *FilterHK, hidden: true, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png}
-
-  - {name: 美国节点, <<: *fallback, filter: *FilterUS, hidden: true, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/United_States.png}
-
-  - {name: 狮城节点, <<: *fallback, filter: *FilterSG, hidden: true, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Singapore.png}
-
-  - {name: 日本节点, <<: *fallback, filter: *FilterJP, hidden: true, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Japan.png}
-
-  - {name: 台湾节点, <<: *fallback, filter: *FilterTW, hidden: true, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Taiwan.png}
-
-  - {name: 韩国节点, <<: *fallback, filter: *FilterKR, hidden: true, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/South_Korea.png}
-
+# 订阅规则
 rule-providers:
+# 搜狗输入法 隐私收集
+  Sogouinput: 
+    <<: *RuleProviders
+    path: './rules/sogouinput.txt'
+    url: 'https://ruleset.skk.moe/Clash/non_ip/sogouinput.txt'
 
-  # 下载服务
-  Download: {<<: *c, path: ./RuleSet/Download.list,  url: https://ruleset.skk.moe/Clash/non_ip/direct.txt}
-      
-  # 广告拦截
-  adrules: {<<: *c, path: ./RuleSet/adrules.list, url: https://adrules.top/adrules.list}
-  Reject_non_ip: {<<: *c, path: ./RuleSet/reject_non_ip.txt, url: https://ruleset.skk.moe/Clash/non_ip/reject.txt}
-
-  # 搜狗输入法 隐私收集
-  Sogouinput: {<<: *c, path: ./RuleSet/sogouinput.txt, url: https://ruleset.skk.moe/Clash/non_ip/sogouinput.txt}
+  ADRules:
+    <<: *RuleProviders
+    path: './rules/ADRules.text'
+    url: 'https://adrules.top/adrules.list'
 
   # 常见静态 CDN
-  Cdn_domainset: {<<: *d, path: ./RuleSet/cdn_domainset.txt, url: https://ruleset.skk.moe/Clash/domainset/cdn.txt}
-  Cdn_non_ip: {<<: *d, path: ./RuleSet/cdn_non_ip.txt, url: https://ruleset.skk.moe/Clash/non_ip/cdn.txt}
+  Cdn_domainset: 
+    <<: *RuleProviders
+    path: './rules/cdn_domainset.txt
+    url: 'https://ruleset.skk.moe/Clash/domainset/cdn.txt'
 
-  # 苹果服务
-  Apple Service: {<<: *c, path: ./RuleSet/apple_services.conf,  url: https://ruleset.skk.moe/List/non_ip/apple_services.conf}
-  Apple CDN: {<<: *c, path: ./RuleSet/apple_cdn.conf,  url: https://ruleset.skk.moe/List/non_ip/apple_cdn.conf}
-  云上贵州: {<<: *c, path: ./RuleSet/apple_cdn.conf,  url: https://ruleset.skk.moe/List/non_ip/apple_cn.conf}
+  Cdn_non_ip: 
+    <<: *RuleProviders 
+    path: './rules/cdn_non_ip.txt'
+    url: 'https://ruleset.skk.moe/Clash/non_ip/cdn.txt'
 
-  # 微软服务 
-  OneDrive: {<<: *c, path: ./RuleSet/OneDrive.list,  url: https://github.com/Repcz/Tool/raw/X/Clash/Rules/OneDrive.list}
-  Microsoft: {<<: *c, path: ./RuleSet/Microsoft.list,  url: https://github.com/Repcz/Tool/raw/X/Clash/Rules/Microsoft.list}
-  Microsoft 国内 CDN: {<<: *c, path: ./RuleSet/microsoft_cdn.conf, url: https://ruleset.skk.moe/List/non_ip/microsoft_cdn.conf}
+  Lan:
+    <<: *RuleProviders
+    path: './rules/Lan.yaml'
+    url: 'https://gitlab.com/lodepuly/proxy_tool_resources/-/raw/master/rule/Clash/Lan/Lan.yaml'
 
-  # 谷歌服务
-  YouTube: {<<: *c, path: ./RuleSet/YouTube.list,  url: https://github.com/Repcz/Tool/raw/X/Clash/Rules/YouTube.list}
-  Google: {<<: *c, path: ./RuleSet/Google.list,  url: https://github.com/Repcz/Tool/raw/X/Clash/Rules/Google.list}
+  Direct:
+    <<: *RuleProviders
+    path: './rules/Direct.yaml'
+    url: 'https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Clash/Rule/Direct.yaml'
 
-  # 电报消息
-  Telegram: {<<: *c, path: ./RuleSet/telegram_non_ip.txt, url: https://github.com/LucaLin233/Luca_Conf/blob/main/Surge/Rule/Telegram.list?raw=true}
+  Proxy:
+    <<: *RuleProviders
+    path: './rules/Proxy.yaml'
+    url: 'https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Clash/Rule/Proxy.yaml'
 
-  # 推特消息
-  Twitter: {<<: *c, path: ./RuleSet/Twitter.list,  url: https://github.com/Repcz/Tool/raw/X/Clash/Rules/Twitter.list}
+  ChinaDownloadCDN:
+    <<: *RuleProviders
+    path: './rules/ChinaDownloadCDN.yaml'
+    url: 'https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Clash/Rule/ChinaDownloadCDN.yaml'
 
-  # 游戏平台
-  Steam: {<<: *c, path: ./RuleSet/steam.list,  url: https://github.com/Repcz/Tool/raw/X/Clash/Rules/Steam.list}
-  Epic: {<<: *c, path: ./RuleSet/Epic.list,  url: https://github.com/Repcz/Tool/raw/X/Clash/Rules/Epic.list}
+  InternationalDownloadCDN:
+    <<: *RuleProviders
+    path: './rules/InternationalDownloadCDN.yaml'
+    url: 'https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Clash/Rule/InternationalDownloadCDN.yaml'
 
-  # AI平台
-  AI: {<<: *c, path: ./RuleSet/AI.list,  url: https://github.com/Repcz/Tool/raw/X/Clash/Rules/AI.list}
+  AI:
+    <<: *RuleProviders
+    path: './rules/AI.yaml'
+    url: 'https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Clash/Rule/AI.yaml'
 
-  # Emby
-  Emby: {<<: *c, path: ./RuleSet/Emby.list,  url: https://github.com/Repcz/Tool/raw/X/Clash/Rules/Emby.list}
+  TikTok:
+    <<: *RuleProviders
+    path: './rules/TikTok.yaml'
+    url: 'https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Clash/Rule/TikTok.yaml'
 
-  # 国际媒体
-  ProxyMedia: {<<: *c, path: ./RuleSet/ProxyMedia.list,  url: https://github.com/Repcz/Tool/raw/X/Clash/Rules/ProxyMedia.list}
+  Game:
+    <<: *RuleProviders
+    path: './rules/Game.yaml'
+    url: 'https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Clash/Rule/Game.yaml'
 
-  # 国外网站
-  国外网站: {<<: *c, path: ./RuleSet/global_non_ip.txt, url: https://ruleset.skk.moe/Clash/non_ip/global.txt}
-  Github: {<<: *c, path: ./RuleSet/Github.list,  url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GitHub/GitHub.list}
-  
-  # 局域网   
-  Lan: {<<: *c, path: ./RuleSet/Lan.list,  url: https://github.com/Repcz/Tool/raw/X/Clash/Rules/Lan.list}
+  1Password:
+    <<: *RuleProviders
+    path: './rules/1PasswordUS.yaml'
+    url: 'https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Clash/Rule/1PasswordUS.yaml'
 
-  # 中国大陆
-  ChinaDomain: {<<: *c, path: ./RuleSet/ChinaDomain.list,  url: https://github.com/Repcz/Tool/raw/X/Clash/Rules/ChinaDomain.list}
-  Domestic_non_ip: {<<: *c, path: ./RuleSet/domestic_non_ip.txt, url: https://ruleset.skk.moe/Clash/non_ip/domestic.txt}
-  Direct_non_ip: {<<: *c, path: ./RuleSet/direct_non_ip.txt, url: https://ruleset.skk.moe/Clash/non_ip/direct.txt}
-  Domestic_ip: {<<: *c, path: ./RuleSet/domestic_ip.txt, url: https://ruleset.skk.moe/Clash/ip/domestic.txt}
-  China_ip: {<<: *i, path: ./RuleSet/china_ip.txt, url: https://ruleset.skk.moe/Clash/ip/china_ip.txt}
-    
+  Steam:
+    <<: *RuleProviders
+    path: './rules/Steam.yaml'
+    url: 'https://gitlab.com/lodepuly/proxy_tool_resources/-/raw/master/rule/Clash/Steam/Steam.yaml'
+
+  Netflix:
+    <<: *RuleProviders
+    path: './rules/Netflix.yaml'
+    url: 'https://gitlab.com/lodepuly/proxy_tool_resources/-/raw/master/rule/Clash/Netflix/Netflix.yaml'
+
+  Emby:
+    <<: *RuleProviders
+    path: './rules/Emby.yaml'
+    url: 'https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Clash/Rule/EmbyServer.yaml'
+
+  iCloudChina:
+    <<: *RuleProviders
+    path: './rules/iCloudChina.yaml'
+    url: 'https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Clash/Rule/iCloudChina.yaml'
+
+  ApplePushNotificationService:
+    <<: *RuleProviders
+    path: './rules/ApplePushNotificationService.yaml'
+    url: 'https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Clash/Rule/ApplePushNotificationService.yaml'
+
+  AppleSoftwareUpdates:
+    <<: *RuleProviders
+    path: './rules/AppleSoftwareUpdates.yaml'
+    url: 'https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Clash/Rule/AppleSoftwareUpdates.yaml'
+
+  AppleID:
+    <<: *RuleProviders
+    path: './rules/AppleID.yaml'
+    url: 'https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Clash/Rule/AppleID.yaml'
+
+  AppStore:
+    <<: *RuleProviders
+    path: './rules/AppStore.yaml'
+    url: 'https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Clash/Rule/AppStore.yaml'
+
+  TestFlight:
+    <<: *RuleProviders
+    path: './rules/TestFlight.yaml'
+    url: 'https://gitlab.com/lodepuly/proxy_tool_resources/-/raw/master/rule/Clash/TestFlight/TestFlight.yaml'
+
+  Microsoft:
+    <<: *RuleProviders
+    path: './rules/Microsoft.yaml'
+    url: 'https://gitlab.com/lodepuly/proxy_tool_resources/-/raw/master/rule/Clash/Microsoft/Microsoft.yaml'
+
+  Github:
+    <<: *RuleProviders
+    path: './rules/Github.yaml'
+    url: 'https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GitHub/GitHub.list'
+
+  Google:
+    <<: *RuleProviders
+    path: './rules/Google.yaml'
+    url: 'https://gitlab.com/lodepuly/proxy_tool_resources/-/raw/master/rule/Clash/Google/Google.yaml'
+
+  Telegram:
+    <<: *RuleProviders
+    path: './rules/Telegram.yaml'
+    url: 'https://github.com/LucaLin233/Luca_Conf/blob/main/Surge/Rule/Telegram.list?raw=true'
+
+  ESET_China:
+    <<: *RuleProviders
+    path: './rules/ESET_China.yaml'
+    url: 'https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Clash/Rule/ESET_China.yaml'
+
+# 规则指向
 rules:
 # Process 程序规则
 # > AdGuard
@@ -321,43 +398,37 @@ rules:
 
 # Rulesets，规则集（每 24 小时后台自动更新）
 # 规则集包含多条子规则，可以是另一个本地 list 文件，或者是一个 URL
-# 内置规则集的具体内容可在 Surge Mac 设置界面查看
 
-  #- SCRIPT,quic,REJECT
-  #- RULE-SET,Download,DIRECT
-  - RULE-SET,云上贵州,DIRECT
-  - RULE-SET,Apple CDN,DIRECT
-  - RULE-SET,Sogouinput,广告拦截
-  - RULE-SET,adrules,广告拦截
-  - RULE-SET,Reject_non_ip,广告拦截
-  - RULE-SET,AI,AI
-  - RULE-SET,Cdn_domainset,国外网站
-  - RULE-SET,Cdn_non_ip,国外网站
-  - RULE-SET,Apple Service,苹果服务
-  - RULE-SET,Github,国外网站
-  - RULE-SET,Microsoft 国内 CDN,DIRECT
-  - RULE-SET,OneDrive,微软服务
-  - RULE-SET,Microsoft,微软服务
-  - RULE-SET,YouTube,谷歌服务
-  - RULE-SET,Google,谷歌服务
-  - RULE-SET,Telegram,电报消息
-  - RULE-SET,Twitter,推特消息
-  - RULE-SET,Steam,游戏平台
-  - RULE-SET,Epic,游戏平台
-  - RULE-SET,Emby,Emby
-  - RULE-SET,ProxyMedia,国际媒体
-  - RULE-SET,国外网站,国外网站
-  - RULE-SET,ChinaDomain,DIRECT
-  - RULE-SET,Domestic_non_ip,DIRECT
-  - RULE-SET,Direct_non_ip,DIRECT
-  - RULE-SET,China_ip,DIRECT,no-resolve
-  - RULE-SET,Domestic_ip,DIRECT,no-resolve
+  - RULE-SET, Sogouinput, REJECT
+  - RULE-SET, ADRules, REJECT
+  - RULE-SET, Cdn_domainset, 国外网站
+  - RULE-SET, Cdn_non_ip, 国外网站
+  - RULE-SET, Lan, DIRECT
+  - RULE-SET, Direct, DIRECT
+  - RULE-SET, Proxy, 漏网之鱼
+  - RULE-SET, ChinaDownloadCDN, DIRECT
+  - RULE-SET, InternationalDownloadCDN, 境外下载
+  - RULE-SET, AI, AI
+  - RULE-SET, TikTok, TikTok
+  - RULE-SET, Steam, 漏网之鱼
+  - RULE-SET, Game, 游戏选择
+  - RULE-SET, Netflix, Netflix
+  - RULE-SET, Emby, Emby
+  - RULE-SET, TestFlight, DIRECT
+  - RULE-SET, iCloudChina, DIRECT
+  - RULE-SET, ApplePushNotificationService, DIRECT
+  - RULE-SET, AppleSoftwareUpdates, DIRECT
+  - RULE-SET, AppleID, App Store
+  - RULE-SET, AppStore, App Store
+  - RULE-SET, 1Password, 1Password
+  - RULE-SET, Microsoft, Microsoft
+  - RULE-SET, Github, 国外网站
+  - RULE-SET, Google, 漏网之鱼
+  - RULE-SET, Telegram, Telegram
+  - RULE-SET, ESET_China, DIRECT
 
 # Surge 的自动 REJECT 保护丢包，防止应用循环请求
   - IP-CIDR,0.0.0.0/32,REJECT,no-resolve
-
-# Local Area Network 本地局域网
-  - GEOIP,Lan,DIRECT
 
   - DOMAIN-SUFFIX,direct,DIRECT
   - DOMAIN-SUFFIX,wpad,DIRECT
@@ -386,8 +457,8 @@ rules:
   - IP-CIDR6,2001:db8::/32,DIRECT
   - IP-CIDR6,2002::/16,DIRECT
 
-  - GEOIP,CN,DIRECT,no-resolve
-  - MATCH,漏网之鱼
+  - GEOIP, CN, DIRECT, no-resolve
+  - MATCH, 漏网之鱼
 
 url-rewrite:
     - ^https?:\/\/(www.)?(g|google)\.cn https://www.google.com 302
