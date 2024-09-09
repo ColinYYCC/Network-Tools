@@ -99,7 +99,7 @@ function main(config) {
       "type": "select",
       "proxies": ["🛰️ 自动选择", "香港节点", "美国节点", "韩国节点", "狮城节点", "日本节点", "台湾节点", "🔯 故障转移", "🔮 负载均衡", "DIRECT"],
       "include-all": true,
-      "icon": "https://github.com/clash-verge-rev/clash-verge-rev/raw/main/src-tauri/icons/icon.png"
+      "icon": "https://github.com/chen08209/FlClash/raw/main/assets/images/icon.png"
     },
     {
       ...groupBaseOption,
