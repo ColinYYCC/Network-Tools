@@ -126,7 +126,7 @@ RuleProviders: &RuleProviders {type: http, behavior: classical, interval: 3600, 
 # 策略组
 proxy-groups: 
   - {name: 游戏选择, type: select, include-all-providers: true, filter: *FilterGame, proxies: [DIRECT, 全球选择], icon: https://github.com/tugepaopao/Image-Storage/raw/master/hand-painted/35.png}
-  - {name: 全球选择, type: select, include-all-providers: true, filter: *FilterAll, icon: https://raw.githubusercontent.com/Irrucky/Tool/main/Surge/icon/surge_3.png}
+  - {name: 全球选择, type: select, include-all-providers: true, filter: *FilterAll, icon: https://github.com/chen08209/FlClash/raw/main/assets/images/icon.png}
   - {name: 国外网站, <<: *pg, icon: https://raw.githubusercontent.com/tugepaopao/Image-Storage/master/hand-painted/56.png}
   - {name: 境外下载, type: select, include-all-providers: true, filter: *FilterAll, proxies: [DIRECT]}
   - {name: AI, type: select, proxies: [美国策略, 香港策略, 台湾策略, 日本策略, 韩国策略, 新国策略, DIRECT], icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png}
