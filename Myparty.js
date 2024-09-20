@@ -318,7 +318,7 @@ function main(config) {
       "path": "./rules/reject.txt",
       ...ruleProviderCommon,
     },
-     "Reject_Extra": {
+    "Reject_Extra": {
       "behavior": "domain",
       "url": "https://ruleset.skk.moe/Clash/domainset/reject_extra.txt",
       "path": "./rules/reject_extra.txt",
