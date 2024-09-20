@@ -579,7 +579,7 @@ function main(config) {
   // 内置了两个规则集：SYSTEM 和 LAN
   // 内置规则集的具体内容可在 Surge Mac 设置界面查看
     
-    "RULE-SET,Special,广告拦截",
+    "RULE-SET,Special,DIRECT",
     "RULE-SET,Sogouinput,广告拦截",
     "RULE-SET,Reject,广告拦截",
     "RULE-SET,静态CDN 域名,国外网站",
