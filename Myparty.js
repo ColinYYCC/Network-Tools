@@ -452,6 +452,12 @@ function main(config) {
       "path": "./rules/apple_cdn.txt",
       ...ruleProviderCommon,
     },
+     "WeChat": {
+      "behavior": "domain",
+      "url": "https://raw.githubusercontent.com/RuCu6/Loon/main/Rules/WeChat.list"
+      "path": "./rules/WeChat.list",
+      ...ruleProviderCommon,
+    },
     "ChinaDomain": {
       "behavior": "classical",
       "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/ChinaDomain.list",
@@ -600,6 +606,7 @@ function main(config) {
     "GEOSITE,gfw,国外网站",
     "RULE-SET,Apple Service,苹果服务",
     "RULE-SET,Apple CDN,DIRECT",
+    "RULE-SET,WeChat,DIRECT",
     "RULE-SET,ChinaDomain,DIRECT",
     "RULE-SET,Domestic_non_ip,DIRECT",
     "RULE-SET,Direct_non_ip,DIRECT",
