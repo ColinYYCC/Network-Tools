@@ -452,7 +452,7 @@ function main(config) {
     },
      "WeChat": {
       "behavior": "domain",
-      "url": "https://raw.githubusercontent.com/RuCu6/Loon/main/Rules/WeChat.list"
+      "url": "https://raw.githubusercontent.com/RuCu6/Loon/main/Rules/WeChat.list",
       "path": "./rules/WeChat.list",
       ...ruleProviderCommon,
     },
