@@ -582,6 +582,7 @@ function main(config) {
     "RULE-SET,Special,DIRECT",
     "RULE-SET,Sogouinput,广告拦截",
     "RULE-SET,Reject,广告拦截",
+		"RULE-SET,Reject_Extra,广告拦截",
     "RULE-SET,静态CDN 域名,国外网站",
     "RULE-SET,Cdn_non_ip,国外网站",
     "RULE-SET,AI,AI",
