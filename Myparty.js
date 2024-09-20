@@ -1,8 +1,6 @@
 // 参考 @repcz(Luzy) 示例 Script 配置
 //
 // Clash Verge Rev (Version ≥ 17.2) & Mihomo-Party (Version ≥ 0.5.8)
-//
-// 最后更新时间: 2024-08-17 20:10
 
 // 规则集通用配置
 const ruleProviderCommon = {
