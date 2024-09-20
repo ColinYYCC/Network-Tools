@@ -456,12 +456,6 @@ function main(config) {
       "path": "./rules/WeChat.list",
       ...ruleProviderCommon,
     },
-    "ChinaDomain": {
-      "behavior": "classical",
-      "url": "https://github.com/Repcz/Tool/raw/X/Clash/Rules/ChinaDomain.list",
-      "path": "./rules/ChinaDomain.list",
-      ...ruleProviderCommon,
-    },
     "Domestic_non_ip": {
       "behavior": "classical",
       "url": "https://ruleset.skk.moe/Clash/non_ip/domestic.txt",
@@ -605,7 +599,6 @@ function main(config) {
     "RULE-SET,Apple Service,苹果服务",
     "RULE-SET,Apple CDN,DIRECT",
     "RULE-SET,WeChat,DIRECT",
-    "RULE-SET,ChinaDomain,DIRECT",
     "RULE-SET,Domestic_non_ip,DIRECT",
     "RULE-SET,Direct_non_ip,DIRECT",
     "RULE-SET,China_ip,DIRECT,no-resolve",
