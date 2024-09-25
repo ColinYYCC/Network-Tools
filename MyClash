@@ -1,4 +1,4 @@
-# mihomo 配置
+z# mihomo 配置
 # 日期：2024-06-26 15:31:03
 # 配置作者：https://t.me/iKeLee
 # 适用版本：所有使用 mihomo 核心的程序
@@ -91,8 +91,6 @@ dns:
   nameserver-policy:
     'geosite:cn': system
     'geosite:gfw,geolocation-!cn': [quic://223.5.5.5, quic://223.6.6.6, https://1.12.12.12/dns-query, https://120.53.53.53/dns-query]
-
-    - 
 
 # 锚点 - 节点订阅的参数 [每小时更新一次订阅节点，每 6 秒一次健康检查]
 NodeParam: &NodeParam {type: http, interval: 3600, health-check: {enable: true, url: 'http://cp.cloudflare.com', interval: 6}}
