@@ -283,6 +283,8 @@ DOMAIN-SUFFIX,cmbchina.com,NO-HYBRID // 部分服务会校验请求的来源 IP�
 # > AdGuard
 DOMAIN,injections.adguard.org,DIRECT
 DOMAIN,local.adguard.org,DIRECT
+# > Zoom
+DOMAIN-SUFFIX,zoom.us,国外网站
 
 # > Client
 # Proxy
