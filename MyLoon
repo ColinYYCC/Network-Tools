@@ -16,6 +16,13 @@ dns-server = system,9.9.9.9,149.112.112.112
 # doh-server = https://dns.quad9.net/dns-query
 # IPv6 支持（默认关闭）
 ipv6 = false
+# 在DNS阶段拒绝域名时采用的方式
+dns-reject-mode = LoopbackIP
+# 域名拒绝规则执行的阶段
+domain-reject-mode = DNS
+
+# 当UDP的流量规则匹配到相关节点，但该节点不支持UDP或未未开启UDP转发时使用的策略，可选DIRECT、REJECT
+udp-fallback-mode = REJECT
 
 # ---(Wi-Fi 访问)---
 # 是否允许wifi下共享网络
@@ -44,7 +51,7 @@ disconnect-on-policy-change = true
 sni-sniffing = true
 
 # > 资源解析器
-resource-parser = https://gitlab.com/sub-store/Sub-Store/-/releases/permalink/latest/downloads/sub-store-parser.loon.min.js
+resource-parser = https://raw.githubusercontent.com/sub-store-org/Sub-Store/release/sub-store-parser.loon.min.jss
 
 # > 设置响应ssid环境下使用的策略，如"loon-wifi5g":DIRECT，表示在loon-wifi5g这个wifi网络下使用直连模式，"cellular":PROXY，表示在蜂窝网络下使用代理模式，"default":RULE，默认使用分流模式
 ssid-trigger = "default":rule, "cellular":rule,"SI":DIRECT
