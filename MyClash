@@ -18,6 +18,8 @@ socks-port: 7891
 mixed-port: 7892
 redir-port: 7893
 tproxy-port: 7894
+experimental:
+  ignore-resolve-fail: true
 
 unified-delay: true
 geodata-mode: false
