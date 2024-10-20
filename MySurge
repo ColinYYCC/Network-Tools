@@ -231,7 +231,7 @@ Emby = select, 香港, 澳门, 台湾, 新加坡, 日本, 美国, 韩国, 🎲�
 游戏 = select, DIRECT, 自选节点, 🎲自动选择, 🔯故障转移, 🔮负载均衡, 🥡节点选择, icon-url=https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/switch.png
 
 # 国际流媒体服务
-国际流媒体 = select, 🎲自动选择, 香港, 台湾, 新加坡, 日本, 美国, 韩国, 🔯故障转移, 🔮负载均衡, DIRECT, icon-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Twitter.png
+国外网站 = select, 🎲自动选择, 香港, 台湾, 新加坡, 日本, 美国, 韩国, 🔯故障转移, 🔮负载均衡, DIRECT, icon-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Twitter.png
 
 # 中国流媒体服务（面向海外版本）
 国內流媒体 = select, DIRECT, 香港, 台湾, 新加坡, 🎲自动选择, 🔯故障转移, 🔮负载均衡, icon-url=https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/bilibilitv.png
@@ -390,8 +390,8 @@ DOMAIN-SET,https://ruleset.skk.moe/List/domainset/cdn.conf,PROXY,extended-matchi
 RULE-SET,https://ruleset.skk.moe/List/non_ip/cdn.conf,PROXY,extended-matching // SukkaW静态CDN域名
 
 # TV+
-PROCESS-NAME,/System/Applications/TV.app/Contents/MacOS/TV,国际流媒体 // TV+
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/AppleTV/AppleTV.list,国际流媒体,extended-matching // TV+
+PROCESS-NAME,/System/Applications/TV.app/Contents/MacOS/TV,国外网站 // TV+
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/AppleTV/AppleTV.list,国外网站,extended-matching // TV+
 # Disney+
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Disney/Disney.list,Disney+,extended-matching // Disney+
 # Emby
@@ -399,10 +399,10 @@ RULE-SET,https://github.com/Repcz/Tool/raw/X/Surge/Rules/Emby.list,Emby,extended
 # Netflix
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Netflix/Netflix.list,Netflix,extended-matching // Netflix
 # YouTube
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/YouTube/YouTube.list,国际流媒体,extended-matching
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/YouTubeMusic/YouTubeMusic.list,国际流媒体,extended-matching // YouTube Music
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/YouTube/YouTube.list,国外网站,extended-matching
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/YouTubeMusic/YouTubeMusic.list,国外网站,extended-matching // YouTube Music
 # Spotify
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Spotify/Spotify.list,国际流媒体,extended-matching // Spotify
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Spotify/Spotify.list,国外网站,extended-matching // Spotify
 # Now E
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/NowE/NowE.list,香港,extended-matching // Now E
 # 巴哈姆特
@@ -418,11 +418,11 @@ RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/r
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/HuluUSA/HuluUSA.list,美国,extended-matching // Hulu🇺🇸
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/HuluJP/HuluJP.list,日本,extended-matching // Hulu🇯🇵
 # BiliBili
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/BiliBiliIntl/BiliBiliIntl.list,国际流媒体,extended-matching // Bilibili🇺🇳
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/BiliBiliIntl/BiliBiliIntl.list,国外网站,extended-matching // Bilibili🇺🇳
 
 # Streaming 国际流媒体服务
-RULE-SET,https://ruleset.skk.moe/List/non_ip/stream.conf,国际流媒体,extended-matching // Streaming 国际流媒体服务
-RULE-SET,https://ruleset.skk.moe/List/ip/stream.conf,国际流媒体 // Streaming 国际流媒体服务(IP)
+RULE-SET,https://ruleset.skk.moe/List/non_ip/stream.conf,国外网站,extended-matching // Streaming 国际流媒体服务
+RULE-SET,https://ruleset.skk.moe/List/ip/stream.conf,国外网站 // Streaming 国际流媒体服务(IP)
 
 # 国外网站
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GitHub/GitHub.list,自选节点,extended-matching // Github
