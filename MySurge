@@ -216,7 +216,7 @@ Apple Services = select, 🎲自动选择, 🔯故障转移, 🔮负载均衡, D
 Telegram = select, 🎲自动选择, 🔯故障转移, 🔮负载均衡, DIRECT, icon-url=https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/telegram(blue1).png
 
 # Netflix
-Netflix = select, 新加坡, 香港, 澳门, 台湾, 日本, 美国, 韩国, 🎲自动选择, 🔯故障转移, 🔮负载均衡, icon-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Netflix.png
+Netflix = select, 新加坡, 香港, 澳门, 台湾, 日本, 美国, 韩国, 🎲自动选择, 🔯故障转移, 🔮负载均衡, icon-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/erdongchanyo/Netflix.png
 # YouTube
 YouTube = select, 香港, 澳门, 台湾, 新加坡, 日本, 美国, 韩国, 🎲自动选择, 🔯故障转移, 🔮负载均衡, icon-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/YouTube.png
 # Disney+
@@ -234,7 +234,7 @@ Emby = select, 香港, 澳门, 台湾, 新加坡, 日本, 美国, 韩国, 🎲�
 国外网站 = select, 🎲自动选择, 香港, 台湾, 新加坡, 日本, 美国, 韩国, 🔯故障转移, 🔮负载均衡, DIRECT, icon-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Twitter.png
 
 # 中国流媒体服务（面向海外版本）
-国內流媒体 = select, DIRECT, 香港, 台湾, 新加坡, 🎲自动选择, 🔯故障转移, 🔮负载均衡, icon-url=https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/bilibilitv.png
+国內流媒体 = select, DIRECT, 香港, 台湾, 新加坡, 🎲自动选择, 🔯故障转移, 🔮负载均衡, icon-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/bilibili_3.png
 
 # 白名单模式 PROXY，黑名单模式 DIRECT
 漏网之鱼 = select, 自选节点, DIRECT, 🎲自动选择, 🔯故障转移, 🔮负载均衡, 🥡节点选择, icon-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Snapfish.png
