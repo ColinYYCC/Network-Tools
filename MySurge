@@ -369,9 +369,7 @@ DOMAIN-SUFFIX,vercel.app,PROXY
 # 内置规则集的具体内容可在 Surge Mac 设置界面查看
 
 # IP归属地更改
-# RULE-SET,https://raw.githubusercontent.com/lwd-temp/anti-ip-attribution/main/generated/surge.list,归属地更改,extended-matching // IP归属地
-
-RULE-SET,https://raw.githubusercontent.com/lwd-temp/anti-ip-attribution/main/generated/surge.list,DIRECT,extended-matching
+https://raw.githubusercontent.com/SunsetMkt/anti-ip-attribution/refs/heads/main/generated/surge.list,归属地更改,extended-matching // IP归属地
 
 # Advertising 广告拦截 / Privacy 隐私保护 / Malware 拦截 / Phiishing 拦截
 # RULE-SET,https://adrules.top/adrules-surge.conf,REJECT,extended-matching
