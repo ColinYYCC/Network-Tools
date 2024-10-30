@@ -47,7 +47,7 @@ function main(config) {
     "fake-ip-range": "28.0.0.1/18",
     "fake-ip-filter": ["*", "+.lan", "+.local", "+.direct", "+.msftconnecttest.com", "+.msftncsi.com"],
     "default-nameserver": ["9.9.9.9", "149.112.112.112", "223.5.5.5"],
-    "nameserver": ["9.9.9.9", "149.112.112.112"],
+    "nameserver": "https://dns.quad9.net/dns-query",
     "nameserver-policy": {
       "geosite:cn": ["223.5.5.5", "119.29.29.29"],
       "geosite:gfw,geolocation-!cn": ["9.9.9.9", "149.112.112.112"]
