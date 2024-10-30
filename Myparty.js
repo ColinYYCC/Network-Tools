@@ -46,10 +46,10 @@ function main(config) {
     "enhanced-mode": "fake-ip",
     "fake-ip-range": "28.0.0.1/18",
     "fake-ip-filter": ["*", "+.lan", "+.local", "+.direct", "+.msftconnecttest.com", "+.msftncsi.com"],
-    "default-nameserver": ["9.9.9.9", "149.112.112.112", "system"],
+    "default-nameserver": ["9.9.9.9", "149.112.112.112", "223.5.5.5"],
     "nameserver": ["9.9.9.9", "149.112.112.112"],
     "nameserver-policy": {
-      "geosite:cn": "system",
+      "geosite:cn": "223.5.5.5",
       "geosite:gfw,geolocation-!cn": ["9.9.9.9", "149.112.112.112"]
     }
   };
