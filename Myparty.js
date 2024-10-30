@@ -49,7 +49,7 @@ function main(config) {
     "default-nameserver": ["9.9.9.9", "149.112.112.112", "223.5.5.5"],
     "nameserver": "https://dns.quad9.net/dns-query",
     "nameserver-policy": {
-      "geosite:cn": ["223.5.5.5", "119.29.29.29"],
+      "geosite:cn": ["223.5.5.5", "119.29.29.29", "https://doh.pub/dns-query"],
       "geosite:gfw,geolocation-!cn": ["9.9.9.9", "149.112.112.112"]
     }
   };
