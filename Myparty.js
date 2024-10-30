@@ -49,7 +49,7 @@ function main(config) {
     "default-nameserver": ["9.9.9.9", "149.112.112.112", "223.5.5.5"],
     "nameserver": ["9.9.9.9", "149.112.112.112"],
     "nameserver-policy": {
-      "geosite:cn": "223.5.5.5",
+      "geosite:cn": ["223.5.5.5", "119.29.29.29"],
       "geosite:gfw,geolocation-!cn": ["9.9.9.9", "149.112.112.112"]
     }
   };
