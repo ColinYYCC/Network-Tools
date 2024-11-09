@@ -81,7 +81,6 @@ geoip-url = https://github.com/xream/geoip/releases/latest/download/ipinfo.count
 [Proxy]
 
 [Remote Proxy]
-[填入机场订阅]
 # ------
 
 [Remote Filter]
