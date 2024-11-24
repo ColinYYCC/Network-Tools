@@ -76,6 +76,8 @@ disable-stun = true
 
 # > 自定义geoip数据库的url
 geoip-url = https://github.com/xream/geoip/releases/latest/download/ipinfo.country.mmdb
+# > 自定义ASN数据库的url
+ipasn-url=https://raw.githubusercontent.com/P3TERX/GeoLite.mmdb/download/GeoLite2-ASN.mmdb
 # ------
 
 [Proxy]
