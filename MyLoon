@@ -51,7 +51,7 @@ disconnect-on-policy-change = true
 sni-sniffing = true
 
 # > 资源解析器
-resource-parser = https://raw.githubusercontent.com/sub-store-org/Sub-Store/release/sub-store-parser.loon.min.jss
+resource-parser = https://raw.githubusercontent.com/sub-store-org/Sub-Store/release/sub-store-parser.loon.min.js
 
 # > 设置响应ssid环境下使用的策略，如"loon-wifi5g":DIRECT，表示在loon-wifi5g这个wifi网络下使用直连模式，"cellular":PROXY，表示在蜂窝网络下使用代理模式，"default":RULE，默认使用分流模式
 ssid-trigger = "default":rule, "cellular":rule,"SI":DIRECT
@@ -216,7 +216,6 @@ https://kelee.one/Tool/Loon/Plugin/JD_Price.plugin, enabled=true
 https://kelee.one/Tool/Loon/Plugin/QuickSearch.plugin, enabled=true
 https://kelee.one/Tool/Loon/Plugin/Prevent_DNS_Leaks.plugin, policy=漏网之鱼, enabled=true
 https://kelee.one/Tool/Loon/Plugin/Node_detection_tool.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/TestFlight.plugin, policy=DIRECT, enabled=true
 https://kelee.one/Tool/Loon/Plugin/Weixin_external_links_unlock.plugin, enabled=true
 https://kelee.one/Tool/Loon/Plugin/Fileball_mount.plugin, enabled=false
 https://kelee.one/Tool/Loon/Plugin/Auto_Join_TF.plugin, policy=DIRECT, enabled=false
