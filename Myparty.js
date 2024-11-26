@@ -50,7 +50,8 @@ function main(config) {
     "nameserver": "https://dns.quad9.net/dns-query",
     "nameserver-policy": {
       "geosite:cn": ["223.5.5.5", "119.29.29.29", "https://doh.pub/dns-query"],
-      "geosite:gfw,geolocation-!cn": ["9.9.9.9", "149.112.112.112"]
+      "geosite:gfw,geolocation-!cn": ["9.9.9.9", "149.112.112.112"],
+      "nameserver-policy": "rule-set:AD": "rcode://success",
     }
   };
 
