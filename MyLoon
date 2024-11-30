@@ -130,7 +130,7 @@ GEOIP, !CN, 国外网站
 FINAL, 漏网之鱼
 
 [Remote Rule]
-https://github.com/SunsetMkt/anti-ip-attribution/raw/main/generated/surge.list, policy=Direct, tag=Reject, enabled=true
+https://github.com/SunsetMkt/anti-ip-attribution/raw/main/generated/surge.list, policy=DIRECT, tag=修正, enabled=true
 https://adrules.top/adrules-surge.conf, policy=REJECT-DROP, tag=Adrules, enabled=true
 https://ruleset.skk.moe/List/non_ip/reject.conf, policy=REJECT-DROP, tag=Reject, enabled=true
 https://ruleset.skk.moe/List/domainset/reject.conf, policy=REJECT-TINYGIF, tag=Reject-D, enabled=false
