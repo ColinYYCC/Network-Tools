@@ -131,7 +131,7 @@ FINAL, 漏网之鱼
 
 [Remote Rule]
 # IP归属地更改
-https://github.com/SunsetMkt/anti-ip-attribution/raw/main/generated/surge.list, policy=DIRECT, tag=IP归属地更改, enabled=true
+https://raw.githubusercontent.com/SunsetMkt/anti-ip-attribution/refs/heads/main/generated/surge.list, policy=DIRECT, tag=IP归属地更改, enabled=true
 
 # ADs
 https://adrules.top/adrules-surge.conf, policy=REJECT-DROP, tag=Adrules, enabled=false
