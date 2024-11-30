@@ -130,18 +130,23 @@ GEOIP, !CN, 国外网站
 FINAL, 漏网之鱼
 
 [Remote Rule]
+
 https://github.com/SunsetMkt/anti-ip-attribution/raw/main/generated/surge.list, policy=DIRECT, tag=修正, enabled=true
+
+# ADs
 https://adrules.top/adrules-surge.conf, policy=REJECT-DROP, tag=Adrules, enabled=false
 https://ruleset.skk.moe/List/domainset/reject.conf, policy=REJECT, tag=ADs, enabled=true
 https://ruleset.skk.moe/List/domainset/reject_extra.conf, policy=REJECT, tag=ADs-Extra, enabled=true
 https://ruleset.skk.moe/List/non_ip/reject.conf, policy=REJECT, tag=ADs-NIP, enabled=true
-https://ruleset.skk.moe/List/non_ip/reject-no-drop.conf, policy=REJECT-NO-DROP, tag=防止PCDN, enabled=true // 防止 PCDN
-https://ruleset.skk.moe/List/non_ip/reject-drop.conf, policy=REJECT-DROP, tag=Adobe 系列软件内部的跟踪, enabled=true // Adobe 系列软件内部的跟踪
-# RULE-SET,https://ruleset.skk.moe/List/ip/reject.conf,REJECT-DROP // 广告拦截 IP
+https://ruleset.skk.moe/List/non_ip/reject-no-drop.conf, policy=REJECT-NO-DROP, tag=防止PCDN, enabled=true
+https://ruleset.skk.moe/List/non_ip/reject-drop.conf, policy=REJECT-DROP, tag=Adobe 系列软件内部的跟踪, enabled=true
+#https://ruleset.skk.moe/List/ip/reject.conf, policy=REJECT-DROP, tag=广告拦截 IP, enabled=true
 
 # CDN
 https://ruleset.skk.moe/List/domainset/cdn.conf, policy=国外网站, tag=SukkaW静态CDN域名, enabled=true
 https://ruleset.skk.moe/List/non_ip/cdn.conf, policy=国外网站, tag=SukkaW静态CDN域名, enabled=true
+
+# 国外网址
 https://github.com/Repcz/Tool/raw/X/Loon/Rules/AI.list, policy=AI, tag=AI, enabled=true
 https://github.com/Repcz/Tool/raw/X/Loon/Rules/YouTube.list, policy=谷歌服务, tag=Youtube, enabled=true
 https://github.com/Repcz/Tool/raw/X/Loon/Rules/Google.list, policy=谷歌服务, tag=Google, enabled=true
