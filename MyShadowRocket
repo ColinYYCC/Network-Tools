@@ -40,7 +40,7 @@ udp-policy-not-supported-behaviour = REJECT
 
 🌏 国外网站 = select,🛰️ 自动选择,🔯 故障转移,🔮 负载均衡,🇭🇰 香港节点,🇺🇸 美国节点,🇸🇬 狮城节点,🇯🇵 日本节点,🇨🇳 台湾节点,🇰🇷 韩国节点,interval=86400,timeout=3,select=0,url=http://latency-test.skk.moe/endpoint
 📽️ 国际媒体 = select,🇸🇬 狮城节点,🛰️ 自动选择,🔯 故障转移,🔮 负载均衡,🇭🇰 香港节点,🇺🇸 美国节点,🇯🇵 日本节点,🇨🇳 台湾节点,🇰🇷 韩国节点,interval=86400,timeout=3,select=0,url=http://latency-test.skk.moe/endpoint
- Apple Service = select,🛰️ 自动选择,🔯 故障转移,🔮 负载均衡,🇭🇰 香港节点,🇺🇸 美国节点,🇸🇬 狮城节点,🇯🇵 日本节点,🇨🇳 台湾节点,🇰🇷 韩国节点,interval=86400,timeout=3,select=0,url=http://latency-test.skk.moe/endpoint
+ Apple Service = select, DIRECT, 🛰️ 自动选择,🔯 故障转移,🔮 负载均衡,🇭🇰 香港节点,🇺🇸 美国节点,🇸🇬 狮城节点,🇯🇵 日本节点,🇨🇳 台湾节点,🇰🇷 韩国节点,interval=86400,timeout=3,select=0,url=http://latency-test.skk.moe/endpoint
 🖥️ 微软服务 = select,🛰️ 自动选择,🔯 故障转移,🔮 负载均衡,🇭🇰 香港节点,🇺🇸 美国节点,🇸🇬 狮城节点,🇯🇵 日本节点,🇨🇳 台湾节点,🇰🇷 韩国节点,interval=86400,timeout=3,select=0,url=http://latency-test.skk.moe/endpoint
 🌌 谷歌服务 = select,🇭🇰 香港节点,🛰️ 自动选择,🔯 故障转移,🔮 负载均衡,🇺🇸 美国节点,🇸🇬 狮城节点,🇯🇵 日本节点,🇨🇳 台湾节点,🇰🇷 韩国节点,interval=86400,timeout=3,select=0,url=http://latency-test.skk.moe/endpoint
 📟 电报消息 = select,🇭🇰 香港节点,🛰️ 自动选择,🔯 故障转移,🔮 负载均衡,🇺🇸 美国节点,🇸🇬 狮城节点,🇯🇵 日本节点,🇨🇳 台湾节点,🇰🇷 韩国节点,interval=86400,timeout=3,select=0,url=http://latency-test.skk.moe/endpoint
@@ -76,13 +76,19 @@ RULE-SET,https://ruleset.skk.moe/Clash/non_ip/sogouinput.txt,REJECT-DROP
 
 # 广告拦截
 RULE-SET,https://adrules.top/adrules.list,REJECT-DROP
-RULE-SET,https://ruleset.skk.moe/Clash/non_ip/reject-no-drop.txt,REJECT-DROP
+RULE-SET,https://ruleset.skk.moe/List/domainset/reject.conf,REJECT
+RULE-SET,https://ruleset.skk.moe/List/domainset/reject_extra.conf,REJECT
+RULE-SET,https://ruleset.skk.moe/Clash/non_ip/reject-no-drop.txt,REJECT
 RULE-SET,https://ruleset.skk.moe/Clash/non_ip/reject-drop.txt,REJECT-DROP
-RULE-SET,https://ruleset.skk.moe/Clash/non_ip/reject.txt,REJECT-DROP
+RULE-SET,https://ruleset.skk.moe/Clash/non_ip/reject.txt,REJECT
 
 # 静态CDN域名(強烈建議)
 DOMAIN-SET,https://ruleset.skk.moe/List/domainset/cdn.conf,🌏 国外网站
 DOMAIN-SET,https://ruleset.skk.moe/List/non_ip/cdn.conf,🌏 国外网站
+
+# 苹果服务
+RULE-SET,https://ruleset.skk.moe/List/non_ip/apple_services.conf, Apple Service
+DOMAIN-SET,https://ruleset.skk.moe/List/domainset/apple_cdn.conf,DIRECT
 
 # Telegram
 RULE-SET,https://github.com/LucaLin233/Luca_Conf/blob/main/Surge/Rule/Telegram.list?raw=true,📟 电报消息
@@ -124,10 +130,6 @@ RULE-SET,https://github.com/Repcz/Tool/raw/X/Shadowrocket/Rules/Emby.list,📽�
 RULE-SET,https://ruleset.skk.moe/List/non_ip/global.conf,🌏 国外网站
 # Github
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/GitHub/GitHub.list,🌏 国外网站
-
-# 苹果服务
-RULE-SET,https://ruleset.skk.moe/List/non_ip/apple_services.conf, Apple Service
-DOMAIN-SET,https://ruleset.skk.moe/List/domainset/apple_cdn.conf,DIRECT
 
 # WeChat 微信
 RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/WeChat/WeChat.list,DIRECT
