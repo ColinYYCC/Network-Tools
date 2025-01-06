@@ -209,7 +209,7 @@ Rename = select, policy-path=[输入你的机场订阅链接], update-interval=1
 归属地更改 = select, DIRECT, 香港, 台湾, 新加坡, 日本, 美国, 韩国, icon-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Periscope.png
 
 # Apple
-Apple Services = select, 🎲自动选择, 🔯故障转移, 🔮负载均衡, DIRECT, icon-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Apple.png
+Apple Services = select, DIRECT, 🎲自动选择, 🔯故障转移, 🔮负载均衡, icon-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Apple.png
 
 # Telegram
 Telegram = select, 🎲自动选择, 🔯故障转移, 🔮负载均衡, DIRECT, icon-url=https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/telegram(blue1).png
