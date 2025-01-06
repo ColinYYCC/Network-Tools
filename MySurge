@@ -34,7 +34,6 @@ test-timeout = 3
 
 # > 自定义 GeoIP 数据库
 geoip-maxmind-url = https://github.com/xream/geoip/releases/latest/download/ipinfo.country.mmdb
-# geoip-maxmind-url = https://raw.githubusercontent.com/Repcz/Tool/raw/X/GeoIP/Global_Country.mmdb
 # GeoIP 禁用自动更新
 disable-geoip-db-auto-update = false
 
