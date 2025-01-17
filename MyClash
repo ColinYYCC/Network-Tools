@@ -73,7 +73,7 @@ tun:
   enable: true
   stack: system
   dns-hijack:
-    - any:53
+    - 9.9.9.9:53
   auto-route: true
   auto-detect-interface: true
 
