@@ -41,10 +41,10 @@ external-controller: 0.0.0.0:9090
 # external-ui-url: 'https://github.com/MetaCubeX/metacubexd/archive/refs/heads/gh-pages.zip'
 
 geox-url:
-  geoip: "https://mirror.ghproxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.dat"
+  geoip: "https://github.com/xream/geoip/releases/latest/download/ipinfo.geoip.dat"
   geosite: "https://mirror.ghproxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat"
-  mmdb: "https://mirror.ghproxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/country-lite.mmdb"
-  asn: 'https://gitlab.com/Loon0x00/loon_data/-/raw/main/geo/GeoLite2-ASN.mmdb'
+  mmdb: "https://github.com/xream/geoip/releases/latest/download/ipinfo.country.mmdb"
+  asn: 'https://github.com/xream/geoip/releases/latest/download/ipinfo.asn.mmdb'
 
 profile:
   store-selected: true
@@ -260,7 +260,7 @@ rule-providers:
   ADRules:
     <<: *RuleProviders
     path: './rules/ADRules.text'
-    url: 'https://adrules.top/adrules.list'
+    url: 'https://adrules.top/adrules_domainset.txt'
 
   # 常见静态 CDN
   CDN_domainset: 
