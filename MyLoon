@@ -816,8 +816,11 @@ upos-sz-upcdntx.bilivideo.com = server:https://doh.pub/dns-query
 [Rewrite]
 ^https?://(www.)?g.cn 302 https://www.google.com
 ^https?://(www.)?google.cn 302 https://www.google.com
+^https?://union.click.jd.com/jda? http://union.click.jd.com/jda?adblock= header
 
 [Script]
+http-request ^https?://ios\.prod\.ftl\.netflix\.com/iosui/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
+http-response ^https?://ios\.prod\.ftl\.netflix\.com/iosui/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D requires-body=1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
 
 [Mitm]
 ca-p12 =
