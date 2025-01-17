@@ -87,7 +87,7 @@ function main(config) {
   config["tun"] = {
     "enable": true,
     "stack": "mixed",
-    "dns-hijack": ["1.1.1.1:53","1.0.0.1:53"]
+    "dns-hijack": ["9.9.9.9:53", "149.112.112.112:53"]
   };
 
   // 覆盖策略组
