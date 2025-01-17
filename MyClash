@@ -6,7 +6,7 @@
 p: &p {type: http, interval: 86400, health-check: {enable: true, url: http://latency-test.skk.moe/endpoint, interval: 1800, timeout: 5000}}
 proxy-providers:
   Subscribe: # 在此将 "http://your-service-provider" 替换为你的机场订阅，推荐使用 base64 或者 node list
-    url: https://api.yuyan.vin/api/v1/client/subscribe?token=d06b82045f0ba3a8fc6a473532b50cb7
+    url: http://your-service-provider
     <<: *p
     #override: # 修改节点前后缀时，需移除前方的 "#" 符号
       #additional-prefix: "节点前缀"
