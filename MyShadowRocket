@@ -66,7 +66,7 @@ udp-policy-not-supported-behaviour = REJECT
 DOMAIN-SUFFIX,zoom.us,🌏 国外网站
 
 # 局域网 
-RULE-SET,https://github.com/Repcz/Tool/raw/X/Clash/Rules/Lan.list,DIRECT
+RULE-SET,https://raw.githubusercontent.com/dler-io/Rules/refs/heads/main/Surge/Surge%203/Provider/LAN.list,DIRECT
 
 # 下载服务
 RULE-SET,https://ruleset.skk.moe/Clash/non_ip/direct.txt,DIRECT
@@ -91,27 +91,26 @@ RULE-SET,https://github.com/LucaLin233/Luca_Conf/blob/main/Surge/Rule/Telegram.l
 RULE-SET,https://github.com/Repcz/Tool/raw/X/Shadowrocket/Rules/AI.list,🤖 AI
 
 # Twitter
-RULE-SET,https://github.com/Repcz/Tool/raw/X/Shadowrocket/Rules/Twitter.list,🐦 推特消息
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Twitter/Twitter.list,🐦 推特消息
 
 # 微软服务
-RULE-SET,https://github.com/Repcz/Tool/raw/X/Shadowrocket/Rules/OneDrive.list,🖥️ 微软服务
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/OneDrive/OneDrive.list,🖥️ 微软服务
 RULE-SET,https://github.com/Repcz/Tool/raw/X/Shadowrocket/Rules/Microsoft.list,🖥️ 微软服务
 RULE-SET,https://ruleset.skk.moe/List/non_ip/microsoft_cdn.conf,DIRECT
 
 # 谷歌服务
-RULE-SET,https://github.com/Repcz/Tool/raw/X/Shadowrocket/Rules/YouTube.list,🌌 谷歌服务
-RULE-SET,https://github.com/Repcz/Tool/raw/X/Shadowrocket/Rules/Google.list,🌌 谷歌服务
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/YouTube/YouTube.list,🌌 谷歌服务
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Google/Google.list,🌌 谷歌服务
 
 # Spotify
-RULE-SET,https://github.com/Repcz/Tool/raw/X/Shadowrocket/Rules/Spotify.list,🎵 Spotify
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Spotify/Spotify.list,🎵 Spotify
 
 # 国际媒体
-RULE-SET,https://github.com/Repcz/Tool/raw/X/Shadowrocket/Rules/Bahamut.list,📽️ 国际媒体
-RULE-SET,https://github.com/Repcz/Tool/raw/X/Shadowrocket/Rules/Netflix.list,📽️ 国际媒体
-RULE-SET,https://github.com/Repcz/Tool/raw/X/Shadowrocket/Rules/Disney.list,📽️ 国际媒体
-RULE-SET,https://github.com/Repcz/Tool/raw/X/Shadowrocket/Rules/PrimeVideo.list,📽️ 国际媒体
-RULE-SET,https://github.com/Repcz/Tool/raw/X/Shadowrocket/Rules/HBO.list,📽️ 国际媒体
-RULE-SET,https://github.com/Repcz/Tool/raw/X/Shadowrocket/Rules/TikTok.list,📽️ 国际媒体
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Bahamut/Bahamut.list,📽️ 国际媒体
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Netflix/Netflix.list,📽️ 国际媒体
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Netflix/Netflix.list,📽️ 国际媒体
+RULE-SET,https://raw.githubusercontent.com/dler-io/Rules/main/Surge/Surge%203/Provider/Media/Max.list,📽️ 国际媒体
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/TikTok/TikTok.list,📽️ 国际媒体
 
 # Streaming 国际流媒体服务
 RULE-SET,https://ruleset.skk.moe/List/non_ip/stream.conf,📽️ 国际媒体
