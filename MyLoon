@@ -6,7 +6,10 @@
 # ================
 
 [General]
+# skip-proxy则和HTTP Proxy有关，如果配置了该参数，那么所配置的这些IP段、域名将不会转发到Loon，而是由系统处理
 skip-proxy = localhost,*.local,passenger.t3go.cn,e.crashlytics.com,captive.apple.com,app.yinxiang.com,injections.adguard.org,local.adguard.org,cable.auth.com,www.baidu.com,yunbusiness.ccb.com,*.bankcomm.com,*.ccb.com,*.boc.cn,10.0.0.0/8,100.64.0.0/10,127.0.0.0/8,169.254.0.0/16,172.16.0.0/12,192.168.0.0/16,224.0.0.0/3,::1/128,fc00::/7,fd00::/8,fe80::/10,ff00::/8,2001::/32,2001:db8::/32,2002::/16,::ffff:0:0:0:0/1,::ffff:128:0:0:0/1
+# bypass-tun则和TUN有关，如果配置了该参数，那么所配置的这些IP段、域名就会不交给Loon来处理，系统直接处理
+bypass-tun = 198.51.100.0/24, 203.0.113.0/24, 224.0.0.0/4, 239.255.255.250/32, 240.0.0.0/4, 255.255.255.255/32
 
 # ---(DNS 服务器)---
 # DNS 服务器 (如无必要不建议使用 DNS over HTTPS)
@@ -14,8 +17,8 @@ skip-proxy = localhost,*.local,passenger.t3go.cn,e.crashlytics.com,captive.apple
 dns-server = system,9.9.9.9,149.112.112.112
 # 加密 DNS 服务器设置
 # doh-server = https://dns.quad9.net/dns-query
-# IPv6 支持（默认关闭）
-ipv6 = true
+# ip-mode 支持（默认dual）
+ip-mode = dual
 # 在DNS阶段拒绝域名时采用的方式
 dns-reject-mode = LoopbackIP
 # 域名拒绝规则执行的阶段
@@ -61,11 +64,7 @@ real-ip = *.lan,*.id.ui.direct,cable.auth.com,*.msftconnecttest.com,*.msftncsi.c
 # Cellular: 在WiFi和蜂窝数据都开启的情况下指定使用蜂窝网络
 # Performace: 在WiFi和蜂窝数据都开启的情况下使用最优的网络接口
 # Balance: 在WiFi和蜂窝数据都开启的情况下，均衡使用网络接口
-interface-mode = auto
-
-# > TCP Force HTTP Hosts
-# 让 Loon 把 TCP 连接当作 HTTP 请求来处理。Loon HTTP 引擎将处理这些请求，所有的高级功能，如捕获、重写和脚本等都可以使用。
-force-http-engine-hosts = *.ott.cibntv.net,123.59.31.1,119.18.193.135,122.14.246.33,175.102.178.52
+interface-mode = Performace
 
 # > disable-stun
 # 禁用stun是否禁用stun协议的udp数据，禁用后可以有效解决webrtc的ip泄露
