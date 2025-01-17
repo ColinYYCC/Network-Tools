@@ -265,7 +265,7 @@ rule-providers:
   # 常见静态 CDN
   CDN_domainset: 
     <<: *RuleProviders
-    path: './rules/cdn_domainset.txt
+    path: './rules/cdn_domainset.txt'
     url: 'https://ruleset.skk.moe/Clash/domainset/cdn.txt'
 
   CDN_nonip: 
