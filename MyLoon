@@ -104,7 +104,6 @@ US = NameRegex, FilterKey = "^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄�
 国外网站 = select,🛰️ 自动选择,🔯 故障转移,🔮 负载均衡,香港节点,美国节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/tugepaopao/Image-Storage/master/hand-painted/56.png
 国际媒体 = select,🛰️ 自动选择,🔯 故障转移,🔮 负载均衡,狮城节点,香港节点,美国节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://github.com/tugepaopao/Image-Storage/raw/master/hand-painted/49.png
 微软服务 = select,🛰️ 自动选择,🔯 故障转移,🔮 负载均衡,香港节点,美国节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Microsoft.png
-谷歌服务 = select,🛰️ 自动选择,🔯 故障转移,🔮 负载均衡,香港节点,美国节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://github.com/tugepaopao/Image-Storage/raw/master/cartoon/Cute/google.png
 电报消息 = select,🛰️ 自动选择,🔯 故障转移,🔮 负载均衡,香港节点,美国节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://github.com/tugepaopao/Image-Storage/raw/master/hand-painted/36.png
 推特消息 = select,🛰️ 自动选择,🔯 故障转移,🔮 负载均衡,美国节点,香港节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Twitter.png
 Apple Service = select,DIRECT,🛰️ 自动选择,🔯 故障转移,🔮 负载均衡,美国节点,香港节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Apple.png
@@ -150,9 +149,6 @@ https://ruleset.skk.moe/List/domainset/cdn.conf, policy=国外网站, tag=SukkaW
 https://ruleset.skk.moe/List/non_ip/cdn.conf, policy=国外网站, tag=SukkaW静态CDN域名, enabled=true
 
 # 国外网址
-https://github.com/Repcz/Tool/raw/X/Loon/Rules/AI.list, policy=AI, tag=AI, enabled=true
-https://github.com/Repcz/Tool/raw/X/Loon/Rules/YouTube.list, policy=谷歌服务, tag=Youtube, enabled=true
-https://github.com/Repcz/Tool/raw/X/Loon/Rules/Google.list, policy=谷歌服务, tag=Google, enabled=true
 https://github.com/Repcz/Tool/raw/X/Loon/Rules/Microsoft.list, policy=微软服务, tag=Microsoft, enabled=true
 https://github.com/Repcz/Tool/raw/X/Loon/Rules/Github.list, policy=微软服务, tag=Github, enabled=true
 https://github.com/Repcz/Tool/raw/X/Loon/Rules/Twitter.list, policy=推特消息, tag=Twitter, enabled=true
