@@ -943,7 +943,7 @@ SSID:"Apple Store" suspend=true
 # 需要 Web 验证登录的 Wi-Fi 网络以及路由器已经科学上网的 Surge 挂起
 
 [MITM]
-skip-server-cert-verify = false
+skip-server-cert-verify = true
 tcp-connection = true
 h2 = true
 hostname = www.google.cn
