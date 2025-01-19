@@ -103,7 +103,6 @@ US = NameRegex, FilterKey = "^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄�
 # 分流策略组
 国外网站 = select,🛰️ 自动选择,🔯 故障转移,🔮 负载均衡,香港节点,美国节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/tugepaopao/Image-Storage/master/hand-painted/56.png
 国际媒体 = select,🛰️ 自动选择,🔯 故障转移,🔮 负载均衡,狮城节点,香港节点,美国节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://github.com/tugepaopao/Image-Storage/raw/master/hand-painted/49.png
-微软服务 = select,🛰️ 自动选择,🔯 故障转移,🔮 负载均衡,香港节点,美国节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Microsoft.png
 电报消息 = select,🛰️ 自动选择,🔯 故障转移,🔮 负载均衡,香港节点,美国节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://github.com/tugepaopao/Image-Storage/raw/master/hand-painted/36.png
 推特消息 = select,🛰️ 自动选择,🔯 故障转移,🔮 负载均衡,美国节点,香港节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Twitter.png
 Apple Service = select,DIRECT,🛰️ 自动选择,🔯 故障转移,🔮 负载均衡,美国节点,香港节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Apple.png
@@ -149,8 +148,8 @@ https://ruleset.skk.moe/List/domainset/cdn.conf, policy=国外网站, tag=SukkaW
 https://ruleset.skk.moe/List/non_ip/cdn.conf, policy=国外网站, tag=SukkaW静态CDN域名, enabled=true
 
 # 国外网址
-https://github.com/Repcz/Tool/raw/X/Loon/Rules/Microsoft.list, policy=微软服务, tag=Microsoft, enabled=true
-https://github.com/Repcz/Tool/raw/X/Loon/Rules/Github.list, policy=微软服务, tag=Github, enabled=true
+https://github.com/Repcz/Tool/raw/X/Loon/Rules/Microsoft.list, policy=国外网站, tag=Microsoft, enabled=true
+https://github.com/Repcz/Tool/raw/X/Loon/Rules/Github.list, policy=国外网站, tag=Github, enabled=true
 https://github.com/Repcz/Tool/raw/X/Loon/Rules/Twitter.list, policy=推特消息, tag=Twitter, enabled=true
 https://github.com/LucaLin233/Luca_Conf/blob/main/Surge/Rule/Telegram.list?raw=true, policy=电报消息, tag=Telegram, enabled=true
 https://github.com/Repcz/Tool/raw/X/Loon/Rules/Emby.list, policy=Emby, tag=Emby, enabled=true
@@ -165,9 +164,9 @@ https://github.com/Repcz/Tool/raw/X/Loon/Rules/TikTok.list, policy=国际媒体,
 https://ruleset.skk.moe/List/non_ip/stream.conf, policy=国际媒体, tag=Streaming 国际流媒体服务, enabled=true
 https://ruleset.skk.moe/List/ip/stream.conf, policy=国际媒体, tag=Streaming 国际流媒体服务(IP), enabled=true
 https://ruleset.skk.moe/List/non_ip/global.conf, policy=国外网站, tag=Proxy, enabled=true
+https://ruleset.skk.moe/List/non_ip/apple_cdn.conf, policy=DIRECT, tag=Apple CDN, enabled=true
 https://ruleset.skk.moe/List/non_ip/apple_services.conf, policy=Apple Service, tag=Apple Service, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/WeChat/WeChat.list, policy=DIRECT, tag=WeChat 微信, enabled=true
-https://ruleset.skk.moe/List/non_ip/apple_cdn.conf, policy=DIRECT, tag=Apple CDN, enabled=true
 
 # > 👾Game 游戏(不仅限于UDP, 包括相关CDN)
 # GameList
