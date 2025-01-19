@@ -135,7 +135,7 @@ FINAL, 漏网之鱼
 https://raw.githubusercontent.com/SunsetMkt/anti-ip-attribution/refs/heads/main/generated/surge.list, policy=DIRECT, tag=IP归属地更改, enabled=true
 
 # ADs
-https://adrules.top/adrules.list, policy=REJECT-DROP, tag=Adrules, enabled=true
+https://adrules.top/adrules.list, policy=REJECT, tag=Adrules, enabled=true
 https://ruleset.skk.moe/List/domainset/reject.conf, policy=REJECT, tag=ADs, enabled=true
 https://ruleset.skk.moe/List/domainset/reject_extra.conf, policy=REJECT, tag=ADs-Extra, enabled=true
 https://ruleset.skk.moe/List/non_ip/reject.conf, policy=REJECT, tag=ADs-NIP, enabled=true
