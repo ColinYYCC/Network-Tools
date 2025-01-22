@@ -6,15 +6,15 @@
 # ================
 
 [General]
-# skip-proxy则和HTTP Proxy有关，如果配置了该参数，那么所配置的这些IP段、域名将不会转发到Loon，而是由系统处理
-skip-proxy = localhost,*.local,passenger.t3go.cn,e.crashlytics.com,captive.apple.com,app.yinxiang.com,injections.adguard.org,local.adguard.org,cable.auth.com,www.baidu.com,yunbusiness.ccb.com,*.bankcomm.com,*.ccb.com,*.boc.cn,10.0.0.0/8,100.64.0.0/10,127.0.0.0/8,169.254.0.0/16,172.16.0.0/12,192.168.0.0/16,224.0.0.0/3,::1/128,fc00::/7,fd00::/8,fe80::/10,ff00::/8,2001::/32,2001:db8::/32,2002::/16,::ffff:0:0:0:0/1,::ffff:128:0:0:0/1
-# bypass-tun则和TUN有关，如果配置了该参数，那么所配置的这些IP段、域名就会不交给Loon来处理，系统直接处理
-bypass-tun = 198.51.100.0/24, 203.0.113.0/24, 224.0.0.0/4, 239.255.255.250/32, 240.0.0.0/4, 255.255.255.255/32
+# skip-proxy则和HTTP Proxy有关, 如果配置了该参数, 那么所配置的这些IP段、域名将不会转发到Loon, 而是由系统处理
+skip-proxy = localhost, *.local, passenger.t3go.cn, e.crashlytics.com, captive.apple.com, app.yinxiang.com, injections.adguard.org, local.adguard.org, cable.auth.com, www.baidu.com, yunbusiness.ccb.com, *.bankcomm.com, *.ccb.com, *.boc.cn, 10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/12, 192.168.0.0/16, 224.0.0.0/3, ::1/128, fc00::/7, fd00::/8, fe80::/10, ff00::/8, 2001::/32, 2001:db8::/32, 2002::/16, ::ffff:0:0:0:0/1, ::ffff:128:0:0:0/1
+# bypass-tun则和TUN有关, 如果配置了该参数, 那么所配置的这些IP段、域名就会不交给Loon来处理, 系统直接处理
+bypass-tun = 198.51.100.0/24,  203.0.113.0/24,  224.0.0.0/4,  239.255.255.250/32,  240.0.0.0/4,  255.255.255.255/32
 
 # ---(DNS 服务器)---
 # DNS 服务器 (如无必要不建议使用 DNS over HTTPS)
 # 传统 DNS 服务器设置
-dns-server = system,9.9.9.9,149.112.112.112,2620:fe::fe,2620:fe::9
+dns-server = system, 9.9.9.9, 149.112.112.112, 2620:fe::fe, 2620:fe::9
 # 加密 DNS 服务器设置
 # doh-server = https://dns.quad9.net/dns-query
 # ip-mode 支持（默认dual）
@@ -24,7 +24,7 @@ dns-reject-mode = LoopbackIP
 # 域名拒绝规则执行的阶段
 domain-reject-mode = DNS
 
-# 当UDP的流量规则匹配到相关节点，但该节点不支持UDP或未未开启UDP转发时使用的策略，可选DIRECT、REJECT
+# 当UDP的流量规则匹配到相关节点, 但该节点不支持UDP或未未开启UDP转发时使用的策略, 可选DIRECT、REJECT
 udp-fallback-mode = REJECT
 
 # ---(Wi-Fi 访问)---
@@ -57,21 +57,21 @@ sni-sniffing = true
 resource-parser = https://raw.githubusercontent.com/sub-store-org/Sub-Store/release/sub-store-parser.loon.min.js
 
 # > 以下配置的域名不会使用fakeip进行映射
-real-ip = *.lan,*.id.ui.direct,cable.auth.com,*.msftconnecttest.com,*.msftncsi.com,network-test.debian.org,detectportal.firefox.com,resolver1.opendns.com,*.srv.nintendo.net,*.stun.playstation.net,xbox.*.microsoft.com,*.xboxlive.com,stun.*,global.turn.twilio.com,global.stun.twilio.com,app.yinxiang.com,injections.adguard.org,local.adguard.org,cable.auth.com,localhost.*.qq.com,localhost.*.weixin.qq.com,*.logon.battlenet.com.cn,*.logon.battle.net,*.blzstatic.cn,music.163.com,*.music.163.com,*.126.net,musicapi.taihe.com,music.taihe.com,songsearch.kugou.com,trackercdn.kugou.com,*.kuwo.cn,api-jooxtt.sanook.com,api.joox.com,joox.com,y.qq.com,*.y.qq.com,streamoc.music.tc.qq.com,mobileoc.music.tc.qq.com,isure.stream.qqmusic.qq.com,dl.stream.qqmusic.qq.com,aqqmusic.tc.qq.com,amobile.music.tc.qq.com,*.xiami.com,*.music.migu.cn,music.migu.cn,proxy.golang.org,*.mcdn.bilivideo.cn,*.cmpassport.com,id6.me,open.e.189.cn,opencloud.wostore.cn,auth.wosms.cn,id.mail.wo.cn,mdn.open.wo.cn,hmrz.wo.cn,*.jegotrip.com.cn,*.icitymobile.mobi,*.pingan.com.cn,*.cmbchina.com,pool.ntp.org,*.pool.ntp.org,ntp.*.com,time.*.com,ntp?.*.com,time?.*.com,time.*.gov,time.*.edu.cn,*.ntp.org.cn,PDC._msDCS.*.*,DC._msDCS.*.*,GC._msDCS.*.*
+real-ip = *.lan, *.id.ui.direct, cable.auth.com, *.msftconnecttest.com, *.msftncsi.com, network-test.debian.org, detectportal.firefox.com, resolver1.opendns.com, *.srv.nintendo.net, *.stun.playstation.net, xbox.*.microsoft.com, *.xboxlive.com, stun.*, global.turn.twilio.com, global.stun.twilio.com, app.yinxiang.com, injections.adguard.org, local.adguard.org, cable.auth.com, localhost.*.qq.com, localhost.*.weixin.qq.com, *.logon.battlenet.com.cn, *.logon.battle.net, *.blzstatic.cn, music.163.com, *.music.163.com, *.126.net, musicapi.taihe.com, music.taihe.com, songsearch.kugou.com, trackercdn.kugou.com, *.kuwo.cn, api-jooxtt.sanook.com, api.joox.com, joox.com, y.qq.com, *.y.qq.com, streamoc.music.tc.qq.com, mobileoc.music.tc.qq.com, isure.stream.qqmusic.qq.com, dl.stream.qqmusic.qq.com, aqqmusic.tc.qq.com, amobile.music.tc.qq.com, *.xiami.com, *.music.migu.cn, music.migu.cn, proxy.golang.org, *.mcdn.bilivideo.cn, *.cmpassport.com, id6.me, open.e.189.cn, opencloud.wostore.cn, auth.wosms.cn, id.mail.wo.cn, mdn.open.wo.cn, hmrz.wo.cn, *.jegotrip.com.cn, *.icitymobile.mobi, *.pingan.com.cn, *.cmbchina.com, pool.ntp.org, *.pool.ntp.org, ntp.*.com, time.*.com, ntp?.*.com, time?.*.com, time.*.gov, time.*.edu.cn, *.ntp.org.cn, PDC._msDCS.*.*, DC._msDCS.*.*, GC._msDCS.*.*
 
-# > interface-mode 指定流量使用哪个网络接口进行转发，目前包含三种模式:
+# > interface-mode 指定流量使用哪个网络接口进行转发, 目前包含三种模式:
 # Auto: 系统自动分配
 # Cellular: 在WiFi和蜂窝数据都开启的情况下指定使用蜂窝网络
 # Performace: 在WiFi和蜂窝数据都开启的情况下使用最优的网络接口
-# Balance: 在WiFi和蜂窝数据都开启的情况下，均衡使用网络接口
+# Balance: 在WiFi和蜂窝数据都开启的情况下, 均衡使用网络接口
 interface-mode = Performace
 
 # > hijack-dns
-# 有些app会自己使用自定义的DNS over UDP来解析IP，可以配置相关IP:端口来劫持这些查询，并返回fakeip的响应
+# 有些app会自己使用自定义的DNS over UDP来解析IP, 可以配置相关IP:端口来劫持这些查询, 并返回fakeip的响应
 hijack-dns = 9.9.9.9
 
 # > disable-stun
-# 禁用stun是否禁用stun协议的udp数据，禁用后可以有效解决webrtc的ip泄露
+# 禁用stun是否禁用stun协议的udp数据, 禁用后可以有效解决webrtc的ip泄露
 disable-stun = true
 
 # > 自定义geoip数据库的url
@@ -97,33 +97,33 @@ US = NameRegex, FilterKey = "^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄�
 # ------
 
 [Proxy Group]
-🥡节点选择 = select,🎲 自动选择,🔯 故障转移,🔮 负载均衡,香港节点,美国节点,狮城节点,日本节点,台湾节点,DIRECT,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/Loon_9.png
+🥡节点选择 = select, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, 香港节点, 美国节点, 狮城节点, 日本节点, 台湾节点, DIRECT, url = http://latency-test.skk.moe/endpoint, img-url = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/Loon_9.png
 # ------
 
 # 分流策略组
-国外网站 = select,🎲 自动选择,🔯 故障转移,🔮 负载均衡,香港节点,美国节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/tugepaopao/Image-Storage/master/hand-painted/56.png
-国际媒体 = select,🎲 自动选择,🔯 故障转移,🔮 负载均衡,狮城节点,香港节点,美国节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://github.com/tugepaopao/Image-Storage/raw/master/hand-painted/49.png
-电报消息 = select,🎲 自动选择,🔯 故障转移,🔮 负载均衡,香港节点,美国节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://github.com/tugepaopao/Image-Storage/raw/master/hand-painted/36.png
-推特消息 = select,🎲 自动选择,🔯 故障转移,🔮 负载均衡,美国节点,香港节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Twitter.png
-Apple Service = select,DIRECT,🎲 自动选择,🔯 故障转移,🔮 负载均衡,美国节点,香港节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Apple.png
-AI = select,美国节点,🎲 自动选择,🔯 故障转移,🔮 负载均衡,香港节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png
-游戏 = select,DIRECT,🎲 自动选择,🔯 故障转移,游戏节点,香港节点,美国节点,url = http://latency-test.skk.moe/endpoint,img-url = https://github.com/tugepaopao/Image-Storage/raw/master/hand-painted/35.png
-Emby = select,🎲 自动选择,🔯 故障转移,🔮 负载均衡,香港节点,美国节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
-Spotify = select,🎲 自动选择,🔯 故障转移,🔮 负载均衡,香港节点,美国节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://github.com/tugepaopao/Image-Storage/raw/master/cartoon/Cute/spotify.png
-漏网之鱼 = select,🎲 自动选择,🔯 故障转移,🔮 负载均衡,DIRECT,香港节点,美国节点,狮城节点,日本节点,韩国节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Snapfish.png
+国外网站 = select, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, 香港节点, 美国节点, 狮城节点, 日本节点, 台湾节点, url = http://latency-test.skk.moe/endpoint, img-url = https://raw.githubusercontent.com/tugepaopao/Image-Storage/master/hand-painted/56.png
+国际媒体 = select, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, 狮城节点, 香港节点, 美国节点, 日本节点, 台湾节点, url = http://latency-test.skk.moe/endpoint, img-url = https://github.com/tugepaopao/Image-Storage/raw/master/hand-painted/49.png
+电报消息 = select, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, 香港节点, 美国节点, 狮城节点, 日本节点, 台湾节点, url = http://latency-test.skk.moe/endpoint, img-url = https://github.com/tugepaopao/Image-Storage/raw/master/hand-painted/36.png
+推特消息 = select, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, 美国节点, 香港节点, 狮城节点, 日本节点, 台湾节点, url = http://latency-test.skk.moe/endpoint, img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Twitter.png
+Apple Service = select, DIRECT, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, 美国节点, 香港节点, 狮城节点, 日本节点, 台湾节点, url = http://latency-test.skk.moe/endpoint, img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Apple.png
+AI = select, 美国节点, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, 香港节点, 狮城节点, 日本节点, 台湾节点, url = http://latency-test.skk.moe/endpoint, img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png
+游戏 = select, DIRECT, 🎲 自动选择, 🔯 故障转移, 游戏节点, 香港节点, 美国节点, url = http://latency-test.skk.moe/endpoint, img-url = https://github.com/tugepaopao/Image-Storage/raw/master/hand-painted/35.png
+Emby = select, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, 香港节点, 美国节点, 狮城节点, 日本节点, 台湾节点, url = http://latency-test.skk.moe/endpoint, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
+Spotify = select, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, 香港节点, 美国节点, 狮城节点, 日本节点, 台湾节点, url = http://latency-test.skk.moe/endpoint, img-url = https://github.com/tugepaopao/Image-Storage/raw/master/cartoon/Cute/spotify.png
+漏网之鱼 = select, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, DIRECT, 香港节点, 美国节点, 狮城节点, 日本节点, 韩国节点, 台湾节点, url = http://latency-test.skk.moe/endpoint, img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Snapfish.png
 # ------
 
 # 地区策略组
-🎲 自动选择 = url-test,All,url = http://latency-test.skk.moe/endpoint,interval = 300,tolerance = 30,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Auto_Speed.png
-🔯 故障转移 = fallback,All,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Server.png
-🔮 负载均衡 = load-balance,All,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,algorithm = pcc,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Available.png
-游戏节点 = url-test,Game,url = http://latency-test.skk.moe/endpoint,interval = 300,tolerance = 30,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png
-香港 = fallback,HK,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png
-美国 = fallback,US,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/United_States.png
-狮城 = fallback,SG,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Singapore.png}
-日本 = fallback,JP,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Japan.png
-韩国 = fallback,KR,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/South_Korea.png
-台湾 = fallback,TW,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Taiwan.png
+🎲 自动选择 = url-test, All, url = http://latency-test.skk.moe/endpoint, interval = 300, tolerance = 30, img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Auto_Speed.png
+🔯 故障转移 = fallback, All, url = http://latency-test.skk.moe/endpoint, interval = 300, max-timeout = 3000, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Server.png
+🔮 负载均衡 = load-balance, All, url = http://latency-test.skk.moe/endpoint, interval = 300, max-timeout = 3000, algorithm = pcc, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Available.png
+游戏节点 = url-test, Game, url = http://latency-test.skk.moe/endpoint, interval = 300, tolerance = 30, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png
+香港 = fallback, HK, url = http://latency-test.skk.moe/endpoint, interval = 300, max-timeout = 3000, img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png
+美国 = fallback, US, url = http://latency-test.skk.moe/endpoint, interval = 300, max-timeout = 3000, img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/United_States.png
+狮城 = fallback, SG, url = http://latency-test.skk.moe/endpoint, interval = 300, max-timeout = 3000, img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Singapore.png}
+日本 = fallback, JP, url = http://latency-test.skk.moe/endpoint, interval = 300, max-timeout = 3000, img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Japan.png
+韩国 = fallback, KR, url = http://latency-test.skk.moe/endpoint, interval = 300, max-timeout = 3000, img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/South_Korea.png
+台湾 = fallback, TW, url = http://latency-test.skk.moe/endpoint, interval = 300, max-timeout = 3000, img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Taiwan.png
 # ------
 
 [Rule]
@@ -148,7 +148,7 @@ https://ruleset.skk.moe/List/domainset/cdn.conf, policy=国外网站, tag=SukkaW
 https://ruleset.skk.moe/List/non_ip/cdn.conf, policy=国外网站, tag=SukkaW静态CDN域名, enabled=true
 
 # TV+
-PROCESS-NAME,/System/Applications/TV.app/Contents/MacOS/TV, policy=国外网站, tag=TV+, enabled=true
+PROCESS-NAME, /System/Applications/TV.app/Contents/MacOS/TV, policy=国外网站, tag=TV+, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/AppleTV/AppleTV.list, policy=国外网站, tag=TV+, enabled=true
 # Disney+
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Disney/Disney.list, policy=Disney+, tag=Disney+, enabled=true
@@ -166,28 +166,28 @@ https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/
 # 巴哈姆特
 https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Streaming/Video/Bahamut.list, policy=台湾, tag=巴哈姆特, enabled=true
 # Hami Video
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/HamiVideo/HamiVideo.list,policy=台湾, tag=Hami Video, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/HamiVideo/HamiVideo.list, policy=台湾, tag=Hami Video, enabled=true
 # Niconico
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Niconico/Niconico.list,policy=日本, tag=Niconico, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Niconico/Niconico.list, policy=日本, tag=Niconico, enabled=true
 # HBO
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/HBOUSA/HBOUSA.list,policy=美国, tag=HBO MAX, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/HBOHK/HBOHK.list,policy=香港, tag=HBO GO ASIA, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/HBOUSA/HBOUSA.list, policy=美国, tag=HBO MAX, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/HBOHK/HBOHK.list, policy=香港, tag=HBO GO ASIA, enabled=true
 # Hulu
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/HuluUSA/HuluUSA.list,policy=美国, tag=Hulu, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/HuluJP/HuluJP.list,policy=日本, tag=HuluJP, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/HuluUSA/HuluUSA.list, policy=美国, tag=Hulu, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/HuluJP/HuluJP.list, policy=日本, tag=HuluJP, enabled=true
 # BiliBili
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/BiliBiliIntl/BiliBiliIntl.list,policy=国外网站, tag=BiliBili, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/BiliBiliIntl/BiliBiliIntl.list, policy=国外网站, tag=BiliBili, enabled=true
 
 # Streaming 国际流媒体服务
-https://ruleset.skk.moe/List/non_ip/stream.conf,policy=国外网站, tag=Streaming 国际流媒体服务, enabled=true // Streaming 国际流媒体服务
-https://ruleset.skk.moe/List/ip/stream.conf,policy=国外网站, tag=Streaming 国际流媒体服务(IP), enabled=true // Streaming 国际流媒体服务(IP)
+https://ruleset.skk.moe/List/non_ip/stream.conf, policy=国外网站, tag=Streaming 国际流媒体服务, enabled=true // Streaming 国际流媒体服务
+https://ruleset.skk.moe/List/ip/stream.conf, policy=国外网站, tag=Streaming 国际流媒体服务(IP), enabled=true // Streaming 国际流媒体服务(IP)
 
 # 国外网站
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/GitHub/GitHub.list,policy=自选节点, tag=Github, enabled=true // Github
-https://ruleset.skk.moe/List/non_ip/global.conf,policy=自选节点, tag=国外网站, enabled=true // 国外网站
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/GitHub/GitHub.list, policy=自选节点, tag=Github, enabled=true // Github
+https://ruleset.skk.moe/List/non_ip/global.conf, policy=自选节点, tag=国外网站, enabled=true // 国外网站
 
 # Telegram 电报
-https://github.com/LucaLin233/Luca_Conf/blob/main/Surge/Rule/Telegram.list?raw=true,policy=Telegram, tag=Telegram 电报, enabled=true
+https://github.com/LucaLin233/Luca_Conf/blob/main/Surge/Rule/Telegram.list?raw=true, policy=Telegram, tag=Telegram 电报, enabled=true
 
 
 # > 👾Game 游戏(不仅限于UDP, 包括相关CDN)
@@ -241,8 +241,8 @@ https://kelee.one/Tool/Loon/Plugin/Tieba_remove_ads.plugin, enabled=true
 https://kelee.one/Tool/Loon/Plugin/JD_remove_ads.plugin, enabled=true
 https://kelee.one/Tool/Loon/Plugin/Weibo_remove_ads.plugin, enabled=true
 https://kelee.one/Tool/Loon/Plugin/Zhihu_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Aiinquiry_remove_ads.plugin,enabled=true
-https://kelee.one/Tool/Loon/Plugin/DiDi_remove_ads.plugin,enabled=true
+https://kelee.one/Tool/Loon/Plugin/Aiinquiry_remove_ads.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/DiDi_remove_ads.plugin, enabled=true
 https://kelee.one/Tool/Loon/Plugin/BabyTree_remove_ads.plugin, enabled=true
 https://kelee.one/Tool/Loon/Plugin/RedPaper_remove_ads.plugin, enabled=true
 https://kelee.one/Tool/Loon/Plugin/PiPiXia_remove_ads.plugin, enabled=true
@@ -840,7 +840,7 @@ upos-sz-upcdntx.bilivideo.com = server:https://doh.pub/dns-query
 
 [Script]
 http-request ^https?://ios\.prod\.ftl\.netflix\.com/iosui/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
-http-response ^https?://ios\.prod\.ftl\.netflix\.com/iosui/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D requires-body=1,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
+http-response ^https?://ios\.prod\.ftl\.netflix\.com/iosui/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D requires-body=1, script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
 
 [Mitm]
 ca-p12 =
