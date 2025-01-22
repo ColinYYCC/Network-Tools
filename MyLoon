@@ -97,33 +97,33 @@ US = NameRegex, FilterKey = "^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄�
 # ------
 
 [Proxy Group]
-全球节点 = select,🛰️ 自动选择,🔯 故障转移,🔮 负载均衡,香港节点,美国节点,狮城节点,日本节点,台湾节点,DIRECT,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/Loon_9.png
+🥡节点选择 = select,🎲 自动选择,🔯 故障转移,🔮 负载均衡,香港节点,美国节点,狮城节点,日本节点,台湾节点,DIRECT,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/Loon_9.png
 # ------
 
 # 分流策略组
-国外网站 = select,🛰️ 自动选择,🔯 故障转移,🔮 负载均衡,香港节点,美国节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/tugepaopao/Image-Storage/master/hand-painted/56.png
-国际媒体 = select,🛰️ 自动选择,🔯 故障转移,🔮 负载均衡,狮城节点,香港节点,美国节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://github.com/tugepaopao/Image-Storage/raw/master/hand-painted/49.png
-电报消息 = select,🛰️ 自动选择,🔯 故障转移,🔮 负载均衡,香港节点,美国节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://github.com/tugepaopao/Image-Storage/raw/master/hand-painted/36.png
-推特消息 = select,🛰️ 自动选择,🔯 故障转移,🔮 负载均衡,美国节点,香港节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Twitter.png
-Apple Service = select,DIRECT,🛰️ 自动选择,🔯 故障转移,🔮 负载均衡,美国节点,香港节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Apple.png
-AI = select,美国节点,🛰️ 自动选择,🔯 故障转移,🔮 负载均衡,香港节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png
-游戏 = select,DIRECT,🛰️ 自动选择,🔯 故障转移,游戏节点,香港节点,美国节点,url = http://latency-test.skk.moe/endpoint,img-url = https://github.com/tugepaopao/Image-Storage/raw/master/hand-painted/35.png
-Emby = select,🛰️ 自动选择,🔯 故障转移,🔮 负载均衡,香港节点,美国节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
-Spotify = select,🛰️ 自动选择,🔯 故障转移,🔮 负载均衡,香港节点,美国节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://github.com/tugepaopao/Image-Storage/raw/master/cartoon/Cute/spotify.png
-漏网之鱼 = select,🛰️ 自动选择,🔯 故障转移,🔮 负载均衡,DIRECT,香港节点,美国节点,狮城节点,日本节点,韩国节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Snapfish.png
+国外网站 = select,🎲 自动选择,🔯 故障转移,🔮 负载均衡,香港节点,美国节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/tugepaopao/Image-Storage/master/hand-painted/56.png
+国际媒体 = select,🎲 自动选择,🔯 故障转移,🔮 负载均衡,狮城节点,香港节点,美国节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://github.com/tugepaopao/Image-Storage/raw/master/hand-painted/49.png
+电报消息 = select,🎲 自动选择,🔯 故障转移,🔮 负载均衡,香港节点,美国节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://github.com/tugepaopao/Image-Storage/raw/master/hand-painted/36.png
+推特消息 = select,🎲 自动选择,🔯 故障转移,🔮 负载均衡,美国节点,香港节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Twitter.png
+Apple Service = select,DIRECT,🎲 自动选择,🔯 故障转移,🔮 负载均衡,美国节点,香港节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Apple.png
+AI = select,美国节点,🎲 自动选择,🔯 故障转移,🔮 负载均衡,香港节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png
+游戏 = select,DIRECT,🎲 自动选择,🔯 故障转移,游戏节点,香港节点,美国节点,url = http://latency-test.skk.moe/endpoint,img-url = https://github.com/tugepaopao/Image-Storage/raw/master/hand-painted/35.png
+Emby = select,🎲 自动选择,🔯 故障转移,🔮 负载均衡,香港节点,美国节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
+Spotify = select,🎲 自动选择,🔯 故障转移,🔮 负载均衡,香港节点,美国节点,狮城节点,日本节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://github.com/tugepaopao/Image-Storage/raw/master/cartoon/Cute/spotify.png
+漏网之鱼 = select,🎲 自动选择,🔯 故障转移,🔮 负载均衡,DIRECT,香港节点,美国节点,狮城节点,日本节点,韩国节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Snapfish.png
 # ------
 
 # 地区策略组
-🛰️ 自动选择 = url-test,All,url = http://latency-test.skk.moe/endpoint,interval = 300,tolerance = 30,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Auto_Speed.png
+🎲 自动选择 = url-test,All,url = http://latency-test.skk.moe/endpoint,interval = 300,tolerance = 30,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Auto_Speed.png
 🔯 故障转移 = fallback,All,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Server.png
 🔮 负载均衡 = load-balance,All,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,algorithm = pcc,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Available.png
 游戏节点 = url-test,Game,url = http://latency-test.skk.moe/endpoint,interval = 300,tolerance = 30,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png
-香港节点 = fallback,HK,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png
-美国节点 = fallback,US,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/United_States.png
-狮城节点 = fallback,SG,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Singapore.png}
-日本节点 = fallback,JP,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Japan.png
-韩国节点 = fallback,KR,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/South_Korea.png
-台湾节点 = fallback,TW,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Taiwan.png
+香港 = fallback,HK,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png
+美国 = fallback,US,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/United_States.png
+狮城 = fallback,SG,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Singapore.png}
+日本 = fallback,JP,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Japan.png
+韩国 = fallback,KR,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/South_Korea.png
+台湾 = fallback,TW,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Taiwan.png
 # ------
 
 [Rule]
@@ -147,54 +147,76 @@ https://ruleset.skk.moe/List/non_ip/reject-drop.conf, policy=REJECT-DROP, tag=Ad
 https://ruleset.skk.moe/List/domainset/cdn.conf, policy=国外网站, tag=SukkaW静态CDN域名, enabled=true
 https://ruleset.skk.moe/List/non_ip/cdn.conf, policy=国外网站, tag=SukkaW静态CDN域名, enabled=true
 
-# 国外网址
-https://github.com/Repcz/Tool/raw/X/Loon/Rules/Microsoft.list, policy=国外网站, tag=Microsoft, enabled=true
-https://github.com/Repcz/Tool/raw/X/Loon/Rules/Github.list, policy=国外网站, tag=Github, enabled=true
-https://github.com/Repcz/Tool/raw/X/Loon/Rules/Twitter.list, policy=推特消息, tag=Twitter, enabled=true
-https://github.com/LucaLin233/Luca_Conf/blob/main/Surge/Rule/Telegram.list?raw=true, policy=电报消息, tag=Telegram, enabled=true
-https://github.com/Repcz/Tool/raw/X/Loon/Rules/Emby.list, policy=Emby, tag=Emby, enabled=true
-https://github.com/Repcz/Tool/raw/X/Loon/Rules/Spotify.list, policy=Spotify, tag=Spotif, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/AppleTV/AppleTV.list, policy=国际媒体, tag=AppleTV., enabled=true
-https://github.com/Repcz/Tool/raw/X/Loon/Rules/Bahamut.list, policy=国际媒体, tag=Bahamut, enabled=true
-https://github.com/Repcz/Tool/raw/X/Loon/Rules/Netflix.list, policy=国际媒体, tag=Netflix, enabled=true
-https://github.com/Repcz/Tool/raw/X/Loon/Rules/Disney.list, policy=国际媒体, tag=Disney, enabled=true
-https://github.com/Repcz/Tool/raw/X/Loon/Rules/PrimeVideo.list, policy=国际媒体, tag=PrimeVideo, enabled=true
-https://github.com/Repcz/Tool/raw/X/Loon/Rules/HBO.list, policy=国际媒体, tag=HBO, enabled=true
-https://github.com/Repcz/Tool/raw/X/Loon/Rules/TikTok.list, policy=国际媒体, tag=TikTok, enabled=true
-https://ruleset.skk.moe/List/non_ip/stream.conf, policy=国际媒体, tag=Streaming 国际流媒体服务, enabled=true
-https://ruleset.skk.moe/List/ip/stream.conf, policy=国际媒体, tag=Streaming 国际流媒体服务(IP), enabled=true
-https://ruleset.skk.moe/List/non_ip/global.conf, policy=国外网站, tag=Proxy, enabled=true
-https://ruleset.skk.moe/List/non_ip/apple_cdn.conf, policy=DIRECT, tag=Apple CDN, enabled=true
-https://ruleset.skk.moe/List/non_ip/apple_services.conf, policy=Apple Service, tag=Apple Service, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/WeChat/WeChat.list, policy=DIRECT, tag=WeChat 微信, enabled=true
+# TV+
+PROCESS-NAME,/System/Applications/TV.app/Contents/MacOS/TV, policy=国外网站, tag=TV+, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/AppleTV/AppleTV.list, policy=国外网站, tag=TV+, enabled=true
+# Disney+
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Disney/Disney.list, policy=Disney+, tag=Disney+, enabled=true
+# Emby
+https://github.com/Repcz/Tool/raw/X/Surge/Rules/Emby.list, policy=Emby, tag=Emby, enabled=true
+# Netflix
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Netflix/Netflix.list, policy=Netflix, tag=Netflix, enabled=true
+# YouTube
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/YouTube/YouTube.list, policy=国外网站, tag=YouTube, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/YouTubeMusic/YouTubeMusic.list, policy=国外网站, tag=YouTube, enabled=true
+# Spotify
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Spotify/Spotify.list, policy=国外网站, tag=Spotify, enabled=true
+# Now E
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/NowE/NowE.list, policy=香港, tag=Now E, enabled=true
+# 巴哈姆特
+https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Streaming/Video/Bahamut.list, policy=台湾, tag=巴哈姆特, enabled=true
+# Hami Video
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/HamiVideo/HamiVideo.list,policy=台湾, tag=Hami Video, enabled=true
+# Niconico
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Niconico/Niconico.list,policy=日本, tag=Niconico, enabled=true
+# HBO
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/HBOUSA/HBOUSA.list,policy=美国, tag=HBO MAX, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/HBOHK/HBOHK.list,policy=香港, tag=HBO GO ASIA, enabled=true
+# Hulu
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/HuluUSA/HuluUSA.list,policy=美国, tag=Hulu, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/HuluJP/HuluJP.list,policy=日本, tag=HuluJP, enabled=true
+# BiliBili
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/BiliBiliIntl/BiliBiliIntl.list,policy=国外网站, tag=BiliBili, enabled=true
+
+# Streaming 国际流媒体服务
+https://ruleset.skk.moe/List/non_ip/stream.conf,policy=国外网站, tag=Streaming 国际流媒体服务, enabled=true // Streaming 国际流媒体服务
+https://ruleset.skk.moe/List/ip/stream.conf,policy=国外网站, tag=Streaming 国际流媒体服务(IP), enabled=true // Streaming 国际流媒体服务(IP)
+
+# 国外网站
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/GitHub/GitHub.list,policy=自选节点, tag=Github, enabled=true // Github
+https://ruleset.skk.moe/List/non_ip/global.conf,policy=自选节点, tag=国外网站, enabled=true // 国外网站
+
+# Telegram 电报
+https://github.com/LucaLin233/Luca_Conf/blob/main/Surge/Rule/Telegram.list?raw=true,policy=Telegram, tag=Telegram 电报, enabled=true
+
 
 # > 👾Game 游戏(不仅限于UDP, 包括相关CDN)
 # GameList
-# https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Game/Game.list, policy=游戏, tag=GameList, enabled=true // GameList
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Blizzard/Blizzard.list, policy=游戏, tag=暴雪娱乐 Blizzard, enabled=true // 暴雪娱乐 Blizzard
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Classic/Classic.list, policy=游戏, tag=Classic, enabled=true // Classic
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/DiabloIII/DiabloIII.list, policy=游戏, tag=暗黑破坏神III DiabloIII, enabled=true // 暗黑破坏神III DiabloIII
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Hearthstone/Hearthstone.list, policy=游戏, tag=炉石传说 Hearthstone, enabled=true // 炉石传说 Hearthstone
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/HeroesoftheStorm/HeroesoftheStorm.list, policy=游戏, tag=风暴英雄 HeroesoftheStorm, enabled=true // 风暴英雄 HeroesoftheStorm
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Rockstar/Rockstar.list, policy=游戏, tag=侠盗猎车手 Rockstar, enabled=true // 侠盗猎车手 Rockstar
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Overwatch/Overwatch.list, policy=游戏, tag=守望先锋 Overwatch, enabled=true // 守望先锋 Overwatch
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/StarCraftII/StarCraftII.list, policy=游戏, tag=星海爭霸II StarCraftII, enabled=true // 星海爭霸II StarCraftII
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/WildRift/WildRift.list, policy=游戏, tag=英雄联盟手游 WildRift, enabled=true // 英雄联盟手游 WildRift
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/WorldofWarcraft/WorldofWarcraft.list, policy=游戏, tag=魔兽世界WorldofWarcraft, enabled=true // 魔兽世界WorldofWarcraft
+# https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Game/Game.list, policy=游戏, tag=GameList, enabled=true // GameList
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Blizzard/Blizzard.list, policy=游戏, tag=暴雪娱乐 Blizzard, enabled=true // 暴雪娱乐 Blizzard
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Classic/Classic.list, policy=游戏, tag=Classic, enabled=true // Classic
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/DiabloIII/DiabloIII.list, policy=游戏, tag=暗黑破坏神III DiabloIII, enabled=true // 暗黑破坏神III DiabloIII
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Hearthstone/Hearthstone.list, policy=游戏, tag=炉石传说 Hearthstone, enabled=true // 炉石传说 Hearthstone
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/HeroesoftheStorm/HeroesoftheStorm.list, policy=游戏, tag=风暴英雄 HeroesoftheStorm, enabled=true // 风暴英雄 HeroesoftheStorm
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Rockstar/Rockstar.list, policy=游戏, tag=侠盗猎车手 Rockstar, enabled=true // 侠盗猎车手 Rockstar
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Overwatch/Overwatch.list, policy=游戏, tag=守望先锋 Overwatch, enabled=true // 守望先锋 Overwatch
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/StarCraftII/StarCraftII.list, policy=游戏, tag=星海爭霸II StarCraftII, enabled=true // 星海爭霸II StarCraftII
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/WildRift/WildRift.list, policy=游戏, tag=英雄联盟手游 WildRift, enabled=true // 英雄联盟手游 WildRift
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/WorldofWarcraft/WorldofWarcraft.list, policy=游戏, tag=魔兽世界WorldofWarcraft, enabled=true // 魔兽世界WorldofWarcraft
 
 # Game Publisher
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Discord/Discord.list, policy=游戏, tag=Discord, enabled=true // Discord
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/EA/EA.list, policy=游戏, tag=EA, enabled=true // EA
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Epic/Epic.list, policy=游戏, tag=Epic, enabled=true // Epic
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/HoYoverse/HoYoverse.list, policy=游戏, tag=米哈游, enabled=true // 米哈游
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Nintendo/Nintendo.list, policy=游戏, tag=任天堂 Nintendo, enabled=true // 任天堂 Nintendo
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Origin/Origin.list, policy=游戏, tag=Origin, enabled=true // Origin
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/PlayStation/PlayStation.list, policy=游戏, tag=PlayStation, enabled=true // PlayStation
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Steam/Steam.list, policy=游戏, tag=Steam, enabled=true // Steam
-# https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/SteamCN/SteamCN.list, policy=游戏, tag=SteamCN, enabled=true // SteamCN
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Supercell/Supercell.list, policy=游戏, tag=部落冲突 Supercell, enabled=true // 部落冲突 Supercell
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/UBI/UBI.list, policy=游戏, tag=UBI, enabled=true // UBI
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Surge/Xbox/Xbox.list, policy=游戏, tag=Xbox, enabled=true // Xbox
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Discord/Discord.list, policy=游戏, tag=Discord, enabled=true // Discord
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/EA/EA.list, policy=游戏, tag=EA, enabled=true // EA
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Epic/Epic.list, policy=游戏, tag=Epic, enabled=true // Epic
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/HoYoverse/HoYoverse.list, policy=游戏, tag=米哈游, enabled=true // 米哈游
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Nintendo/Nintendo.list, policy=游戏, tag=任天堂 Nintendo, enabled=true // 任天堂 Nintendo
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Origin/Origin.list, policy=游戏, tag=Origin, enabled=true // Origin
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/PlayStation/PlayStation.list, policy=游戏, tag=PlayStation, enabled=true // PlayStation
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Steam/Steam.list, policy=游戏, tag=Steam, enabled=true // Steam
+# https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/SteamCN/SteamCN.list, policy=游戏, tag=SteamCN, enabled=true // SteamCN
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Supercell/Supercell.list, policy=游戏, tag=部落冲突 Supercell, enabled=true // 部落冲突 Supercell
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/UBI/UBI.list, policy=游戏, tag=UBI, enabled=true // UBI
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Xbox/Xbox.list, policy=游戏, tag=Xbox, enabled=true // Xbox
 
 # 中国直连
 https://ruleset.skk.moe/List/non_ip/domestic.conf, policy=DIRECT, tag=国內直连, enabled=true
