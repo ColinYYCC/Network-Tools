@@ -148,7 +148,6 @@ https://ruleset.skk.moe/List/domainset/cdn.conf, policy=国外网站, tag=SukkaW
 https://ruleset.skk.moe/List/non_ip/cdn.conf, policy=国外网站, tag=SukkaW静态CDN域名, enabled=true
 
 # TV+
-PROCESS-NAME, /System/Applications/TV.app/Contents/MacOS/TV, policy=国外网站, tag=TV+, enabled=true
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/AppleTV/AppleTV.list, policy=国外网站, tag=TV+, enabled=true
 # Disney+
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Disney/Disney.list, policy=Disney+, tag=Disney+, enabled=true
