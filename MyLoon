@@ -97,7 +97,7 @@ US = NameRegex, FilterKey = "^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄�
 # ------
 
 [Proxy Group]
-🥡节点选择 = select, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, 香港节点, 美国节点, 狮城节点, 日本节点, 台湾节点, DIRECT, url = http://latency-test.skk.moe/endpoint, img-url = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/Loon_9.png
+🥡 节点选择 = select, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, 香港节点, 美国节点, 狮城节点, 日本节点, 台湾节点, DIRECT, url = http://latency-test.skk.moe/endpoint, img-url = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/Loon_9.png
 # ------
 
 # 分流策略组
@@ -183,8 +183,8 @@ https://ruleset.skk.moe/List/non_ip/stream.conf, policy=国外网站, tag=Stream
 https://ruleset.skk.moe/List/ip/stream.conf, policy=国外网站, tag=Streaming 国际流媒体服务(IP), enabled=true // Streaming 国际流媒体服务(IP)
 
 # 国外网站
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/GitHub/GitHub.list, policy=自选节点, tag=Github, enabled=true // Github
-https://ruleset.skk.moe/List/non_ip/global.conf, policy=自选节点, tag=国外网站, enabled=true // 国外网站
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/GitHub/GitHub.list, policy=🥡 节点选择, tag=Github, enabled=true // Github
+https://ruleset.skk.moe/List/non_ip/global.conf, policy=🥡 节点选择, tag=国外网站, enabled=true // 国外网站
 
 # Telegram 电报
 https://github.com/LucaLin233/Luca_Conf/blob/main/Surge/Rule/Telegram.list?raw=true, policy=Telegram, tag=Telegram 电报, enabled=true
