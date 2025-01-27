@@ -1,4 +1,4 @@
-# 基于[@Repcz][@iKeLee]修改
+# 基于[@iKeLee]修改
 # Author:https://github.com/ColinYYCC
 # 以 ';' 或 '#' 或 '//' 开头的配置文件行为注释行
 #
@@ -127,7 +127,68 @@ Spotify = select, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, 香�
 # ------
 
 [Rule]
-GEOIP, !CN, 国外网站
+# --- CUSTOM RULES ---
+# 自定义规则
+## 您可以在此处插入自定义规则
+
+# 新增内置策略 NO-HYBRID，等价为 NO-HYBRID = direct, hybrid=off
+DOMAIN-SUFFIX,cmbchina.com,NO-HYBRID
+
+# Process 程序规则
+# > Client
+# Proxy
+# Download
+DOMAIN-SUFFIX,smtp,DIRECT
+DOMAIN-KEYWORD,aria2,DIRECT
+# BT
+DOMAIN-KEYWORD,announce,DIRECT
+DOMAIN-KEYWORD,torrent,DIRECT
+DOMAIN-KEYWORD,tracker,DIRECT
+
+# Web Controller 网页控制器规则
+# > Surge
+DOMAIN,yasd.royli.dev,DIRECT
+# > Clash
+DOMAIN,clash.razord.top,DIRECT
+DOMAIN,yacd.haishan.me,DIRECT
+# > BoxJs
+DOMAIN,boxjs.com,DIRECT
+DOMAIN,boxjs.net,DIRECT
+
+# Local Area Network 本地局域网
+DOMAIN-SUFFIX,direct,DIRECT
+DOMAIN-SUFFIX,wpad,DIRECT
+DOMAIN-SUFFIX,local,DIRECT
+DOMAIN-SUFFIX,localhost,DIRECT
+DOMAIN-SUFFIX,invalid,DIRECT
+DOMAIN-SUFFIX,onion,DIRECT
+DOMAIN-SUFFIX,test,DIRECT
+DOMAIN-SUFFIX,lan,DIRECT
+DOMAIN-SUFFIX,intranet,DIRECT
+DOMAIN-SUFFIX,internal,DIRECT
+DOMAIN-SUFFIX,private,DIRECT
+DOMAIN-SUFFIX,home,DIRECT
+DOMAIN-SUFFIX,corp,DIRECT
+IP-CIDR,10.0.0.0/8,DIRECT
+IP-CIDR,100.64.0.0/10,DIRECT
+IP-CIDR,127.0.0.0/8,DIRECT
+IP-CIDR,169.254.0.0/16,DIRECT
+IP-CIDR,172.16.0.0/12,DIRECT
+IP-CIDR,192.168.0.0/16,DIRECT
+IP-CIDR,224.0.0.0/4,DIRECT
+IP-CIDR,240.0.0.0/4,DIRECT
+IP-CIDR,255.255.255.255/32,DIRECT
+IP-CIDR6,fc00::/7,DIRECT
+IP-CIDR6,fd00::/8,DIRECT
+IP-CIDR6,fe80::/10,DIRECT
+IP-CIDR6,ff00::/8,DIRECT
+IP-CIDR6,ff01::/16,DIRECT
+IP-CIDR6,ff02::/16,DIRECT
+IP-CIDR6,ff03::/16,DIRECT
+IP-CIDR6,ff04::/16,DIRECT
+IP-CIDR6,ff05::/16,DIRECT
+IP-CIDR6,2001:db8::/32,DIRECT
+IP-CIDR6,2002::/16,DIRECT
 FINAL, 漏网之鱼
 
 [Remote Rule]
