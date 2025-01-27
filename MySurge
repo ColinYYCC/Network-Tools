@@ -274,6 +274,8 @@ PROXY = select, 自选节点, hidden=true
 # --- CUSTOM RULES ---
 # 自定义规则
 # # 您可以在此处插入自定义规则
+# > Zoom
+DOMAIN-SUFFIX,zoom.us,国外网站
 
 # 新增内置策略 NO-HYBRID，等价为 NO-HYBRID = direct, hybrid=off
 DOMAIN-SUFFIX,cmbchina.com,NO-HYBRID // 部分服务会校验请求的来源 IP，在开启 hybrid 时有可能因为请求IP变化导致无法正常登录和使用（如招商银行），可使用 NO-HYBRID 对特定请求单独关闭 All Hybrid
@@ -282,8 +284,6 @@ DOMAIN-SUFFIX,cmbchina.com,NO-HYBRID // 部分服务会校验请求的来源 IP�
 # > AdGuard
 DOMAIN,injections.adguard.org,DIRECT
 DOMAIN,local.adguard.org,DIRECT
-# > Zoom
-DOMAIN-SUFFIX,zoom.us,国外网站
 
 # > Client
 # Proxy
