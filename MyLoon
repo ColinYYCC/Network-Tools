@@ -64,7 +64,7 @@ real-ip = *.lan, *.id.ui.direct, cable.auth.com, *.msftconnecttest.com, *.msftnc
 # Cellular: 在WiFi和蜂窝数据都开启的情况下指定使用蜂窝网络
 # Performace: 在WiFi和蜂窝数据都开启的情况下使用最优的网络接口
 # Balance: 在WiFi和蜂窝数据都开启的情况下, 均衡使用网络接口
-interface-mode = Performace
+interface-mode = Auto
 
 # > hijack-dns
 # 有些app会自己使用自定义的DNS over UDP来解析IP, 可以配置相关IP:端口来劫持这些查询, 并返回fakeip的响应
