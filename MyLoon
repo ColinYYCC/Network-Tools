@@ -6,10 +6,10 @@
 # ================
 
 [General]
-# skip-proxy则和HTTP Proxy有关, 如果配置了该参数, 那么所配置的这些IP段、域名将不会转发到Loon, 而是由系统处理
+# skip-proxy则和HTTP Proxy有关,  如果配置了该参数,  那么所配置的这些IP段、域名将不会转发到Loon,  而是由系统处理
 skip-proxy = localhost, *.local, captive.apple.com, e.crashlytics.com, www.baidu.com, passenger.t3go.cn, yunbusiness.ccb.com, wxh.wo.cn, gate.lagou.com, www.abchina.com.cn, login-service.mobile-bank.psbc.com, mobile-bank.psbc.com, 10.0.0.0/8, 127.0.0.1/32, 172.16.0.0/12, 192.168.0.0/16, 192.168.122.1/32, 193.168.0.1/32, ::1/128, fe80::/10
-# bypass-tun则和TUN有关, 如果配置了该参数, 那么所配置的这些IP段、域名就会不交给Loon来处理, 系统直接处理
-bypass-tun = 10.0.0.0/8,100.64.0.0/10,127.0.0.0/8,169.254.0.0/16,172.16.0.0/12,192.0.0.0/24,192.0.2.0/24,192.88.99.0/24,192.168.0.0/16,198.18.0.0/15,198.51.100.0/24,203.0.113.0/24,224.0.0.0/4,255.255.255.255/32
+# bypass-tun则和TUN有关,  如果配置了该参数,  那么所配置的这些IP段、域名就会不交给Loon来处理,  系统直接处理
+bypass-tun = 10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/12, 192.0.0.0/24, 192.0.2.0/24, 192.88.99.0/24, 192.168.0.0/16, 198.18.0.0/15, 198.51.100.0/24, 203.0.113.0/24, 224.0.0.0/4, 255.255.255.255/32
 
 # ---(DNS 服务器)---
 # DNS 服务器 (如无必要不建议使用 DNS over HTTPS)
@@ -24,7 +24,7 @@ dns-reject-mode = LoopbackIP
 # 域名拒绝规则执行的阶段
 domain-reject-mode = DNS
 
-# 当UDP的流量规则匹配到相关节点, 但该节点不支持UDP或未未开启UDP转发时使用的策略, 可选DIRECT、REJECT
+# 当UDP的流量规则匹配到相关节点,  但该节点不支持UDP或未未开启UDP转发时使用的策略,  可选DIRECT、REJECT
 udp-fallback-mode = REJECT
 
 # ---(Wi-Fi 访问)---
@@ -59,25 +59,25 @@ resource-parser = https://raw.githubusercontent.com/sub-store-org/Sub-Store/rele
 # > 以下配置的域名不会使用fakeip进行映射
 real-ip = *.lan, *.id.ui.direct, cable.auth.com, *.msftconnecttest.com, *.msftncsi.com, network-test.debian.org, detectportal.firefox.com, resolver1.opendns.com, *.srv.nintendo.net, *.stun.playstation.net, xbox.*.microsoft.com, *.xboxlive.com, stun.*, global.turn.twilio.com, global.stun.twilio.com, app.yinxiang.com, injections.adguard.org, local.adguard.org, cable.auth.com, localhost.*.qq.com, localhost.*.weixin.qq.com, *.logon.battlenet.com.cn, *.logon.battle.net, *.blzstatic.cn, music.163.com, *.music.163.com, *.126.net, musicapi.taihe.com, music.taihe.com, songsearch.kugou.com, trackercdn.kugou.com, *.kuwo.cn, api-jooxtt.sanook.com, api.joox.com, joox.com, y.qq.com, *.y.qq.com, streamoc.music.tc.qq.com, mobileoc.music.tc.qq.com, isure.stream.qqmusic.qq.com, dl.stream.qqmusic.qq.com, aqqmusic.tc.qq.com, amobile.music.tc.qq.com, *.xiami.com, *.music.migu.cn, music.migu.cn, proxy.golang.org, *.mcdn.bilivideo.cn, *.cmpassport.com, id6.me, open.e.189.cn, opencloud.wostore.cn, auth.wosms.cn, id.mail.wo.cn, mdn.open.wo.cn, hmrz.wo.cn, *.jegotrip.com.cn, *.icitymobile.mobi, *.pingan.com.cn, *.cmbchina.com, pool.ntp.org, *.pool.ntp.org, ntp.*.com, time.*.com, ntp?.*.com, time?.*.com, time.*.gov, time.*.edu.cn, *.ntp.org.cn, PDC._msDCS.*.*, DC._msDCS.*.*, GC._msDCS.*.*
 
-# > interface-mode 指定流量使用哪个网络接口进行转发, 目前包含三种模式:
+# > interface-mode 指定流量使用哪个网络接口进行转发,  目前包含三种模式:
 # Auto: 系统自动分配
 # Cellular: 在WiFi和蜂窝数据都开启的情况下指定使用蜂窝网络
 # Performace: 在WiFi和蜂窝数据都开启的情况下使用最优的网络接口
-# Balance: 在WiFi和蜂窝数据都开启的情况下, 均衡使用网络接口
-interface-mode = Auto
+# Balance: 在WiFi和蜂窝数据都开启的情况下,  均衡使用网络接口
+interface-mode = auto
 
 # > hijack-dns
-# 有些app会自己使用自定义的DNS over UDP来解析IP, 可以配置相关IP:端口来劫持这些查询, 并返回fakeip的响应
+# 有些app会自己使用自定义的DNS over UDP来解析IP,  可以配置相关IP:端口来劫持这些查询,  并返回fakeip的响应
 hijack-dns = 9.9.9.9
 
 # > disable-stun
-# 禁用stun是否禁用stun协议的udp数据, 禁用后可以有效解决webrtc的ip泄露
+# 禁用stun是否禁用stun协议的udp数据,  禁用后可以有效解决webrtc的ip泄露
 disable-stun = true
 
 # > 自定义geoip数据库的url
 geoip-url = https://github.com/xream/geoip/releases/latest/download/ipinfo.country.mmdb
 # > 自定义ASN数据库的url
-ipasn-url=https://raw.githubusercontent.com/P3TERX/GeoLite.mmdb/download/GeoLite2-ASN.mmdb
+ipasn-url = https://raw.githubusercontent.com/P3TERX/GeoLite.mmdb/download/GeoLite2-ASN.mmdb
 # ------
 
 [Proxy]
@@ -86,43 +86,43 @@ ipasn-url=https://raw.githubusercontent.com/P3TERX/GeoLite.mmdb/download/GeoLite
 # ------
 
 [Remote Filter]
-Game = NameRegex, FilterKey = "^(?=.*((?i)游戏|🎮|(\b(GAME)\b)))(?!.*((?i)回国|校园)).*$"
-All = NameRegex, FilterKey = "^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|(\b(USE|USED|TOTAL|EXPIRE|EMAIL|Panel)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$"
-HK = NameRegex, FilterKey = "^(?=.*((?i)🇭🇰|香港|(\b(HK|Hong)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
-TW = NameRegex, FilterKey = "^(?=.*((?i)🇹🇼|台湾|(\b(TW|Tai|Taiwan)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
-JP = NameRegex, FilterKey = "^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
-KR = NameRegex, FilterKey = "^(?=.*((?i)🇰🇷|韩国|韓|首尔|(\b(KR|Korea)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
-SG = NameRegex, FilterKey = "^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
-US = NameRegex, FilterKey = "^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+Game = NameRegex,  FilterKey = "^(?=.*((?i)游戏|🎮|(\b(GAME)\b)))(?!.*((?i)回国|校园)).*$"
+All = NameRegex,  FilterKey = "^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|(\b(USE|USED|TOTAL|EXPIRE|EMAIL|Panel)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$"
+HK = NameRegex,  FilterKey = "^(?=.*((?i)🇭🇰|香港|(\b(HK|Hong)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+TW = NameRegex,  FilterKey = "^(?=.*((?i)🇹🇼|台湾|(\b(TW|Tai|Taiwan)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+JP = NameRegex,  FilterKey = "^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+KR = NameRegex,  FilterKey = "^(?=.*((?i)🇰🇷|韩国|韓|首尔|(\b(KR|Korea)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+SG = NameRegex,  FilterKey = "^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+US = NameRegex,  FilterKey = "^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
 # ------
 
 [Proxy Group]
-🥡 节点选择 = select, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, 香港, 美国, 狮城, 日本, 台湾, DIRECT, url = http://latency-test.skk.moe/endpoint, img-url = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/Loon_9.png
+🥡 节点选择 = select, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, 台湾, DIRECT, url = http://latency-test.skk.moe/endpoint, img-url = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/Loon_9.png
 # ------
 
 # 分流策略组
-国外网站 = select, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, 香港, 美国, 狮城, 日本, 台湾, url = http://latency-test.skk.moe/endpoint, img-url = https://raw.githubusercontent.com/tugepaopao/Image-Storage/master/hand-painted/56.png
-国际媒体 = select, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, 狮城, 香港, 美国, 日本, 台湾, url = http://latency-test.skk.moe/endpoint, img-url = https://github.com/tugepaopao/Image-Storage/raw/master/hand-painted/49.png
-Telegram = select, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, 香港, 美国, 狮城, 日本, 台湾, url = http://latency-test.skk.moe/endpoint, img-url = https://github.com/tugepaopao/Image-Storage/raw/master/hand-painted/36.png
-推特消息 = select, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, 美国, 香港, 狮城, 日本, 台湾, url = http://latency-test.skk.moe/endpoint, img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Twitter.png
-Apple Service = select, DIRECT, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, 美国, 香港, 狮城, 日本, 台湾, url = http://latency-test.skk.moe/endpoint, img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Apple.png
-AI = select, 美国, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, 香港, 狮城, 日本, 台湾, url = http://latency-test.skk.moe/endpoint, img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png
-游戏 = select, DIRECT, 🎲 自动选择, 🔯 故障转移, 游戏, 香港, 美国, url = http://latency-test.skk.moe/endpoint, img-url = https://github.com/tugepaopao/Image-Storage/raw/master/hand-painted/35.png
-Emby = select, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, 香港, 美国, 狮城, 日本, 台湾, url = http://latency-test.skk.moe/endpoint, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
-Spotify = select, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, 香港, 美国, 狮城, 日本, 台湾, url = http://latency-test.skk.moe/endpoint, img-url = https://github.com/tugepaopao/Image-Storage/raw/master/cartoon/Cute/spotify.png
-漏网之鱼 = select, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, DIRECT, 香港, 美国, 狮城, 日本, 韩国, 台湾, url = http://latency-test.skk.moe/endpoint, img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Snapfish.png
+国外网站 = select, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, 🇭🇰香港, 🇺🇸美国, 🇸🇬狮城, 🇯🇵日本, 🇰🇷韩国, 台湾, url = http://latency-test.skk.moe/endpoint, img-url = https://raw.githubusercontent.com/tugepaopao/Image-Storage/master/hand-painted/56.png
+国际媒体 = select, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, 🇭🇰香港, 🇺🇸美国, 🇸🇬狮城, 🇯🇵日本, 🇰🇷韩国, 台湾, url = http://latency-test.skk.moe/endpoint, img-url = https://github.com/tugepaopao/Image-Storage/raw/master/hand-painted/49.png
+Telegram = select, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, 🇭🇰香港, 🇺🇸美国, 🇸🇬狮城, 🇯🇵日本, 🇰🇷韩国, 台湾, url = http://latency-test.skk.moe/endpoint, img-url = https://github.com/tugepaopao/Image-Storage/raw/master/hand-painted/36.png
+推特消息 = select, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, 🇭🇰香港, 🇺🇸美国, 🇸🇬狮城, 🇯🇵日本, 🇰🇷韩国, 台湾, url = http://latency-test.skk.moe/endpoint, img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Twitter.png
+Apple Service = select, DIRECT, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, 🇭🇰香港, 🇺🇸美国, 🇸🇬狮城, 🇯🇵日本, 🇰🇷韩国, 台湾, url = http://latency-test.skk.moe/endpoint, img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Apple.png
+AI = select, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, 🇭🇰香港, 🇺🇸美国, 🇸🇬狮城, 🇯🇵日本, 🇰🇷韩国, 台湾, url = http://latency-test.skk.moe/endpoint, img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png
+游戏 = select, DIRECT, 🎲 自动选择, 🔯 故障转移, 游戏节点, url = http://latency-test.skk.moe/endpoint, img-url = https://github.com/tugepaopao/Image-Storage/raw/master/hand-painted/35.png
+Emby = select, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, 🇭🇰香港, 🇺🇸美国, 🇸🇬狮城, 🇯🇵日本, 🇰🇷韩国, 台湾, url = http://latency-test.skk.moe/endpoint, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
+Spotify = select, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, 🇭🇰香港, 🇺🇸美国, 🇸🇬狮城, 🇯🇵日本, 🇰🇷韩国, 台湾, url = http://latency-test.skk.moe/endpoint, img-url = https://github.com/tugepaopao/Image-Storage/raw/master/cartoon/Cute/spotify.png
+漏网之鱼 = select, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, DIRECT, 🇭🇰香港, 🇺🇸美国, 🇸🇬狮城, 🇯🇵日本, 🇰🇷韩国, 台湾, url = http://latency-test.skk.moe/endpoint, img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Snapfish.png
 # ------
 
 # 地区策略组
 🎲 自动选择 = url-test, All, url = http://latency-test.skk.moe/endpoint, interval = 300, tolerance = 30, img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Auto_Speed.png
 🔯 故障转移 = fallback, All, url = http://latency-test.skk.moe/endpoint, interval = 300, max-timeout = 3000, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Server.png
 🔮 负载均衡 = load-balance, All, url = http://latency-test.skk.moe/endpoint, interval = 300, max-timeout = 3000, algorithm = pcc, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Available.png
-游戏 = url-test, Game, url = http://latency-test.skk.moe/endpoint, interval = 300, tolerance = 30, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png
-香港 = fallback, HK, url = http://latency-test.skk.moe/endpoint, interval = 300, max-timeout = 3000, img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png
-美国 = fallback, US, url = http://latency-test.skk.moe/endpoint, interval = 300, max-timeout = 3000, img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/United_States.png
-狮城 = fallback, SG, url = http://latency-test.skk.moe/endpoint, interval = 300, max-timeout = 3000, img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Singapore.png
-日本 = fallback, JP, url = http://latency-test.skk.moe/endpoint, interval = 300, max-timeout = 3000, img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Japan.png
-韩国 = fallback, KR, url = http://latency-test.skk.moe/endpoint, interval = 300, max-timeout = 3000, img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/South_Korea.png
+游戏节点 = url-test, Game, url = http://latency-test.skk.moe/endpoint, interval = 300, tolerance = 30, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png
+🇭🇰香港 = fallback, HK, url = http://latency-test.skk.moe/endpoint, interval = 300, max-timeout = 3000, img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png
+🇺🇸美国 = fallback, US, url = http://latency-test.skk.moe/endpoint, interval = 300, max-timeout = 3000, img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/United_States.png
+🇸🇬狮城 = fallback, SG, url = http://latency-test.skk.moe/endpoint, interval = 300, max-timeout = 3000, img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Singapore.png
+🇯🇵日本 = fallback, JP, url = http://latency-test.skk.moe/endpoint, interval = 300, max-timeout = 3000, img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Japan.png
+🇰🇷韩国 = fallback, KR, url = http://latency-test.skk.moe/endpoint, interval = 300, max-timeout = 3000, img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/South_Korea.png
 台湾 = fallback, TW, url = http://latency-test.skk.moe/endpoint, interval = 300, max-timeout = 3000, img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Taiwan.png
 # ------
 
@@ -131,213 +131,213 @@ Spotify = select, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, 香�
 # 自定义规则
 ## 您可以在此处插入自定义规则
 # > Zoom
-DOMAIN-SUFFIX,zoom.us,国外网站
+DOMAIN-SUFFIX, zoom.us, 国外网站
 
-# 新增内置策略 NO-HYBRID，等价为 NO-HYBRID = direct, hybrid=off
-DOMAIN-SUFFIX,cmbchina.com,NO-HYBRID
+# 新增内置策略 NO-HYBRID, 等价为 NO-HYBRID = direct,  hybrid=off
+DOMAIN-SUFFIX, cmbchina.com, NO-HYBRID
 
 # Process 程序规则
 # > Client
 # Proxy
 # Download
-DOMAIN-SUFFIX,smtp,DIRECT
-DOMAIN-KEYWORD,aria2,DIRECT
+DOMAIN-SUFFIX, smtp, DIRECT
+DOMAIN-KEYWORD, aria2, DIRECT
 # BT
-DOMAIN-KEYWORD,announce,DIRECT
-DOMAIN-KEYWORD,torrent,DIRECT
-DOMAIN-KEYWORD,tracker,DIRECT
+DOMAIN-KEYWORD, announce, DIRECT
+DOMAIN-KEYWORD, torrent, DIRECT
+DOMAIN-KEYWORD, tracker, DIRECT
 
 # Web Controller 网页控制器规则
 # > Surge
-DOMAIN,yasd.royli.dev,DIRECT
+DOMAIN, yasd.royli.dev, DIRECT
 # > Clash
-DOMAIN,clash.razord.top,DIRECT
-DOMAIN,yacd.haishan.me,DIRECT
+DOMAIN, clash.razord.top, DIRECT
+DOMAIN, yacd.haishan.me, DIRECT
 # > BoxJs
-DOMAIN,boxjs.com,DIRECT
-DOMAIN,boxjs.net,DIRECT
+DOMAIN, boxjs.com, DIRECT
+DOMAIN, boxjs.net, DIRECT
 
 # Local Area Network 本地局域网
-DOMAIN-SUFFIX,direct,DIRECT
-DOMAIN-SUFFIX,wpad,DIRECT
-DOMAIN-SUFFIX,local,DIRECT
-DOMAIN-SUFFIX,localhost,DIRECT
-DOMAIN-SUFFIX,invalid,DIRECT
-DOMAIN-SUFFIX,onion,DIRECT
-DOMAIN-SUFFIX,test,DIRECT
-DOMAIN-SUFFIX,lan,DIRECT
-DOMAIN-SUFFIX,intranet,DIRECT
-DOMAIN-SUFFIX,internal,DIRECT
-DOMAIN-SUFFIX,private,DIRECT
-DOMAIN-SUFFIX,home,DIRECT
-DOMAIN-SUFFIX,corp,DIRECT
-IP-CIDR,10.0.0.0/8,DIRECT
-IP-CIDR,100.64.0.0/10,DIRECT
-IP-CIDR,127.0.0.0/8,DIRECT
-IP-CIDR,169.254.0.0/16,DIRECT
-IP-CIDR,172.16.0.0/12,DIRECT
-IP-CIDR,192.168.0.0/16,DIRECT
-IP-CIDR,224.0.0.0/4,DIRECT
-IP-CIDR,240.0.0.0/4,DIRECT
-IP-CIDR,255.255.255.255/32,DIRECT
-IP-CIDR6,fc00::/7,DIRECT
-IP-CIDR6,fd00::/8,DIRECT
-IP-CIDR6,fe80::/10,DIRECT
-IP-CIDR6,ff00::/8,DIRECT
-IP-CIDR6,ff01::/16,DIRECT
-IP-CIDR6,ff02::/16,DIRECT
-IP-CIDR6,ff03::/16,DIRECT
-IP-CIDR6,ff04::/16,DIRECT
-IP-CIDR6,ff05::/16,DIRECT
-IP-CIDR6,2001:db8::/32,DIRECT
-IP-CIDR6,2002::/16,DIRECT
+DOMAIN-SUFFIX, direct, DIRECT
+DOMAIN-SUFFIX, wpad, DIRECT
+DOMAIN-SUFFIX, local, DIRECT
+DOMAIN-SUFFIX, localhost, DIRECT
+DOMAIN-SUFFIX, invalid, DIRECT
+DOMAIN-SUFFIX, onion, DIRECT
+DOMAIN-SUFFIX, test, DIRECT
+DOMAIN-SUFFIX, lan, DIRECT
+DOMAIN-SUFFIX, intranet, DIRECT
+DOMAIN-SUFFIX, internal, DIRECT
+DOMAIN-SUFFIX, private, DIRECT
+DOMAIN-SUFFIX, home, DIRECT
+DOMAIN-SUFFIX, corp, DIRECT
+IP-CIDR, 10.0.0.0/8, DIRECT
+IP-CIDR, 100.64.0.0/10, DIRECT
+IP-CIDR, 127.0.0.0/8, DIRECT
+IP-CIDR, 169.254.0.0/16, DIRECT
+IP-CIDR, 172.16.0.0/12, DIRECT
+IP-CIDR, 192.168.0.0/16, DIRECT
+IP-CIDR, 224.0.0.0/4, DIRECT
+IP-CIDR, 240.0.0.0/4, DIRECT
+IP-CIDR, 255.255.255.255/32, DIRECT
+IP-CIDR6, fc00::/7, DIRECT
+IP-CIDR6, fd00::/8, DIRECT
+IP-CIDR6, fe80::/10, DIRECT
+IP-CIDR6, ff00::/8, DIRECT
+IP-CIDR6, ff01::/16, DIRECT
+IP-CIDR6, ff02::/16, DIRECT
+IP-CIDR6, ff03::/16, DIRECT
+IP-CIDR6, ff04::/16, DIRECT
+IP-CIDR6, ff05::/16, DIRECT
+IP-CIDR6, 2001:db8::/32, DIRECT
+IP-CIDR6, 2002::/16, DIRECT
 FINAL, 漏网之鱼
 
 [Remote Rule]
 # IP归属地更改
-https://raw.githubusercontent.com/SunsetMkt/anti-ip-attribution/refs/heads/main/generated/surge.list, policy=DIRECT, tag=IP归属地更改, enabled=true
+https://raw.githubusercontent.com/SunsetMkt/anti-ip-attribution/refs/heads/main/generated/surge.list,  policy=DIRECT,  tag=IP归属地更改,  enabled=true
 
 # ADs
-https://adrules.top/adrules.list, policy=REJECT, tag=Adrules, enabled=true
-https://ruleset.skk.moe/List/domainset/reject.conf, policy=REJECT, tag=ADs, enabled=true
-https://ruleset.skk.moe/List/domainset/reject_extra.conf, policy=REJECT, tag=ADs-Extra, enabled=true
-https://ruleset.skk.moe/List/non_ip/reject.conf, policy=REJECT, tag=ADs-NIP, enabled=true
-https://ruleset.skk.moe/List/non_ip/reject-no-drop.conf, policy=REJECT-NO-DROP, tag=防止PCDN, enabled=true
-https://ruleset.skk.moe/List/non_ip/reject-drop.conf, policy=REJECT-DROP, tag=Adobe 系列软件内部的跟踪, enabled=true
-#https://ruleset.skk.moe/List/ip/reject.conf, policy=REJECT-DROP, tag=广告拦截 IP, enabled=false
+https://adrules.top/adrules.list,  policy=REJECT,  tag=Adrules,  enabled=true
+https://ruleset.skk.moe/List/domainset/reject.conf,  policy=REJECT,  tag=ADs,  enabled=true
+https://ruleset.skk.moe/List/domainset/reject_extra.conf,  policy=REJECT,  tag=ADs-Extra,  enabled=true
+https://ruleset.skk.moe/List/non_ip/reject.conf,  policy=REJECT,  tag=ADs-NIP,  enabled=true
+https://ruleset.skk.moe/List/non_ip/reject-no-drop.conf,  policy=REJECT-NO-DROP,  tag=防止PCDN,  enabled=true
+https://ruleset.skk.moe/List/non_ip/reject-drop.conf,  policy=REJECT-DROP,  tag=Adobe 系列软件内部的跟踪,  enabled=true
+#https://ruleset.skk.moe/List/ip/reject.conf,  policy=REJECT-DROP,  tag=广告拦截 IP,  enabled=false
 
 # CDN
-https://ruleset.skk.moe/List/domainset/cdn.conf, policy=国外网站, tag=SukkaW静态CDN域名, enabled=true
-https://ruleset.skk.moe/List/non_ip/cdn.conf, policy=国外网站, tag=SukkaW静态CDN域名, enabled=true
+https://ruleset.skk.moe/List/domainset/cdn.conf,  policy=国外网站,  tag=SukkaW静态CDN域名,  enabled=true
+https://ruleset.skk.moe/List/non_ip/cdn.conf,  policy=国外网站,  tag=SukkaW静态CDN域名,  enabled=true
 
 # TV+
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/AppleTV/AppleTV.list, policy=国外网站, tag=TV+, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/AppleTV/AppleTV.list,  policy=国外网站,  tag=TV+,  enabled=true
 # Disney+
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Disney/Disney.list, policy=Disney+, tag=Disney+, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Disney/Disney.list,  policy=Disney+,  tag=Disney+,  enabled=true
 # Emby
-https://github.com/Repcz/Tool/raw/X/Surge/Rules/Emby.list, policy=Emby, tag=Emby, enabled=true
+https://github.com/Repcz/Tool/raw/X/Surge/Rules/Emby.list,  policy=Emby,  tag=Emby,  enabled=true
 # Netflix
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Netflix/Netflix.list, policy=Netflix, tag=Netflix, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Netflix/Netflix.list,  policy=Netflix,  tag=Netflix,  enabled=true
 # YouTube
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/YouTube/YouTube.list, policy=国外网站, tag=YouTube, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/YouTubeMusic/YouTubeMusic.list, policy=国外网站, tag=YouTube, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/YouTube/YouTube.list,  policy=国外网站,  tag=YouTube,  enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/YouTubeMusic/YouTubeMusic.list,  policy=国外网站,  tag=YouTube,  enabled=true
 # Spotify
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Spotify/Spotify.list, policy=国外网站, tag=Spotify, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Spotify/Spotify.list,  policy=国外网站,  tag=Spotify,  enabled=true
 # Now E
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/NowE/NowE.list, policy=香港, tag=Now E, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/NowE/NowE.list,  policy=香港,  tag=Now E,  enabled=true
 # 巴哈姆特
-https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Streaming/Video/Bahamut.list, policy=台湾, tag=巴哈姆特, enabled=true
+https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Streaming/Video/Bahamut.list,  policy=台湾,  tag=巴哈姆特,  enabled=true
 # Hami Video
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/HamiVideo/HamiVideo.list, policy=台湾, tag=Hami Video, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/HamiVideo/HamiVideo.list,  policy=台湾,  tag=Hami Video,  enabled=true
 # Niconico
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Niconico/Niconico.list, policy=日本, tag=Niconico, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Niconico/Niconico.list,  policy=日本,  tag=Niconico,  enabled=true
 # HBO
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/HBOUSA/HBOUSA.list, policy=美国, tag=HBO MAX, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/HBOHK/HBOHK.list, policy=香港, tag=HBO GO ASIA, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/HBOUSA/HBOUSA.list,  policy=美国,  tag=HBO MAX,  enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/HBOHK/HBOHK.list,  policy=香港,  tag=HBO GO ASIA,  enabled=true
 # Hulu
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/HuluUSA/HuluUSA.list, policy=美国, tag=Hulu, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/HuluJP/HuluJP.list, policy=日本, tag=HuluJP, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/HuluUSA/HuluUSA.list,  policy=美国,  tag=Hulu,  enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/HuluJP/HuluJP.list,  policy=日本,  tag=HuluJP,  enabled=true
 # BiliBili
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/BiliBiliIntl/BiliBiliIntl.list, policy=国外网站, tag=BiliBili, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/BiliBiliIntl/BiliBiliIntl.list,  policy=国外网站,  tag=BiliBili,  enabled=true
 
 # Streaming 国际流媒体服务
-https://ruleset.skk.moe/List/non_ip/stream.conf, policy=国外网站, tag=Streaming 国际流媒体服务, enabled=true // Streaming 国际流媒体服务
-https://ruleset.skk.moe/List/ip/stream.conf, policy=国外网站, tag=Streaming 国际流媒体服务(IP), enabled=true // Streaming 国际流媒体服务(IP)
+https://ruleset.skk.moe/List/non_ip/stream.conf,  policy=国外网站,  tag=Streaming 国际流媒体服务,  enabled=true
+https://ruleset.skk.moe/List/ip/stream.conf,  policy=国外网站,  tag=Streaming 国际流媒体服务(IP),  enabled=true
 
 # 国外网站
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/GitHub/GitHub.list, policy=🥡 节点选择, tag=Github, enabled=true // Github
-https://ruleset.skk.moe/List/non_ip/global.conf, policy=🥡 节点选择, tag=国外网站, enabled=true // 国外网站
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/GitHub/GitHub.list,  policy=🥡 节点选择,  tag=Github,  enabled=true
+https://ruleset.skk.moe/List/non_ip/global.conf,  policy=🥡 节点选择,  tag=国外网站,  enabled=true
 
 # Telegram 电报
-https://github.com/LucaLin233/Luca_Conf/blob/main/Surge/Rule/Telegram.list?raw=true, policy=Telegram, tag=Telegram 电报, enabled=true
+https://github.com/LucaLin233/Luca_Conf/blob/main/Surge/Rule/Telegram.list?raw=true,  policy=Telegram,  tag=Telegram 电报,  enabled=true
 
 
-# > 👾Game 游戏(不仅限于UDP, 包括相关CDN)
+# > 👾Game 游戏(不仅限于UDP,  包括相关CDN)
 # GameList
-# https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Game/Game.list, policy=游戏, tag=GameList, enabled=true // GameList
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Blizzard/Blizzard.list, policy=游戏, tag=暴雪娱乐 Blizzard, enabled=true // 暴雪娱乐 Blizzard
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Classic/Classic.list, policy=游戏, tag=Classic, enabled=true // Classic
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/DiabloIII/DiabloIII.list, policy=游戏, tag=暗黑破坏神III DiabloIII, enabled=true // 暗黑破坏神III DiabloIII
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Hearthstone/Hearthstone.list, policy=游戏, tag=炉石传说 Hearthstone, enabled=true // 炉石传说 Hearthstone
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/HeroesoftheStorm/HeroesoftheStorm.list, policy=游戏, tag=风暴英雄 HeroesoftheStorm, enabled=true // 风暴英雄 HeroesoftheStorm
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Rockstar/Rockstar.list, policy=游戏, tag=侠盗猎车手 Rockstar, enabled=true // 侠盗猎车手 Rockstar
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Overwatch/Overwatch.list, policy=游戏, tag=守望先锋 Overwatch, enabled=true // 守望先锋 Overwatch
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/StarCraftII/StarCraftII.list, policy=游戏, tag=星海爭霸II StarCraftII, enabled=true // 星海爭霸II StarCraftII
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/WildRift/WildRift.list, policy=游戏, tag=英雄联盟手游 WildRift, enabled=true // 英雄联盟手游 WildRift
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/WorldofWarcraft/WorldofWarcraft.list, policy=游戏, tag=魔兽世界WorldofWarcraft, enabled=true // 魔兽世界WorldofWarcraft
+# https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Game/Game.list,  policy=游戏,  tag=GameList,  enabled=true // GameList
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Blizzard/Blizzard.list,  policy=游戏,  tag=暴雪娱乐 Blizzard,  enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Classic/Classic.list,  policy=游戏,  tag=Classic,  enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/DiabloIII/DiabloIII.list,  policy=游戏,  tag=暗黑破坏神III DiabloIII,  enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Hearthstone/Hearthstone.list,  policy=游戏,  tag=炉石传说 Hearthstone,  enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/HeroesoftheStorm/HeroesoftheStorm.list,  policy=游戏,  tag=风暴英雄 HeroesoftheStorm,  enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Rockstar/Rockstar.list,  policy=游戏,  tag=侠盗猎车手 Rockstar,  enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Overwatch/Overwatch.list,  policy=游戏,  tag=守望先锋 Overwatch,  enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/StarCraftII/StarCraftII.list,  policy=游戏,  tag=星海爭霸II StarCraftII,  enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/WildRift/WildRift.list,  policy=游戏,  tag=英雄联盟手游 WildRift,  enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/WorldofWarcraft/WorldofWarcraft.list,  policy=游戏,  tag=魔兽世界WorldofWarcraft,  enabled=true
 
 # Game Publisher
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Discord/Discord.list, policy=游戏, tag=Discord, enabled=true // Discord
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/EA/EA.list, policy=游戏, tag=EA, enabled=true // EA
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Epic/Epic.list, policy=游戏, tag=Epic, enabled=true // Epic
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/HoYoverse/HoYoverse.list, policy=游戏, tag=米哈游, enabled=true // 米哈游
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Nintendo/Nintendo.list, policy=游戏, tag=任天堂 Nintendo, enabled=true // 任天堂 Nintendo
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Origin/Origin.list, policy=游戏, tag=Origin, enabled=true // Origin
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/PlayStation/PlayStation.list, policy=游戏, tag=PlayStation, enabled=true // PlayStation
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Steam/Steam.list, policy=游戏, tag=Steam, enabled=true // Steam
-# https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/SteamCN/SteamCN.list, policy=游戏, tag=SteamCN, enabled=true // SteamCN
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Supercell/Supercell.list, policy=游戏, tag=部落冲突 Supercell, enabled=true // 部落冲突 Supercell
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/UBI/UBI.list, policy=游戏, tag=UBI, enabled=true // UBI
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Xbox/Xbox.list, policy=游戏, tag=Xbox, enabled=true // Xbox
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Discord/Discord.list,  policy=游戏,  tag=Discord,  enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/EA/EA.list,  policy=游戏,  tag=EA,  enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Epic/Epic.list,  policy=游戏,  tag=Epic,  enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/HoYoverse/HoYoverse.list,  policy=游戏,  tag=米哈游,  enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Nintendo/Nintendo.list,  policy=游戏,  tag=任天堂 Nintendo,  enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Origin/Origin.list,  policy=游戏,  tag=Origin,  enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/PlayStation/PlayStation.list,  policy=游戏,  tag=PlayStation,  enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Steam/Steam.list,  policy=游戏,  tag=Steam,  enabled=true
+# https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/SteamCN/SteamCN.list,  policy=游戏,  tag=SteamCN,  enabled=true // SteamCN
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Supercell/Supercell.list,  policy=游戏,  tag=部落冲突 Supercell,  enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/UBI/UBI.list,  policy=游戏,  tag=UBI,  enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Xbox/Xbox.list,  policy=游戏,  tag=Xbox,  enabled=true
 
 # 中国直连
-https://ruleset.skk.moe/List/non_ip/domestic.conf, policy=DIRECT, tag=国內直连, enabled=true
-https://ruleset.skk.moe/List/non_ip/direct.conf, policy=DIRECT, tag=国內直连, enabled=true
-https://ruleset.skk.moe/List/ip/domestic.conf, policy=DIRECT, tag=China 中国直连 (IP), enabled=true
-https://ruleset.skk.moe/List/ip/china_ip.conf, policy=DIRECT, tag=China 中国直连 (IP), enabled=true
-https://github.com/Repcz/Tool/raw/X/Loon/Rules/Lan.list, policy=DIRECT, tag=LAN, enabled=true
-https://github.com/Repcz/Tool/raw/X/Loon/Rules/FILTER_REGION.list, policy=DIRECT, tag=CN, enabled=true
+https://ruleset.skk.moe/List/non_ip/domestic.conf,  policy=DIRECT,  tag=国內直连,  enabled=true
+https://ruleset.skk.moe/List/non_ip/direct.conf,  policy=DIRECT,  tag=国內直连,  enabled=true
+https://ruleset.skk.moe/List/ip/domestic.conf,  policy=DIRECT,  tag=China 中国直连 (IP),  enabled=true
+https://ruleset.skk.moe/List/ip/china_ip.conf,  policy=DIRECT,  tag=China 中国直连 (IP),  enabled=true
+https://github.com/Repcz/Tool/raw/X/Loon/Rules/Lan.list,  policy=DIRECT,  tag=LAN,  enabled=true
+https://github.com/Repcz/Tool/raw/X/Loon/Rules/FILTER_REGION.list,  policy=DIRECT,  tag=CN,  enabled=true
 # ------
 
 [Plugin]
 
-https://kelee.one/Tool/Loon/Plugin/LoonGallery.plugin, policy=漏网之鱼, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Block_HTTPDNS.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/BlockAdvertisers.plugin, enabled = true
-https://kelee.one/Tool/Loon/Plugin/Remove_ads_by_keli.plugin, enabled = true
-https://kelee.one/Tool/Loon/Plugin/Cainiao_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/CaixinMedia_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/CoolApk_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Taobao_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Tieba_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/JD_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Weibo_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Zhihu_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Aiinquiry_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/DiDi_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/BabyTree_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/RedPaper_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/PiPiXia_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/IThome_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/QQMusic_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Reddit_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/QQKSong_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Spotify_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/YouTube_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/AliYunDrive_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Amap_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/BaiduNetDisk_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Himalaya_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/QiDian_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/DragonRead_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Umetrip_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/BaiduSearchWebpage_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Bilibili_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Baidu_input_method_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/NeteaseCloudMusic_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/smzdm_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Weixin_Official_Accounts_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/WexinMiniPrograms_Remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/JD_Price.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/QuickSearch.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Prevent_DNS_Leaks.plugin, policy=漏网之鱼, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Node_detection_tool.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Weixin_external_links_unlock.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Fileball_mount.plugin, enabled=false
-https://kelee.one/Tool/Loon/Plugin/Auto_Join_TF.plugin, policy=DIRECT, enabled=false
-https://kelee.one/Tool/Loon/Plugin/BoxJs.plugin, policy=漏网之鱼, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Sub-Store.plugin, policy=漏网之鱼, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Script-Hub.plugin, policy=漏网之鱼, enabled=true
+https://kelee.one/Tool/Loon/Plugin/LoonGallery.plugin,  policy=漏网之鱼,  enabled=true
+https://kelee.one/Tool/Loon/Plugin/Block_HTTPDNS.plugin,  enabled=true
+https://kelee.one/Tool/Loon/Plugin/BlockAdvertisers.plugin,  enabled=true
+https://kelee.one/Tool/Loon/Plugin/Remove_ads_by_keli.plugin,  enabled=true
+https://kelee.one/Tool/Loon/Plugin/Cainiao_remove_ads.plugin,  enabled=true
+https://kelee.one/Tool/Loon/Plugin/CaixinMedia_remove_ads.plugin,  enabled=true
+https://kelee.one/Tool/Loon/Plugin/CoolApk_remove_ads.plugin,  enabled=true
+https://kelee.one/Tool/Loon/Plugin/Taobao_remove_ads.plugin,  enabled=true
+https://kelee.one/Tool/Loon/Plugin/Tieba_remove_ads.plugin,  enabled=true
+https://kelee.one/Tool/Loon/Plugin/JD_remove_ads.plugin,  enabled=true
+https://kelee.one/Tool/Loon/Plugin/Weibo_remove_ads.plugin,  enabled=true
+https://kelee.one/Tool/Loon/Plugin/Zhihu_remove_ads.plugin,  enabled=true
+https://kelee.one/Tool/Loon/Plugin/Aiinquiry_remove_ads.plugin,  enabled=true
+https://kelee.one/Tool/Loon/Plugin/DiDi_remove_ads.plugin,  enabled=true
+https://kelee.one/Tool/Loon/Plugin/BabyTree_remove_ads.plugin,  enabled=true
+https://kelee.one/Tool/Loon/Plugin/RedPaper_remove_ads.plugin,  enabled=true
+https://kelee.one/Tool/Loon/Plugin/PiPiXia_remove_ads.plugin,  enabled=true
+https://kelee.one/Tool/Loon/Plugin/IThome_remove_ads.plugin,  enabled=true
+https://kelee.one/Tool/Loon/Plugin/QQMusic_remove_ads.plugin,  enabled=true
+https://kelee.one/Tool/Loon/Plugin/Reddit_remove_ads.plugin,  enabled=true
+https://kelee.one/Tool/Loon/Plugin/QQKSong_remove_ads.plugin,  enabled=true
+https://kelee.one/Tool/Loon/Plugin/Spotify_remove_ads.plugin,  enabled=true
+https://kelee.one/Tool/Loon/Plugin/YouTube_remove_ads.plugin,  enabled=true
+https://kelee.one/Tool/Loon/Plugin/AliYunDrive_remove_ads.plugin,  enabled=true
+https://kelee.one/Tool/Loon/Plugin/Amap_remove_ads.plugin,  enabled=true
+https://kelee.one/Tool/Loon/Plugin/BaiduNetDisk_remove_ads.plugin,  enabled=true
+https://kelee.one/Tool/Loon/Plugin/Himalaya_remove_ads.plugin,  enabled=true
+https://kelee.one/Tool/Loon/Plugin/QiDian_remove_ads.plugin,  enabled=true
+https://kelee.one/Tool/Loon/Plugin/DragonRead_remove_ads.plugin,  enabled=true
+https://kelee.one/Tool/Loon/Plugin/Umetrip_remove_ads.plugin,  enabled=true
+https://kelee.one/Tool/Loon/Plugin/BaiduSearchWebpage_remove_ads.plugin,  enabled=true
+https://kelee.one/Tool/Loon/Plugin/Bilibili_remove_ads.plugin,  enabled=true
+https://kelee.one/Tool/Loon/Plugin/Baidu_input_method_remove_ads.plugin,  enabled=true
+https://kelee.one/Tool/Loon/Plugin/NeteaseCloudMusic_remove_ads.plugin,  enabled=true
+https://kelee.one/Tool/Loon/Plugin/smzdm_remove_ads.plugin,  enabled=true
+https://kelee.one/Tool/Loon/Plugin/Weixin_Official_Accounts_remove_ads.plugin,  enabled=true
+https://kelee.one/Tool/Loon/Plugin/WexinMiniPrograms_Remove_ads.plugin,  enabled=true
+https://kelee.one/Tool/Loon/Plugin/JD_Price.plugin,  enabled=true
+https://kelee.one/Tool/Loon/Plugin/QuickSearch.plugin,  enabled=true
+https://kelee.one/Tool/Loon/Plugin/Prevent_DNS_Leaks.plugin,  policy=漏网之鱼,  enabled=true
+https://kelee.one/Tool/Loon/Plugin/Node_detection_tool.plugin,  enabled=true
+https://kelee.one/Tool/Loon/Plugin/Weixin_external_links_unlock.plugin,  enabled=true
+https://kelee.one/Tool/Loon/Plugin/Fileball_mount.plugin,  enabled=false
+https://kelee.one/Tool/Loon/Plugin/Auto_Join_TF.plugin,  policy=DIRECT,  enabled=false
+https://kelee.one/Tool/Loon/Plugin/BoxJs.plugin,  policy=漏网之鱼,  enabled=true
+https://kelee.one/Tool/Loon/Plugin/Sub-Store.plugin,  policy=漏网之鱼,  enabled=true
+https://kelee.one/Tool/Loon/Plugin/Script-Hub.plugin,  policy=漏网之鱼,  enabled=true
 # ------
 
 [Host]
@@ -898,11 +898,11 @@ upos-sz-upcdntx.bilivideo.com = server:https://doh.pub/dns-query
 [Rewrite]
 ^https?://(www.)?g.cn 302 https://www.google.com
 ^https?://(www.)?google.cn 302 https://www.google.com
-^https?://union.click.jd.com/jda? http://union.click.jd.com/jda?adblock= header
+^https?://union.click.jd.com/jda? header http://union.click.jd.com/jda?adblock=
 
 [Script]
-http-request ^https?://ios\.prod\.ftl\.netflix\.com/iosui/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
-http-response ^https?://ios\.prod\.ftl\.netflix\.com/iosui/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D requires-body=1, script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
+http-request ^https?://ios\.prod\.ftl\.netflix\.com/iosui/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js,  tag=nf_rating.js
+http-response ^https?://ios\.prod\.ftl\.netflix\.com/iosui/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js,  requires-body=true,  tag=nf_rating.js
 
 [Mitm]
 ca-p12 =
