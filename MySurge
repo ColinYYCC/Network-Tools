@@ -946,8 +946,7 @@ SSID:"Apple Store" suspend=true
 skip-server-cert-verify = true
 tcp-connection = true
 h2 = true
-hostname = www.google.cn
-hostname-disabled = gateway.icloud.com, gateway.icloud.com.cn, weather-data.apple.com, buy.itunes.apple.com
+hostname = -gateway.icloud.com, -weather-data.apple.com, -buy.itunes.apple.com, -pan.baidu.com, www.google.cn
 
 [Script]
 京东_开屏去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/startup/startup.js
