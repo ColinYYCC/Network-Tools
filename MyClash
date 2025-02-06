@@ -5,10 +5,10 @@
 
 p: &p {type: http, interval: 86400, health-check: {enable: true, url: http://latency-test.skk.moe/endpoint, interval: 1800, timeout: 5000}}
 proxy-providers:
-  Subscribe: # 在此将 "http://your-service-provider" 替换为你的机场订阅，推荐使用 base64 或者 node list
+  Subscribe: # 在此将 "http://your-service-provider" 替换为你的机场订阅, 推荐使用 base64 或者 node list
     url: http://your-service-provider
     <<: *p
-    #override: # 修改节点前后缀时，需移除前方的 "#" 符号
+    #override: # 修改节点前后缀时, 需移除前方的 "#" 符号
       #additional-prefix: "节点前缀"
       #additional-suffix: "节点后缀"
   #Subscribe2: {url: http://your-service-provider, <<: *p}
@@ -196,14 +196,14 @@ FilterAll: &FilterAll '^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客�
 
 # 策略组参数锚点
 # 锚点 - 全部参数
-pg: &pg {type: select, proxies: [🛰️ 自动选择,  🔯 故障转移, 🔮 负载均衡, 香港策略, 台湾策略, 日本策略, 韩国策略, 新国策略, 美国策略, DIRECT]}
-# 锚点 - 时延优选参数 [每 6 秒一次惰性健康检查，容差 20ms，时延超过 2 秒判定为失败，失败 3 次则自动触发健康检查]
+pg: &pg {type: select, proxies: [🛰️ 自动选择, 🔯 故障转移, 🔮 负载均衡, 香港策略, 台湾策略, 日本策略, 韩国策略, 新国策略, 美国策略, DIRECT]}
+# 锚点 - 时延优选参数 [每 6 秒一次惰性健康检查, 容差 20ms, 时延超过 2 秒判定为失败, 失败 3 次则自动触发健康检查]
 UrlTest: &UrlTest {type: url-test, interval: 6, tolerance: 20, lazy: true, url: 'http://latency-test.skk.moe/endpoint', disable-udp: false, timeout: 2000, max-failed-times: 3, hidden: true, include-all-providers: true}
-# 锚点 - 故障转移参数 [每 6 秒一次惰性健康检查，时延超过 2 秒判定为失败，失败 3 次则自动触发健康检查]
+# 锚点 - 故障转移参数 [每 6 秒一次惰性健康检查, 时延超过 2 秒判定为失败, 失败 3 次则自动触发健康检查]
 FallBack: &FallBack {type: fallback, interval: 6, lazy: true, url: 'http://latency-test.skk.moe/endpoint', disable-udp: false, timeout: 2000, max-failed-times: 3, hidden: true, include-all-providers: true}
-# 锚点 - 负载均衡参数 [每 6 秒一次惰性健康检查，时延超过 2 秒判定为失败，失败 3 次则自动触发健康检查]
+# 锚点 - 负载均衡参数 [每 6 秒一次惰性健康检查, 时延超过 2 秒判定为失败, 失败 3 次则自动触发健康检查]
 LoadBalance: &LoadBalance {type: load-balance, interval: 6, lazy: true, url: 'http://latency-test.skk.moe/endpoint', disable-udp: false, strategy: consistent-hashing, timeout: 2000, max-failed-times: 3, hidden: true, include-all-providers: true}
-# 锚点 - 规则参数 [每小时更新一次订阅规则，更新规则时使用直连策略]
+# 锚点 - 规则参数 [每小时更新一次订阅规则, 更新规则时使用直连策略]
 RuleProviders: &RuleProviders {type: http, behavior: classical, interval: 3600, format: text}
 
 # 策略组
@@ -378,117 +378,113 @@ rule-providers:
     path: './rules/ESET_China.yaml'
     url: 'https://kelee.one/Tool/Clash/Rule/ESET_China.yaml'
 
-    "Domestic_non_ip": {
-      "behavior": "classical",
-      "url": "https://ruleset.skk.moe/Clash/non_ip/domestic.txt",
-      "path": "./rules/domestic.txt",
-      ...ruleProviderCommon,
-    },
-    "Direct_non_ip": {
-      "behavior": "classical",
-      "url": "https://ruleset.skk.moe/Clash/non_ip/direct.txt",
-      "path": "./rules/direct.txt",
-      ...ruleProviderCommon,
-    },
-    "Domestic_ip": {
-      "behavior": "classical",
-      "url": "https://ruleset.skk.moe/Clash/ip/domestic.txt",
-      "path": "./rules/domestic.txt",
-      ...ruleProviderCommon,
-    },
-    "China_ip": {
-      "behavior": "ipcidr",
-      "url": "https://ruleset.skk.moe/Clash/ip/china_ip.txt",
-      "path": "./rules/china_ip.txt",
-      ...ruleProviderCommon,
+    Domestic_non_ip:
+    <<: *RuleProviders
+    path: './rules/domestic.txt'
+    url: 'https://ruleset.skk.moe/Clash/non_ip/domestic.txt'
+
+    Direct_non_ip:
+    <<: *RuleProviders
+    path: './rules/direct.txt'
+    url: 'https://ruleset.skk.moe/Clash/non_ip/direct.txt'
+
+    Domestic_ip:
+    <<: *RuleProviders
+    path: './rules/domestic.txt'
+    url: 'https://ruleset.skk.moe/Clash/ip/domestic.txt'
+
+    China_ip:
+    <<: *RuleProviders
+    path: './rules/china_ip.txt'
+    url: 'https://ruleset.skk.moe/Clash/ip/china_ip.txt'
 
 # 规则指向
 rules:
 # Process 程序规则
 # > AdGuard
-  - DOMAIN,injections.adguard.org,DIRECT
-  - DOMAIN,local.adguard.org,DIRECT
+  - DOMAIN, injections.adguard.org, DIRECT
+  - DOMAIN, local.adguard.org, DIRECT
 # > Zoom
-  - DOMAIN-SUFFIX,zoom.us,国外网站
+  - DOMAIN-SUFFIX, zoom.us, 国外网站
 
 # > Client
 # Proxy
-  - PROCESS-NAME,*Clash*,DIRECT
-  - PROCESS-NAME,*clash*,DIRECT
-  - PROCESS-NAME,Surge*,DIRECT
-  - PROCESS-NAME,v2ray,DIRECT
-  - PROCESS-NAME,xray,DIRECT
-  - PROCESS-NAME,naive,DIRECT
-  - PROCESS-NAME,Trojan,DIRECT
-  - PROCESS-NAME,Trojan-go,DIRECT
-  - PROCESS-NAME,ss-local,DIRECT
-  - PROCESS-NAME,ssr-local,DIRECT
-  - PROCESS-NAME,privoxy,DIRECT
-  - PROCESS-NAME,leaf,DIRECT
-  - PROCESS-NAME,UUBooster,DIRECT
+  - PROCESS-NAME, *Clash*, DIRECT
+  - PROCESS-NAME, *clash*, DIRECT
+  - PROCESS-NAME, Surge*, DIRECT
+  - PROCESS-NAME, v2ray, DIRECT
+  - PROCESS-NAME, xray, DIRECT
+  - PROCESS-NAME, naive, DIRECT
+  - PROCESS-NAME, Trojan, DIRECT
+  - PROCESS-NAME, Trojan-go, DIRECT
+  - PROCESS-NAME, ss-local, DIRECT
+  - PROCESS-NAME, ssr-local, DIRECT
+  - PROCESS-NAME, privoxy, DIRECT
+  - PROCESS-NAME, leaf, DIRECT
+  - PROCESS-NAME, UUBooster, DIRECT
 
 # > Downloader
-  - PROCESS-NAME,BaiduNetdisk,DIRECT
-  - PROCESS-NAME,*Folx*,DIRECT
-  - PROCESS-NAME,*Thunder*,DIRECT
-  - PROCESS-NAME,*DownloadService*,DIRECT
-  - PROCESS-NAME,*Soda*,DIRECT
-  - PROCESS-NAME,*p4pclient*,DIRECT
-  - PROCESS-NAME,aria2c,DIRECT
-  - PROCESS-NAME,fdm,DIRECT
-  - PROCESS-NAME,Folx,DIRECT
-  - PROCESS-NAME,NetTransport,DIRECT
-  - PROCESS-NAME,amuled,DIRECT
-  - PROCESS-NAME,Motrix.app,DIRECT
-  - DOMAIN-SUFFIX,smtp,DIRECT
-  - DOMAIN-KEYWORD,aria2,DIRECT
+  - PROCESS-NAME, BaiduNetdisk, DIRECT
+  - PROCESS-NAME, *Folx*, DIRECT
+  - PROCESS-NAME, *Thunder*, DIRECT
+  - PROCESS-NAME, *DownloadService*, DIRECT
+  - PROCESS-NAME, *Soda*, DIRECT
+  - PROCESS-NAME, *p4pclient*, DIRECT
+  - PROCESS-NAME, aria2c, DIRECT
+  - PROCESS-NAME, fdm, DIRECT
+  - PROCESS-NAME, Folx, DIRECT
+  - PROCESS-NAME, NetTransport, DIRECT
+  - PROCESS-NAME, amuled, DIRECT
+  - PROCESS-NAME, Motrix.app, DIRECT
+  - DOMAIN-SUFFIX, smtp, DIRECT
+  - DOMAIN-KEYWORD, aria2, DIRECT
 
 # > Xunlei
-  - PROCESS-NAME,Thunder,DIRECT
-  - PROCESS-NAME,ThunderVIP,DIRECT
-  - DOMAIN-SUFFIX,xunlei.com,DIRECT
+  - PROCESS-NAME, Thunder, DIRECT
+  - PROCESS-NAME, ThunderVIP, DIRECT
+  - DOMAIN-SUFFIX, xunlei.com, DIRECT
 
 # tailscale
-  - PROCESS-NAME,tailscaled,DIRECT
+  - PROCESS-NAME, tailscaled, DIRECT
 # Parsec
-  - PROCESS-NAME,parsecd,DIRECT
+  - PROCESS-NAME, parsecd, DIRECT
 # 向日葵远程
-  - PROCESS-NAME,SunloginClient_Desktop,DIRECT
-  - PROCESS-NAME,SunloginClient_Helper,DIRECT
+  - PROCESS-NAME, SunloginClient_Desktop, DIRECT
+  - PROCESS-NAME, SunloginClient_Helper, DIRECT
 # Todesk
-  - DOMAIN-KEYWORD,todesk,DIRECT
+  - DOMAIN-KEYWORD, todesk, DIRECT
 # 百度网盘
-  - PROCESS-NAME,BaiduNetdisk_mac,DIRECT
+  - PROCESS-NAME, BaiduNetdisk_mac, DIRECT
 
 # BT
-  - PROCESS-NAME,BitComet,DIRECT
-  - PROCESS-NAME,DownloadService,DIRECT
-  - PROCESS-NAME,qBittorrent,DIRECT
-  - PROCESS-NAME,qbittorrent-nox,DIRECT
-  - PROCESS-NAME,Transmission,DIRECT
-  - PROCESS-NAME,transmission-daemon,DIRECT
-  - PROCESS-NAME,transmission-qt,DIRECT
-  - PROCESS-NAME,uTorrent,DIRECT
-  - PROCESS-NAME,WebTorrent,DIRECT
-  - PROCESS-NAME,WebTorrent Helper,DIRECT
-  - DOMAIN-KEYWORD,announce,DIRECT
-  - DOMAIN-KEYWORD,torrent,DIRECT
-  - DOMAIN-KEYWORD,tracker,DIRECT
+  - PROCESS-NAME, BitComet, DIRECT
+  - PROCESS-NAME, DownloadService, DIRECT
+  - PROCESS-NAME, qBittorrent, DIRECT
+  - PROCESS-NAME, qbittorrent-nox, DIRECT
+  - PROCESS-NAME, Transmission, DIRECT
+  - PROCESS-NAME, transmission-daemon, DIRECT
+  - PROCESS-NAME, transmission-qt, DIRECT
+  - PROCESS-NAME, uTorrent, DIRECT
+  - PROCESS-NAME, WebTorrent, DIRECT
+  - PROCESS-NAME, WebTorrent Helper, DIRECT
+  - DOMAIN-KEYWORD, announce, DIRECT
+  - DOMAIN-KEYWORD, torrent, DIRECT
+  - DOMAIN-KEYWORD, tracker, DIRECT
 
 # Web Controller 网页控制器规则
 # > Surge
-  - DOMAIN,yasd.royli.dev,DIRECT
+  - DOMAIN, yasd.royli.dev, DIRECT
 # > Clash
-  - DOMAIN,clash.razord.top,DIRECT
-  - DOMAIN,yacd.haishan.me,DIRECT
+  - DOMAIN, clash.razord.top, DIRECT
+  - DOMAIN, yacd.haishan.me, DIRECT
 # > BoxJs
-  - DOMAIN,boxjs.com,DIRECT
-  - DOMAIN,boxjs.net,DIRECT
+  - DOMAIN, boxjs.com, DIRECT
+  - DOMAIN, boxjs.net, DIRECT
 # > Sub-Store
-  - DOMAIN-SUFFIX,vercel.app,国外网站
+  - DOMAIN-SUFFIX, vercel.app, 国外网站
 
-# Rulesets，规则集（每 24 小时后台自动更新）
-# 规则集包含多条子规则，可以是另一个本地 list 文件，或者是一个 URL
+# Rulesets, 规则集（每 24 小时后台自动更新）
+# 规则集包含多条子规则, 可以是另一个本地 list 文件, 或者是一个 URL
 
   - RULE-SET, Sogouinput, REJECT
   - RULE-SET, ADRules, REJECT
@@ -524,35 +520,35 @@ rules:
   - RULE-SET, China_ip, DIRECT, no-resolve
   - RULE-SET, Domestic_ip, DIRECT, no-resolve
 
-# Surge 的自动 REJECT 保护丢包，防止应用循环请求
-  - IP-CIDR,0.0.0.0/32,REJECT,no-resolve
+# Surge 的自动 REJECT 保护丢包, 防止应用循环请求
+  - IP-CIDR, 0.0.0.0/32, REJECT, no-resolve
 
-  - DOMAIN-SUFFIX,direct,DIRECT
-  - DOMAIN-SUFFIX,wpad,DIRECT
-  - DOMAIN-SUFFIX,localhost,DIRECT
-  - DOMAIN-SUFFIX,invalid,DIRECT
-  - DOMAIN-SUFFIX,onion,DIRECT
-  - DOMAIN-SUFFIX,test,DIRECT
-  - DOMAIN-SUFFIX,lan,DIRECT
-  - DOMAIN-SUFFIX,intranet,DIRECT
-  - DOMAIN-SUFFIX,internal,DIRECT
-  - DOMAIN-SUFFIX,private,DIRECT
-  - DOMAIN-SUFFIX,home,DIRECT
-  - DOMAIN-SUFFIX,corp,DIRECT
-  - IP-CIDR,169.254.0.0/16,DIRECT
-  - IP-CIDR,224.0.0.0/4,DIRECT
-  - IP-CIDR,240.0.0.0/4,DIRECT
-  - IP-CIDR,255.255.255.255/32,DIRECT
-  - IP-CIDR6,fc00::/7,DIRECT
-  - IP-CIDR6,fd00::/8,DIRECT
-  - IP-CIDR6,ff00::/8,DIRECT
-  - IP-CIDR6,ff01::/16,DIRECT
-  - IP-CIDR6,ff02::/16,DIRECT
-  - IP-CIDR6,ff03::/16,DIRECT
-  - IP-CIDR6,ff04::/16,DIRECT
-  - IP-CIDR6,ff05::/16,DIRECT
-  - IP-CIDR6,2001:db8::/32,DIRECT
-  - IP-CIDR6,2002::/16,DIRECT
+  - DOMAIN-SUFFIX, direct, DIRECT
+  - DOMAIN-SUFFIX, wpad, DIRECT
+  - DOMAIN-SUFFIX, localhost, DIRECT
+  - DOMAIN-SUFFIX, invalid, DIRECT
+  - DOMAIN-SUFFIX, onion, DIRECT
+  - DOMAIN-SUFFIX, test, DIRECT
+  - DOMAIN-SUFFIX, lan, DIRECT
+  - DOMAIN-SUFFIX, intranet, DIRECT
+  - DOMAIN-SUFFIX, internal, DIRECT
+  - DOMAIN-SUFFIX, private, DIRECT
+  - DOMAIN-SUFFIX, home, DIRECT
+  - DOMAIN-SUFFIX, corp, DIRECT
+  - IP-CIDR, 169.254.0.0/16, DIRECT
+  - IP-CIDR, 224.0.0.0/4, DIRECT
+  - IP-CIDR, 240.0.0.0/4, DIRECT
+  - IP-CIDR, 255.255.255.255/32, DIRECT
+  - IP-CIDR6, fc00::/7, DIRECT
+  - IP-CIDR6, fd00::/8, DIRECT
+  - IP-CIDR6, ff00::/8, DIRECT
+  - IP-CIDR6, ff01::/16, DIRECT
+  - IP-CIDR6, ff02::/16, DIRECT
+  - IP-CIDR6, ff03::/16, DIRECT
+  - IP-CIDR6, ff04::/16, DIRECT
+  - IP-CIDR6, ff05::/16, DIRECT
+  - IP-CIDR6, 2001:db8::/32, DIRECT
+  - IP-CIDR6, 2002::/16, DIRECT
 
   - GEOIP, CN, DIRECT, no-resolve
   - MATCH, 漏网之鱼
