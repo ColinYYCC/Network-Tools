@@ -314,20 +314,8 @@ function main(config) {
     },
     "Reject": {
       "behavior": "domain",
-      "url": "https://ruleset.skk.moe/Clash/domainset/reject.txt",
-      "path": "./rules/reject.txt",
-      ...ruleProviderCommon,
-    },
-    "Reject_Extra": {
-      "behavior": "domain",
-      "url": "https://ruleset.skk.moe/Clash/domainset/reject_extra.txt",
-      "path": "./rules/reject_extra.txt",
-      ...ruleProviderCommon,
-    },
-     "Reject_conf": {
-      "behavior": "domain",
-      "url": "https://ruleset.skk.moe/List/non_ip/reject.conf",
-      "path": "./rules/reject.conf",
+      "url": "https://adrules.top/adrules_domainset.txt",
+      "path": "./rules/adrules_domainset.txt",
       ...ruleProviderCommon,
     },
      "reject-no-drop": {
@@ -600,8 +588,6 @@ function main(config) {
     "RULE-SET,Special,DIRECT",
     "RULE-SET,Sogouinput,广告拦截",
     "RULE-SET,Reject,广告拦截",
-    "RULE-SET,Reject_Extra,广告拦截",
-    "RULE-SET,Reject_conf,广告拦截",
     "RULE-SET,reject-no-drop,广告拦截",
     "RULE-SET,reject-drop,广告拦截",
     "RULE-SET,静态CDN 域名,国外网站",
