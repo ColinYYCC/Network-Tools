@@ -330,12 +330,6 @@ function main(config) {
       "path": "./rules/reject.conf",
       ...ruleProviderCommon,
     },
-     "Reject_Extra": {
-      "behavior": "domain",
-      "url": "https://ruleset.skk.moe/Clash/domainset/reject_extra.txt",
-      "path": "./rules/reject_extra.txt",
-      ...ruleProviderCommon,
-    },
      "reject-no-drop": {
       "behavior": "domain",
       "url": "https://ruleset.skk.moe/List/non_ip/reject-no-drop.conf",
