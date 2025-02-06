@@ -243,6 +243,14 @@ rule-providers:
     <<: *RuleProviders
     path: './rules/ADRules.text'
     url: 'https://adrules.top/adrules_domainset.txt'
+  RejectPCDN:
+    <<: *RuleProviders
+    path: './rules/reject-no-drop.text'
+    url: 'https://ruleset.skk.moe/List/non_ip/reject-no-drop.conf'  
+  reject-drop:
+    <<: *RuleProviders
+    path: './rules/reject-drop.text'
+    url: 'https://ruleset.skk.moe/List/non_ip/reject-drop.conf'
 
   # 常见静态 CDN
   CDN_domainset: 
@@ -258,92 +266,92 @@ rule-providers:
   Lan:
     <<: *RuleProviders
     path: './rules/Lan.yaml'
-    url: 'https://gitlab.com/lodepuly/proxy_tool_resources/-/raw/master/rule/Clash/Lan/Lan.yaml'
+    url: 'https://rule.kelee.one/Clash/Lan/Lan.yaml'
 
   Direct:
     <<: *RuleProviders
     path: './rules/Direct.yaml'
-    url: 'https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Clash/Rule/Direct.yaml'
+    url: 'https://kelee.one/Tool/Clash/Rule/Direct.yaml'
 
   Proxy:
     <<: *RuleProviders
     path: './rules/Proxy.yaml'
-    url: 'https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Clash/Rule/Proxy.yaml'
+    url: 'https://kelee.one/Tool/Clash/Rule/Proxy.yaml'
 
   ChinaDownloadCDN:
     <<: *RuleProviders
     path: './rules/ChinaDownloadCDN.yaml'
-    url: 'https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Clash/Rule/ChinaDownloadCDN.yaml'
+    url: 'https://kelee.one/Tool/Clash/Rule/ChinaDownloadCDN.yaml'
 
   InternationalDownloadCDN:
     <<: *RuleProviders
     path: './rules/InternationalDownloadCDN.yaml'
-    url: 'https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Clash/Rule/InternationalDownloadCDN.yaml'
+    url: 'https://kelee.one/Tool/Clash/Rule/InternationalDownloadCDN.yaml'
 
   AI:
     <<: *RuleProviders
     path: './rules/AI.yaml'
-    url: 'https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Clash/Rule/AI.yaml'
+    url: 'https://kelee.one/Tool/Clash/Rule/AI.yaml'
 
   TikTok:
     <<: *RuleProviders
     path: './rules/TikTok.yaml'
-    url: 'https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Clash/Rule/TikTok.yaml'
+    url: 'https://kelee.one/Tool/Clash/Rule/TikTok.yaml'
 
   Game:
     <<: *RuleProviders
     path: './rules/Game.yaml'
-    url: 'https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Clash/Rule/Game.yaml'
+    url: 'https://kelee.one/Tool/Clash/Rule/Game.yaml'
 
   Steam:
     <<: *RuleProviders
     path: './rules/Steam.yaml'
-    url: 'https://gitlab.com/lodepuly/proxy_tool_resources/-/raw/master/rule/Clash/Steam/Steam.yaml'
+    url: 'https://rule.kelee.one/Clash/Steam/Steam.yaml'
 
   Netflix:
     <<: *RuleProviders
     path: './rules/Netflix.yaml'
-    url: 'https://gitlab.com/lodepuly/proxy_tool_resources/-/raw/master/rule/Clash/Netflix/Netflix.yaml'
+    url: 'https://rule.kelee.one/Clash/Netflix/Netflix.yaml'
 
   Emby:
     <<: *RuleProviders
     path: './rules/Emby.yaml'
-    url: 'https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Clash/Rule/EmbyServer.yaml'
+    url: 'https://kelee.one/Tool/Clash/Rule/EmbyServer.yaml'
 
   iCloudChina:
     <<: *RuleProviders
     path: './rules/iCloudChina.yaml'
-    url: 'https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Clash/Rule/iCloudChina.yaml'
+    url: 'https://kelee.one/Tool/Clash/Rule/iCloudChina.yaml'
 
   ApplePushNotificationService:
     <<: *RuleProviders
     path: './rules/ApplePushNotificationService.yaml'
-    url: 'https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Clash/Rule/ApplePushNotificationService.yaml'
+    url: 'https://kelee.one/Tool/Clash/Rule/ApplePushNotificationService.yaml'
 
   AppleSoftwareUpdates:
     <<: *RuleProviders
     path: './rules/AppleSoftwareUpdates.yaml'
-    url: 'https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Clash/Rule/AppleSoftwareUpdates.yaml'
+    url: 'https://kelee.one/Tool/Clash/Rule/AppleSoftwareUpdates.yaml'
 
   AppleID:
     <<: *RuleProviders
     path: './rules/AppleID.yaml'
-    url: 'https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Clash/Rule/AppleID.yaml'
+    url: 'https://kelee.one/Tool/Clash/Rule/AppleID.yaml'
 
   AppStore:
     <<: *RuleProviders
     path: './rules/AppStore.yaml'
-    url: 'https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Clash/Rule/AppStore.yaml'
+    url: 'https://kelee.one/Tool/Clash/Rule/AppStore.yaml'
 
   TestFlight:
     <<: *RuleProviders
     path: './rules/TestFlight.yaml'
-    url: 'https://gitlab.com/lodepuly/proxy_tool_resources/-/raw/master/rule/Clash/TestFlight/TestFlight.yaml'
+    url: 'https://rule.kelee.one/Clash/TestFlight/TestFlight.yaml'
 
   Microsoft:
     <<: *RuleProviders
     path: './rules/Microsoft.yaml'
-    url: 'https://gitlab.com/lodepuly/proxy_tool_resources/-/raw/master/rule/Clash/Microsoft/Microsoft.yaml'
+    url: 'https://rule.kelee.one/Clash/Microsoft/Microsoft.yaml'
 
   Github:
     <<: *RuleProviders
@@ -352,8 +360,8 @@ rule-providers:
 
   Google:
     <<: *RuleProviders
-    path: './rules/Google.yaml'
-    url: 'https://gitlab.com/lodepuly/proxy_tool_resources/-/raw/master/rule/Clash/Google/Google.yaml'
+    path: './rules/Google.yaml'  
+    url: 'https://rule.kelee.one/Clash/Google/Google.yaml'
 
   Telegram:
     <<: *RuleProviders
@@ -368,7 +376,31 @@ rule-providers:
   ESET_China:
     <<: *RuleProviders
     path: './rules/ESET_China.yaml'
-    url: 'https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Clash/Rule/ESET_China.yaml'
+    url: 'https://kelee.one/Tool/Clash/Rule/ESET_China.yaml'
+
+    "Domestic_non_ip": {
+      "behavior": "classical",
+      "url": "https://ruleset.skk.moe/Clash/non_ip/domestic.txt",
+      "path": "./rules/domestic.txt",
+      ...ruleProviderCommon,
+    },
+    "Direct_non_ip": {
+      "behavior": "classical",
+      "url": "https://ruleset.skk.moe/Clash/non_ip/direct.txt",
+      "path": "./rules/direct.txt",
+      ...ruleProviderCommon,
+    },
+    "Domestic_ip": {
+      "behavior": "classical",
+      "url": "https://ruleset.skk.moe/Clash/ip/domestic.txt",
+      "path": "./rules/domestic.txt",
+      ...ruleProviderCommon,
+    },
+    "China_ip": {
+      "behavior": "ipcidr",
+      "url": "https://ruleset.skk.moe/Clash/ip/china_ip.txt",
+      "path": "./rules/china_ip.txt",
+      ...ruleProviderCommon,
 
 # 规则指向
 rules:
@@ -460,6 +492,8 @@ rules:
 
   - RULE-SET, Sogouinput, REJECT
   - RULE-SET, ADRules, REJECT
+  - RULE-SET, RejectPCDN, REJECT
+  - RULE-SET, reject-drop, REJECT
   - RULE-SET, CDN_domainset, 国外网站
   - RULE-SET, CDN_nonip, 国外网站
   - RULE-SET, Lan, DIRECT
@@ -485,6 +519,10 @@ rules:
   - RULE-SET, Telegram, Telegram
   - RULE-SET, WeChat, DIRECT
   - RULE-SET, ESET_China, DIRECT
+  - RULE-SET, Domestic_non_ip, DIRECT
+  - RULE-SET, Direct_non_ip, DIRECT
+  - RULE-SET, China_ip, DIRECT, no-resolve
+  - RULE-SET, Domestic_ip, DIRECT, no-resolve
 
 # Surge 的自动 REJECT 保护丢包，防止应用循环请求
   - IP-CIDR,0.0.0.0/32,REJECT,no-resolve
