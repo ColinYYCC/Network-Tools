@@ -77,7 +77,8 @@ disable-stun = true
 # > 自定义geoip数据库的url
 geoip-url = https://github.com/xream/geoip/releases/latest/download/ipinfo.country.mmdb
 # > 自定义ASN数据库的url
-ipasn-url = https://raw.githubusercontent.com/P3TERX/GeoLite.mmdb/download/GeoLite2-ASN.mmdb
+ipasn-url = https://github.com/xream/geoip/releases/latest/download/ipinfo.asn.mmdb
+# ipasn-url = https://raw.githubusercontent.com/P3TERX/GeoLite.mmdb/download/GeoLite2-ASN.mmdb
 # ------
 
 [Proxy]
@@ -224,19 +225,19 @@ https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/
 # Spotify
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Spotify/Spotify.list,  policy=国外网站,  tag=Spotify,  enabled=true
 # Now E
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/NowE/NowE.list,  policy=香港,  tag=Now E,  enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/NowE/NowE.list,  policy=香港节点,  tag=Now E,  enabled=true
 # 巴哈姆特
-https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Streaming/Video/Bahamut.list,  policy=台湾,  tag=巴哈姆特,  enabled=true
+https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Streaming/Video/Bahamut.list,  policy=台湾节点,  tag=巴哈姆特,  enabled=true
 # Hami Video
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/HamiVideo/HamiVideo.list,  policy=台湾,  tag=Hami Video,  enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/HamiVideo/HamiVideo.list,  policy=台湾节点,  tag=Hami Video,  enabled=true
 # Niconico
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Niconico/Niconico.list,  policy=日本,  tag=Niconico,  enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Niconico/Niconico.list,  policy=日本节点,  tag=Niconico,  enabled=true
 # HBO
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/HBOUSA/HBOUSA.list,  policy=美国,  tag=HBO MAX,  enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/HBOHK/HBOHK.list,  policy=香港,  tag=HBO GO ASIA,  enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/HBOUSA/HBOUSA.list,  policy=美国节点,  tag=HBO MAX,  enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/HBOHK/HBOHK.list,  policy=香港节点,  tag=HBO GO ASIA,  enabled=true
 # Hulu
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/HuluUSA/HuluUSA.list,  policy=美国,  tag=Hulu,  enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/HuluJP/HuluJP.list,  policy=日本,  tag=HuluJP,  enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/HuluUSA/HuluUSA.list,  policy=美国节点,  tag=Hulu,  enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/HuluJP/HuluJP.list,  policy=日本节点,  tag=HuluJP,  enabled=true
 # BiliBili
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/BiliBiliIntl/BiliBiliIntl.list,  policy=国外网站,  tag=BiliBili,  enabled=true
 
