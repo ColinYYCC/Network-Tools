@@ -383,17 +383,17 @@ rule-providers:
     path: './rules/domestic.txt'
     url: 'https://ruleset.skk.moe/Clash/non_ip/domestic.txt'
 
-   Direct_non_ip:
+  Direct_non_ip:
     <<: *RuleProviders
     path: './rules/direct.txt'
     url: 'https://ruleset.skk.moe/Clash/non_ip/direct.txt'
 
-   Domestic_ip:
+  Domestic_ip:
     <<: *RuleProviders
     path: './rules/domestic.txt'
     url: 'https://ruleset.skk.moe/Clash/ip/domestic.txt'
 
-   China_ip:
+  China_ip:
     <<: *RuleProviders
     path: './rules/china_ip.txt'
     url: 'https://ruleset.skk.moe/Clash/ip/china_ip.txt'
