@@ -200,12 +200,8 @@ https://raw.githubusercontent.com/SunsetMkt/anti-ip-attribution/refs/heads/main/
 
 # ADs
 https://adrules.top/adrules.list,  policy=REJECT,  tag=Adrules,  enabled=true
-https://ruleset.skk.moe/List/domainset/reject.conf,  policy=REJECT,  tag=ADs,  enabled=true
-https://ruleset.skk.moe/List/domainset/reject_extra.conf,  policy=REJECT,  tag=ADs-Extra,  enabled=true
-https://ruleset.skk.moe/List/non_ip/reject.conf,  policy=REJECT,  tag=ADs-NIP,  enabled=true
 https://ruleset.skk.moe/List/non_ip/reject-no-drop.conf,  policy=REJECT-NO-DROP,  tag=防止PCDN,  enabled=true
 https://ruleset.skk.moe/List/non_ip/reject-drop.conf,  policy=REJECT-DROP,  tag=Adobe 系列软件内部的跟踪,  enabled=true
-#https://ruleset.skk.moe/List/ip/reject.conf,  policy=REJECT-DROP,  tag=广告拦截 IP,  enabled=false
 
 # CDN
 https://ruleset.skk.moe/List/domainset/cdn.conf,  policy=国外网站,  tag=SukkaW静态CDN域名,  enabled=true
