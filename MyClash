@@ -360,7 +360,7 @@ rule-providers:
 
   Google:
     <<: *RuleProviders
-    path: './rules/Google.yaml'  
+    path: './rules/Google.yaml'
     url: 'https://rule.kelee.one/Clash/Google/Google.yaml'
 
   Telegram:
@@ -378,22 +378,22 @@ rule-providers:
     path: './rules/ESET_China.yaml'
     url: 'https://kelee.one/Tool/Clash/Rule/ESET_China.yaml'
 
-    Domestic_non_ip:
+  Domestic_non_ip:
     <<: *RuleProviders
     path: './rules/domestic.txt'
     url: 'https://ruleset.skk.moe/Clash/non_ip/domestic.txt'
 
-    Direct_non_ip:
+   Direct_non_ip:
     <<: *RuleProviders
     path: './rules/direct.txt'
     url: 'https://ruleset.skk.moe/Clash/non_ip/direct.txt'
 
-    Domestic_ip:
+   Domestic_ip:
     <<: *RuleProviders
     path: './rules/domestic.txt'
     url: 'https://ruleset.skk.moe/Clash/ip/domestic.txt'
 
-    China_ip:
+   China_ip:
     <<: *RuleProviders
     path: './rules/china_ip.txt'
     url: 'https://ruleset.skk.moe/Clash/ip/china_ip.txt'
@@ -517,11 +517,11 @@ rules:
   - RULE-SET, ESET_China, DIRECT
   - RULE-SET, Domestic_non_ip, DIRECT
   - RULE-SET, Direct_non_ip, DIRECT
-  - RULE-SET, China_ip, DIRECT, no-resolve
-  - RULE-SET, Domestic_ip, DIRECT, no-resolve
+  - RULE-SET, China_ip, DIRECT
+  - RULE-SET, Domestic_ip, DIRECT
 
 # Surge 的自动 REJECT 保护丢包, 防止应用循环请求
-  - IP-CIDR, 0.0.0.0/32, REJECT, no-resolve
+  - IP-CIDR, 0.0.0.0/32, REJECT
 
   - DOMAIN-SUFFIX, direct, DIRECT
   - DOMAIN-SUFFIX, wpad, DIRECT
@@ -550,7 +550,7 @@ rules:
   - IP-CIDR6, 2001:db8::/32, DIRECT
   - IP-CIDR6, 2002::/16, DIRECT
 
-  - GEOIP, CN, DIRECT, no-resolve
+  - GEOIP, CN, DIRECT
   - MATCH, 漏网之鱼
 
 url-rewrite:
