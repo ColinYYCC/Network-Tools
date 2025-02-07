@@ -196,145 +196,137 @@ FINAL, 漏网之鱼
 
 [Remote Rule]
 # IP归属地更改
-https://raw.githubusercontent.com/SunsetMkt/anti-ip-attribution/refs/heads/main/generated/surge.list,  policy=DIRECT,  tag=IP归属地更改,  enabled=true
+https://raw.githubusercontent.com/SunsetMkt/anti-ip-attribution/refs/heads/main/generated/surge.list, policy=DIRECT, tag=IP归属地更改, enabled=true
 
 # ADs
-https://adrules.top/adrules.list,  policy=REJECT,  tag=Adrules,  enabled=true
-https://ruleset.skk.moe/List/non_ip/reject-no-drop.conf,  policy=REJECT-NO-DROP,  tag=防止PCDN,  enabled=true
-https://ruleset.skk.moe/List/non_ip/reject-drop.conf,  policy=REJECT-DROP,  tag=Adobe 系列软件内部的跟踪,  enabled=true
+https://adrules.top/adrules.list, policy=REJECT, tag=Adrules, enabled=true
+https://ruleset.skk.moe/List/non_ip/reject-no-drop.conf, policy=REJECT-NO-DROP, tag=防止PCDN, enabled=true
+https://ruleset.skk.moe/List/non_ip/reject-drop.conf, policy=REJECT-DROP, tag=Adobe 系列软件内部的跟踪, enabled=true
+#https://ruleset.skk.moe/List/ip/reject.conf,  policy=REJECT-DROP,  tag=广告拦截 IP,  enabled=false
 
 # CDN
-https://ruleset.skk.moe/List/domainset/cdn.conf,  policy=国外网站,  tag=SukkaW静态CDN域名,  enabled=true
-https://ruleset.skk.moe/List/non_ip/cdn.conf,  policy=国外网站,  tag=SukkaW静态CDN域名,  enabled=true
+https://ruleset.skk.moe/List/domainset/cdn.conf, policy=国外网站, tag=SukkaW静态CDN域名, enabled=true
+https://ruleset.skk.moe/List/non_ip/cdn.conf, policy=国外网站, tag=SukkaW静态CDN域名, enabled=true
 
 # TV+
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/AppleTV/AppleTV.list,  policy=国外网站,  tag=TV+,  enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/AppleTV/AppleTV.list, policy=国外网站, tag=TV+, enabled=true
 # Disney+
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Disney/Disney.list,  policy=Disney+,  tag=Disney+,  enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Disney/Disney.list, policy=Disney+, tag=Disney+, enabled=true
 # Emby
-https://github.com/Repcz/Tool/raw/X/Surge/Rules/Emby.list,  policy=Emby,  tag=Emby,  enabled=true
+https://github.com/Repcz/Tool/raw/X/Surge/Rules/Emby.list, policy=Emby, tag=Emby, enabled=true
 # Netflix
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Netflix/Netflix.list,  policy=Netflix,  tag=Netflix,  enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Netflix/Netflix.list, policy=Netflix, tag=Netflix, enabled=true
 # YouTube
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/YouTube/YouTube.list,  policy=国外网站,  tag=YouTube,  enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/YouTubeMusic/YouTubeMusic.list,  policy=国外网站,  tag=YouTube,  enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/YouTube/YouTube.list, policy=国外网站, tag=YouTube, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/YouTubeMusic/YouTubeMusic.list, policy=国外网站, tag=YouTube, enabled=true
 # Spotify
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Spotify/Spotify.list,  policy=国外网站,  tag=Spotify,  enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Spotify/Spotify.list, policy=国外网站, tag=Spotify, enabled=true
 # Now E
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/NowE/NowE.list,  policy=香港节点,  tag=Now E,  enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/NowE/NowE.list, policy=香港, tag=Now E, enabled=true
 # 巴哈姆特
-https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Streaming/Video/Bahamut.list,  policy=台湾节点,  tag=巴哈姆特,  enabled=true
+https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/Streaming/Video/Bahamut.list, policy=台湾, tag=巴哈姆特, enabled=true
 # Hami Video
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/HamiVideo/HamiVideo.list,  policy=台湾节点,  tag=Hami Video,  enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/HamiVideo/HamiVideo.list, policy=台湾, tag=Hami Video, enabled=true
 # Niconico
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Niconico/Niconico.list,  policy=日本节点,  tag=Niconico,  enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Niconico/Niconico.list, policy=日本, tag=Niconico, enabled=true
 # HBO
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/HBOUSA/HBOUSA.list,  policy=美国节点,  tag=HBO MAX,  enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/HBOHK/HBOHK.list,  policy=香港节点,  tag=HBO GO ASIA,  enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/HBOUSA/HBOUSA.list, policy=美国, tag=HBO MAX, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/HBOHK/HBOHK.list, policy=香港, tag=HBO GO ASIA, enabled=true
 # Hulu
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/HuluUSA/HuluUSA.list,  policy=美国节点,  tag=Hulu,  enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/HuluJP/HuluJP.list,  policy=日本节点,  tag=HuluJP,  enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/HuluUSA/HuluUSA.list, policy=美国, tag=Hulu, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/HuluJP/HuluJP.list, policy=日本, tag=HuluJP, enabled=true
 # BiliBili
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/BiliBiliIntl/BiliBiliIntl.list,  policy=国外网站,  tag=BiliBili,  enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/BiliBiliIntl/BiliBiliIntl.list, policy=国外网站, tag=BiliBili, enabled=true
 
 # Streaming 国际流媒体服务
-https://ruleset.skk.moe/List/non_ip/stream.conf,  policy=国外网站,  tag=Streaming 国际流媒体服务,  enabled=true
-https://ruleset.skk.moe/List/ip/stream.conf,  policy=国外网站,  tag=Streaming 国际流媒体服务(IP),  enabled=true
+https://ruleset.skk.moe/List/non_ip/stream.conf, policy=国外网站, tag=Streaming 国际流媒体服务, enabled=true
+https://ruleset.skk.moe/List/ip/stream.conf, policy=国外网站, tag=Streaming 国际流媒体服务(IP), enabled=true
 
 # 国外网站
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/GitHub/GitHub.list,  policy=🥡 节点选择,  tag=Github,  enabled=true
-https://ruleset.skk.moe/List/non_ip/global.conf,  policy=🥡 节点选择,  tag=国外网站,  enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/GitHub/GitHub.list, policy=🥡 节点选择, tag=Github, enabled=true
+https://ruleset.skk.moe/List/non_ip/global.conf, policy=🥡 节点选择, tag=国外网站, enabled=true
 
 # Telegram 电报
-https://github.com/LucaLin233/Luca_Conf/blob/main/Surge/Rule/Telegram.list?raw=true,  policy=Telegram,  tag=Telegram 电报,  enabled=true
+https://github.com/LucaLin233/Luca_Conf/blob/main/Surge/Rule/Telegram.list?raw=true, policy=Telegram, tag=Telegram 电报, enabled=true
 
 
 # > 👾Game 游戏(不仅限于UDP,  包括相关CDN)
 # GameList
 # https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Game/Game.list,  policy=游戏,  tag=GameList,  enabled=true // GameList
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Blizzard/Blizzard.list,  policy=游戏,  tag=暴雪娱乐 Blizzard,  enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Classic/Classic.list,  policy=游戏,  tag=Classic,  enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/DiabloIII/DiabloIII.list,  policy=游戏,  tag=暗黑破坏神III DiabloIII,  enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Hearthstone/Hearthstone.list,  policy=游戏,  tag=炉石传说 Hearthstone,  enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/HeroesoftheStorm/HeroesoftheStorm.list,  policy=游戏,  tag=风暴英雄 HeroesoftheStorm,  enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Rockstar/Rockstar.list,  policy=游戏,  tag=侠盗猎车手 Rockstar,  enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Overwatch/Overwatch.list,  policy=游戏,  tag=守望先锋 Overwatch,  enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/StarCraftII/StarCraftII.list,  policy=游戏,  tag=星海爭霸II StarCraftII,  enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/WildRift/WildRift.list,  policy=游戏,  tag=英雄联盟手游 WildRift,  enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/WorldofWarcraft/WorldofWarcraft.list,  policy=游戏,  tag=魔兽世界WorldofWarcraft,  enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Blizzard/Blizzard.list, policy=游戏, tag=暴雪娱乐 Blizzard, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Classic/Classic.list, policy=游戏, tag=Classic, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/DiabloIII/DiabloIII.list, policy=游戏, tag=暗黑破坏神III DiabloIII, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Hearthstone/Hearthstone.list, policy=游戏, tag=炉石传说 Hearthstone, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/HeroesoftheStorm/HeroesoftheStorm.list, policy=游戏, tag=风暴英雄 HeroesoftheStorm, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Rockstar/Rockstar.list, policy=游戏, tag=侠盗猎车手 Rockstar, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Overwatch/Overwatch.list, policy=游戏, tag=守望先锋 Overwatch, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/StarCraftII/StarCraftII.list, policy=游戏, tag=星海爭霸II StarCraftII, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/WildRift/WildRift.list, policy=游戏, tag=英雄联盟手游 WildRift, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/WorldofWarcraft/WorldofWarcraft.list, policy=游戏, tag=魔兽世界WorldofWarcraft, enabled=true
 
 # Game Publisher
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Discord/Discord.list,  policy=游戏,  tag=Discord,  enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/EA/EA.list,  policy=游戏,  tag=EA,  enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Epic/Epic.list,  policy=游戏,  tag=Epic,  enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/HoYoverse/HoYoverse.list,  policy=游戏,  tag=米哈游,  enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Nintendo/Nintendo.list,  policy=游戏,  tag=任天堂 Nintendo,  enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Origin/Origin.list,  policy=游戏,  tag=Origin,  enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/PlayStation/PlayStation.list,  policy=游戏,  tag=PlayStation,  enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Steam/Steam.list,  policy=游戏,  tag=Steam,  enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Discord/Discord.list, policy=游戏, tag=Discord, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/EA/EA.list, policy=游戏, tag=EA, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Epic/Epic.list, policy=游戏, tag=Epic, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/HoYoverse/HoYoverse.list, policy=游戏, tag=米哈游, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Nintendo/Nintendo.list, policy=游戏, tag=任天堂 Nintendo, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Origin/Origin.list, policy=游戏, tag=Origin, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/PlayStation/PlayStation.list, policy=游戏, tag=PlayStation, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Steam/Steam.list, policy=游戏, tag=Steam, enabled=true
 # https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/SteamCN/SteamCN.list,  policy=游戏,  tag=SteamCN,  enabled=true // SteamCN
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Supercell/Supercell.list,  policy=游戏,  tag=部落冲突 Supercell,  enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/UBI/UBI.list,  policy=游戏,  tag=UBI,  enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Xbox/Xbox.list,  policy=游戏,  tag=Xbox,  enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Supercell/Supercell.list, policy=游戏, tag=部落冲突 Supercell, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/UBI/UBI.list, policy=游戏, tag=UBI, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Xbox/Xbox.list, policy=游戏, tag=Xbox, enabled=true
 
 # 中国直连
-https://ruleset.skk.moe/List/non_ip/domestic.conf,  policy=DIRECT,  tag=国內直连,  enabled=true
-https://ruleset.skk.moe/List/non_ip/direct.conf,  policy=DIRECT,  tag=国內直连,  enabled=true
-https://ruleset.skk.moe/List/ip/domestic.conf,  policy=DIRECT,  tag=China 中国直连 (IP),  enabled=true
-https://ruleset.skk.moe/List/ip/china_ip.conf,  policy=DIRECT,  tag=China 中国直连 (IP),  enabled=true
-https://github.com/Repcz/Tool/raw/X/Loon/Rules/Lan.list,  policy=DIRECT,  tag=LAN,  enabled=true
-https://github.com/Repcz/Tool/raw/X/Loon/Rules/FILTER_REGION.list,  policy=DIRECT,  tag=CN,  enabled=true
+https://ruleset.skk.moe/List/non_ip/domestic.conf, policy=DIRECT, tag=国內直连, enabled=true
+https://ruleset.skk.moe/List/non_ip/direct.conf, policy=DIRECT, tag=国內直连, enabled=true
+https://ruleset.skk.moe/List/ip/domestic.conf, policy=DIRECT, tag=China 中国直连 (IP), enabled=true
+https://ruleset.skk.moe/List/ip/china_ip.conf, policy=DIRECT, tag=China 中国直连 (IP), enabled=true
+https://github.com/Repcz/Tool/raw/X/Loon/Rules/Lan.list, policy=DIRECT, tag=LAN, enabled=true
+https://github.com/Repcz/Tool/raw/X/Loon/Rules/FILTER_REGION.list, policy=DIRECT, tag=CN, enabled=true
 # ------
 
 [Plugin]
-
-https://kelee.one/Tool/Loon/Plugin/LoonGallery.plugin,  policy=漏网之鱼,  enabled=true
-https://kelee.one/Tool/Loon/Plugin/Block_HTTPDNS.plugin,  enabled=true
-https://kelee.one/Tool/Loon/Plugin/BlockAdvertisers.plugin,  enabled=true
-https://kelee.one/Tool/Loon/Plugin/Remove_ads_by_keli.plugin,  enabled=true
-https://kelee.one/Tool/Loon/Plugin/Cainiao_remove_ads.plugin,  enabled=true
-https://kelee.one/Tool/Loon/Plugin/CaixinMedia_remove_ads.plugin,  enabled=true
-https://kelee.one/Tool/Loon/Plugin/CoolApk_remove_ads.plugin,  enabled=true
-https://kelee.one/Tool/Loon/Plugin/Taobao_remove_ads.plugin,  enabled=true
-https://kelee.one/Tool/Loon/Plugin/Tieba_remove_ads.plugin,  enabled=true
-https://kelee.one/Tool/Loon/Plugin/JD_remove_ads.plugin,  enabled=true
-https://kelee.one/Tool/Loon/Plugin/Weibo_remove_ads.plugin,  enabled=true
-https://kelee.one/Tool/Loon/Plugin/Zhihu_remove_ads.plugin,  enabled=true
-https://kelee.one/Tool/Loon/Plugin/Aiinquiry_remove_ads.plugin,  enabled=true
-https://kelee.one/Tool/Loon/Plugin/DiDi_remove_ads.plugin,  enabled=true
-https://kelee.one/Tool/Loon/Plugin/BabyTree_remove_ads.plugin,  enabled=true
-https://kelee.one/Tool/Loon/Plugin/RedPaper_remove_ads.plugin,  enabled=true
-https://kelee.one/Tool/Loon/Plugin/PiPiXia_remove_ads.plugin,  enabled=true
-https://kelee.one/Tool/Loon/Plugin/IThome_remove_ads.plugin,  enabled=true
-https://kelee.one/Tool/Loon/Plugin/QQMusic_remove_ads.plugin,  enabled=true
-https://kelee.one/Tool/Loon/Plugin/Reddit_remove_ads.plugin,  enabled=true
-https://kelee.one/Tool/Loon/Plugin/QQKSong_remove_ads.plugin,  enabled=true
-https://kelee.one/Tool/Loon/Plugin/Spotify_remove_ads.plugin,  enabled=true
-https://kelee.one/Tool/Loon/Plugin/YouTube_remove_ads.plugin,  enabled=true
-https://kelee.one/Tool/Loon/Plugin/AliYunDrive_remove_ads.plugin,  enabled=true
-https://kelee.one/Tool/Loon/Plugin/Amap_remove_ads.plugin,  enabled=true
-https://kelee.one/Tool/Loon/Plugin/BaiduNetDisk_remove_ads.plugin,  enabled=true
-https://kelee.one/Tool/Loon/Plugin/Himalaya_remove_ads.plugin,  enabled=true
-https://kelee.one/Tool/Loon/Plugin/QiDian_remove_ads.plugin,  enabled=true
-https://kelee.one/Tool/Loon/Plugin/DragonRead_remove_ads.plugin,  enabled=true
-https://kelee.one/Tool/Loon/Plugin/Umetrip_remove_ads.plugin,  enabled=true
-https://kelee.one/Tool/Loon/Plugin/BaiduSearchWebpage_remove_ads.plugin,  enabled=true
-https://kelee.one/Tool/Loon/Plugin/Bilibili_remove_ads.plugin,  enabled=true
-https://kelee.one/Tool/Loon/Plugin/Baidu_input_method_remove_ads.plugin,  enabled=true
-https://kelee.one/Tool/Loon/Plugin/NeteaseCloudMusic_remove_ads.plugin,  enabled=true
-https://kelee.one/Tool/Loon/Plugin/smzdm_remove_ads.plugin,  enabled=true
-https://kelee.one/Tool/Loon/Plugin/Weixin_Official_Accounts_remove_ads.plugin,  enabled=true
-https://kelee.one/Tool/Loon/Plugin/WexinMiniPrograms_Remove_ads.plugin,  enabled=true
-https://kelee.one/Tool/Loon/Plugin/JD_Price.plugin,  enabled=true
-https://kelee.one/Tool/Loon/Plugin/QuickSearch.plugin,  enabled=true
-https://kelee.one/Tool/Loon/Plugin/Prevent_DNS_Leaks.plugin,  policy=漏网之鱼,  enabled=true
-https://kelee.one/Tool/Loon/Plugin/Node_detection_tool.plugin,  enabled=true
-https://kelee.one/Tool/Loon/Plugin/Weixin_external_links_unlock.plugin,  enabled=true
-https://kelee.one/Tool/Loon/Plugin/Fileball_mount.plugin,  enabled=false
-https://kelee.one/Tool/Loon/Plugin/Auto_Join_TF.plugin,  policy=DIRECT,  enabled=false
-https://kelee.one/Tool/Loon/Plugin/BoxJs.plugin,  policy=漏网之鱼,  enabled=true
-https://kelee.one/Tool/Loon/Plugin/Sub-Store.plugin,  policy=漏网之鱼,  enabled=true
-https://kelee.one/Tool/Loon/Plugin/Script-Hub.plugin,  policy=漏网之鱼,  enabled=true
+https://kelee.one/Tool/Loon/Plugin/LoonGallery.plugin, policy=漏网之鱼, enabled=true
+https://kelee.one/Tool/Loon/Plugin/Block_HTTPDNS.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/BlockAdvertisers.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/Remove_ads_by_keli.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/Cainiao_remove_ads.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/Taobao_remove_ads.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/Tieba_remove_ads.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/JD_remove_ads.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/Weibo_remove_ads.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/Zhihu_remove_ads.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/Aiinquiry_remove_ads.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/DiDi_remove_ads.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/RedPaper_remove_ads.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/QQMusic_remove_ads.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/QQKSong_remove_ads.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/Spotify_remove_ads.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/YouTube_remove_ads.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/AliYunDrive_remove_ads.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/Amap_remove_ads.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/BaiduNetDisk_remove_ads.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/Himalaya_remove_ads.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/DragonRead_remove_ads.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/Umetrip_remove_ads.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/BaiduSearchWebpage_remove_ads.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/Baidu_input_method_remove_ads.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/NeteaseCloudMusic_remove_ads.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/smzdm_remove_ads.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/Weixin_Official_Accounts_remove_ads.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/WexinMiniPrograms_Remove_ads.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/JD_Price.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/QuickSearch.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/Prevent_DNS_Leaks.plugin, policy=漏网之鱼, enabled=true
+https://kelee.one/Tool/Loon/Plugin/Node_detection_tool.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/Weixin_external_links_unlock.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/Fileball_mount.plugin, enabled=false
+https://kelee.one/Tool/Loon/Plugin/Auto_Join_TF.plugin, policy=DIRECT, enabled=false
+https://kelee.one/Tool/Loon/Plugin/BoxJs.plugin, policy=漏网之鱼, enabled=false
+https://raw.githubusercontent.com/sub-store-org/Sub-Store/master/config/Loon.plugin, policy=🎲 自动选择, enabled=true
+https://kelee.one/Tool/Loon/Plugin/Script-Hub.plugin, policy=漏网之鱼, enabled=true
 # ------
 
 [Host]
