@@ -135,7 +135,7 @@ Spotify = select, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, 香�
 DOMAIN-SUFFIX, zoom.us, 国外网站
 
 # 新增内置策略 NO-HYBRID, 等价为 NO-HYBRID = direct,  hybrid=off
-DOMAIN-SUFFIX, cmbchina.com, NO-HYBRID
+DOMAIN-SUFFIX, cmbchina.com, DIRECT
 
 # Process 程序规则
 # > Client
