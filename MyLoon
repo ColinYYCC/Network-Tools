@@ -324,7 +324,7 @@ https://kelee.one/Tool/Loon/Plugin/Node_detection_tool.plugin, enabled=true
 https://kelee.one/Tool/Loon/Plugin/Weixin_external_links_unlock.plugin, enabled=true
 https://kelee.one/Tool/Loon/Plugin/Fileball_mount.plugin, enabled=false
 https://kelee.one/Tool/Loon/Plugin/Auto_Join_TF.plugin, policy=DIRECT, enabled=false
-https://kelee.one/Tool/Loon/Plugin/BoxJs.plugin, policy=漏网之鱼, enabled=false
+https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.loon.tf.plugin, policy=漏网之鱼, enabled=false
 https://raw.githubusercontent.com/sub-store-org/Sub-Store/master/config/Loon.plugin, policy=🎲 自动选择, enabled=true
 https://kelee.one/Tool/Loon/Plugin/Script-Hub.plugin, policy=漏网之鱼, enabled=true
 # ------
