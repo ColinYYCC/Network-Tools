@@ -909,5 +909,4 @@ http-response ^https?://ios\.prod\.ftl\.netflix\.com/iosui/user/.+path=%5B%22vid
 ca-p12 =
 ca-passphrase =
 skip-server-cert-verify = true
-h2 = true
 hostname = -gateway.icloud.com, -weather-data.apple.com, -buy.itunes.apple.com, -pan.baidu.com, www.google.cn
