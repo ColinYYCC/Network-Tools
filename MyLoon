@@ -288,6 +288,7 @@ https://github.com/Repcz/Tool/raw/X/Loon/Rules/FILTER_REGION.list, policy=DIRECT
 # ------
 
 [Plugin]
+https://raw.githubusercontent.com/GeQ1an/Rules/master/Loon/Rewrite/Rewrite.plugin,, enabled=true
 https://kelee.one/Tool/Loon/Plugin/LoonGallery.plugin, policy=漏网之鱼, enabled=true
 https://kelee.one/Tool/Loon/Plugin/Block_HTTPDNS.plugin, enabled=true
 https://kelee.one/Tool/Loon/Plugin/BlockAdvertisers.plugin, enabled=true
