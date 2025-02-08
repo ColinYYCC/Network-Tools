@@ -292,11 +292,6 @@ rule-providers:
     path: './rules/AI.yaml'
     url: 'https://kelee.one/Tool/Clash/Rule/AI.yaml'
 
-  TikTok:
-    <<: *RuleProviders
-    path: './rules/TikTok.yaml'
-    url: 'https://kelee.one/Tool/Clash/Rule/TikTok.yaml'
-
   Game:
     <<: *RuleProviders
     path: './rules/Game.yaml'
@@ -499,7 +494,6 @@ rules:
   - RULE-SET, CDN_domainset, 国外网站
   - RULE-SET, CDN_nonip, 国外网站
   - RULE-SET, AI, AI
-  - RULE-SET, TikTok, TikTok
   - RULE-SET, Steam, 国外网站
   - RULE-SET, Game, 游戏选择
   - RULE-SET, Netflix, Netflix
