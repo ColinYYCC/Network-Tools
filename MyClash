@@ -214,7 +214,7 @@ proxy-groups:
   - {name: AI, type: select, proxies: [美国策略, 香港策略, 台湾策略, 日本策略, 韩国策略, 新国策略, DIRECT], icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png}
   - {name: Telegram, type: select, proxies: [🔮 负载均衡, 🔯 故障转移, 🛰️ 自动选择, 香港策略, 台湾策略, 日本策略, 韩国策略, 新国策略, 美国策略], icon: https://github.com/tugepaopao/Image-Storage/raw/master/hand-painted/36.png}
   - {name: App Store, type: select, proxies: [DIRECT, 香港策略, 台湾策略, 日本策略, 韩国策略, 新国策略, 美国策略], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Apple.png}
-  - {name: Microsoft, type: select, proxies: [DIRECT, 香港策略, 台湾策略, 日本策略, 韩国策略, 新国策略, 美国策略], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Microsoft.png}
+  - {name: Spotify, type: select, proxies: [DIRECT, 香港策略, 台湾策略, 日本策略, 韩国策略, 新国策略, 美国策略], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Spotify.png}
   - {name: Netflix, type: select, proxies: [香港策略, 台湾策略, 日本策略, 韩国策略, 新国策略, 美国策略], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Netflix.png}
   - {name: Emby, type: select, proxies: [DIRECT, 香港策略, 台湾策略, 日本策略, 韩国策略, 新国策略, 美国策略], icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png}
   - {name: 游戏选择, type: select, include-all-providers: true, filter: *FilterGame, proxies: [DIRECT, 全球选择], icon: https://github.com/tugepaopao/Image-Storage/raw/master/hand-painted/35.png}
@@ -490,9 +490,12 @@ rules:
   - RULE-SET, RejectPCDN, REJECT
   - RULE-SET, reject-drop, REJECT
   - RULE-SET, Lan, DIRECT
-  - RULE-SET, Direct, DIRECT
   - RULE-SET, ChinaDownloadCDN, DIRECT
   - RULE-SET, InternationalDownloadCDN, DIRECT
+  - RULE-SET, TestFlight, DIRECT
+  - RULE-SET, iCloudChina, DIRECT
+  - RULE-SET, ApplePushNotificationService, DIRECT
+  - RULE-SET, AppleSoftwareUpdates, DIRECT
   - RULE-SET, CDN_domainset, 国外网站
   - RULE-SET, CDN_nonip, 国外网站
   - RULE-SET, AI, AI
@@ -501,13 +504,9 @@ rules:
   - RULE-SET, Game, 游戏选择
   - RULE-SET, Netflix, Netflix
   - RULE-SET, Emby, Emby
-  - RULE-SET, TestFlight, DIRECT
-  - RULE-SET, iCloudChina, DIRECT
-  - RULE-SET, ApplePushNotificationService, DIRECT
-  - RULE-SET, AppleSoftwareUpdates, DIRECT
   - RULE-SET, AppleID, App Store
   - RULE-SET, AppStore, App Store
-  - RULE-SET, Microsoft, Microsoft
+  - RULE-SET, Microsoft, 国外网站
   - RULE-SET, Github, 国外网站
   - RULE-SET, Google, 国外网站
   - RULE-SET, Telegram, Telegram
