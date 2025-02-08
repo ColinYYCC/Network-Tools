@@ -489,13 +489,12 @@ rules:
   - RULE-SET, ADRules, REJECT
   - RULE-SET, RejectPCDN, REJECT
   - RULE-SET, reject-drop, REJECT
-  - RULE-SET, CDN_domainset, 国外网站
-  - RULE-SET, CDN_nonip, 国外网站
   - RULE-SET, Lan, DIRECT
   - RULE-SET, Direct, DIRECT
-  - RULE-SET, Proxy, 漏网之鱼
   - RULE-SET, ChinaDownloadCDN, DIRECT
-  - RULE-SET, InternationalDownloadCDN, 境外下载
+  - RULE-SET, InternationalDownloadCDN, DIRECT
+  - RULE-SET, CDN_domainset, 国外网站
+  - RULE-SET, CDN_nonip, 国外网站
   - RULE-SET, AI, AI
   - RULE-SET, TikTok, TikTok
   - RULE-SET, Steam, 国外网站
@@ -512,6 +511,7 @@ rules:
   - RULE-SET, Github, 国外网站
   - RULE-SET, Google, 国外网站
   - RULE-SET, Telegram, Telegram
+  - RULE-SET, Proxy, 漏网之鱼
   - RULE-SET, WeChat, DIRECT
   - RULE-SET, ESET_China, DIRECT
   - RULE-SET, Domestic_non_ip, DIRECT
