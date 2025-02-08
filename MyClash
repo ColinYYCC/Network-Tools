@@ -209,7 +209,7 @@ RuleProviders: &RuleProviders {type: http, behavior: classical, interval: 3600, 
 # 策略组
 proxy-groups: 
 
-  - {name: 全球选择, type: select, filter: *FilterAll, icon: https://github.com/chen08209/FlClash/raw/main/assets/images/icon.png}
+  - {name: 全球选择, type: select, include-all-providers: true, filter: *FilterAll, icon: https://github.com/chen08209/FlClash/raw/main/assets/images/icon.png}
   - {name: 国外网站, <<: *pg, icon: https://raw.githubusercontent.com/tugepaopao/Image-Storage/master/hand-painted/56.png}
   - {name: AI, type: select, proxies: [美国策略, 香港策略, 台湾策略, 日本策略, 韩国策略, 新国策略, DIRECT], icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png}
   - {name: Telegram, type: select, proxies: [🔮 负载均衡, 🔯 故障转移, 🛰️ 自动选择, 香港策略, 台湾策略, 日本策略, 韩国策略, 新国策略, 美国策略], icon: https://github.com/tugepaopao/Image-Storage/raw/master/hand-painted/36.png}
@@ -217,7 +217,7 @@ proxy-groups:
   - {name: Spotify, type: select, proxies: [DIRECT, 香港策略, 台湾策略, 日本策略, 韩国策略, 新国策略, 美国策略], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Spotify.png}
   - {name: Netflix, type: select, proxies: [香港策略, 台湾策略, 日本策略, 韩国策略, 新国策略, 美国策略], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Netflix.png}
   - {name: Emby, type: select, proxies: [DIRECT, 香港策略, 台湾策略, 日本策略, 韩国策略, 新国策略, 美国策略], icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png}
-  - {name: 游戏选择, type: select, filter: *FilterGame, proxies: [DIRECT, 全球选择], icon: https://github.com/tugepaopao/Image-Storage/raw/master/hand-painted/35.png}
+  - {name: 游戏选择, type: select, include-all-providers: true, filter: *FilterGame, proxies: [DIRECT, 全球选择], icon: https://github.com/tugepaopao/Image-Storage/raw/master/hand-painted/35.png}
   - {name: 漏网之鱼, type: select, proxies: [🔯 故障转移, 🛰️ 自动选择, 🔮 负载均衡, DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Snapfish.png}
 
   - {name: 🛰️ 自动选择, <<: *UrlTest, filter: *FilterAll, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Auto_Speed.png}
@@ -245,7 +245,7 @@ rule-providers:
   RejectPCDN:
     <<: *RuleProviders
     path: './rules/reject-no-drop.text'
-    url: 'https://ruleset.skk.moe/List/non_ip/reject-no-drop.conf'  
+    url: 'https://ruleset.skk.moe/List/non_ip/reject-no-drop.conf'
   reject-drop:
     <<: *RuleProviders
     path: './rules/reject-drop.text'
