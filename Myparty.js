@@ -1,4 +1,5 @@
 // Mihomo Party 覆写 / Clash Verge Rev 扩展脚本
+// 参考 yy（@yyhhyyyyyy）&SakkuW（@SukkaW）的配置
 
 function main (params) {
     if (!params.proxies) return params;
