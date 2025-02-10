@@ -175,10 +175,10 @@ dns:
     - "*.finalfantasyxiv.com"
     - "*.ffxiv.com"
   default-nameserver:
-    - 9.9.9.9
-    - 149.112.112.112
+    - 9.9.9.11
+    - 149.112.112.11
   nameserver: 
-    - https://223.5.5.5/dns-query#h3=true
+    - https://dns11.quad9.net/dns-query#h3=true
     - https://223.6.6.6/dns-query#h3=true
 
 # 锚点 - 节点筛选组
