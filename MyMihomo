@@ -224,13 +224,14 @@ RuleProviders: &RuleProviders {type: http, behavior: classical, interval: 3600, 
 
 # 节点组
 proxy-groups: 
-  - {name: 手动切换, type: select, proxies: [自动选择, 手动选择, DIRECT], url: https://cp.cloudflare.com, icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Static.png}
+  - {name: 手动切换, type: select, proxies: [🛰️ 自动选择, 手动选择, DIRECT], url: https://cp.cloudflare.com, icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Static.png}
   - {name: Telegram, type: select, proxies: [🔮 负载均衡, 🔯 故障转移, 🛰️ 自动选择, 香港节点, 台湾节点, 日本节点, 韩国节点, 新国节点, 美国节点], icon: https://github.com/tugepaopao/Image-Storage/raw/master/hand-painted/36.png}
   - {name: App Store, type: select, proxies: [DIRECT, 香港节点, 台湾节点, 日本节点, 韩国节点, 新国节点, 美国节点], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Apple.png}
   - {name: Netflix, type: select, proxies: [香港策略, 台湾策略, 日本策略, 韩国策略, 新国策略, 美国策略], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Netflix.png}
   - {name: 🤖 AIGC, type: select, proxies: [美国节点, 手动切换, 香港节点, 日本节点, 韩国节点, 狮城节点, 美国节点, 英国节点, 法国节点, 德国节点, 台湾节点], icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png}
   - {name: 🍎 苹果服务, type: select, proxies: [DIRECT, 手动切换, 香港节点, 日本节点, 韩国节点, 狮城节点, 美国节点, 英国节点, 法国节点, 德国节点, 台湾节点], icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Apple.png}
   - {name: Ⓜ️ 微软服务, type: select, proxies: [DIRECT, 手动切换, 香港节点, 日本节点, 韩国节点, 狮城节点, 美国节点, 英国节点, 法国节点, 德国节点, 台湾节点], icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Microsoft.png}
+  - {name: 漏网之鱼, type: select, proxies: [🔯 故障转移, 🛰️ 自动选择, 🔮 负载均衡, DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Snapfish.png}
 
   # 自动选择
   - {name: 香港节点, <<: *UrlTest, filter: *FilterHK}
@@ -426,7 +427,7 @@ rules:
   - RULE-SET,lan_ip,DIRECT
   - RULE-SET,domestic_ip,DIRECT
   - RULE-SET,china_ip,DIRECT
-  - MATCH,手动切换
+  - MATCH,漏网之鱼
 
 url-rewrite:
     - ^https?:\/\/(www.)?(g|google)\.cn https://www.google.com 302
