@@ -14,9 +14,9 @@ bypass-tun = 10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/
 # ---(DNS 服务器)---
 # DNS 服务器 (如无必要不建议使用 DNS over HTTPS)
 # 传统 DNS 服务器设置
-dns-server = system, 9.9.9.11, 149.112.112.11, 2620:fe::11, 2620:fe::fe:11
+dns-server = 9.9.9.11, 149.112.112.11, 2620:fe::11, 2620:fe::fe:11
 # 加密 DNS 服务器设置
-# doh-server = https://dns11.quad9.net/dns-query
+doh-server = https://dns11.quad9.net/dns-query
 # ip-mode 支持（默认dual）
 ip-mode = dual
 # 在DNS阶段拒绝域名时采用的方式
