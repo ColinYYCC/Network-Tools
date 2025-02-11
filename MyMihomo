@@ -299,7 +299,7 @@ rule-providers:
     path: ./Rules/sukkaw_ruleset/cdn_non_ip.txt
 
   # 所有流媒体（包括上述所有流媒体）
-  Netflix
+  Netflix:
     <<: *RuleSet_classical
     url: 'https://rule.kelee.one/Clash/Netflix/Netflix.yaml'
     path: './rules/Netflix.yaml'
