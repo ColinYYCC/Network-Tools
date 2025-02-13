@@ -251,9 +251,9 @@ proxy-groups:
 
 
 ### 规则配置
-RuleSet_classical: &RuleSet_classical {type: http, behavior: classical, interval: 43200, format: text, proxy: 手动切换}
-RuleSet_domain: &RuleSet_domain {type: http, behavior: domain, interval: 43200, format: text, proxy: 手动切换}
-RuleSet_ipcidr: &RuleSet_ipcidr {type: http, behavior: ipcidr, interval: 43200, format: text, proxy: 手动切换}
+RuleSet_classical: &RuleSet_classical {type: http, behavior: classical, interval: 43200, proxy: 手动切换}
+RuleSet_domain: &RuleSet_domain {type: http, behavior: domain, interval: 43200, proxy: 手动切换}
+RuleSet_ipcidr: &RuleSet_ipcidr {type: http, behavior: ipcidr, interval: 43200, proxy: 手动切换}
 
 # 订阅规则
 rule-providers:
