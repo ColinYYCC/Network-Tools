@@ -68,7 +68,7 @@ interface-mode = auto
 
 # > hijack-dns
 # 有些app会自己使用自定义的DNS over UDP来解析IP,  可以配置相关IP:端口来劫持这些查询,  并返回fakeip的响应
-hijack-dns = 9.9.9.9
+hijack-dns = 9.9.9.11
 
 # > disable-stun
 # 禁用stun是否禁用stun协议的udp数据,  禁用后可以有效解决webrtc的ip泄露
