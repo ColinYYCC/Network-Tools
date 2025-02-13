@@ -287,48 +287,22 @@ https://github.com/Repcz/Tool/raw/X/Loon/Rules/Lan.list, policy=DIRECT, tag=LAN,
 https://github.com/Repcz/Tool/raw/X/Loon/Rules/FILTER_REGION.list, policy=DIRECT, tag=CN, enabled=true
 # ------
 
-[Plugin]
-https://raw.githubusercontent.com/GeQ1an/Rules/master/Loon/Rewrite/Rewrite.plugin,, enabled=true
-https://kelee.one/Tool/Loon/Plugin/LoonGallery.plugin, policy=漏网之鱼, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Block_HTTPDNS.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/BlockAdvertisers.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Remove_ads_by_keli.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Cainiao_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Taobao_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Tieba_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/JD_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Weibo_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Zhihu_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Aiinquiry_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/DiDi_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/RedPaper_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/QQMusic_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/QQKSong_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Spotify_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/YouTube_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/AliYunDrive_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Amap_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/BaiduNetDisk_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Himalaya_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/DragonRead_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Umetrip_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/BaiduSearchWebpage_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Baidu_input_method_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/NeteaseCloudMusic_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/smzdm_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Weixin_Official_Accounts_remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/WexinMiniPrograms_Remove_ads.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/JD_Price.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/QuickSearch.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Prevent_DNS_Leaks.plugin, policy=漏网之鱼, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Node_detection_tool.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Weixin_external_links_unlock.plugin, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Fileball_mount.plugin, enabled=false
-https://kelee.one/Tool/Loon/Plugin/Auto_Join_TF.plugin, policy=DIRECT, enabled=false
-https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.loon.tf.plugin, policy=漏网之鱼, enabled=false
-https://raw.githubusercontent.com/sub-store-org/Sub-Store/master/config/Loon.plugin, policy=🎲 自动选择, enabled=true
-https://kelee.one/Tool/Loon/Plugin/Script-Hub.plugin, policy=漏网之鱼, enabled=true
-# ------
+[Rewrite]
+# > Redirect Google Search Service
+# ^(http|https):\/\/(www.)?(g|google)\.cn https://www.google.com 302
+^https?://(.*?[.])?(?:g|google).cn https://$1google.com 302
+# > Redirect Google Maps Service
+^(http|https):\/\/(ditu|maps).google\.cn https://maps.google.com 302
+# > Weibo Short URL
+^http:\/\/t\.cn http://sinaurl.cn 302
+# > NGACN BBS header
+^(http|https):\/\/nga\.178\.com https://ngabbs.com 302
+^(http|https):\/\/bbs\.nga\.cn https://ngabbs.com 302
+# > wiki → wikiwand
+^https:\/\/zh.(m.)?wikipedia.org/zh(-\w*)?(?=/) https://www.wikiwand.com/zh$2 302
+^https:\/\/(\w*).(m.)?wikipedia.org/wiki https://www.wikiwand.com/$1 302
+# > JD
+^https?://union.click.jd.com/jda? header http://union.click.jd.com/jda?adblock=
 
 [Host]
 # --- CUSTOM HOSTS ---
@@ -869,26 +843,52 @@ upos-sz-upcdntx.bilivideo.com = server:https://doh.pub/dns-query
 *.he.net = server:https://ordns.he.net/dns-query
 # ------
 
-[Rewrite]
-# > Redirect Google Search Service
-# ^(http|https):\/\/(www.)?(g|google)\.cn https://www.google.com 302
-^https?://(.*?[.])?(?:g|google).cn https://$1google.com 302
-# > Redirect Google Maps Service
-^(http|https):\/\/(ditu|maps).google\.cn https://maps.google.com 302
-# > Weibo Short URL
-^http:\/\/t\.cn http://sinaurl.cn 302
-# > NGACN BBS header
-^(http|https):\/\/nga\.178\.com https://ngabbs.com 302
-^(http|https):\/\/bbs\.nga\.cn https://ngabbs.com 302
-# > wiki → wikiwand
-^https:\/\/zh.(m.)?wikipedia.org/zh(-\w*)?(?=/) https://www.wikiwand.com/zh$2 302
-^https:\/\/(\w*).(m.)?wikipedia.org/wiki https://www.wikiwand.com/$1 302
-# > JD
-^https?://union.click.jd.com/jda? header http://union.click.jd.com/jda?adblock=
-
 [Script]
 http-request ^https?://ios\.prod\.ftl\.netflix\.com/iosui/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js,  tag=nf_rating.js
 http-response ^https?://ios\.prod\.ftl\.netflix\.com/iosui/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js,  requires-body=true,  tag=nf_rating.js
+
+[Plugin]
+https://raw.githubusercontent.com/GeQ1an/Rules/master/Loon/Rewrite/Rewrite.plugin,, enabled=true
+https://kelee.one/Tool/Loon/Plugin/LoonGallery.plugin, policy=漏网之鱼, enabled=true
+https://kelee.one/Tool/Loon/Plugin/Block_HTTPDNS.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/BlockAdvertisers.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/Remove_ads_by_keli.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/Cainiao_remove_ads.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/Taobao_remove_ads.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/Tieba_remove_ads.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/JD_remove_ads.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/Weibo_remove_ads.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/Zhihu_remove_ads.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/Aiinquiry_remove_ads.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/DiDi_remove_ads.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/RedPaper_remove_ads.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/QQMusic_remove_ads.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/QQKSong_remove_ads.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/Spotify_remove_ads.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/YouTube_remove_ads.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/AliYunDrive_remove_ads.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/Amap_remove_ads.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/BaiduNetDisk_remove_ads.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/Himalaya_remove_ads.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/DragonRead_remove_ads.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/Umetrip_remove_ads.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/BaiduSearchWebpage_remove_ads.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/Baidu_input_method_remove_ads.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/NeteaseCloudMusic_remove_ads.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/smzdm_remove_ads.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/Weixin_Official_Accounts_remove_ads.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/WexinMiniPrograms_Remove_ads.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/JD_Price.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/QuickSearch.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/Prevent_DNS_Leaks.plugin, policy=漏网之鱼, enabled=true
+https://kelee.one/Tool/Loon/Plugin/Node_detection_tool.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/Weixin_external_links_unlock.plugin, enabled=true
+https://kelee.one/Tool/Loon/Plugin/Fileball_mount.plugin, enabled=false
+https://kelee.one/Tool/Loon/Plugin/Auto_Join_TF.plugin, policy=DIRECT, enabled=false
+https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.loon.tf.plugin, policy=漏网之鱼, enabled=false
+https://raw.githubusercontent.com/sub-store-org/Sub-Store/master/config/Loon.plugin, policy=🎲 自动选择, enabled=true
+https://kelee.one/Tool/Loon/Plugin/Script-Hub.plugin, policy=漏网之鱼, enabled=true
+# ------
 
 [Mitm]
 hostname = -gateway.icloud.com, -weather-data.apple.com, -buy.itunes.apple.com, -pan.baidu.com, www.google.cn
