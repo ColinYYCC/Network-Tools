@@ -99,7 +99,7 @@ US = NameRegex,  FilterKey = "^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄
 
 [Proxy Group]
 # > 配置分流
-🥡 节点选择 = select, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, 香港节点, 美国节点, 狮城节点, 日本节点, 韩国节点, 台湾节点, DIRECT, url = http://latency-test.skk.moe/endpoint, img-url = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/Loon_9.png
+🥡 节点选择 = select, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, 香港节点, 美国节点, 狮城节点, 日本节点, 韩国节点, 台湾节点, DIRECT, url = http://latency-test.skk.moe/endpoint, img-url = https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/loon.png
 # ------
 
 # > 分流策略组
@@ -109,7 +109,8 @@ Telegram = select, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, 香�
 # Apple
 Apple Service = select, DIRECT, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, 香港节点, 美国节点, 狮城节点, 日本节点, 韩国节点, 台湾节点, url = http://latency-test.skk.moe/endpoint, img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Apple.png
 # Ai
-AI = select, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, 香港节点, 美国节点, 狮城节点, 日本节点, 韩国节点, 台湾节点, url = http://latency-test.skk.moe/endpoint, img-url = https://github.com/ColinYYCC/Network-Tools/blob/main/Logo/DeepSeek.png
+AI = select, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, 香港节点, 美国节点, 狮城节点, 日本节点, 韩国节点, 台湾节点, url = http://latency-test.skk.moe/endpoint, img-url = https://github.com/ColinYYCC/Network-Tools/raw/main/Logo/DeepSeek.png
+
 # > 媒体策略组
 # Netflix
 Netflix = select, 狮城节点, 香港节点, 台湾节点, 日本节点, 美国节点, 韩国节点, 🎲自动选择, 🔯故障转移, 🔮负载均衡, img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Netflix.png
@@ -121,7 +122,7 @@ Disney+ = select, 狮城节点, 香港节点, 台湾节点, 日本节点, 美国
 Spotify = select, 香港节点, 美国节点, 狮城节点, 日本节点, 韩国节点, 台湾节点, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, url = http://latency-test.skk.moe/endpoint, img-url = https://github.com/tugepaopao/Image-Storage/raw/master/cartoon/Cute/spotify.png
 # Emby
 Emby = select, 香港节点, 美国节点, 狮城节点, 日本节点, 韩国节点, 台湾节点, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, url = http://latency-test.skk.moe/endpoint, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
-游戏 = select, DIRECT, 🎲 自动选择, 🔯 故障转移, 游戏节点, url = http://latency-test.skk.moe/endpoint, img-url =  http://latency-test.skk.moe/endpoint,img-url = https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/xbox.png
+游戏 = select, DIRECT, 🎲 自动选择, 🔯 故障转移, 游戏节点, url = http://latency-test.skk.moe/endpoint, img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/steam(1).png
 
 # > 白名单模式 PROXY，黑名单模式 DIRECT
 漏网之鱼 = select, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, DIRECT, 香港节点, 美国节点, 狮城节点, 日本节点, 韩国节点, 台湾节点, url = http://latency-test.skk.moe/endpoint, img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Snapfish.png
