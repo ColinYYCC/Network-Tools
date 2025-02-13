@@ -98,26 +98,44 @@ US = NameRegex,  FilterKey = "^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄
 # ------
 
 [Proxy Group]
+# > 配置分流
 🥡 节点选择 = select, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, 香港节点, 美国节点, 狮城节点, 日本节点, 韩国节点, 台湾节点, DIRECT, url = http://latency-test.skk.moe/endpoint, img-url = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/chxm1023/Loon_9.png
 # ------
 
-# 分流策略组
-国外网站 = select, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, 香港节点, 美国节点, 狮城节点, 日本节点, 韩国节点, 台湾节点, url = http://latency-test.skk.moe/endpoint, img-url = https://raw.githubusercontent.com/tugepaopao/Image-Storage/master/hand-painted/56.png
-国际媒体 = select, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, 香港节点, 美国节点, 狮城节点, 日本节点, 韩国节点, 台湾节点, url = http://latency-test.skk.moe/endpoint, img-url = https://github.com/tugepaopao/Image-Storage/raw/master/hand-painted/49.png
-Telegram = select, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, 香港节点, 美国节点, 狮城节点, 日本节点, 韩国节点, 台湾节点, url = http://latency-test.skk.moe/endpoint, img-url = https://github.com/tugepaopao/Image-Storage/raw/master/hand-painted/36.png
-推特消息 = select, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, 香港节点, 美国节点, 狮城节点, 日本节点, 韩国节点, 台湾节点, url = http://latency-test.skk.moe/endpoint, img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Twitter.png
+# > 分流策略组
+国外网站 = select, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, 香港节点, 美国节点, 狮城节点, 日本节点, 韩国节点, 台湾节点, url = http://latency-test.skk.moe/endpoint, img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Twitter.png
+# Telegram
+Telegram = select, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, 香港节点, 美国节点, 狮城节点, 日本节点, 韩国节点, 台湾节点, url = http://latency-test.skk.moe/endpoint, img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/telegram(blue1).png
+# Apple
 Apple Service = select, DIRECT, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, 香港节点, 美国节点, 狮城节点, 日本节点, 韩国节点, 台湾节点, url = http://latency-test.skk.moe/endpoint, img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Apple.png
-AI = select, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, 香港节点, 美国节点, 狮城节点, 日本节点, 韩国节点, 台湾节点, url = http://latency-test.skk.moe/endpoint, img-url = https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png
+# Ai
+AI = select, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, 香港节点, 美国节点, 狮城节点, 日本节点, 韩国节点, 台湾节点, url = http://latency-test.skk.moe/endpoint, img-url = https://raw.githubusercontent.com/deepseek-ai/awesome-deepseek-integration/refs/heads/main/docs/_logo%20svg/AVATARS.svg
+
+# > 媒体策略组
+国际媒体 = select, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, 香港节点, 美国节点, 狮城节点, 日本节点, 韩国节点, 台湾节点, url = http://latency-test.skk.moe/endpoint, img-url = https://github.com/tugepaopao/Image-Storage/raw/master/hand-painted/49.png
+# Netflix
+Netflix = select, 狮城节点, 香港节点, 台湾节点, 日本节点, 美国节点, 韩国节点, 🎲自动选择, 🔯故障转移, 🔮负载均衡, icon-url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/erdongchanyo/Netflix.png
+# YouTube
+YouTube = select, 香港节点, 台湾节点, 狮城节点, 日本节点, 美国节点, 韩国节点, 🎲自动选择, 🔯故障转移, 🔮负载均衡, icon-url=https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/YouTube.png
+# Disney+
+Disney+ = select, 狮城节点, 香港节点, 台湾节点, 日本节点, 美国节点, 韩国节点, 🎲自动选择, 🔯故障转移, 🔮负载均衡, icon-url=https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Disney.png
+# Spotify
+Spotify = select, 香港节点, 美国节点, 狮城节点, 日本节点, 韩国节点, 台湾节点, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, url = http://latency-test.skk.moe/endpoint, img-url = https://github.com/tugepaopao/Image-Storage/raw/master/cartoon/Cute/spotify.png
+# Emby
+Emby = select, 香港节点, 美国节点, 狮城节点, 日本节点, 韩国节点, 台湾节点, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, url = http://latency-test.skk.moe/endpoint, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
 游戏 = select, DIRECT, 🎲 自动选择, 🔯 故障转移, 游戏节点, url = http://latency-test.skk.moe/endpoint, img-url = https://github.com/tugepaopao/Image-Storage/raw/master/hand-painted/35.png
-Emby = select, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, 香港节点, 美国节点, 狮城节点, 日本节点, 韩国节点, 台湾节点, url = http://latency-test.skk.moe/endpoint, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
-Spotify = select, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, 香港节点, 美国节点, 狮城节点, 日本节点, 韩国节点, 台湾节点, url = http://latency-test.skk.moe/endpoint, img-url = https://github.com/tugepaopao/Image-Storage/raw/master/cartoon/Cute/spotify.png
+
+# > 白名单模式 PROXY，黑名单模式 DIRECT
 漏网之鱼 = select, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, DIRECT, 香港节点, 美国节点, 狮城节点, 日本节点, 韩国节点, 台湾节点, url = http://latency-test.skk.moe/endpoint, img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Snapfish.png
 # ------
 
-# 地区策略组
+# > 节点分流
 🎲 自动选择 = url-test, All, url = http://latency-test.skk.moe/endpoint, interval = 300, tolerance = 30, img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Auto_Speed.png
 🔯 故障转移 = fallback, All, url = http://latency-test.skk.moe/endpoint, interval = 300, max-timeout = 3000, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Server.png
 🔮 负载均衡 = load-balance, All, url = http://latency-test.skk.moe/endpoint, interval = 300, max-timeout = 3000, algorithm = pcc, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Available.png
+# ------
+
+# 地区策略组
 游戏节点 = url-test, Game, url = http://latency-test.skk.moe/endpoint, interval = 300, tolerance = 30, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png
 香港节点 = fallback, HK, url = http://latency-test.skk.moe/endpoint, interval = 300, max-timeout = 3000, img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png
 美国节点 = fallback, US, url = http://latency-test.skk.moe/endpoint, interval = 300, max-timeout = 3000, img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/United_States.png
@@ -217,10 +235,10 @@ https://github.com/Repcz/Tool/raw/X/Surge/Rules/Emby.list, policy=Emby, tag=Emby
 # Netflix
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Netflix/Netflix.list, policy=Netflix, tag=Netflix, enabled=true
 # YouTube
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/YouTube/YouTube.list, policy=国外网站, tag=YouTube, enabled=true
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/YouTubeMusic/YouTubeMusic.list, policy=国外网站, tag=YouTube, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/YouTube/YouTube.list, policy=YouTube, tag=YouTube, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/YouTubeMusic/YouTubeMusic.list, policy=YouTube, tag=YouTube, enabled=true
 # Spotify
-https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Spotify/Spotify.list, policy=国外网站, tag=Spotify, enabled=true
+https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/Spotify/Spotify.list, policy=Spotify, tag=Spotify, enabled=true
 # Now E
 https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/NowE/NowE.list, policy=香港, tag=Now E, enabled=true
 # 巴哈姆特
