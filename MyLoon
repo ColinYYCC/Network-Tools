@@ -88,61 +88,59 @@ ipasn-url = https://github.com/xream/geoip/releases/latest/download/ipinfo.asn.m
 # ------
 
 [Remote Filter]
-Game = NameRegex,  FilterKey = "^(?=.*((?i)游戏|🎮|(\b(GAME)\b)))(?!.*((?i)回国|校园)).*$"
-All = NameRegex,  FilterKey = "^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|(\b(USE|USED|TOTAL|EXPIRE|EMAIL|Panel)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$"
-HK = NameRegex,  FilterKey = "^(?=.*((?i)🇭🇰|香港|(\b(HK|Hong)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
-TW = NameRegex,  FilterKey = "^(?=.*((?i)🇹🇼|台湾|(\b(TW|Tai|Taiwan)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
-JP = NameRegex,  FilterKey = "^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
-KR = NameRegex,  FilterKey = "^(?=.*((?i)🇰🇷|韩国|韓|首尔|(\b(KR|Korea)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
-SG = NameRegex,  FilterKey = "^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
-US = NameRegex,  FilterKey = "^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+[Remote Filter]
+All = NameRegex, FilterKey = "^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|(\b(USE|USED|TOTAL|EXPIRE|EMAIL|Panel)\b|(\d{4}-\d{2}-\d{2}|\dG)))).*$"
+HK = NameRegex, FilterKey = "^(?=.*((?i)🇭🇰|香港|(\b(HK|Hong)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+TW = NameRegex, FilterKey = "^(?=.*((?i)🇹🇼|台湾|(\b(TW|Tai|Taiwan)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+JP = NameRegex, FilterKey = "^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+KR = NameRegex, FilterKey = "^(?=.*((?i)🇰🇷|韩国|韓|首尔|(\b(KR|Korea)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+SG = NameRegex, FilterKey = "^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
+US = NameRegex, FilterKey = "^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$"
 # ------
 
 [Proxy Group]
 # > 配置分流
-🥡 节点选择 = select, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, 香港节点, 美国节点, 狮城节点, 日本节点, 韩国节点, 台湾节点, DIRECT, url = http://latency-test.skk.moe/endpoint, img-url = https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/loon.png
+🥡 节点选择 = select,🎲 自动选择,🔯 故障转移,🔮 负载均衡,香港节点,美国节点,狮城节点,日本节点,韩国节点,台湾节点,DIRECT,url = http://latency-test.skk.moe/endpoint,img-url = https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/loon.png
 # ------
 
 # > 分流策略组
-国外网站 = select, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, 香港节点, 美国节点, 狮城节点, 日本节点, 韩国节点, 台湾节点, url = http://latency-test.skk.moe/endpoint, img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Twitter.png
+国外网站 = select,🎲 自动选择,🔯 故障转移,🔮 负载均衡,香港节点,美国节点,狮城节点,日本节点,韩国节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Twitter.png
 # Telegram
-Telegram = select, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, 香港节点, 美国节点, 狮城节点, 日本节点, 韩国节点, 台湾节点, url = http://latency-test.skk.moe/endpoint, img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/telegram(blue1).png
+Telegram = select,🎲 自动选择,🔯 故障转移,🔮 负载均衡,香港节点,美国节点,狮城节点,日本节点,韩国节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/telegram(blue1).png
 # Apple
-Apple Service = select, DIRECT, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, 香港节点, 美国节点, 狮城节点, 日本节点, 韩国节点, 台湾节点, url = http://latency-test.skk.moe/endpoint, img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Apple.png
+Apple Service = select,DIRECT,🎲 自动选择,🔯 故障转移,🔮 负载均衡,香港节点,美国节点,狮城节点,日本节点,韩国节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Apple.png
 # Ai
-AI = select, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, 香港节点, 美国节点, 狮城节点, 日本节点, 韩国节点, 台湾节点, url = http://latency-test.skk.moe/endpoint, img-url = https://github.com/ColinYYCC/Network-Tools/raw/main/Logo/DeepSeek.png
-
+AI = select,🎲 自动选择,🔯 故障转移,🔮 负载均衡,香港节点,美国节点,狮城节点,日本节点,韩国节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://github.com/ColinYYCC/Network-Tools/raw/main/Logo/DeepSeek.png
 # > 媒体策略组
 # Netflix
-Netflix = select, 狮城节点, 香港节点, 台湾节点, 日本节点, 美国节点, 韩国节点, 🎲自动选择, 🔯故障转移, 🔮负载均衡, img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Netflix.png
+Netflix = select,狮城节点,香港节点,台湾节点,日本节点,美国节点,韩国节点,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Netflix.png
 # YouTube
-YouTube = select, 香港节点, 台湾节点, 狮城节点, 日本节点, 美国节点, 韩国节点, 🎲自动选择, 🔯故障转移, 🔮负载均衡, img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/YouTube.png
+YouTube = select,香港节点,台湾节点,狮城节点,日本节点,美国节点,韩国节点,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/YouTube.png
 # Disney+
-Disney+ = select, 狮城节点, 香港节点, 台湾节点, 日本节点, 美国节点, 韩国节点, 🎲自动选择, 🔯故障转移, 🔮负载均衡, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Disney.png
+Disney+ = select,狮城节点,香港节点,台湾节点,日本节点,美国节点,韩国节点,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Disney.png
 # Spotify
-Spotify = select, 香港节点, 美国节点, 狮城节点, 日本节点, 韩国节点, 台湾节点, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, url = http://latency-test.skk.moe/endpoint, img-url = https://github.com/tugepaopao/Image-Storage/raw/master/cartoon/Cute/spotify.png
+Spotify = select,香港节点,美国节点,狮城节点,日本节点,韩国节点,台湾节点,🎲 自动选择,🔯 故障转移,🔮 负载均衡,url = http://latency-test.skk.moe/endpoint,img-url = https://github.com/tugepaopao/Image-Storage/raw/master/cartoon/Cute/spotify.png
 # Emby
-Emby = select, 香港节点, 美国节点, 狮城节点, 日本节点, 韩国节点, 台湾节点, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, url = http://latency-test.skk.moe/endpoint, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
-游戏 = select, DIRECT, 🎲 自动选择, 🔯 故障转移, 游戏节点, url = http://latency-test.skk.moe/endpoint, img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/steam(1).png
+Emby = select,香港节点,美国节点,狮城节点,日本节点,韩国节点,台湾节点,🎲 自动选择,🔯 故障转移,🔮 负载均衡,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Emby.png
+游戏 = select,DIRECT,🎲 自动选择,🔯 故障转移,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/steam(1).png
 
 # > 白名单模式 PROXY，黑名单模式 DIRECT
-漏网之鱼 = select, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, DIRECT, 香港节点, 美国节点, 狮城节点, 日本节点, 韩国节点, 台湾节点, url = http://latency-test.skk.moe/endpoint, img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Snapfish.png
+漏网之鱼 = select,🎲 自动选择,🔯 故障转移,🔮 负载均衡,DIRECT,香港节点,美国节点,狮城节点,日本节点,韩国节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Snapfish.png
 # ------
 
 # > 节点分流
-🎲 自动选择 = url-test, All, url = http://latency-test.skk.moe/endpoint, interval = 300, tolerance = 30, img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Auto_Speed.png
-🔯 故障转移 = fallback, All, url = http://latency-test.skk.moe/endpoint, interval = 300, max-timeout = 3000, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Server.png
-🔮 负载均衡 = load-balance, All, url = http://latency-test.skk.moe/endpoint, interval = 300, max-timeout = 3000, algorithm = pcc, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Available.png
+🎲 自动选择 = url-test,All,url = http://latency-test.skk.moe/endpoint,interval = 300,tolerance = 30,img-url = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/group/GetSomeFries.png
+🔯 故障转移 = fallback,All,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,img-url = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/select.png
+🔮 负载均衡 = load-balance,All,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,algorithm = pcc,img-url = https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/loadbalance.png
 # ------
 
 # 地区策略组
-游戏节点 = url-test, Game, url = http://latency-test.skk.moe/endpoint, interval = 300, tolerance = 30, img-url = https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Game.png
-香港节点 = fallback, HK, url = http://latency-test.skk.moe/endpoint, interval = 300, max-timeout = 3000, img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png
-美国节点 = fallback, US, url = http://latency-test.skk.moe/endpoint, interval = 300, max-timeout = 3000, img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/United_States.png
-狮城节点 = fallback, SG, url = http://latency-test.skk.moe/endpoint, interval = 300, max-timeout = 3000, img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Singapore.png
-日本节点 = fallback, JP, url = http://latency-test.skk.moe/endpoint, interval = 300, max-timeout = 3000, img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Japan.png
-韩国节点 = fallback, KR, url = http://latency-test.skk.moe/endpoint, interval = 300, max-timeout = 3000, img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/South_Korea.png
-台湾节点 = fallback, TW, url = http://latency-test.skk.moe/endpoint, interval = 300, max-timeout = 3000, img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Taiwan.png
+香港节点 = fallback,HK,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png
+美国节点 = fallback,US,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/United_States.png
+狮城节点 = fallback,SG,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Singapore.png
+日本节点 = fallback,JP,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Japan.png
+韩国节点 = fallback,KR,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/South_Korea.png
+台湾节点 = fallback,TW,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Taiwan.png
 # ------
 
 [Rule]
