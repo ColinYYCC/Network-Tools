@@ -220,9 +220,9 @@ proxy-groups:
 
 
   # 全部节点
-  - {name: 🛰️ 自动选择, <<: *UrlTest, filter: *FilterAll, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Auto_Speed.png}
-  - {name: 🔯 故障转移, <<: *FallBack, filter: *FilterAll, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Server.png}
-  - {name: 🔮 负载均衡, <<: *LoadBalance, filter: *FilterAll, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Available.png}
+  - {name: 🛰️ 自动选择, <<: *UrlTest, filter: *FilterAll, icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/quanqiu(3).png}
+  - {name: 🔯 故障转移, <<: *FallBack, filter: *FilterAll, icon: https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/select.png}
+  - {name: 🔮 负载均衡, <<: *LoadBalance, filter: *FilterAll, icon: https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/loadbalance.png}
 
 
 ### 规则配置
