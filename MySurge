@@ -145,7 +145,7 @@ always-real-ip = *.lan, *.direct, cable.auth.com, *.msftconnecttest.com, *.msftn
 # Hijack DNS
 # 默认情况下，Surge 只返回发送到 Surge DNS 地址的 DNS 查询的假 IP 地址(198.18.0.2)。
 # 有些设备或软件总是使用硬编码的 DNS 服务器。 (例如 Google Speakers 总是使用 8.8.8.8)。 您可以使用此选项劫持查询，以获得一个假地址。
-hijack-dns = 9.9.9.9:53
+hijack-dns = 9.9.9.11:53
 
 # > Always Raw TCP Hosts
 # 注：always-raw-tcp-hosts 参数的优先级高于force-http-engine-hosts参数与 MITM 配置。
