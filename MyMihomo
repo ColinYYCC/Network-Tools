@@ -119,9 +119,6 @@ dns:
     - "GC._msDCS.*.*"
   # fake-ip-filter end
   respect-rules: true
-  default-nameserver:
-    - 9.9.9.11
-    - 149.112.112.11
   nameserver:
     - https://dns11.quad9.net/dns-query
     - https://doh.pub/dns-query
