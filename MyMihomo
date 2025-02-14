@@ -191,7 +191,7 @@ FilterAll: &FilterAll '^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客�
 # 节点组参数锚点
 Select: &Select {type: select, url: 'http://latency-test.skk.moe/endpoint', disable-udp: false, hidden: false, include-all: true}
 Auto: &Auto {type: url-test, url: 'http://latency-test.skk.moe/endpoint', interval: 300, tolerance: 50, disable-udp: false, hidden: true, include-all: true}
-FallBack: &FallBack {type: fallBack, url: 'http://latency-test.skk.moe/endpoint', interval: 300, disable-udp: false, hidden: true, include-all: true}
+FallBack: &FallBack {type: fallback, url: 'http://latency-test.skk.moe/endpoint', interval: 300, disable-udp: false, hidden: true, include-all: true}
 LoadBalance: &LoadBalance {type: load-balance, url: 'http://latency-test.skk.moe/endpoint', interval: 300, disable-udp: false, hidden: true, include-all: true}
 
 
