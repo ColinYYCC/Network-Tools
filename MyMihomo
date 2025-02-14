@@ -190,7 +190,7 @@ FilterAll: &FilterAll '^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客�
 
 # 节点组参数锚点
 # 锚点 - 时延优选参数 [每 300 秒一次惰性健康检查，容差 20ms，时延超过 2 秒判定为失败，失败 3 次则自动触发健康检查]
-UrlTest: &UrlTest {type: url-test, interval: 300, tolerance: 20, url: 'http://latency-test.skk.moe/endpoint', disable-udp: false, timeout: 2000, max-failed-times: 3, hidden: false, include-all: true}
+UrlTest: &UrlTest {type: url-test, interval: 300, tolerance: 20, url: 'http://latency-test.skk.moe/endpoint', disable-udp: false, timeout: 2000, max-failed-times: 3, hidden: true, include-all: true}
 # 锚点 - 故障转移参数 [每 300 秒一次惰性健康检查，时延超过 2 秒判定为失败，失败 3 次则自动触发健康检查]
 FallBack: &FallBack {type: fallback, interval: 300, url: 'http://latency-test.skk.moe/endpoint', disable-udp: false, timeout: 2000, max-failed-times: 3, hidden: false, include-all: true}
 # 锚点 - 负载均衡参数 [每 300 秒一次惰性健康检查，时延超过 2 秒判定为失败，失败 3 次则自动触发健康检查]
@@ -199,24 +199,24 @@ LoadBalance: &LoadBalance {type: load-balance, interval: 300, url: 'http://laten
 
 # 节点组
 proxy-groups: 
-  - {name: 手动切换, type: select, proxies: [🛰️ 自动选择, 🔮 负载均衡, 🔯 故障转移, 香港节点, 台湾节点, 日本节点, 韩国节点, 狮城节点, 美国节点],icon: https://github.com/chen08209/FlClash/raw/main/assets/images/icon.png}
-  - {name: Telegram, type: select, proxies: [🔮 负载均衡, 🔯 故障转移, 🛰️ 自动选择, 香港节点, 台湾节点, 日本节点, 韩国节点, 狮城节点, 美国节点],icon: https://github.com/tugepaopao/Image-Storage/raw/master/hand-painted/36.png}
-  - {name: App Store, type: select, proxies: [DIRECT, 香港节点, 台湾节点, 日本节点, 韩国节点, 狮城节点, 美国节点],icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Apple.png}
-  - {name: Netflix, type: select, proxies: [香港节点, 台湾节点, 日本节点, 韩国节点, 狮城节点, 美国节点],icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Netflix.png}
-  - {name: 🤖 AIGC, type: select, proxies: [美国节点, 手动切换, 香港节点, 日本节点, 韩国节点, 狮城节点, 美国节点, 英国节点, 法国节点, 德国节点, 台湾节点],icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png}
-  - {name: Ⓜ️ 微软服务, type: select, proxies: [DIRECT, 手动切换, 香港节点, 日本节点, 韩国节点, 狮城节点, 美国节点, 英国节点, 法国节点, 德国节点, 台湾节点],icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Microsoft.png}
+  - {name: 手动切换, type: select, proxies: [🛰️ 自动选择, 🔮 负载均衡, 🔯 故障转移, 香港节点, 台湾节点, 日本节点, 韩国节点, 狮城节点, 美国节点], icon: https://github.com/chen08209/FlClash/raw/main/assets/images/icon.png}
+  - {name: Telegram, type: select, proxies: [🔮 负载均衡, 🔯 故障转移, 🛰️ 自动选择, 香港节点, 台湾节点, 日本节点, 韩国节点, 狮城节点, 美国节点], icon: https://github.com/tugepaopao/Image-Storage/raw/master/hand-painted/36.png}
+  - {name: App Store, type: select, proxies: [DIRECT, 香港节点, 台湾节点, 日本节点, 韩国节点, 狮城节点, 美国节点], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Apple.png}
+  - {name: Netflix, type: select, proxies: [香港节点, 台湾节点, 日本节点, 韩国节点, 狮城节点, 美国节点], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Netflix.png}
+  - {name: 🤖 AIGC, type: select, proxies: [美国节点, 手动切换, 香港节点, 日本节点, 韩国节点, 狮城节点, 美国节点, 英国节点, 法国节点, 德国节点, 台湾节点], icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png}
+  - {name: Ⓜ️ 微软服务, type: select, proxies: [DIRECT, 手动切换, 香港节点, 日本节点, 韩国节点, 狮城节点, 美国节点, 英国节点, 法国节点, 德国节点, 台湾节点], icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Microsoft.png}
   - {name: 漏网之鱼, type: select, proxies: [🔯 故障转移, 🛰️ 自动选择, 🔮 负载均衡, DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Snapfish.png}
 
   # 自动选择
-  - {name: 香港节点, <<: *UrlTest, filter: *FilterHK}
-  - {name: 日本节点, <<: *UrlTest, filter: *FilterJP}
-  - {name: 韩国节点, <<: *UrlTest, filter: *FilterKR}
-  - {name: 狮城节点, <<: *UrlTest, filter: *FilterSG}
-  - {name: 美国节点, <<: *UrlTest, filter: *FilterUS}
-  - {name: 英国节点, <<: *UrlTest, filter: *FilterUK}
-  - {name: 法国节点, <<: *UrlTest, filter: *FilterFR}
-  - {name: 德国节点, <<: *UrlTest, filter: *FilterDE}
-  - {name: 台湾节点, <<: *UrlTest, filter: *FilterTW}
+  - {name: 香港节点, <<: *UrlTest, filter: *FilterHK, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png}
+  - {name: 日本节点, <<: *UrlTest, filter: *FilterJP, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Japan.png}
+  - {name: 韩国节点, <<: *UrlTest, filter: *FilterKR, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/South_Korea.png}
+  - {name: 狮城节点, <<: *UrlTest, filter: *FilterSG, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Singapore.png}
+  - {name: 美国节点, <<: *UrlTest, filter: *FilterUS, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/United_States.png}
+  - {name: 英国节点, <<: *UrlTest, filter: *FilterUK, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/United_Kingdom.png}
+  - {name: 法国节点, <<: *UrlTest, filter: *FilterFR, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/France.png}
+  - {name: 德国节点, <<: *UrlTest, filter: *FilterDE, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Germany.png}
+  - {name: 台湾节点, <<: *UrlTest, filter: *FilterTW, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Taiwan.png}
 
 
   # 全部节点
