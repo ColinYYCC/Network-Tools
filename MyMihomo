@@ -230,29 +230,30 @@ proxy-groups:
 
 
 ### 规则配置
-RuleSet_classical: &RuleSet_classical {type: http, behavior: classical, interval: 43200, format: text, proxy: 手动切换}
+RuleSet_classicalT: &RuleSet_classicalT {type: http, behavior: classical, interval: 43200, format: text, proxy: 手动切换}
+RuleSet_classicalY: &RuleSet_classicalY {type: http, behavior: classical, interval: 43200, format: yaml, proxy: 手动切换}
 RuleSet_domain: &RuleSet_domain {type: http, behavior: domain, interval: 43200, format: text, proxy: 手动切换}
 RuleSet_ipcidr: &RuleSet_ipcidr {type: http, behavior: ipcidr, interval: 43200, format: text, proxy: 手动切换}
 
 # 订阅规则
 rule-providers:
   Special:
-    <<: *RuleSet_classical
+    <<: *RuleSet_classicalY
     url: https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Special.yaml
     path: ./Rules/Special.yaml
 
   RejectPCDN:
-    <<: *RuleSet_classical
+    <<: *RuleSet_classicalT
     url: 'https://ruleset.skk.moe/Clash/non_ip/reject-no-drop.txt'
     path: './Rules/sukkaw_ruleset/reject_non_ip_no_drop.txt'
 
   reject_non_ip_drop:
-    <<: *RuleSet_classical
+    <<: *RuleSet_classicalT
     url: https://ruleset.skk.moe/Clash/non_ip/reject-drop.txt
     path: ./Rules/sukkaw_ruleset/reject_non_ip_drop.txt
 
   reject_non_ip:
-    <<: *RuleSet_classical
+    <<: *RuleSet_classicalT
     url: https://ruleset.skk.moe/Clash/non_ip/reject.txt
     path: ./Rules/sukkaw_ruleset/reject_non_ip.txt
 
@@ -262,7 +263,7 @@ rule-providers:
     path: ./Rules/sukkaw_ruleset/reject_domainset.txt
 
   reject_ip:
-    <<: *RuleSet_classical
+    <<: *RuleSet_classicalT
     url: https://ruleset.skk.moe/Clash/ip/reject.txt
     path: ./Rules/sukkaw_ruleset/reject_ip.txt
 
@@ -279,26 +280,26 @@ rule-providers:
 
   # 所有流媒体（包括上述所有流媒体）
   Netflix:
-    <<: *RuleSet_classical
+    <<: *RuleSet_classicalY
     url: 'https://rule.kelee.one/Clash/Netflix/Netflix.yaml'
     path: './rules/Netflix.yaml'
 
   stream_non_ip:
-    <<: *RuleSet_classical
+    <<: *RuleSet_classicalT
     url: https://ruleset.skk.moe/Clash/non_ip/stream.txt
     path: ./Rules/sukkaw_ruleset/stream_non_ip.txt
   stream_ip:
-    <<: *RuleSet_classical
+    <<: *RuleSet_classicalT
     url: https://ruleset.skk.moe/Clash/ip/stream.txt
     path: ./Rules/sukkaw_ruleset/stream_ip.txt
 
   ai_non_ip:
-    <<: *RuleSet_classical
+    <<: *RuleSet_classicalT
     url: https://ruleset.skk.moe/Clash/non_ip/ai.txt
     path: ./Rules/sukkaw_ruleset/ai_non_ip.txt
 
   Telegram:
-    <<: *RuleSet_classical
+    <<: *RuleSet_classicalT
     url: https://github.com/LucaLin233/Luca_Conf/blob/main/Surge/Rule/Telegram.list?raw=true
     path: ./Rules/Telegram.txt
 
@@ -308,22 +309,22 @@ rule-providers:
     path: ./Rules/sukkaw_ruleset/apple_cdn.txt
 
   apple_services:
-    <<: *RuleSet_classical
+    <<: *RuleSet_classicalT
     url: https://ruleset.skk.moe/Clash/non_ip/apple_services.txt
     path: ./Rules/sukkaw_ruleset/apple_services.txt
 
   apple_cn_non_ip:
-    <<: *RuleSet_classical
+    <<: *RuleSet_classicalT
     url: https://ruleset.skk.moe/Clash/non_ip/apple_cn.txt
     path: ./Rules/sukkaw_ruleset/apple_cn_non_ip.txt
   
   microsoft_cdn_non_ip:
-    <<: *RuleSet_classical
+    <<: *RuleSet_classicalT
     url: https://ruleset.skk.moe/Clash/non_ip/microsoft_cdn.txt
     path: ./Rules/sukkaw_ruleset/microsoft_cdn_non_ip.txt
 
   microsoft_non_ip:
-    <<: *RuleSet_classical
+    <<: *RuleSet_classicalT
     url: https://ruleset.skk.moe/Clash/non_ip/microsoft.txt
     path: ./Rules/sukkaw_ruleset/microsoft_non_ip.txt
   
@@ -339,28 +340,28 @@ rule-providers:
 
   # 内网域名和局域网 IP
   lan_non_ip:
-    <<: *RuleSet_classical
+    <<: *RuleSet_classicalT
     url: https://ruleset.skk.moe/Clash/non_ip/lan.txt
     path: ./Rules/sukkaw_ruleset/lan_non_ip.txt
   lan_ip:
-    <<: *RuleSet_classical
+    <<: *RuleSet_classicalT
     url: https://ruleset.skk.moe/Clash/ip/lan.txt
     path: ./Rules/sukkaw_ruleset/lan_ip.txt
   
   domestic_non_ip:
-    <<: *RuleSet_classical
+    <<: *RuleSet_classicalT
     url: https://ruleset.skk.moe/Clash/non_ip/domestic.txt
     path: ./Rules/sukkaw_ruleset/domestic_non_ip.txt
   direct_non_ip:
-    <<: *RuleSet_classical
+    <<: *RuleSet_classicalT
     url: https://ruleset.skk.moe/Clash/non_ip/direct.txt
     path: ./Rules/sukkaw_ruleset/direct_non_ip.txt
   global_non_ip:
-    <<: *RuleSet_classical
+    <<: *RuleSet_classicalT
     url: https://ruleset.skk.moe/Clash/non_ip/global.txt
     path: ./Rules/sukkaw_ruleset/global_non_ip.txt
   domestic_ip:
-    <<: *RuleSet_classical
+    <<: *RuleSet_classicalT
     url: https://ruleset.skk.moe/Clash/ip/domestic.txt
     path: ./Rules/sukkaw_ruleset/domestic_ip.txt
 
