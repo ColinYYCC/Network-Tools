@@ -191,7 +191,7 @@ FilterAll: &FilterAll '^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客�
 # 节点组参数锚点
 # 锚点 - 时延优选参数 [每 6 秒一次惰性健康检查，容差 20ms，时延超过 2 秒判定为失败，失败 3 次则自动触发健康检查]
 UrlTest: &UrlTest {type: url-test, interval: 6, tolerance: 20, url: 'http://latency-test.skk.moe/endpoint', disable-udp: false, timeout: 2000, max-failed-times: 3,  include-all-providers: true}
-Select: &Select {type: select, url: 'http://cp.cloudflare.com', disable-udp: false, hidden: false, include-all: true}
+Select: &Select {type: select, url: 'http://latency-test.skk.moe/endpoint', disable-udp: false, hidden: false}
 Auto: &Auto {type: url-test, url: 'http://cp.cloudflare.com', interval: 300, tolerance: 50, disable-udp: false, hidden: true, include-all: true}
 # 锚点 - 故障转移参数 [每 6 秒一次惰性健康检查，时延超过 2 秒判定为失败，失败 3 次则自动触发健康检查]
 FallBack: &FallBack {type: fallback, interval: 6, url: 'http://latency-test.skk.moe/endpoint', disable-udp: false, timeout: 2000, max-failed-times: 3, include-all-providers: true}
@@ -202,13 +202,13 @@ RuleProviders: &RuleProviders {type: http, behavior: classical, interval: 3600, 
 
 # 节点组
 proxy-groups: 
-  - {name: 手动切换, type: select, proxies: [🛰️ 自动选择, 🔮 负载均衡, 🔯 故障转移, 香港节点, 台湾节点, 日本节点, 韩国节点, 狮城节点, 美国节点], url: http://latency-test.skk.moe/endpoint, disable-udp: false, icon: https://github.com/chen08209/FlClash/raw/main/assets/images/icon.png}
-  - {name: Telegram, type: select, proxies: [🔮 负载均衡, 🔯 故障转移, 🛰️ 自动选择, 香港节点, 台湾节点, 日本节点, 韩国节点, 狮城节点, 美国节点], url: http://latency-test.skk.moe/endpoint, disable-udp: false, icon: https://github.com/tugepaopao/Image-Storage/raw/master/hand-painted/36.png}
-  - {name: App Store, type: select, proxies: [DIRECT, 香港节点, 台湾节点, 日本节点, 韩国节点, 狮城节点, 美国节点], url: http://latency-test.skk.moe/endpoint, disable-udp: false, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Apple.png}
-  - {name: Netflix, type: select, proxies: [香港节点, 台湾节点, 日本节点, 韩国节点, 狮城节点, 美国节点], url: http://latency-test.skk.moe/endpoint, disable-udp: false, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Netflix.png}
-  - {name: 🤖 AIGC, type: select, proxies: [美国节点, 手动切换, 香港节点, 日本节点, 韩国节点, 狮城节点, 美国节点, 英国节点, 法国节点, 德国节点, 台湾节点], url: http://latency-test.skk.moe/endpoint, disable-udp: false, icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png}
-  - {name: Ⓜ️ 微软服务, type: select, proxies: [DIRECT, 手动切换, 香港节点, 日本节点, 韩国节点, 狮城节点, 美国节点, 英国节点, 法国节点, 德国节点, 台湾节点], url: http://latency-test.skk.moe/endpoint, disable-udp: false, icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Microsoft.png}
-  - {name: 漏网之鱼, type: select, proxies: [🔯 故障转移, 🛰️ 自动选择, 🔮 负载均衡, DIRECT], url: http://latency-test.skk.moe/endpoint, disable-udp: false,  icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Snapfish.png}
+  - {name: 手动切换, type: select, proxies: [🛰️ 自动选择, 🔮 负载均衡, 🔯 故障转移, 香港节点, 台湾节点, 日本节点, 韩国节点, 狮城节点, 美国节点],icon: https://github.com/chen08209/FlClash/raw/main/assets/images/icon.png}
+  - {name: Telegram, type: select, proxies: [🔮 负载均衡, 🔯 故障转移, 🛰️ 自动选择, 香港节点, 台湾节点, 日本节点, 韩国节点, 狮城节点, 美国节点],icon: https://github.com/tugepaopao/Image-Storage/raw/master/hand-painted/36.png}
+  - {name: App Store, type: select, proxies: [DIRECT, 香港节点, 台湾节点, 日本节点, 韩国节点, 狮城节点, 美国节点],icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Apple.png}
+  - {name: Netflix, type: select, proxies: [香港节点, 台湾节点, 日本节点, 韩国节点, 狮城节点, 美国节点],icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Netflix.png}
+  - {name: 🤖 AIGC, type: select, proxies: [美国节点, 手动切换, 香港节点, 日本节点, 韩国节点, 狮城节点, 美国节点, 英国节点, 法国节点, 德国节点, 台湾节点],icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/OpenAI.png}
+  - {name: Ⓜ️ 微软服务, type: select, proxies: [DIRECT, 手动切换, 香港节点, 日本节点, 韩国节点, 狮城节点, 美国节点, 英国节点, 法国节点, 德国节点, 台湾节点],icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Microsoft.png}
+  - {name: 漏网之鱼, type: select, proxies: [🔯 故障转移, 🛰️ 自动选择, 🔮 负载均衡, DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Snapfish.png}
 
   # 自动选择
   - {name: 香港节点, <<: *FallBack, filter: *FilterHK}
