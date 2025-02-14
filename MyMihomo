@@ -209,15 +209,15 @@ proxy-groups:
   - {name: 漏网之鱼, type: select, proxies: [🔯 故障转移, 🛰️ 自动选择, 🔮 负载均衡, DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Snapfish.png}
 
   # 自动选择
-  - {name: 香港节点, <<: *UrlTest, filter: *FilterHK}
-  - {name: 日本节点, <<: *UrlTest, filter: *FilterJP}
-  - {name: 韩国节点, <<: *UrlTest, filter: *FilterKR}
-  - {name: 狮城节点, <<: *UrlTest, filter: *FilterSG}
-  - {name: 美国节点, <<: *UrlTest, filter: *FilterUS}
-  - {name: 英国节点, <<: *UrlTest, filter: *FilterUK}
-  - {name: 法国节点, <<: *UrlTest, filter: *FilterFR}
-  - {name: 德国节点, <<: *UrlTest, filter: *FilterDE}
-  - {name: 台湾节点, <<: *UrlTest, filter: *FilterTW}
+  - {name: 香港节点, <<: *FallBack, filter: *FilterHK}
+  - {name: 日本节点, <<: *FallBack, filter: *FilterJP}
+  - {name: 韩国节点, <<: *FallBack, filter: *FilterKR}
+  - {name: 狮城节点, <<: *FallBack, filter: *FilterSG}
+  - {name: 美国节点, <<: *FallBack, filter: *FilterUS}
+  - {name: 英国节点, <<: *FallBack, filter: *FilterUK}
+  - {name: 法国节点, <<: *FallBack, filter: *FilterFR}
+  - {name: 德国节点, <<: *FallBack, filter: *FilterDE}
+  - {name: 台湾节点, <<: *FallBack, filter: *FilterTW}
 
 
   # 全部节点
