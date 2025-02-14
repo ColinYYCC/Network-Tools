@@ -281,7 +281,7 @@ rule-providers:
   # 所有流媒体（包括上述所有流媒体）
   Netflix:
     <<: *RuleSet_classicalY
-    url: 'https://rule.kelee.one/Clash/Netflix/Netflix.yaml'
+    url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Netflix.yaml'
     path: './rules/Netflix.yaml'
 
   stream_non_ip:
