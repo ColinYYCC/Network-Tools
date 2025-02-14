@@ -189,21 +189,12 @@ FilterOthers: &FilterOthers '^(?!.*(🇭🇰|HK|Hong|香港|🇹🇼|TW|Taiwan|W
 FilterAll: &FilterAll '^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$'
 
 # 节点组参数锚点
-Select: &Select {type: select, url: 'http://latency-test.skk.moe/endpoint', disable-udp: false, hidden: false, include-all: true}
-Auto: &Auto {type: url-test, url: 'http://latency-test.skk.moe/endpoint', interval: 300, tolerance: 50, disable-udp: false, hidden: true, include-all: true}
-FallBack: &FallBack {type: fallback, url: 'http://latency-test.skk.moe/endpoint', interval: 300, disable-udp: false, hidden: true, include-all: true}
-LoadBalance: &LoadBalance {type: load-balance, url: 'http://latency-test.skk.moe/endpoint', interval: 300, disable-udp: false, hidden: true, include-all: true}
-
-
-
-# 锚点 - 时延优选参数 [每 6 秒一次惰性健康检查，容差 20ms，时延超过 2 秒判定为失败，失败 3 次则自动触发健康检查]
-# UrlTest: &UrlTest {type: url-test, interval: 6, tolerance: 20, url: 'http://latency-test.skk.moe/endpoint', disable-udp: false, timeout: 2000, max-failed-times: 3,  include-all-providers: true}
-# Select: &Select {type: select, url: 'http://latency-test.skk.moe/endpoint', disable-udp: false, hidden: false}
-# Auto: &Auto {type: url-test, url: 'http://cp.cloudflare.com', interval: 300, tolerance: 50, disable-udp: false, hidden: true, include-all: true}
-# 锚点 - 故障转移参数 [每 6 秒一次惰性健康检查，时延超过 2 秒判定为失败，失败 3 次则自动触发健康检查]
-# FallBack: &FallBack {type: fallback, interval: 6, url: 'http://latency-test.skk.moe/endpoint', disable-udp: false, timeout: 2000, max-failed-times: 3, include-all-providers: true}
-# 锚点 - 负载均衡参数 [每 6 秒一次惰性健康检查，时延超过 2 秒判定为失败，失败 3 次则自动触发健康检查]
-# LoadBalance: &LoadBalance {type: load-balance, interval: 6, url: 'http://latency-test.skk.moe/endpoint', disable-udp: false, strategy: consistent-hashing, timeout: 2000, max-failed-times: 3, include-all-providers: true}
+# 锚点 - 时延优选参数 [每 300 秒一次惰性健康检查，容差 20ms，时延超过 2 秒判定为失败，失败 3 次则自动触发健康检查]
+UrlTest: &UrlTest {type: url-test, interval: 300, tolerance: 20, url: 'http://latency-test.skk.moe/endpoint', disable-udp: false, timeout: 2000, max-failed-times: 3, hidden: false, include-all: true}
+# 锚点 - 故障转移参数 [每 300 秒一次惰性健康检查，时延超过 2 秒判定为失败，失败 3 次则自动触发健康检查]
+FallBack: &FallBack {type: fallback, interval: 300, url: 'http://latency-test.skk.moe/endpoint', disable-udp: false, timeout: 2000, max-failed-times: 3, hidden: false, include-all: true}
+# 锚点 - 负载均衡参数 [每 300 秒一次惰性健康检查，时延超过 2 秒判定为失败，失败 3 次则自动触发健康检查]
+LoadBalance: &LoadBalance {type: load-balance, interval: 300, url: 'http://latency-test.skk.moe/endpoint', disable-udp: false, strategy: consistent-hashing, timeout: 2000, max-failed-times: 3, hidden: false, include-all: true}
 # 锚点 - 规则参数 [每小时更新一次订阅规则，更新规则时使用直连节点]
 
 # 节点组
@@ -217,19 +208,19 @@ proxy-groups:
   - {name: 漏网之鱼, type: select, proxies: [🔯 故障转移, 🛰️ 自动选择, 🔮 负载均衡, DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Snapfish.png}
 
   # 自动选择
-  - {name: 香港节点, <<: *Auto, filter: *FilterHK}
-  - {name: 日本节点, <<: *Auto, filter: *FilterJP}
-  - {name: 韩国节点, <<: *Auto, filter: *FilterKR}
-  - {name: 狮城节点, <<: *Auto, filter: *FilterSG}
-  - {name: 美国节点, <<: *Auto, filter: *FilterUS}
-  - {name: 英国节点, <<: *Auto, filter: *FilterUK}
-  - {name: 法国节点, <<: *Auto, filter: *FilterFR}
-  - {name: 德国节点, <<: *Auto, filter: *FilterDE}
-  - {name: 台湾节点, <<: *Auto, filter: *FilterTW}
+  - {name: 香港节点, <<: *UrlTest, filter: *FilterHK}
+  - {name: 日本节点, <<: *UrlTest, filter: *FilterJP}
+  - {name: 韩国节点, <<: *UrlTest, filter: *FilterKR}
+  - {name: 狮城节点, <<: *UrlTest, filter: *FilterSG}
+  - {name: 美国节点, <<: *UrlTest, filter: *FilterUS}
+  - {name: 英国节点, <<: *UrlTest, filter: *FilterUK}
+  - {name: 法国节点, <<: *UrlTest, filter: *FilterFR}
+  - {name: 德国节点, <<: *UrlTest, filter: *FilterDE}
+  - {name: 台湾节点, <<: *UrlTest, filter: *FilterTW}
 
 
   # 全部节点
-  - {name: 🛰️ 自动选择, <<: *Auto, filter: *FilterAll, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Auto_Speed.png}
+  - {name: 🛰️ 自动选择, <<: *UrlTest, filter: *FilterAll, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Auto_Speed.png}
   - {name: 🔯 故障转移, <<: *FallBack, filter: *FilterAll, hidden: true, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Server.png}
   - {name: 🔮 负载均衡, <<: *LoadBalance, filter: *FilterAll, hidden: true, icon: https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Available.png}
 
