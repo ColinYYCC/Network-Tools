@@ -53,7 +53,7 @@ dns:
     - "cable.auth.com" 
     - "*.msftconnecttest.com" 
     - "*.msftncsi.com" 
-    - "network    -test.debian.org" 
+    - "network-test.debian.org" 
     - "detectportal.firefox.com" 
     - "resolver1.opendns.com" 
     - "*.srv.nintendo.net" 
