@@ -154,7 +154,7 @@ dns:
     - "*.ntp.org.cn" 
     - "PDC._msDCS.*.*" 
     - "DC._msDCS.*.*" 
-    - "GC._msDCS.*.*
+    - "GC._msDCS.*.*"
   default-nameserver:
     - 9.9.9.11
     - 149.112.112.11
