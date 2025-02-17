@@ -118,7 +118,7 @@ dns:
     - "*.ntp.org.cn" 
     - "PDC._msDCS.*.*" 
     - "DC._msDCS.*.*" 
-    - "GC._msDCS.*.*
+    - "GC._msDCS.*.*"
   # fake-ip-filter end
   respect-rules: true
   nameserver:
