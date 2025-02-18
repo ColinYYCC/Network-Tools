@@ -100,47 +100,47 @@ US = NameRegex, FilterKey = "^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄�
 
 [Proxy Group]
 # > 配置分流
-🥡 节点选择 = select,🎲 自动选择,🔯 故障转移,🔮 负载均衡,香港节点,美国节点,狮城节点,日本节点,韩国节点,台湾节点,DIRECT,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Loon_27.png
+🥡 节点选择 = select, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, 香港节点, 美国节点, 狮城节点, 日本节点, 韩国节点, 台湾节点, DIRECT, url = http://latency-test.skk.moe/endpoint, img-url = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/Loon_27.png
 # ------
 
 # > 分流策略组
-国外网站 = select,🎲 自动选择,🔯 故障转移,🔮 负载均衡,香港节点,美国节点,狮城节点,日本节点,韩国节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Twitter.png
+国外网站 = select, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, 香港节点, 美国节点, 狮城节点, 日本节点, 韩国节点, 台湾节点, url = http://latency-test.skk.moe/endpoint, img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Twitter.png
 # Telegram
-Telegram = select,🎲 自动选择,🔯 故障转移,🔮 负载均衡,香港节点,美国节点,狮城节点,日本节点,韩国节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/telegram(blue1).png
+Telegram = select, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, 香港节点, 美国节点, 狮城节点, 日本节点, 韩国节点, 台湾节点, url = http://latency-test.skk.moe/endpoint, img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/telegram(blue1).png
 # Apple
-Apple Service = select,DIRECT,🎲 自动选择,🔯 故障转移,🔮 负载均衡,香港节点,美国节点,狮城节点,日本节点,韩国节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Apple.png
+Apple Service = select, DIRECT, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, 香港节点, 美国节点, 狮城节点, 日本节点, 韩国节点, 台湾节点, url = http://latency-test.skk.moe/endpoint, img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Apple.png
 # Ai
-AI = select,🎲 自动选择,🔯 故障转移,🔮 负载均衡,香港节点,美国节点,狮城节点,日本节点,韩国节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://github.com/ColinYYCC/Network-Tools/raw/main/Logo/DeepSeek.png
+AI = select, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, 香港节点, 美国节点, 狮城节点, 日本节点, 韩国节点, 台湾节点, url = http://latency-test.skk.moe/endpoint, img-url = https://github.com/ColinYYCC/Network-Tools/raw/main/Logo/DeepSeek.png
 # > 媒体策略组
 # Netflix
-Netflix = select,狮城节点,香港节点,台湾节点,日本节点,美国节点,韩国节点,img-url = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/netflix(red).png
+Netflix = select, 狮城节点, 香港节点, 台湾节点, 日本节点, 美国节点, 韩国节点, img-url = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/netflix(red).png
 # YouTube
-YouTube = select,香港节点,台湾节点,狮城节点,日本节点,美国节点,韩国节点,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/YouTube.png
+YouTube = select, 香港节点, 台湾节点, 狮城节点, 日本节点, 美国节点, 韩国节点, img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/YouTube.png
 # Disney+
-Disney+ = select,狮城节点,香港节点,台湾节点,日本节点,美国节点,韩国节点,img-url = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/disney(blue).png
+Disney+ = select, 狮城节点, 香港节点, 台湾节点, 日本节点, 美国节点, 韩国节点, img-url = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/disney(blue).png
 # Spotify
-Spotify = select,香港节点,美国节点,狮城节点,日本节点,韩国节点,台湾节点,🎲 自动选择,🔯 故障转移,🔮 负载均衡,url = http://latency-test.skk.moe/endpoint,img-url = https://github.com/tugepaopao/Image-Storage/raw/master/cartoon/Cute/spotify.png
+Spotify = select, 香港节点, 美国节点, 狮城节点, 日本节点, 韩国节点, 台湾节点, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, url = http://latency-test.skk.moe/endpoint, img-url = https://github.com/tugepaopao/Image-Storage/raw/master/cartoon/Cute/spotify.png
 # Emby
-Emby = select,香港节点,美国节点,狮城节点,日本节点,韩国节点,台湾节点,🎲 自动选择,🔯 故障转移,🔮 负载均衡,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/emby.png
-游戏 = select,DIRECT,🎲 自动选择,🔯 故障转移,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/steam(1).png
+Emby = select, 香港节点, 美国节点, 狮城节点, 日本节点, 韩国节点, 台湾节点, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, url = http://latency-test.skk.moe/endpoint, img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/emby.png
+游戏 = select, DIRECT, 🎲 自动选择, 🔯 故障转移, url = http://latency-test.skk.moe/endpoint, img-url = https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/steam(1).png
 
-# > 白名单模式 PROXY，黑名单模式 DIRECT
-漏网之鱼 = select,🎲 自动选择,🔯 故障转移,🔮 负载均衡,DIRECT,香港节点,美国节点,狮城节点,日本节点,韩国节点,台湾节点,url = http://latency-test.skk.moe/endpoint,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Snapfish.png
+# > 白名单模式 PROXY, 黑名单模式 DIRECT
+漏网之鱼 = select, 🎲 自动选择, 🔯 故障转移, 🔮 负载均衡, DIRECT, 香港节点, 美国节点, 狮城节点, 日本节点, 韩国节点, 台湾节点, url = http://latency-test.skk.moe/endpoint, img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Snapfish.png
 # ------
 
 # > 节点分流
-🎲 自动选择 = url-test,All,url = http://latency-test.skk.moe/endpoint,interval = 300,tolerance = 30,img-url = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/group/GetSomeFries.png
-🔯 故障转移 = fallback,All,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,img-url = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/select.png
-🔮 负载均衡 = load-balance,All,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,algorithm = pcc,img-url = https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/loadbalance.png
+🎲 自动选择 = url-test, All, url = http://latency-test.skk.moe/endpoint, interval = 300, tolerance = 30, img-url = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/group/GetSomeFries.png
+🔯 故障转移 = fallback, All, url = http://latency-test.skk.moe/endpoint, interval = 300, max-timeout = 3000, img-url = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/apps/select.png
+🔮 负载均衡 = load-balance, All, url = http://latency-test.skk.moe/endpoint, interval = 300, max-timeout = 3000, algorithm = pcc, img-url = https://github.com/shindgewongxj/WHATSINStash/raw/main/icon/loadbalance.png
 # ------
 
 # 地区策略组
-香港节点 = fallback,HK,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png
-美国节点 = fallback,US,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/United_States.png
-狮城节点 = fallback,SG,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Singapore.png
-日本节点 = fallback,JP,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Japan.png
-韩国节点 = fallback,KR,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/South_Korea.png
-台湾节点 = fallback,TW,url = http://latency-test.skk.moe/endpoint,interval = 300,max-timeout = 3000,img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Taiwan.png
+香港节点 = fallback, HK, url = http://latency-test.skk.moe/endpoint, interval = 300, max-timeout = 3000, img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png
+美国节点 = fallback, US, url = http://latency-test.skk.moe/endpoint, interval = 300, max-timeout = 3000, img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/United_States.png
+狮城节点 = fallback, SG, url = http://latency-test.skk.moe/endpoint, interval = 300, max-timeout = 3000, img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Singapore.png
+日本节点 = fallback, JP, url = http://latency-test.skk.moe/endpoint, interval = 300, max-timeout = 3000, img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Japan.png
+韩国节点 = fallback, KR, url = http://latency-test.skk.moe/endpoint, interval = 300, max-timeout = 3000, img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/South_Korea.png
+台湾节点 = fallback, TW, url = http://latency-test.skk.moe/endpoint, interval = 300, max-timeout = 3000, img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Taiwan.png
 # ------
 
 [Rule]
@@ -148,67 +148,67 @@ Emby = select,香港节点,美国节点,狮城节点,日本节点,韩国节点,�
 # 自定义规则
 ## 您可以在此处插入自定义规则
 # > Zoom
-DOMAIN-SUFFIX,zoom.us,国外网站
+DOMAIN-SUFFIX, zoom.us, 国外网站
 
 # 新增内置策略 NO-HYBRID, 等价为 NO-HYBRID = direct, hybrid=off
-DOMAIN-SUFFIX,cmbchina.com,DIRECT
+DOMAIN-SUFFIX, cmbchina.com, DIRECT
 
 # Process 程序规则
 # > Client
 # Proxy
 # Download
-DOMAIN-SUFFIX,smtp,DIRECT
-DOMAIN-KEYWORD,aria2,DIRECT
+DOMAIN-SUFFIX, smtp, DIRECT
+DOMAIN-KEYWORD, aria2, DIRECT
 # BT
-DOMAIN-KEYWORD,announce,DIRECT
-DOMAIN-KEYWORD,torrent,DIRECT
-DOMAIN-KEYWORD,tracker,DIRECT
+DOMAIN-KEYWORD, announce, DIRECT
+DOMAIN-KEYWORD, torrent, DIRECT
+DOMAIN-KEYWORD, tracker, DIRECT
 
 # Web Controller 网页控制器规则
 # > Surge
-DOMAIN,yasd.royli.dev,DIRECT
+DOMAIN, yasd.royli.dev, DIRECT
 # > Clash
-DOMAIN,clash.razord.top,DIRECT
-DOMAIN,yacd.haishan.me,DIRECT
+DOMAIN, clash.razord.top, DIRECT
+DOMAIN, yacd.haishan.me, DIRECT
 # > BoxJs
-DOMAIN,boxjs.com,DIRECT
-DOMAIN,boxjs.net,DIRECT
+DOMAIN, boxjs.com, DIRECT
+DOMAIN, boxjs.net, DIRECT
 
 # Local Area Network 本地局域网
-DOMAIN-SUFFIX,direct,DIRECT
-DOMAIN-SUFFIX,wpad,DIRECT
-DOMAIN-SUFFIX,local,DIRECT
-DOMAIN-SUFFIX,localhost,DIRECT
-DOMAIN-SUFFIX,invalid,DIRECT
-DOMAIN-SUFFIX,onion,DIRECT
-DOMAIN-SUFFIX,test,DIRECT
-DOMAIN-SUFFIX,lan,DIRECT
-DOMAIN-SUFFIX,intranet,DIRECT
-DOMAIN-SUFFIX,internal,DIRECT
-DOMAIN-SUFFIX,private,DIRECT
-DOMAIN-SUFFIX,home,DIRECT
-DOMAIN-SUFFIX,corp,DIRECT
-IP-CIDR,10.0.0.0/8,DIRECT
-IP-CIDR,100.64.0.0/10,DIRECT
-IP-CIDR,127.0.0.0/8,DIRECT
-IP-CIDR,169.254.0.0/16,DIRECT
-IP-CIDR,172.16.0.0/12,DIRECT
-IP-CIDR,192.168.0.0/16,DIRECT
-IP-CIDR,224.0.0.0/4,DIRECT
-IP-CIDR,240.0.0.0/4,DIRECT
-IP-CIDR,255.255.255.255/32,DIRECT
-IP-CIDR6,fc00::/7,DIRECT
-IP-CIDR6,fd00::/8,DIRECT
-IP-CIDR6,fe80::/10,DIRECT
-IP-CIDR6,ff00::/8,DIRECT
-IP-CIDR6,ff01::/16,DIRECT
-IP-CIDR6,ff02::/16,DIRECT
-IP-CIDR6,ff03::/16,DIRECT
-IP-CIDR6,ff04::/16,DIRECT
-IP-CIDR6,ff05::/16,DIRECT
-IP-CIDR6,2001:db8::/32,DIRECT
-IP-CIDR6,2002::/16,DIRECT
-FINAL,漏网之鱼
+DOMAIN-SUFFIX, direct, DIRECT
+DOMAIN-SUFFIX, wpad, DIRECT
+DOMAIN-SUFFIX, local, DIRECT
+DOMAIN-SUFFIX, localhost, DIRECT
+DOMAIN-SUFFIX, invalid, DIRECT
+DOMAIN-SUFFIX, onion, DIRECT
+DOMAIN-SUFFIX, test, DIRECT
+DOMAIN-SUFFIX, lan, DIRECT
+DOMAIN-SUFFIX, intranet, DIRECT
+DOMAIN-SUFFIX, internal, DIRECT
+DOMAIN-SUFFIX, private, DIRECT
+DOMAIN-SUFFIX, home, DIRECT
+DOMAIN-SUFFIX, corp, DIRECT
+IP-CIDR, 10.0.0.0/8, DIRECT
+IP-CIDR, 100.64.0.0/10, DIRECT
+IP-CIDR, 127.0.0.0/8, DIRECT
+IP-CIDR, 169.254.0.0/16, DIRECT
+IP-CIDR, 172.16.0.0/12, DIRECT
+IP-CIDR, 192.168.0.0/16, DIRECT
+IP-CIDR, 224.0.0.0/4, DIRECT
+IP-CIDR, 240.0.0.0/4, DIRECT
+IP-CIDR, 255.255.255.255/32, DIRECT
+IP-CIDR6, fc00::/7, DIRECT
+IP-CIDR6, fd00::/8, DIRECT
+IP-CIDR6, fe80::/10, DIRECT
+IP-CIDR6, ff00::/8, DIRECT
+IP-CIDR6, ff01::/16, DIRECT
+IP-CIDR6, ff02::/16, DIRECT
+IP-CIDR6, ff03::/16, DIRECT
+IP-CIDR6, ff04::/16, DIRECT
+IP-CIDR6, ff05::/16, DIRECT
+IP-CIDR6, 2001:db8::/32, DIRECT
+IP-CIDR6, 2002::/16, DIRECT
+FINAL, 漏网之鱼
 # ------
 
 [Remote Rule]
@@ -909,7 +909,7 @@ https://kelee.one/Tool/Loon/Plugin/Script-Hub.plugin, policy = 漏网之鱼, ena
 # ------
 
 [Mitm]
-hostname = -gateway.icloud.com,-weather-data.apple.com,-buy.itunes.apple.com,-pan.baidu.com,www.google.cn
+hostname = -gateway.icloud.com, -weather-data.apple.com, -buy.itunes.apple.com, -pan.baidu.com, www.google.cn
 enable = true
 skip-server-cert-verify = true
 ca-p12 = 
