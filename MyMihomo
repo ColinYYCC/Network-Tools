@@ -24,7 +24,7 @@ global-client-fingerprint: chrome
 allow-lan: true
 mode: rule
 log-level: warning
-ipv6: false
+ipv6: true
 udp: true
 
 ### 如果使用的是裸核，需要将下面的注释去掉，方便ui界面的使用
@@ -122,6 +122,8 @@ dns:
   # fake-ip-filter end
   respect-rules: true
   nameserver:
+    - 2620:fe::11
+    - 2620:fe::fe:11
     - https://dns11.quad9.net/dns-query
     - tls://dns11.quad9.net
     - https://doh.pub/dns-query
