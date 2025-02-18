@@ -123,6 +123,7 @@ dns:
   respect-rules: true
   nameserver:
     - https://dns11.quad9.net/dns-query
+    - tls://dns11.quad9.net
     - https://doh.pub/dns-query
   proxy-server-nameserver:
     - https://dns11.quad9.net/dns-query
