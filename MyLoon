@@ -302,6 +302,7 @@ https://ruleset.skk.moe/List/ip/domestic.conf, policy = DIRECT, tag = China 中�
 https://ruleset.skk.moe/List/ip/china_ip.conf, policy = DIRECT, tag = China 中国直连 (IP), enabled = true
 https://github.com/Repcz/Tool/raw/X/Loon/Rules/Lan.list, policy = DIRECT, tag = LAN, enabled = true
 https://github.com/Repcz/Tool/raw/X/Loon/Rules/FILTER_REGION.list, policy = DIRECT, tag = CN, enabled = true
+https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/ruleset/ASN.China.list, policy=DIRECT, tag="🍟 Fries: 🌐 ASN China", enabled=true
 # ------
 
 [Rewrite]
