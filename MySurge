@@ -387,6 +387,13 @@ DOMAIN-SET,https://ruleset.skk.moe/List/domainset/speedtest.conf,PROXY,extended-
 # 静态CDN域名(強烈建議)
 DOMAIN-SET,https://ruleset.skk.moe/List/domainset/cdn.conf,PROXY,extended-matching // SukkaW静态CDN域名
 RULE-SET,https://ruleset.skk.moe/List/non_ip/cdn.conf,PROXY,extended-matching // SukkaW静态CDN域名
+# > Apple & Microsoft 国内 CDN 域名
+RULE-SET,https://ruleset.skk.moe/List/non_ip/apple_cdn.conf,DIRECT
+
+# > Apple CN 域名
+RULE-SET,https://ruleset.skk.moe/List/non_ip/apple_cn.conf,DIRECT
+# > 苹果和微软服务域名
+RULE-SET,https://ruleset.skk.moe/List/non_ip/apple_services.conf,Apple Services,extended-matching
 
 # 苹果服务规则列表
 RULE-SET,https://testingcf.jsdelivr.net/gh/dler-io/Rules@main/Surge/Surge%203/Provider/Apple.list,Apple Services,extended-matching //  Apple Services
