@@ -7,8 +7,7 @@
 
 [General]
 # skip-proxy则和HTTP Proxy有关, 如果配置了该参数, 那么所配置的这些IP段、域名将不会转发到Loon, 而是由系统处理
-skip-proxy = localhost, *.local, captive.apple.com, sequoia.apple.com, seed-sequoia.siri.apple.com, *.gov.cn, *.12306.cn, *.csrc.gov.cn, *.customs.gov.cn, *.miit.gov.cn, *.cae.cn, *.nsfc.gov.cn, *.ccb.com, *.icbc.com.cn, *.cmbchina.com, *.bankofchina.com, *.abchina.com.cn, *.psbc.com, *.alipay.com, *.baidu.com, *.qq.com, *.weixin.qq.com, *.taobao.com, *.tmall.com, *.jd.com, *.163.com, *.sina.com.cn, *.bilibili.com, *.bytedance.com, *.douyin.com, *.chinaunicom.com, *.chinamobile.com, *.10086.cn, *.wo.cn, *.t3go.cn, *.ctyun.cn, *.cnnic.cn, 127.0.0.1, 10.0.0.0/8, 100.64.0.0/10, 172.16.0.0/12, 192.168.0.0/16, 169.254.0.0/16, ::1/128, fc00::/7, fd00::/8, fe80::/10
-
+skip-proxy = localhost, *.local, 127.0.0.1, ::1/128, 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16, 100.64.0.0/10, 169.254.0.0/16, fc00::/7, fd00::/8, fe80::/10, captive.apple.com, sequoia.apple.com, seed-sequoia.siri.apple.com, *.gov.cn, *.12306.cn, *.ccb.com, *.icbc.com.cn, *.cmbchina.com, *.bankofchina.com, *.abchina.com.cn, *.psbc.com, *.bankcomm.com, *.cmbc.com.cn, *.citicbank.com, *.spdb.com.cn, *.cib.com.cn, *.cebbank.com, *.hxb.com.cn, *.cgbchina.com.cn, *.pingan.com.cn, *.alipay.com, *.weixin.qq.com, *.baidu.com, *.taobao.com, *.tmall.com, *.jd.com, *.163.com, *.sina.com.cn, *.bilibili.com, *.douyin.com, *.bytedance.com, *.chinaunicom.com, *.chinamobile.com, *.10086.cn, *.wo.cn, *.t3go.cn, *.ctyun.cn, *.cnnic.cn, *.qq.com, *.miit.gov.cn, *.cae.cn, *.nsfc.gov.cn
 # bypass-tun则和TUN有关, 如果配置了该参数, 那么所配置的这些IP段、域名就会不交给Loon来处理, 系统直接处理
 bypass-tun = 10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/12, 192.0.0.0/24, 192.0.2.0/24, 192.88.99.0/24, 192.168.0.0/16, 198.18.0.0/15, 198.51.100.0/24, 203.0.113.0/24, 224.0.0.0/4, 255.255.255.255/32
 
