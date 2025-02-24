@@ -58,69 +58,7 @@ sni-sniffing = true
 resource-parser = https://raw.githubusercontent.com/sub-store-org/Sub-Store/release/sub-store-parser.loon.min.js
 
 # > 以下配置的域名不会使用fakeip进行映射
-real-ip =
-  # 本地网络与设备
-  *.lan,                     # 本地局域网域名
-  *.id.ui.direct,            # 设备身份服务
-  cable.auth.com,            # 身份验证服务（删除重复项）
-
-  # 网络检测服务
-  *.msftconnecttest.com,     # Microsoft网络连接测试
-  *.msftncsi.com,            # Microsoft网络状态检测
-  network-test.debian.org,   # Debian网络测试
-  detectportal.firefox.com,  # Firefox网络门户检测
-  resolver1.opendns.com,     # OpenDNS解析服务
-
-  # 游戏平台
-  *.srv.nintendo.net,        # 任天堂在线服务
-  *.stun.playstation.net,    # PlayStation网络穿透
-  xbox.*.microsoft.com,      # Xbox服务（修正通配符层级）
-  *.xboxlive.com,            # Xbox Live核心服务
-
-  # 实时通信与穿透
-  *.stun.twilio.com,         # Twilio STUN服务（替代过广的stun.*）
-  global.turn.twilio.com,    # Twilio TURN服务
-  global.stun.twilio.com,    # Twilio STUN全局服务
-
-  # 笔记与工具
-  app.yinxiang.com,          # 印象笔记
-  injections.adguard.org,    # AdGuard过滤规则
-  local.adguard.org,         # AdGuard本地服务
-
-  # 金融与支付
-  *.cmpassport.com,          # 中国移动支付认证
-  *.pingan.com.cn,           # 平安集团服务
-  *.cmbchina.com,            # 招商银行
-  id6.me,                    # 身份验证服务
-  open.e.189.cn,             # 天翼云开放平台
-  auth.wosms.cn,             # 沃短信认证
-
-  # 音乐流媒体
-  music.163.com,             # 网易云音乐（合并冗余）
-  *.music.163.com,           # 覆盖所有子域名
-  *.126.net,                 # 网易CDN
-  musicapi.taihe.com,        # 百度音乐API
-  songsearch.kugou.com,      # 酷狗音乐搜索
-  trackercdn.kugou.com,      # 酷狗追踪CDN
-  api.joox.com,              # JOOX音乐API
-  *.y.qq.com,                # QQ音乐子域名
-  *.music.migu.cn,           # 咪咕音乐
-
-  # 开发与基础设施
-  proxy.golang.org,          # Go模块代理
-  *.mcdn.bilivideo.cn,       # B站移动CDN
-
-  # 时间同步服务
-  pool.ntp.org,              # NTP池项目
-  *.pool.ntp.org,            # NTP池子域名
-  ntp.*.com,                 # 通用NTP服务（修正问号错误）
-  time.*.com,                # 通用时间服务
-  time.*.gov,                # 政府时间服务
-  time.*.edu.cn,             # 教育网时间服务
-  *.ntp.org.cn,              # 中国NTP服务
-
-  # Windows域控服务（修正SRV记录格式）
-  _msdcs.*                   # 替代错误格式 PDC._msDCS.*.*
+real-ip = *.lan, *.id.ui.direct, cable.auth.com, *.msftconnecttest.com, *.msftncsi.com, network-test.debian.org, detectportal.firefox.com, resolver1.opendns.com, *.srv.nintendo.net, *.stun.playstation.net, xbox.*.microsoft.com, *.xboxlive.com, stun.*, global.turn.twilio.com, global.stun.twilio.com, app.yinxiang.com, injections.adguard.org, local.adguard.org, localhost.*.qq.com, localhost.*.weixin.qq.com, *.logon.battlenet.com.cn, *.logon.battle.net, *.blzstatic.cn, *.music.163.com, *.126.net, musicapi.taihe.com, music.taihe.com, trackercdn.kugou.com, *.kuwo.cn, api.joox.com, joox.com, *.y.qq.com, *.music.tc.qq.com, *.xiami.com, *.music.migu.cn, proxy.golang.org, *.mcdn.bilivideo.cn, *.cmpassport.com, id6.me, open.e.189.cn, opencloud.wostore.cn, auth.wosms.cn, id.mail.wo.cn, mdn.open.wo.cn, hmrz.wo.cn, *.jegotrip.com.cn, *.icitymobile.mobi, *.pingan.com.cn, *.cmbchina.com, pool.ntp.org, *.pool.ntp.org, time.*.com, time.*.gov, time.*.edu.cn, *.ntp.org.cn, PDC._msDCS.*.*, GC._msDCS.*.*
 
 # > interface-mode 指定流量使用哪个网络接口进行转发, 目前包含三种模式:
 # Auto: 系统自动分配
@@ -287,7 +225,7 @@ https://ruleset.skk.moe/List/non_ip/reject-drop.conf, policy = REJECT-DROP, tag 
 # CDN
 https://ruleset.skk.moe/List/domainset/cdn.conf, policy = 国外网站, tag = SukkaW静态CDN域名, enabled = true
 https://ruleset.skk.moe/List/non_ip/cdn.conf, policy = 国外网站, tag = SukkaW静态CDN域名, enabled = true
-https://ruleset.skk.moe/List/non_ip/apple_cdn.conf, policy = DIRECT, tag = Apple 国內CDN  , enabled = true
+https://ruleset.skk.moe/List/non_ip/apple_cdn.conf, policy = DIRECT, tag = Apple 国內CDN, enabled = true
 
 # > Apple CN 域名
 https://ruleset.skk.moe/List/non_ip/apple_cn.conf, policy = DIRECT, tag = Apple CN 域名, enabled = true
