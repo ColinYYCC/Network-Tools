@@ -58,7 +58,7 @@ sni-sniffing = true
 resource-parser = https://raw.githubusercontent.com/sub-store-org/Sub-Store/release/sub-store-parser.loon.min.js
 
 # > 以下配置的域名不会使用fakeip进行映射
-real-ip = always-real-ip = 
+real-ip =
   # 本地网络与设备
   *.lan,                     # 本地局域网域名
   *.id.ui.direct,            # 设备身份服务
