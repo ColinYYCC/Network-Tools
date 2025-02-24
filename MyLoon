@@ -7,7 +7,30 @@
 
 [General]
 # skip-proxy则和HTTP Proxy有关, 如果配置了该参数, 那么所配置的这些IP段、域名将不会转发到Loon, 而是由系统处理
-skip-proxy = localhost, *.local, captive.apple.com, e.crashlytics.com, cable.auth.com, sequoia.apple.com, seed-sequoia.siri.apple.com, www.baidu.com, passenger.t3go.cn, *.ccb.com, wxh.wo.cn, gate.lagou.com, *.abchina.com.cn, login-service.mobile-bank.psbc.com, mobile-bank.psbc.com, 10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8,  162.14.0.0/16, 162.159.192.0/24, 162.159.193.0/24, 162.159.195.0/24, 169.254.0.0/16, 172.16.0.0/12, 192.168.0.0/16, 192.168.122.1/32, 193.168.0.1/32, 224.0.0.0/4, 240.0.0.0/4, 255.255.255.255/32, ::1/128, fc00::/7, fd00::/8, fe80::/10, ff00::/8, 2001::/32, 2001:db8::/32, 2002::/16, ::ffff:0:0:0:0/1, ::ffff:128:0:0:0/1
+skip-proxy = skip-proxy = 
+// 国内保留地址段（IPv4/IPv6）
+127.0.0.1, localhost, *.local,
+10.0.0.0/8, 100.64.0.0/10, 172.16.0.0/12, 192.168.0.0/16, 169.254.0.0/16,
+::1/128, fc00::/7, fd00::/8, fe80::/10,
+
+// 苹果服务域名
+captive.apple.com, sequoia.apple.com, seed-sequoia.siri.apple.com,
+
+// 国内公共服务域名
+*.gov.cn, *.12306.cn, *.csrc.gov.cn, *.customs.gov.cn,
+*.miit.gov.cn, *.cae.cn, *.nsfc.gov.cn,
+
+// 国内金融机构域名
+*.ccb.com, *.icbc.com.cn, *.cmbchina.com, *.bankofchina.com,
+*.abchina.com.cn, *.psbc.com, *.alipay.com,
+
+// 国内互联网服务域名
+*.baidu.com, *.qq.com, *.weixin.qq.com, *.taobao.com, *.tmall.com, *.jd.com, 
+*.163.com, *.sina.com.cn, *.bilibili.com, *.bytedance.com, *.douyin.com,
+
+// 国内运营商及基础设施
+*.chinaunicom.com, *.chinamobile.com, *.10086.cn, *.wo.cn,
+*.t3go.cn, *.ctyun.cn, *.cnnic.cn
 
 # bypass-tun则和TUN有关, 如果配置了该参数, 那么所配置的这些IP段、域名就会不交给Loon来处理, 系统直接处理
 bypass-tun = 10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/12, 192.0.0.0/24, 192.0.2.0/24, 192.88.99.0/24, 192.168.0.0/16, 198.18.0.0/15, 198.51.100.0/24, 203.0.113.0/24, 224.0.0.0/4, 255.255.255.255/32
@@ -58,7 +81,69 @@ sni-sniffing = true
 resource-parser = https://raw.githubusercontent.com/sub-store-org/Sub-Store/release/sub-store-parser.loon.min.js
 
 # > 以下配置的域名不会使用fakeip进行映射
-real-ip = *.lan, *.id.ui.direct, cable.auth.com, *.msftconnecttest.com, *.msftncsi.com, network-test.debian.org, detectportal.firefox.com, resolver1.opendns.com, *.srv.nintendo.net, *.stun.playstation.net, xbox.*.microsoft.com, *.xboxlive.com, stun.syncthing.net, stun.*, *.turn.twilio.com, *.stun.twilio.com, app.yinxiang.com, injections.adguard.org, local.adguard.org, cable.auth.com, localhost.*.qq.com, localhost.*.weixin.qq.com, *.logon.battlenet.com.cn, *.logon.battle.net, *.blzstatic.cn, music.163.com, *.music.163.com, *.126.net, musicapi.taihe.com, music.taihe.com, songsearch.kugou.com, trackercdn.kugou.com, *.kuwo.cn, api-jooxtt.sanook.com, api.joox.com, joox.com, y.qq.com, *.y.qq.com, streamoc.music.tc.qq.com, mobileoc.music.tc.qq.com, isure.stream.qqmusic.qq.com, dl.stream.qqmusic.qq.com, aqqmusic.tc.qq.com, amobile.music.tc.qq.com, *.xiami.com, *.music.migu.cn, music.migu.cn, proxy.golang.org, *.mcdn.bilivideo.cn, *.cmpassport.com, id6.me, open.e.189.cn, opencloud.wostore.cn, auth.wosms.cn, id.mail.wo.cn, mdn.open.wo.cn, hmrz.wo.cn, *.jegotrip.com.cn, *.icitymobile.mobi, *.pingan.com.cn, *.cmbchina.com, pool.ntp.org, *.pool.ntp.org, ntp.*.com, time.*.com, ntp?.*.com, time?.*.com, time.*.gov, time.*.edu.cn, *.ntp.org.cn, PDC._msDCS.*.*, DC._msDCS.*.*, GC._msDCS.*.*
+real-ip = always-real-ip = 
+  # 本地网络与设备
+  *.lan,                     # 本地局域网域名
+  *.id.ui.direct,            # 设备身份服务
+  cable.auth.com,            # 身份验证服务（删除重复项）
+
+  # 网络检测服务
+  *.msftconnecttest.com,     # Microsoft网络连接测试
+  *.msftncsi.com,            # Microsoft网络状态检测
+  network-test.debian.org,   # Debian网络测试
+  detectportal.firefox.com,  # Firefox网络门户检测
+  resolver1.opendns.com,     # OpenDNS解析服务
+
+  # 游戏平台
+  *.srv.nintendo.net,        # 任天堂在线服务
+  *.stun.playstation.net,    # PlayStation网络穿透
+  xbox.*.microsoft.com,      # Xbox服务（修正通配符层级）
+  *.xboxlive.com,            # Xbox Live核心服务
+
+  # 实时通信与穿透
+  *.stun.twilio.com,         # Twilio STUN服务（替代过广的stun.*）
+  global.turn.twilio.com,    # Twilio TURN服务
+  global.stun.twilio.com,    # Twilio STUN全局服务
+
+  # 笔记与工具
+  app.yinxiang.com,          # 印象笔记
+  injections.adguard.org,    # AdGuard过滤规则
+  local.adguard.org,         # AdGuard本地服务
+
+  # 金融与支付
+  *.cmpassport.com,          # 中国移动支付认证
+  *.pingan.com.cn,           # 平安集团服务
+  *.cmbchina.com,            # 招商银行
+  id6.me,                    # 身份验证服务
+  open.e.189.cn,             # 天翼云开放平台
+  auth.wosms.cn,             # 沃短信认证
+
+  # 音乐流媒体
+  music.163.com,             # 网易云音乐（合并冗余）
+  *.music.163.com,           # 覆盖所有子域名
+  *.126.net,                 # 网易CDN
+  musicapi.taihe.com,        # 百度音乐API
+  songsearch.kugou.com,      # 酷狗音乐搜索
+  trackercdn.kugou.com,      # 酷狗追踪CDN
+  api.joox.com,              # JOOX音乐API
+  *.y.qq.com,                # QQ音乐子域名
+  *.music.migu.cn,           # 咪咕音乐
+
+  # 开发与基础设施
+  proxy.golang.org,          # Go模块代理
+  *.mcdn.bilivideo.cn,       # B站移动CDN
+
+  # 时间同步服务
+  pool.ntp.org,              # NTP池项目
+  *.pool.ntp.org,            # NTP池子域名
+  ntp.*.com,                 # 通用NTP服务（修正问号错误）
+  time.*.com,                # 通用时间服务
+  time.*.gov,                # 政府时间服务
+  time.*.edu.cn,             # 教育网时间服务
+  *.ntp.org.cn,              # 中国NTP服务
+
+  # Windows域控服务（修正SRV记录格式）
+  _msdcs.*                   # 替代错误格式 PDC._msDCS.*.*
 
 # > interface-mode 指定流量使用哪个网络接口进行转发, 目前包含三种模式:
 # Auto: 系统自动分配
