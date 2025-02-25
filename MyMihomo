@@ -30,13 +30,13 @@ udp: true
 ### 如果使用的是裸核，需要将下面的注释去掉，方便ui界面的使用
 # external-controller: 0.0.0.0:9988
 # external-ui: ui
-# external-ui-url: 'https://mirror.ghproxy.com/https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip'
+# external-ui-url: "https://mirror.ghproxy.com/https://github.com/Zephyruso/zashboard/releases/latest/download/dist.zip"
 
 geox-url:
   geoip: "https://github.com/xream/geoip/releases/latest/download/ipinfo.geoip.dat"
   geosite: "https://mirror.ghproxy.com/https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.dat"
   mmdb: "https://github.com/xream/geoip/releases/latest/download/ipinfo.country.mmdb"
-  asn: 'https://github.com/xream/geoip/releases/latest/download/ipinfo.asn.mmdb'
+  asn: "https://github.com/xream/geoip/releases/latest/download/ipinfo.asn.mmdb"
 
 ### DNS配置
 dns:
@@ -48,44 +48,44 @@ dns:
   fake-ip-range: 198.18.0.1/16
   # fake-ip-filter start
   fake-ip-filter:
-    - '*.lan',
-    - '*.id.ui.direct',
+    - "*.lan",
+    - "*.id.ui.direct",
     - cable.auth.com,
-    - '*.msftconnecttest.com',
-    - '*.msftncsi.com',
+    - "*.msftconnecttest.com",
+    - "*.msftncsi.com",
     - network-test.debian.org,
     - detectportal.firefox.com,
     - resolver1.opendns.com,
-    - '*.srv.nintendo.net',
-    - '*.stun.playstation.net',
-    - 'xbox.*.microsoft.com',
-    - '*.xboxlive.com',
-    - 'stun.*',
+    - "*.srv.nintendo.net",
+    - "*.stun.playstation.net",
+    - "xbox.*.microsoft.com",
+    - "*.xboxlive.com",
+    - "stun.*",
     - global.turn.twilio.com,
     - global.stun.twilio.com,
     - app.yinxiang.com,
     - injections.adguard.org,
     - local.adguard.org,
-    - 'localhost.*.qq.com',
-    - 'localhost.*.weixin.qq.com',
-    - '*.logon.battlenet.com.cn',
-    - '*.logon.battle.net',
-    - '*.blzstatic.cn',
-    - '*.music.163.com',
-    - '*.126.net',
+    - "localhost.*.qq.com",
+    - "localhost.*.weixin.qq.com",
+    - "*.logon.battlenet.com.cn",
+    - "*.logon.battle.net",
+    - "*.blzstatic.cn",
+    - "*.music.163.com",
+    - "*.126.net",
     - musicapi.taihe.com,
     - music.taihe.com,
     - trackercdn.kugou.com,
-    - '*.kuwo.cn',
+    - "*.kuwo.cn",
     - api.joox.com,
     - joox.com,
-    - '*.y.qq.com',
-    - '*.music.tc.qq.com',
-    - '*.xiami.com',
-    - '*.music.migu.cn',
+    - "*.y.qq.com",
+    - "*.music.tc.qq.com",
+    - "*.xiami.com",
+    - "*.music.migu.cn",
     - proxy.golang.org,
-    - '*.mcdn.bilivideo.cn',
-    - '*.cmpassport.com',
+    - "*.mcdn.bilivideo.cn",
+    - "*.cmpassport.com",
     - id6.me,
     - open.e.189.cn,
     - opencloud.wostore.cn,
@@ -93,18 +93,20 @@ dns:
     - id.mail.wo.cn,
     - mdn.open.wo.cn,
     - hmrz.wo.cn,
-    - '*.jegotrip.com.cn',
-    - '*.icitymobile.mobi',
-    - '*.pingan.com.cn',
-    - '*.cmbchina.com',
+    - "*.jegotrip.com.cn",
+    - "*.icitymobile.mobi",
+    - "*.pingan.com.cn",
+    - "*.cmbchina.com",
     - pool.ntp.org,
-    - '*.pool.ntp.org',
-    - 'time.*.com',
-    - 'time.*.gov',
-    - 'time.*.edu.cn',
-    - '*.ntp.org.cn',
-    - 'PDC._msDCS.*.*',
-    - 'GC._msDCS.*.*'
+    - "*.pool.ntp.org",
+    - "time.*.com",
+    - "time.*.gov",
+    - "time.*.edu.cn",
+    - "*.ntp.org.cn",
+    - "PDC._msDCS.*.*",
+    - "DC._msDCS.*.*",
+    - "GC._msDCS.*.*"
+
   # fake-ip-filter end
   respect-rules: true
   nameserver:
@@ -154,38 +156,38 @@ tun:
   # route-exclude-address: ["192.168.110.0/24"]
 
 ### 节点配置
-NodeParam: &NodeParam {type: http, interval: 86400, health-check: {enable: true, url: 'http://latency-test.skk.moe/endpoint', interval: 300}}
+NodeParam: &NodeParam {type: http, interval: 86400, health-check: {enable: true, url: "http://latency-test.skk.moe/endpoint", interval: 300}}
 # 节点订阅
 proxy-providers: 
   Node-1:
-    url: '替换订阅链接'
+    url: "替换订阅链接"
     <<: *NodeParam
-    path: './proxy_provider/providers.yaml'
+    path: "./proxy_provider/providers.yaml"
   # Node-2:
-  #   url: '替换订阅链接'
+  #   url: "替换订阅链接"
   #   <<: *NodeParam
-  #   path: './proxy_provider/providers.yaml'
+  #   path: "./proxy_provider/providers.yaml"
 
 # 节点筛选
-FilterHK: &FilterHK '^(?=.*(香港|HK|Hong|🇭🇰))^(?!.*(网站|地址|剩余|过期|时间|有效|网址|禁止|邮箱|发布|客服|订阅|节点)).*$'
-FilterJP: &FilterJP '^(?=.*(日本|JP|Japan|🇯🇵))^(?!.*(网站|地址|剩余|过期|时间|有效|网址|禁止|邮箱|发布|客服|订阅|节点)).*$'
-FilterKR: &FilterKR '^(?=.*(韩国|韓|KR|Korea|🇰🇷))^(?!.*(网站|地址|剩余|过期|时间|有效|网址|禁止|邮箱|发布|客服|订阅|节点)).*$'
-FilterSG: &FilterSG '^(?=.*(新加坡|狮城|SG|Singapore|🇸🇬))^(?!.*(网站|地址|剩余|过期|时间|有效|网址|禁止|邮箱|发布|客服|订阅|节点)).*$'
-FilterUS: &FilterUS '^(?=.*(美国|US|United States|America|🇺🇸))^(?!.*(网站|地址|剩余|过期|时间|有效|网址|禁止|邮箱|发布|客服|订阅|节点)).*$'
-FilterUK: &FilterUK '^(?=.*(英国|UK|United Kingdom|🇬🇧))^(?!.*(网站|地址|剩余|过期|时间|有效|网址|禁止|邮箱|发布|客服|订阅|节点)).*$'
-FilterFR: &FilterFR '^(?=.*(法国|FR|France|🇫🇷))^(?!.*(网站|地址|剩余|过期|时间|有效|网址|禁止|邮箱|发布|客服|订阅|节点)).*$'
-FilterDE: &FilterDE '^(?=.*(德国|DE|Germany|🇩🇪))^(?!.*(网站|地址|剩余|过期|时间|有效|网址|禁止|邮箱|发布|客服|订阅|节点)).*$'
-FilterTW: &FilterTW '^(?=.*(台湾|TW|Taiwan|Wan|🇹🇼|🇨🇳))^(?!.*(网站|地址|剩余|过期|时间|有效|网址|禁止|邮箱|发布|客服|订阅|节点)).*$'
-FilterOthers: &FilterOthers '^(?!.*(🇭🇰|HK|Hong|香港|🇹🇼|TW|Taiwan|Wan|🇯🇵|JP|Japan|日本|🇸🇬|SG|Singapore|狮城|🇺🇸|US|United States|America|美国|🇩🇪|DE|Germany|德国|🇬🇧|UK|United Kingdom|英国|🇰🇷|KR|Korea|韩国|韓|🇫🇷|FR|France|法国)).*$'
-FilterAll: &FilterAll '^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$'
+FilterHK: &FilterHK "^(?=.*(香港|HK|Hong|🇭🇰))^(?!.*(网站|地址|剩余|过期|时间|有效|网址|禁止|邮箱|发布|客服|订阅|节点)).*$"
+FilterJP: &FilterJP "^(?=.*(日本|JP|Japan|🇯🇵))^(?!.*(网站|地址|剩余|过期|时间|有效|网址|禁止|邮箱|发布|客服|订阅|节点)).*$"
+FilterKR: &FilterKR "^(?=.*(韩国|韓|KR|Korea|🇰🇷))^(?!.*(网站|地址|剩余|过期|时间|有效|网址|禁止|邮箱|发布|客服|订阅|节点)).*$"
+FilterSG: &FilterSG "^(?=.*(新加坡|狮城|SG|Singapore|🇸🇬))^(?!.*(网站|地址|剩余|过期|时间|有效|网址|禁止|邮箱|发布|客服|订阅|节点)).*$"
+FilterUS: &FilterUS "^(?=.*(美国|US|United States|America|🇺🇸))^(?!.*(网站|地址|剩余|过期|时间|有效|网址|禁止|邮箱|发布|客服|订阅|节点)).*$"
+FilterUK: &FilterUK "^(?=.*(英国|UK|United Kingdom|🇬🇧))^(?!.*(网站|地址|剩余|过期|时间|有效|网址|禁止|邮箱|发布|客服|订阅|节点)).*$"
+FilterFR: &FilterFR "^(?=.*(法国|FR|France|🇫🇷))^(?!.*(网站|地址|剩余|过期|时间|有效|网址|禁止|邮箱|发布|客服|订阅|节点)).*$"
+FilterDE: &FilterDE "^(?=.*(德国|DE|Germany|🇩🇪))^(?!.*(网站|地址|剩余|过期|时间|有效|网址|禁止|邮箱|发布|客服|订阅|节点)).*$"
+FilterTW: &FilterTW "^(?=.*(台湾|TW|Taiwan|Wan|🇹🇼|🇨🇳))^(?!.*(网站|地址|剩余|过期|时间|有效|网址|禁止|邮箱|发布|客服|订阅|节点)).*$"
+FilterOthers: &FilterOthers "^(?!.*(🇭🇰|HK|Hong|香港|🇹🇼|TW|Taiwan|Wan|🇯🇵|JP|Japan|日本|🇸🇬|SG|Singapore|狮城|🇺🇸|US|United States|America|美国|🇩🇪|DE|Germany|德国|🇬🇧|UK|United Kingdom|英国|🇰🇷|KR|Korea|韩国|韓|🇫🇷|FR|France|法国)).*$"
+FilterAll: &FilterAll "^(?=.*(.))(?!.*((?i)群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(\b(USE|USED|TOTAL|EXPIRE|EMAIL|Panel|Channel|Author)\b|(\d{4}-\d{2}-\d{2}|\d+G)))).*$"
 
 # 节点组参数锚点
 # 锚点 - 时延优选参数 [每 300 秒一次惰性健康检查，容差 20ms，时延超过 2 秒判定为失败，失败 3 次则自动触发健康检查]
-UrlTest: &UrlTest {type: url-test, interval: 300, tolerance: 20, url: 'http://latency-test.skk.moe/endpoint', disable-udp: false, timeout: 2000, max-failed-times: 3, hidden: true, include-all: true}
+UrlTest: &UrlTest {type: url-test, interval: 300, tolerance: 20, url: "http://latency-test.skk.moe/endpoint", disable-udp: false, timeout: 2000, max-failed-times: 3, hidden: true, include-all: true}
 # 锚点 - 故障转移参数 [每 300 秒一次惰性健康检查，时延超过 2 秒判定为失败，失败 3 次则自动触发健康检查]
-FallBack: &FallBack {type: fallback, interval: 300, url: 'http://latency-test.skk.moe/endpoint', disable-udp: false, timeout: 2000, max-failed-times: 3, hidden: false, include-all: true}
+FallBack: &FallBack {type: fallback, interval: 300, url: "http://latency-test.skk.moe/endpoint", disable-udp: false, timeout: 2000, max-failed-times: 3, hidden: false, include-all: true}
 # 锚点 - 负载均衡参数 [每 300 秒一次惰性健康检查，时延超过 2 秒判定为失败，失败 3 次则自动触发健康检查]
-LoadBalance: &LoadBalance {type: load-balance, interval: 300, url: 'http://latency-test.skk.moe/endpoint', disable-udp: false, strategy: consistent-hashing, timeout: 2000, max-failed-times: 3, hidden: false, include-all: true}
+LoadBalance: &LoadBalance {type: load-balance, interval: 300, url: "http://latency-test.skk.moe/endpoint", disable-udp: false, strategy: consistent-hashing, timeout: 2000, max-failed-times: 3, hidden: false, include-all: true}
 # 锚点 - 规则参数 [每小时更新一次订阅规则，更新规则时使用直连节点]
 
 # 节点组
@@ -231,8 +233,8 @@ rule-providers:
 
   RejectPCDN:
     <<: *RuleSet_classicalT
-    url: 'https://ruleset.skk.moe/Clash/non_ip/reject-no-drop.txt'
-    path: './Rules/sukkaw_ruleset/reject_non_ip_no_drop.txt'
+    url: "https://ruleset.skk.moe/Clash/non_ip/reject-no-drop.txt"
+    path: "./Rules/sukkaw_ruleset/reject_non_ip_no_drop.txt"
 
   reject_non_ip_drop:
     <<: *RuleSet_classicalT
@@ -268,8 +270,8 @@ rule-providers:
   # 所有流媒体（包括上述所有流媒体）
   Netflix:
     <<: *RuleSet_classicalY
-    url: 'https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Netflix.yaml'
-    path: './rules/Netflix.yaml'
+    url: "https://raw.githubusercontent.com/dler-io/Rules/main/Clash/Provider/Media/Netflix.yaml"
+    path: "./rules/Netflix.yaml"
 
   stream_non_ip:
     <<: *RuleSet_classicalT
