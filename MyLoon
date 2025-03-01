@@ -17,8 +17,9 @@ bypass-tun = 10.0.0.0/8, 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, 172.16.0.0/
 dns-server = 9.9.9.11, 149.112.112.11, 2620:fe::11, 2620:fe::fe:11
 # 加密 DNS 服务器设置
 # doh-server = https://dns11.quad9.net/dns-query
-# ip-mode 支持（默认dual）
+# ip-mode 支持（默认dual: IPv4&IPv6）
 ip-mode = dual
+ipv6-vif = auto
 # 在DNS阶段拒绝域名时采用的方式
 dns-reject-mode = LoopbackIP
 # 域名拒绝规则执行的阶段
@@ -64,7 +65,7 @@ real-ip = *.lan, *.id.ui.direct, cable.auth.com, *.msftconnecttest.com, *.msftnc
 # Cellular: 在WiFi和蜂窝数据都开启的情况下指定使用蜂窝网络
 # Performace: 在WiFi和蜂窝数据都开启的情况下使用最优的网络接口
 # Balance: 在WiFi和蜂窝数据都开启的情况下, 均衡使用网络接口
-interface-mode = auto
+interface-mode = Performace
 
 # > hijack-dns
 # 有些app会自己使用自定义的DNS over UDP来解析IP, 可以配置相关IP:端口来劫持这些查询, 并返回fakeip的响应
