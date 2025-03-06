@@ -216,11 +216,11 @@ proxy-groups:
   - {name: AI, type: select, proxies: [🛰️ 自动选择, 🔯 故障转移, 🔮 负载均衡, 香港节点, 美国节点, 狮城节点, 日本节点, 韩国节点, 台湾节点], icon: https://github.com/ColinYYCC/Network-Tools/raw/main/Logo/DeepSeek.png}
 # > 媒体策略组
 # Netflix
-  - {name: Netflix, type: select, proxies: [狮城节点, 香港节点, 台湾节点, 日本节点, 美国节点, 韩国节点], img-url = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/netflix(red).png}
+  - {name: Netflix, type: select, proxies: [狮城节点, 香港节点, 台湾节点, 日本节点, 美国节点, 韩国节点], icon: https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/netflix(red).png}
 # YouTube
-  - {name: YouTube, type: select, proxies: [香港节点, 台湾节点, 狮城节点, 日本节点, 美国节点, 韩国节点], img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/YouTube.png}
+  - {name: YouTube, type: select, proxies: [香港节点, 台湾节点, 狮城节点, 日本节点, 美国节点, 韩国节点], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/YouTube.png}
 # Disney+
-  - {name: Disney+, type: select, proxies: [狮城节点, 香港节点, 台湾节点, 日本节点, 美国节点, 韩国节点], img-url = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/disney(blue).png}
+  - {name: Disney+, type: select, proxies: [狮城节点, 香港节点, 台湾节点, 日本节点, 美国节点, 韩国节点], icon: https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/disney(blue).png}
 # Spotify
   - {name: Spotify, type: select, proxies: [香港节点, 美国节点, 狮城节点, 日本节点, 韩国节点, 台湾节点, 🛰️ 自动选择, 🔯 故障转移, 🔮 负载均衡], icon: https://github.com/tugepaopao/Image-Storage/raw/master/cartoon/Cute/spotify.png}
 # Emby
