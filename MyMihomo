@@ -406,7 +406,7 @@ rules:
   - RULE-SET,download_non_ip,手动切换
   - RULE-SET,microsoft_cdn_non_ip,DIRECT
   - RULE-SET,apple_cn_non_ip,DIRECT  
-  - RULE-SET,apple_services,App Store
+  - RULE-SET,apple_services,Apple Service
   - RULE-SET,microsoft_non_ip,Ⓜ️ 微软服务
   - RULE-SET,ai_non_ip,🤖 AIGC
   - RULE-SET,global_non_ip,手动切换
