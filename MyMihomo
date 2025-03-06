@@ -206,12 +206,27 @@ LoadBalance: &LoadBalance {type: load-balance, interval: 300, url: "http://laten
 # 节点组
 proxy-groups: 
   - {name: 手动切换, type: select, proxies: [🛰️ 自动选择, 🔮 负载均衡, 🔯 故障转移, 香港节点, 台湾节点, 日本节点, 韩国节点, 狮城节点, 美国节点], icon: https://github.com/chen08209/FlClash/raw/main/assets/images/icon.png}
-  - {name: Telegram, type: select, proxies: [🔮 负载均衡, 🔯 故障转移, 🛰️ 自动选择, 香港节点, 台湾节点, 日本节点, 韩国节点, 狮城节点, 美国节点], icon: https://github.com/tugepaopao/Image-Storage/raw/master/hand-painted/36.png}
-  - {name: App Store, type: select, proxies: [DIRECT, 香港节点, 台湾节点, 日本节点, 韩国节点, 狮城节点, 美国节点], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Apple.png}
-  - {name: Netflix, type: select, proxies: [香港节点, 台湾节点, 日本节点, 韩国节点, 狮城节点, 美国节点], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Universal/Netflix.png}
-  - {name: 🤖 AIGC, type: select, proxies: [美国节点, 手动切换, 香港节点, 日本节点, 韩国节点, 狮城节点, 美国节点, 英国节点, 法国节点, 德国节点, 台湾节点], icon: https://github.com/ColinYYCC/Network-Tools/raw/main/Logo/DeepSeek.png}
-  - {name: Ⓜ️ 微软服务, type: select, proxies: [DIRECT, 手动切换, 香港节点, 日本节点, 韩国节点, 狮城节点, 美国节点, 英国节点, 法国节点, 德国节点, 台湾节点], icon: https://raw.githubusercontent.com/Orz-3/mini/master/Color/Microsoft.png}
-  - {name: 漏网之鱼, type: select, proxies: [🔯 故障转移, 🛰️ 自动选择, 🔮 负载均衡, DIRECT], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Snapfish.png}
+# > 分流策略组
+  - {name: 国外网站, type: select, proxies: [🛰️ 自动选择, 🔯 故障转移, 🔮 负载均衡, 香港节点, 美国节点, 狮城节点, 日本节点, 韩国节点, 台湾节点], icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Twitter.png}
+# Telegram
+  - {name: Telegram, type: select, proxies: [🛰️ 自动选择, 🔯 故障转移, 🔮 负载均衡, 香港节点, 美国节点, 狮城节点, 日本节点, 韩国节点, 台湾节点], icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/telegram(blue1).png}
+# Apple
+  - {name: Apple Service, type: select, proxies: [DIRECT, 🛰️ 自动选择, 🔯 故障转移, 🔮 负载均衡, 香港节点, 美国节点, 狮城节点, 日本节点, 韩国节点], 台湾节点, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/Apple.png}
+# Ai
+  - {name: AI, type: select, proxies: [🛰️ 自动选择, 🔯 故障转移, 🔮 负载均衡, 香港节点, 美国节点, 狮城节点, 日本节点, 韩国节点, 台湾节点], icon: https://github.com/ColinYYCC/Network-Tools/raw/main/Logo/DeepSeek.png}
+# > 媒体策略组
+# Netflix
+  - {name: Netflix, type: select, proxies: [狮城节点, 香港节点, 台湾节点, 日本节点, 美国节点, 韩国节点], img-url = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/netflix(red).png}
+# YouTube
+  - {name: YouTube, type: select, proxies: [香港节点, 台湾节点, 狮城节点, 日本节点, 美国节点, 韩国节点], img-url = https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Social_Media/YouTube.png}
+# Disney+
+  - {name: Disney+, type: select, proxies: [狮城节点, 香港节点, 台湾节点, 日本节点, 美国节点, 韩国节点], img-url = https://raw.githubusercontent.com/fmz200/wool_scripts/main/icons/lige47/disney(blue).png}
+# Spotify
+  - {name: Spotify, type: select, proxies: [香港节点, 美国节点, 狮城节点, 日本节点, 韩国节点, 台湾节点, 🛰️ 自动选择, 🔯 故障转移, 🔮 负载均衡], icon: https://github.com/tugepaopao/Image-Storage/raw/master/cartoon/Cute/spotify.png}
+# Emby
+  - {name: Emby, type: select, proxies: [香港节点, 美国节点, 狮城节点, 日本节点, 韩国节点, 台湾节点, 🛰️ 自动选择, 🔯 故障转移, 🔮 负载均衡], icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/emby.png}
+  - {name: 游戏, type: select, proxies: [DIRECT, 🛰️ 自动选择, 🔯 故障转移], icon: https://raw.githubusercontent.com/lige47/QuanX-icon-rule/main/icon/steam(1).png}
+# ------
 
   # 自动选择
   - {name: 香港节点, <<: *UrlTest, filter: *FilterHK, icon: https://raw.githubusercontent.com/Semporia/Hand-Painted-icon/master/Rounded_Rectangle/Hong_Kong.png}
