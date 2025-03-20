@@ -439,7 +439,7 @@ RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/r
 RULE-SET,https://ruleset.skk.moe/List/non_ip/global.conf,自选节点,extended-matching // 国外网站
 
 # Telegram 电报
-RULE-SET,https://github.com/LucaLin233/Luca_Conf/blob/main/Surge/Rule/Telegram.list?raw=true,Telegram,extended-matching // Telegram 电报
+RULE-SET,https://github.com/LucaLin233/Luca_Conf/raw/main/Surge/Rule/Telegram.list?raw=true,Telegram,extended-matching // Telegram 电报
 
 # > 👾Game 游戏(不仅限于UDP, 包括相关CDN)
 # GameList
