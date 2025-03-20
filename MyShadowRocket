@@ -85,7 +85,7 @@ DOMAIN-SET,https://ruleset.skk.moe/List/non_ip/cdn.conf,🌏 国外网站
 RULE-SET,https://testingcf.jsdelivr.net/gh/dler-io/Rules@main/Surge/Surge%203/Provider/Apple.list, Apple Service
 
 # Telegram
-RULE-SET,https://github.com/LucaLin233/Luca_Conf/blob/main/Surge/Rule/Telegram.list?raw=true,📟 电报消息
+RULE-SET,https://github.com/LucaLin233/Luca_Conf/raw/main/Surge/Rule/Telegram.list?raw=true,📟 电报消息
 
 # OpenAI
 RULE-SET,https://github.com/Repcz/Tool/raw/X/Shadowrocket/Rules/AI.list,🤖 AI
