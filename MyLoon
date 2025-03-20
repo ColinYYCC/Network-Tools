@@ -271,7 +271,7 @@ https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/
 https://ruleset.skk.moe/List/non_ip/global.conf, policy = 🥡 节点选择, tag = 国外网站, enabled = true
 
 # Telegram 电报
-https://github.com/LucaLin233/Luca_Conf/blob/main/Surge/Rule/Telegram.list?raw = true, policy = Telegram, tag = Telegram 电报, enabled = true
+https://github.com/LucaLin233/Luca_Conf/raw/main/Surge/Rule/Telegram.list?raw = true, policy = Telegram, tag = Telegram 电报, enabled = true
 
 # > 👾Game 游戏(不仅限于UDP, 包括相关CDN)
 # GameList
