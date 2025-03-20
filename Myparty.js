@@ -945,7 +945,7 @@ function overwriteRules (params) {
         telegram: {
             type: "http",
             behavior: "classical",
-            url: "https://github.com/LucaLin233/Luca_Conf/blob/main/Surge/Rule/Telegram.list?raw=true",
+            url: "https://github.com/LucaLin233/Luca_Conf/raw/main/Surge/Rule/Telegram.list?raw=true",
             path: "./rules/Telegram.list",
             interval: 43200,
             format: "text",
