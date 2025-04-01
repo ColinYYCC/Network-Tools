@@ -426,8 +426,104 @@ rules:
   - RULE-SET,lan_ip,DIRECT
   - RULE-SET,domestic_ip,DIRECT
   - RULE-SET,china_ip,DIRECT
+
+# 自定义规则
+## 您可以在此处插入自定义规则
+  - DOMAIN-SUFFIX,zoom.us,国外网站
+  - DOMAIN-KEYWORD,todesk,DIRECT
+  - DOMAIN-KEYWORD,AnyViewer,DIRECT
+
+# Process 程序规则
+# > AdGuard
+  - DOMAIN,injections.adguard.org,DIRECT
+  - DOMAIN,local.adguard.org,DIRECT
+
+# > Client
+# Proxy
+  - PROCESS-NAME,*Clash*,DIRECT
+  - PROCESS-NAME,*clash*,DIRECT
+  - PROCESS-NAME,Surge*,DIRECT
+  - PROCESS-NAME,v2ray,DIRECT
+  - PROCESS-NAME,xray,DIRECT
+  - PROCESS-NAME,naive,DIRECT
+  - PROCESS-NAME,Trojan,DIRECT
+  - PROCESS-NAME,Trojan-go,DIRECT
+  - PROCESS-NAME,ss-local,DIRECT
+  - PROCESS-NAME,ssr-local,DIRECT
+  - PROCESS-NAME,privoxy,DIRECT
+  - PROCESS-NAME,leaf,DIRECT
+  - PROCESS-NAME,UUBooster,DIRECT
+
+# > Downloader
+  - PROCESS-NAME,BaiduNetdisk,DIRECT
+  - PROCESS-NAME,*Folx*,DIRECT
+  - PROCESS-NAME,*Thunder*,DIRECT
+  - PROCESS-NAME,*DownloadService*,DIRECT
+  - PROCESS-NAME,*Soda*,DIRECT
+  - PROCESS-NAME,*p4pclient*,DIRECT
+  - PROCESS-NAME,aria2c,DIRECT
+  - PROCESS-NAME,fdm,DIRECT
+  - PROCESS-NAME,Folx,DIRECT
+  - PROCESS-NAME,NetTransport,DIRECT
+  - PROCESS-NAME,amuled,DIRECT
+  - PROCESS-NAME,Motrix.app,DIRECT
+  - DOMAIN-SUFFIX,smtp,DIRECT
+  - DOMAIN-KEYWORD,aria2,DIRECT
+
+# BT
+  - PROCESS-NAME,BitComet,DIRECT
+  - PROCESS-NAME,DownloadService,DIRECT
+  - PROCESS-NAME,qBittorrent,DIRECT
+  - PROCESS-NAME,qbittorrent-nox,DIRECT
+  - PROCESS-NAME,Transmission*,DIRECT
+  - PROCESS-NAME,transmission*,DIRECT
+  - PROCESS-NAME,uTorrent,DIRECT
+  - PROCESS-NAME,WebTorrent,DIRECT
+  - PROCESS-NAME,WebTorrent Helper,DIRECT
+  - DOMAIN-KEYWORD,announce,DIRECT
+  - DOMAIN-KEYWORD,torrent,DIRECT
+  - DOMAIN-KEYWORD,tracker,DIRECT
+
+# Surge 的自动 REJECT 保护丢包，防止应用循环请求
+  - IP-CIDR,0.0.0.0/32,REJECT,no-resolve
+
+# Local Area Network 本地局域网
+  - DOMAIN-SUFFIX,lan,DIRECT
+  - DOMAIN-SUFFIX, direct, DIRECT
+  - DOMAIN-SUFFIX, wpad, DIRECT
+  - DOMAIN-SUFFIX, local, DIRECT
+  - DOMAIN-SUFFIX, localhost, DIRECT
+  - DOMAIN-SUFFIX, invalid, DIRECT
+  - DOMAIN-SUFFIX, onion, DIRECT
+  - DOMAIN-SUFFIX, test, DIRECT
+  - DOMAIN-SUFFIX, lan, DIRECT
+  - DOMAIN-SUFFIX, intranet, DIRECT
+  - DOMAIN-SUFFIX, internal, DIRECT
+  - DOMAIN-SUFFIX, private, DIRECT
+  - DOMAIN-SUFFIX, home, DIRECT
+  - DOMAIN-SUFFIX, corp, DIRECT
+  - IP-CIDR, 10.0.0.0/8, DIRECT
+  - IP-CIDR, 100.64.0.0/10, DIRECT
+  - IP-CIDR, 127.0.0.0/8, DIRECT
+  - IP-CIDR, 169.254.0.0/16, DIRECT
+  - IP-CIDR, 172.16.0.0/12, DIRECT
+  - IP-CIDR, 192.168.0.0/16, DIRECT
+  - IP-CIDR, 224.0.0.0/4, DIRECT
+  - IP-CIDR, 240.0.0.0/4, DIRECT
+  - IP-CIDR, 255.255.255.255/32, DIRECT
+  - IP-CIDR6, fc00::/7, DIRECT
+  - IP-CIDR6, fd00::/8, DIRECT
+  - IP-CIDR6, fe80::/10, DIRECT
+  - IP-CIDR6, ff00::/8, DIRECT
+  - IP-CIDR6, ff01::/16, DIRECT
+  - IP-CIDR6, ff02::/16, DIRECT
+  - IP-CIDR6, ff03::/16, DIRECT
+  - IP-CIDR6, ff04::/16, DIRECT
+  - IP-CIDR6, ff05::/16, DIRECT
+  - IP-CIDR6, 2001:db8::/32, DIRECT
+  - IP-CIDR6, 2002::/16, DIRECT
   - MATCH,漏网之鱼
 
 url-rewrite:
-    - ^https?:\/\/(www.)?(g|google)\.cn https://www.google.com 302
-    - ^https?:\/\/(ditu|maps).google\.cn https://maps.google.com 302
+  - ^https?:\/\/(www.)?(g|google)\.cn https://www.google.com 302
+  - ^https?:\/\/(ditu|maps).google\.cn https://maps.google.com 302
