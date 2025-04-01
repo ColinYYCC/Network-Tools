@@ -179,6 +179,9 @@ DOMAIN, yacd.haishan.me, DIRECT
 DOMAIN, boxjs.com, DIRECT
 DOMAIN, boxjs.net, DIRECT
 
+# 自动 REJECT 保护丢包，防止应用循环请求
+IP-CIDR,0.0.0.0/32,REJECT
+
 # Local Area Network 本地局域网
 DOMAIN-SUFFIX, direct, DIRECT
 DOMAIN-SUFFIX, wpad, DIRECT
