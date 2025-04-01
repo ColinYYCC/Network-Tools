@@ -335,6 +335,8 @@ PROCESS-NAME,SunloginClient_Desktop,DIRECT
 PROCESS-NAME,SunloginClient_Helper,DIRECT
 # Todesk
 DOMAIN-KEYWORD,todesk,DIRECT
+# AnyViewer
+DOMAIN-KEYWORD,AnyViewer,DIRECT
 # 百度网盘
 PROCESS-NAME,BaiduNetdisk_mac,DIRECT
 
