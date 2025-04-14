@@ -881,7 +881,6 @@ http-response ^https?://ios\.prod\.ftl\.netflix\.com/iosui/user/.+path=%5B%22vid
 # ------
 
 [Plugin]
-https://raw.githubusercontent.com/GeQ1an/Rules/master/Loon/Rewrite/Rewrite.plugin, enabled = true
 https://kelee.one/Tool/Loon/Plugin/LoonGallery.plugin, policy = 漏网之鱼, enabled = true
 https://kelee.one/Tool/Loon/Plugin/Block_HTTPDNS.plugin, enabled = true
 https://kelee.one/Tool/Loon/Plugin/BlockAdvertisers.plugin, enabled = true
