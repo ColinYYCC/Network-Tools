@@ -156,7 +156,7 @@ DOMAIN-KEYWORD,todesk,DIRECT
 DOMAIN-KEYWORD,AnyViewer,DIRECT
 
 # 新增内置策略 NO-HYBRID, 等价为 NO-HYBRID = direct, hybrid=off
-DOMAIN-SUFFIX, cmbchina.com, NO-HYBRID
+DOMAIN-SUFFIX, cmbchina.com, DIRECT
 
 # Process 程序规则
 # > Client
