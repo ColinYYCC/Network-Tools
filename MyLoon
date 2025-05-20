@@ -220,9 +220,6 @@ FINAL, 漏网之鱼
 # ------
 
 [Remote Rule]
-# IP归属地更改
-https://raw.githubusercontent.com/SunsetMkt/anti-ip-attribution/refs/heads/main/generated/surge.list, policy = DIRECT, tag = IP归属地更改, enabled = true
-
 # ADs
 https://adrules.top/adrules.list, policy = REJECT, tag = Adrules, enabled = true
 https://ruleset.skk.moe/List/non_ip/reject-no-drop.conf, policy = REJECT-NO-DROP, tag = 防止PCDN, enabled = true
