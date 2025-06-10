@@ -154,6 +154,8 @@ DOMAIN-SUFFIX, zoom.us, 国外网站
 DOMAIN-KEYWORD,todesk,DIRECT
 # AnyViewer
 DOMAIN-KEYWORD,AnyViewer,DIRECT
+# DeepL
+DOMAIN-KEYWORD,DeepL,DIRECT
 
 # 新增内置策略 NO-HYBRID, 等价为 NO-HYBRID = direct, hybrid=off
 DOMAIN-SUFFIX, cmbchina.com, DIRECT
