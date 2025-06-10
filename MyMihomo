@@ -426,6 +426,7 @@ rules:
   - DOMAIN-SUFFIX,zoom.us,国外网站
   - DOMAIN-KEYWORD,todesk,DIRECT
   - DOMAIN-KEYWORD,AnyViewer,DIRECT
+  - DOMAIN-KEYWORD,DeepL,DIRECT
 
 # Process 程序规则
 # > AdGuard
